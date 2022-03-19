@@ -3,21 +3,23 @@ import '../Cart/css/dealcart.css';
 import Link from '@mui/material/Link';
 
 const DealCart = (props) => {
-    
+
     return (
         <div className='body1'>
-            <Link href="#">
+            <Link href="#" underline='none' color={'black'}>
+            
                 <img className="img1" src={props.img1} alt="img1" />
+
+                <div className='cartBottom'>
+                    <div className='cartButtomLeft'>
+                        <img className="img2" src={props.img2}  alt="img1" />
+
+                    </div>
+                    <div className='cartButtomRight'>
+                        <p>{props.text}</p>
+                    </div>
+                </div>
             </Link>
-            <div className='cartBottom'>
-                <div className='cartButtomLeft'>
-
-                </div>
-                <div className='cartButtomRight'>
-
-                </div>
-            </div>
-
         </div>
     );
 };
