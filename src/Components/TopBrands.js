@@ -1,9 +1,11 @@
 import React from 'react';
+import '../Components/css/topbrands.css';
+import Brands from '../Content/Brands';
 
 const TopBrands = () => {
     return (
-        <div>
-            
+        <div className='body'>
+            <Brands></Brands>
         </div>
     );
 };

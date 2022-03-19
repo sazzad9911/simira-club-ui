@@ -12,7 +12,9 @@ import Footer from './../Components/Footer';
 
 const Home = () => {
     return (
-        <div>
+        <div style={{
+            overflowY:'scroll'
+        }}>
             <Header/>
             <Slider/>
             <div>
