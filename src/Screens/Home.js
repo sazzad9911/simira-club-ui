@@ -21,24 +21,26 @@ import PopularDeal from './../Components/PopularDeal';
 
 const Home = () => {
     return (
-        <div>
-            <Header />
-            <Slider />
+        <div style={{
+            overflowY: 'scroll',
+            overflowX: 'hidden',
+            width: '100vw',
+            heigh: '100vh'
+        }}>
+            <Header/>
+            <Slider/>
             <div style={{
-                float: 'left',
-                display: 'flex',
-                overflow: 'hidden',
-                width: '100%',
-                overflowX:'scroll'
+                width:'100vw',
             }}>
-                <IconButton img={Hotels} title='Hotels' />
-                <IconButton img={Restaurant} title='Restaurant' />
-                <IconButton img={Games} title='Games' />
-                <IconButton img={Shopping} title='Shopping' />
-                <IconButton img={Villas} title='Villas' />
-                <IconButton img={Camping} title='Camping' />
-                <IconButton img={Spa_Salons} title='Spa & Salons' />
-                <IconButton img={Travel} title='Travel' />
+                <IconButton img={Hotels} title='Hotels'/>
+                <IconButton img={Restaurant} title='Restaurant'/>
+                <IconButton img={Games} title='Games'/>
+                <IconButton img={Shopping} title='Shopping'/>
+                <IconButton img={Villas} title='Villas'/>
+                <IconButton img={Camping} title='Camping'/>
+                <IconButton img={Spa_Salons} title='Spa & Salons'/>
+                <IconButton img={Travel} title='Travel'/>
+                
             </div>
             <TopBrands />
             <PopularDeal />
