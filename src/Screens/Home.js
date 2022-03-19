@@ -14,7 +14,10 @@ import PopularDeal from './../Components/PopularDeal';
 const Home = () => {
     return (
         <div style={{
-            overflowY:'scroll'
+            overflowY:'scroll',
+            overflowX:'hidden',
+            width:'100vw',
+            heigh:'100vh'
         }}>
             <Header/>
             <Slider/>
