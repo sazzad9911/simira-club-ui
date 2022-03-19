@@ -10,6 +10,7 @@ const IconButton = (props) => {
             <h5>{props.title}</h5>
         </button>
     </Link>   
+
     );
 };
 

@@ -1,9 +1,10 @@
 .box {
     width: 100%;
-    overflow-y: hidden;
-    height: 350px;
     background: #F5F5F5;
-
+    margin: 0;
+    overflow: hidden;
+    margin-top:10px;
+    margin-bottom:10px;
 }
  
 .text {
@@ -13,4 +14,7 @@
 }
 .brandShow{
     display: flex;
+    float: left;
+    overflow-x: scroll;
+    width: 100%;
 }
