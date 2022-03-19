@@ -6,9 +6,11 @@ const PopularHotels = () => {
     return (
         <div className='popularhotelsBody'>
             <div className='popularhotelsText'>
-                <h1>Popular Hotels</h1>
+                <p>Popular Hotels</p>
             </div>
             <div className='popularhotelsCart'>
+                <HotelCart />
+                <HotelCart />
                 <HotelCart />
                 <HotelCart />
             </div>
