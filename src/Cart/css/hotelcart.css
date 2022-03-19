@@ -1,6 +1,8 @@
-.body{
+.hotelcartBody{
     height: 313.78px;
     width: 297.26px;
     border-radius: 10px;
     background-color: blueviolet;
+    margin-top: 5%;
+    margin-left: 10%;
 }
