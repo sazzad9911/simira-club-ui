@@ -4,8 +4,22 @@ import Brands from '../Content/Brands';
 
 const TopBrands = () => {
     return (
-        <div className='body'>
-            <Brands></Brands>
+        <div className='box'>
+            <p className='text'>Top brands for you</p>
+            <div className='brandShow'>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+                <Brands></Brands>
+            </div>
         </div>
     );
 };
