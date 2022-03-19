@@ -26,7 +26,9 @@ const Home = () => {
         }}>
             <Header/>
             <Slider/>
-            <div>
+            <div style={{
+                width:'100vw',
+            }}>
                 <IconButton img={Hotels} title='Hotels'/>
                 <IconButton img={Restaurant} title='Restaurant'/>
                 <IconButton img={Games} title='Games'/>
@@ -35,6 +37,7 @@ const Home = () => {
                 <IconButton img={Camping} title='Camping'/>
                 <IconButton img={Spa_Salons} title='Spa & Salons'/>
                 <IconButton img={Travel} title='Travel'/>
+                
             </div>
             <TopBrands/>
             <PopularDeal/>
