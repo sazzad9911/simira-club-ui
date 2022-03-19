@@ -2,9 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## installing package and run
+npm install </br>
+npm start </br>
 
-In the project directory, you can run:
+## we are using-You don't need to install anything, just use those.
+You can use material UI for buid in design.. Use it for first development---</br>
+[EXAMPLE](https://mui.com/components/). </br>
+Material UI dosen't support CSS, so you need to use style components.-</br>
+[EXAMPLE](https://styled-components.com/docs/basics#getting-started)
+# Linking with page
+If you are using internal link then use React Router Dom </br>
+[EXAMPLE](https://mui.com/components/links/) <br/>
+Otherwise use anchor tag </br>
+[EXAMPLE](https://www.w3schools.com/tags/tag_a.asp)
+# HTML CSS
+you can use HTML CSS for rare case. # Remind it - name of your css have to well define. Suppose I am desining header div then I can use header-container
 
 ### `npm start`
 
