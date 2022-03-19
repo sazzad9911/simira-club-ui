@@ -5,10 +5,28 @@
     background-color: rgb(191, 126, 251);
     margin-top: 20px;
     margin-left: 60px;
+    position: relative;
    
 }
 .hotelcartImg{
     height: 250px;
     width: 220px;
     border-radius: 10px;
+}
+.hotelcartBodydiv{
+    position: absolute;
+    bottom: 0;
+
+}
+.hotelcartText{
+    color:#fff;
+}
+
+.hotelcartIconDiv{
+    display: flex;
+}
+.hotelcartIcon{
+    color: #fff;
+    position: relative;
+
 }
