@@ -16,8 +16,7 @@ import Villas from './../File/icon/Villas.png';
 import Camping from './../File/icon/Camping.png';
 import Spa_Salons from './../File/icon/Spa _ Salons.png';
 import Travel from './../File/icon/Travel.png';
-
-
+import PopularDeal from './../Components/PopularDeal';
 
 
 const Home = () => {
@@ -38,6 +37,7 @@ const Home = () => {
                 <IconButton img={Travel} title='Travel'/>
             </div>
             <TopBrands/>
+            <PopularDeal/>
             <BookShow/>
             <PopularHotels/>
             <AppOverView/>

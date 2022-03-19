@@ -1,0 +1,11 @@
+.popularhotelsBody{
+    height: auto;
+    width: auto;
+  
+}
+.popularhotelsCart{
+    display: flex;
+}
+.popularhotelsText{
+    margin-left: 60px;
+}
