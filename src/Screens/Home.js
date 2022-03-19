@@ -22,7 +22,10 @@ import PopularDeal from './../Components/PopularDeal';
 const Home = () => {
     return (
         <div style={{
-            overflowY:'scroll'
+            overflowY: 'scroll',
+            overflowX: 'hidden',
+            width: '100vw',
+            heigh: '100vh'
         }}>
             <Header/>
             <Slider/>
@@ -39,13 +42,13 @@ const Home = () => {
                 <IconButton img={Travel} title='Travel'/>
                 
             </div>
-            <TopBrands/>
-            <PopularDeal/>
-            <BookShow/>
-            <PopularHotels/>
-            <AppOverView/>
-            <OptionLand/>
-            <Footer/>
+            <TopBrands />
+            <PopularDeal />
+            <BookShow />
+            <PopularHotels />
+            <AppOverView />
+            <OptionLand />
+            <Footer />
         </div>
     );
 };

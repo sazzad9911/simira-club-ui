@@ -1,0 +1,19 @@
+.box1 {
+    width: 100%;
+}
+
+.text1 {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: 32px;
+    color: #000000;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 60px;
+}
+.brandShow1{
+    display: flex;
+    float: left;
+    margin-top: 0px;
+    margin-left: 40px;
+}
