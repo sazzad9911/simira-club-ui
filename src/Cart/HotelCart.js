@@ -4,8 +4,9 @@ import './css/hotelcart.css';
 const HotelCart = () => {
     return (
         <div>
-            <div className='hotelcartBody'></div>
-            <h1>akash</h1>
+            <div className='hotelcartBody'>
+                
+            </div>
         </div>
     );
 };

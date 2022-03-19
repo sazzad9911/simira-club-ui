@@ -5,8 +5,14 @@ import '../Components/css/popularhotels.css';
 const PopularHotels = () => {
     return (
         <div className='popularhotelsBody'>
-            <HotelCart/>
-            <HotelCart/>
+            <div className='popularhotelsText'>
+                <h1>Popular Hotels</h1>
+            </div>
+            <div className='popularhotelsCart'>
+                <HotelCart />
+                <HotelCart />
+            </div>
+
         </div>
     );
 };
