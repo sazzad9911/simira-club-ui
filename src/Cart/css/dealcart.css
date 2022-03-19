@@ -1,0 +1,30 @@
+.body1 {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.35);
+    background-color: aqua;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.img1{
+    width: 300px;
+    height: 120px;
+    border-radius: 10px;
+    
+}
+.cartBottom{
+    display: flex;
+    float: left;
+}
+.cartButtomLeft{
+    background-color: blueviolet;
+    height: 75px;
+    width: 20px;
+}
+.cartButtomRight{
+    background-color: brown;
+    height: 75px;
+    width: 20px;
+}
