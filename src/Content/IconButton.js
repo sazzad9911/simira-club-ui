@@ -4,10 +4,9 @@ import Link from '@mui/material/Link';
 
 const IconButton = (props) => {
     return (
-    <div class='iconboxOne'>
-
+    <div className='iconboxOne'>
             <Link href="/">
-                <button class='iconbox'>
+                <button className='iconbox'>
                     <img src={props.img} />
                     <h5>{props.title}</h5>
                 </button>

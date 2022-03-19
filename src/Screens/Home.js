@@ -21,17 +21,15 @@ import PopularDeal from './../Components/PopularDeal';
 
 const Home = () => {
     return (
-        <div style={{
-            overflowY: 'scroll',
-            overflowX: 'hidden',
-            width: '100vw',
-            heigh: '100vh'
-        }}>
+        <div>
             <Header />
             <Slider />
             <div style={{
                 float: 'left',
                 display: 'flex',
+                overflow: 'hidden',
+                width: '100%',
+                overflowX:'scroll'
             }}>
                 <IconButton img={Hotels} title='Hotels' />
                 <IconButton img={Restaurant} title='Restaurant' />

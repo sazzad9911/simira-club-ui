@@ -8,3 +8,4 @@ const UserInformation=(state=initialState,action)=>{
             return state    
     }
 }
+export default UserInformation
