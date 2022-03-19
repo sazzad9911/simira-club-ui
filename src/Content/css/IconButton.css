@@ -1,9 +1,9 @@
 
-.iconbox {
+.iconButtonbox {
     height: 120px;
     width: 120px;
     background-color: white;
-    box-shadow: 3px 2px 8px -3px #888;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.466);
     border-radius: 20px;
     border: 0px;
     margin: 10px;
