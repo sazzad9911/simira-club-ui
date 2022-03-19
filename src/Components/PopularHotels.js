@@ -9,7 +9,7 @@ const PopularHotels = () => {
                 <p>Popular Hotels</p>
             </div>
             <div className='popularhotelsCart'>
-                <HotelCart />
+                <HotelCart scendText='akasg' text='Shradha Saburi Palace' img='https://www.berjayahotel.com/sites/default/files/BMH%20PremierRoom%20800x800.jpg'/>
                 <HotelCart />
                 <HotelCart />
                 <HotelCart />
