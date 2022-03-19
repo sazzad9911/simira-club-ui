@@ -8,6 +8,7 @@ import PopularHotels from './../Components/PopularHotels';
 import AppOverView from './../Cart/AppOverView';
 import OptionLand from './../Components/OptionLand';
 import Footer from './../Components/Footer';
+import PopularDeal from './../Components/PopularDeal';
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
                 <IconButton/>
             </div>
             <TopBrands/>
+            <PopularDeal/>
             <BookShow/>
             <PopularHotels/>
             <AppOverView/>
