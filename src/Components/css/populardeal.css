@@ -13,7 +13,8 @@
 .brandShow1 {
     display: flex;
     float: left;
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     overflow-x: scroll;
 }
 
@@ -37,7 +38,7 @@
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.445);
     border-radius: 20px;
     margin-top: 150px;
-    margin-left: 97%;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;

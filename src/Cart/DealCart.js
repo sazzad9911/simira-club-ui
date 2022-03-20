@@ -5,13 +5,13 @@ import Link from '@mui/material/Link';
 const DealCart = (props) => {
 
     return (
-        <div className='body1'>
+        <div className='body12'>
             <Link href="#" underline='none' color={'black'}>
             
                 <img className="img1" src={props.img1} alt="img1" />
 
                 <div className='cartBottom'>
-                    <div className='cartButtomLeft'>
+                     <div className='cartButtomLeft'>
                         <img className="img2" src={props.img2}  alt="img1" />
 
                     </div>

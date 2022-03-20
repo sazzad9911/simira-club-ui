@@ -5,6 +5,7 @@
     overflow: hidden;
     margin-top:10px;
     margin-bottom:10px;
+    overflow: hidden;
 }
  
 .text {
@@ -37,8 +38,8 @@
     background: #FFFFFF;
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.445);
     border-radius: 20px;
-    margin-top: 110px;
-    margin-left: 97%;
+    right: 20px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
