@@ -30,7 +30,9 @@ const Home = () => {
             <Header/>
             <Slider/>
             <div style={{
-                width:'100vw',
+                width:'100%',
+                heigh:'150px',
+                overflowX:'scroll'
             }}>
                 <IconButton img={Hotels} title='Hotels'/>
                 <IconButton img={Restaurant} title='Restaurant'/>
