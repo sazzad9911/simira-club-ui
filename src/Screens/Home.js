@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './../Components/Header';
 import './../Content/css/IconButton.css'
-import Slider from './../Cart/Slider';
+import SliderHead from './../Cart/Slider';
 import IconButton from './../Content/IconButton';
 import TopBrands from './../Components/TopBrands';
 import BookShow from './../Cart/BookShow';
@@ -33,7 +33,7 @@ const Home = () => {
             heigh: '100vh'
         }}>
             <Header />
-            <Slider />
+            <SliderHead />
             <div style={{
                 width: '100%',
                 heigh: '150px',
