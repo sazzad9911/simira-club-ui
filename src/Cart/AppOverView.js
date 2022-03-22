@@ -2,18 +2,20 @@ import React from 'react';
 import './css/AppOverView.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Link from '@mui/material/Link';
-import Button from '@mui/material/Button';
-import styled from '@emotion/styled';
+import  photo from './css/photo.jpeg';
 
 const AppOverView = () => {
-    
+
     return (
         <div className='AppOverViewBody'>
             <div className='AppOverViewLaftDiv'>
+                <div className='AppOverViewLaftDivImf'>
+                    <img className='AppOverViewImg' src={photo} />
+                </div>
 
             </div>
             <div className='AppOverViewRightDiv'>
-                <div style={{marginTop:'50px'}}>
+                <div style={{ marginTop: '50px' }}>
                     <text className='AppOverViewBigText'>Get The SmiraClub App</text>
                     <div>
                         <p>
@@ -23,7 +25,7 @@ const AppOverView = () => {
                     </div>
 
                 </div>
-                <div style={{height: '20px',width: 'auto'}}></div>
+                <div style={{ height: '20px', width: 'auto' }}></div>
                 <div className='AppOverViewButtonDiv'>
                     <div className='AppOverViewButtonDiv'>
                         <button className='AppOverViewButton'>
@@ -37,11 +39,11 @@ const AppOverView = () => {
                     </div>
                 </div>
                 <div className='AppOverViewFromBox'>
-                    <input className='AppOverViewFrom' type='text' placeholder='Email'/>
+                    <input className='AppOverViewFrom' type='text' placeholder='Email' />
                     <button className='AppOverViewFromButton'>Send</button>
                 </div>
-   
-                <div style={{margin:'50px',}}>
+
+                <div style={{ margin: '50px', }}>
                     <h5 className='AppOverViewh5'>Download app from</h5>
                     <div className='AppOverViewLink'>
                         <div >

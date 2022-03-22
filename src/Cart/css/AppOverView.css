@@ -1,16 +1,17 @@
 .AppOverViewBody{
     height: 400px;
     width: auto;
-    background-color: aqua;
+    background-color: #FFF5F6;
     flex-direction: row;
     align-items: center;
     display: flex;
+    justify-content: center;
 
 }
 .AppOverViewLaftDiv{
-    height: 300px;
-    width: 30px;
-    background-color: beige;
+    height: 400px;
+    width: auto;
+    background-color: #FFF5F6;
 }
 .AppOverViewRightDiv{
     height: 400px;
@@ -85,4 +86,16 @@
 .AppOverViewh5{
     margin-left: 50px;
     opacity: .6;
+}
+.AppOverViewImg{
+    height: 350px;
+    width: 180px;
+    margin-top: -50px;
+    border-radius: 10px;
+    box-shadow: 5px -5px 72px 0px rgba(230, 227, 227, 0.2), 0px -20px 40px -10px rgb(109, 108, 108);
+
+
+}
+.AppOverViewLaftDivImf{
+    padding: 100px;
 }
