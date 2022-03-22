@@ -12,7 +12,7 @@ const AppOverView = () => {
 
             </div>
             <div className='AppOverViewRightDiv'>
-                <div>
+                <div style={{marginTop:'50px'}}>
                     <text className='AppOverViewBigText'>Get The SmiraClub App</text>
                     <div>
                         <p>
@@ -36,7 +36,7 @@ const AppOverView = () => {
                 </div>
                 <div className='AppOverViewFromBox'>
                     <input className='AppOverViewFrom' type='text' placeholder='Email'/>
-                    <Button variant="contained">Send</Button>
+                    <button className='AppOverViewFromButton'>Send</button>
                 </div>
             </div>
         </div>
