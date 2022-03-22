@@ -19,4 +19,46 @@
 }
 .AppOverViewBigText{
     font-size: 38px;
+    margin-left: 5px;
+}
+.AppOverViewButton{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.AppOverViewButtonDiv{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    margin-left: 5px;
+}
+.AppOverViewButtonLastDiv{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    margin-left: 30px;
+}
+.AppOverViewIcon{
+    font-size: 20px;
+    color: red;
+}
+.AppOverViewHtext{
+    color: red;
+}
+.AppOverViewFrom{
+    outline: none;
+    border: none;
+}
+.AppOverViewFromBox{
+    border: 1px solid black;
+    width: 230px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    background-color: #ffffff;
 }

@@ -1,7 +1,11 @@
 import React from 'react';
 import './css/AppOverView.css';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Button from '@mui/material/Button';
+import styled from '@emotion/styled';
 
 const AppOverView = () => {
+    
     return (
         <div className='AppOverViewBody'>
             <div className='AppOverViewLaftDiv'>
@@ -16,6 +20,23 @@ const AppOverView = () => {
                             download the app.
                         </p>
                     </div>
+
+                </div>
+                <div className='AppOverViewButtonDiv'>
+                    <div className='AppOverViewButtonDiv'>
+                        <button className='AppOverViewButton'>
+                            <CheckCircleIcon className='AppOverViewIcon' />
+                        </button>
+                        <h2 className='AppOverViewHtext'>Email</h2>
+                    </div>
+                    <div className='AppOverViewButtonLastDiv'>
+                        <button className='AppOverViewButton'></button>
+                        <h2>Phone</h2>
+                    </div>
+                </div>
+                <div className='AppOverViewFromBox'>
+                    <input className='AppOverViewFrom' type='text' placeholder='Email'/>
+                    <Button variant="contained">Send</Button>
                 </div>
             </div>
         </div>
