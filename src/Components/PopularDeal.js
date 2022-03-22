@@ -24,11 +24,6 @@ const PopularDeal = () => {
             </div>
             <h2> Popular Deals</h2>
             <div className='brandShow1'>
-            <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
-
-                </DealCart>
                 <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
                     img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
                     text='Flat 35 % OFF On All Orders'>
@@ -39,7 +34,8 @@ const PopularDeal = () => {
                     text='Flat 35 % OFF On All Orders'>
 
                 </DealCart>
-            
+                
+
             </div>
         </div>
     );
