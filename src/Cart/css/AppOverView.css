@@ -1,5 +1,5 @@
 .AppOverViewBody{
-    height: 500px;
+    height: 400px;
     width: auto;
     background-color: aqua;
     flex-direction: row;
@@ -13,7 +13,7 @@
     background-color: beige;
 }
 .AppOverViewRightDiv{
-    height: 500px;
+    height: 400px;
     width: 500px;
     background-color: #FFF5F6;
 }
@@ -61,6 +61,7 @@
     display: flex;
     border-radius: 5px;
     margin-left: 5px;
+    margin-top: 10px;
     background-color: #ffffff;
     justify-content: space-between;
     border: none;
@@ -72,4 +73,16 @@
     color:rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
+}
+.AppOverViewLink{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    margin-top: -10px;
+    margin-left: 50px;
+
+}
+.AppOverViewh5{
+    margin-left: 50px;
+    opacity: .6;
 }

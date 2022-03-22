@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/AppOverView.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import styled from '@emotion/styled';
 
@@ -38,6 +39,18 @@ const AppOverView = () => {
                 <div className='AppOverViewFromBox'>
                     <input className='AppOverViewFrom' type='text' placeholder='Email'/>
                     <button className='AppOverViewFromButton'>Send</button>
+                </div>
+   
+                <div style={{margin:'50px',}}>
+                    <h5 className='AppOverViewh5'>Download app from</h5>
+                    <div className='AppOverViewLink'>
+                        <div >
+                            <Link href="/"><img className='Footerimg' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png' /></Link>
+                        </div>
+                        <div >
+                            <Link href="/"><img className='Footerimg' src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
