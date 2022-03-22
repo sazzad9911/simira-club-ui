@@ -1,0 +1,22 @@
+.AppOverViewBody{
+    height: 500px;
+    width: auto;
+    background-color: aqua;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+
+}
+.AppOverViewLaftDiv{
+    height: 300px;
+    width: 30px;
+    background-color: beige;
+}
+.AppOverViewRightDiv{
+    height: 500px;
+    width: 500px;
+    background-color: #FFF5F6;
+}
+.AppOverViewBigText{
+    font-size: 38px;
+}
