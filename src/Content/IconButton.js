@@ -7,13 +7,13 @@ import Button from '@mui/material/Button';
 
 const IconButton = (props) => {
     return (
-        <button class='iconButtonbox'>
-            <Link href="/">
+
+        <Link href="/">
+            <button className='iconButtonbox'>
                 <img src={props.img} />
                 <h5>{props.title}</h5>
-
-            </Link>
-        </button>
+            </button>
+        </Link>
     );
 };
 

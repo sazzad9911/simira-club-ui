@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef, useState } from 'react';
 import Header from './../Components/Header';
 import './../Content/css/IconButton.css'
 import Slider from './../Cart/Slider';
@@ -21,50 +21,45 @@ import PopularDeal from './../Components/PopularDeal';
 import ArrowCircleLeftSharpIcon from '@mui/icons-material/ArrowCircleLeftSharp';
 import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
 import Button from '@mui/material/Button';
+import './css/Home.css'
 
 
 
 const Home = () => {
+    const ref = createRef()
+    const Left = () => {
+        ref.current.scrollLeft -= 60
+    }
+    const Right = () => {
+        ref.current.scrollLeft += 60
+    }
     return (
-        <div style={{
-            overflowY: 'scroll',
-            overflowX: 'hidden',
-            width: '100vw',
-            heigh: '100vh'
-        }}>
+        <div className='HomeContainer'>
             <Header />
             <Slider />
-            <div style={{
-                width: '100%',
-                heigh: '150px',
-                overflowX: 'scroll'
-            }}>
+            <div ref={ref} className='HomeIconContainer'>
                 <div className='IconButtonarrowLeft'>
-                    <Button >
+                    <Button onClick={Left}>
                         <ArrowCircleLeftSharpIcon color="disabled" fontSize='large'
                         ></ArrowCircleLeftSharpIcon>
                     </Button>
                 </div>
 
                 <div className='IconButtonarrowRight'>
-                    <Button>
+                    <Button onClick={Right}>
                         <ArrowCircleRightSharpIcon
                             fontSize='large'
                             color="disabled"></ArrowCircleRightSharpIcon>
                     </Button>
                 </div>
-                <div>
-
-                    <IconButton img={Hotels} title='Hotels' />
-                    <IconButton img={Restaurant} title='Restaurant' />
-                    <IconButton img={Games} title='Games' />
-                    <IconButton img={Shopping} title='Shopping' />
-                    <IconButton img={Villas} title='Villas' />
-                    <IconButton img={Camping} title='Camping' />
-                    <IconButton img={Spa_Salons} title='Spa & Salons' />
-                    <IconButton img={Travel} title='Travel' />
-
-                </div>
+                <IconButton img={Hotels} title='Hotels' />
+                <IconButton img={Restaurant} title='Restaurant' />
+                <IconButton img={Games} title='Games' />
+                <IconButton img={Shopping} title='Shopping' />
+                <IconButton img={Villas} title='Villas' />
+                <IconButton img={Camping} title='Camping' />
+                <IconButton img={Spa_Salons} title='Spa & Salons' />
+                <IconButton img={Travel} title='Travel' />
             </div>
             <TopBrands />
             <PopularDeal />
@@ -73,6 +68,19 @@ const Home = () => {
             <AppOverView />
             <OptionLand />
             <Footer />
+            {
+                /*
+
+                
+            
+            
+               
+            <BookShow />
+            
+            <AppOverView />
+            
+            */
+            }
         </div>
     );
 };

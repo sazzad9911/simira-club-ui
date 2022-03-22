@@ -1,11 +1,10 @@
-.box1 {
+.box11 {
     width: 100%;
-    overflow: hidden;
 }
 
 .text1 {
     font-family: 'Plus Jakarta Sans';
-    font-weight: 500;
+    font-weight: 500; 
     font-size: 32px;
     color: #000000;
 }
@@ -13,9 +12,8 @@
 .brandShow1 {
     display: flex;
     float: left;
-    max-width: 100%;
-    overflow: hidden;
-    overflow-x: scroll;
+    width: 100%;
+    
 }
 
 .arrowLeft {

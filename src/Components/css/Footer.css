@@ -8,7 +8,7 @@
 }
 
 .Footerbodytwoone {
-    width: 50%;
+    width: 150px;
 }
 
 .Footertxt {
@@ -35,6 +35,7 @@
     justify-content: center;
     text-align: center;
     margin-top: 60px;
+    flex-wrap: wrap;
 }
 
 .Footerbarone {
@@ -63,7 +64,7 @@
 
 .footerbox2 {
     width: 40%;
-    height: 200px;
+    min-height: 200px;
 }
 
 @media (max-width:700px) {

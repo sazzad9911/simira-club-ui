@@ -1,0 +1,9 @@
+.HomeIconContainer{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    float: left;
+    scrollbar-width: thin;
+}

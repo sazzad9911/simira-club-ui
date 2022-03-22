@@ -7,7 +7,11 @@ import Link from '@mui/material/Link';
 const OptionLand = (props) => {
     return (
         <div className='optionLandBody'>
-            <h2>Loads of options for you to explore here</h2>
+            <h2 style={{
+                marginTop: 30,
+                marginBottom: 30,
+                fontSize: 25,
+            }}>Loads of options for you to explore here</h2>
             <PopularDeals></PopularDeals>
             <PopularHotels></PopularHotels>
             <TopBrands></TopBrands>
@@ -89,10 +93,10 @@ const PopularHotelsName = (props) => {
 };
 
 const TopBrands = (props) => {
-    return (
+    return ( 
         <div>
             <h2 >Top Brands With Us</h2>
-            <div className='popularDealsView2'>
+            <div className='popularDealsView'>
                 <TopBrandsName TBWU='Oven Story'></TopBrandsName>
                 <TopBrandsName TBWU='Oven Story'></TopBrandsName>
                 <TopBrandsName TBWU='Oven Story'></TopBrandsName>
@@ -132,8 +136,8 @@ const TopBrandsName = (props) => {
 const CitiesWeOffer = (props) => {
     return (
         <div>
-            <h2 >Top Brands With Us</h2>
-            <div className='popularDealsView3'>
+            <h2 >Cities We Offer</h2>
+            <div className='popularDealsView'>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>

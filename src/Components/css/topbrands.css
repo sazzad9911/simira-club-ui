@@ -18,6 +18,7 @@
     float: left;
     overflow-x: scroll;
     width: 100%;
+    scrollbar-width: thin;
 }
 .arrowLeft1 {
     position: absolute;
@@ -38,7 +39,7 @@
     background: #FFFFFF;
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.445);
     border-radius: 20px;
-    right: 20px;
+    right: 0px;
     margin-top: 100px;
     display: flex;
     align-items: center;
