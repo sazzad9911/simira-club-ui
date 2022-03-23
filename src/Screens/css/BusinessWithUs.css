@@ -1,0 +1,113 @@
+.loginbody3 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.loginbodyleft3 {
+    width: 400px;
+    height: 650px;
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbodyright3 {
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginbodyrightbody3 {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginbodyrightbody3 h1 {
+    text-align: left;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.textinputview3 {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    border-radius: 30px;
+    background-color: #F5F5F5;
+    border: none;
+    margin-bottom: 10px;
+}
+.textinputviewMess3 {
+    width: 400px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.textinput3 {
+    width: 400px;
+    background-color: #F5F5F5;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.textinputMess3 {
+    width: 360px;
+    background-color: #F5F5F5;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin-left: 30px;
+}
+
+.forgotPlink3 {
+    width: 400px;
+}
+
+.loginButton3 {
+    width: 400px;
+    height: 55px;
+    border: 1px solid red;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submitText3 {
+    color: red;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.googleButton3 {
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.googleText3 {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 20px;
+}

@@ -10,10 +10,15 @@ import {
 import Home from './Screens/Home';
 import MyProfile from './Screens/MyProfile';
 import Login from "./Components/LogIn";
+
 import {useDispatch} from 'react-redux'
 import {setUser} from './action'
 import React from 'react'
 import api from './api'
+import SignUp from "./Screens/SignUp";
+import Contact from "./Screens/Contact";
+import BusinessWithUs from "./Screens/BusinessWithUs";
+
 
 function App() {
   const dispatch=useDispatch()
@@ -37,6 +42,9 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/Profile" element={<MyProfile/>} />
         <Route path="/Login" element={<Login/>}/>
+        <Route path="/SignUp" element={<SignUp/>}/>
+        <Route path="Contact" element={<Contact/>}/>
+        <Route path="BusinessWithUs" element={<BusinessWithUs/>}/>
       </Routes>
     </Router>
   );
