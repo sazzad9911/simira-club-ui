@@ -14,30 +14,52 @@ const Coloredline = ({ color }) => (
     />
 );
 const Footer = () => {
-    
+
     return (
         <div>
             <div className='Footerbodyf'>
                 <div className='footerbox'>
-                    <div className='Footertxt'>
+                    <div className='Footertxtt'>
                         <h5>COMPANY</h5>
-                        <Link href="#" color="inherit" underline="none">Careers</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Contact</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Sitemap</Link>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Careers</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Contact</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none" >Sitemap</Link>
+                        </div>
                     </div>
                     <div className='Footertxt'>
                         <h4>For You</h4>
-                        <Link href="#" color="inherit" underline="none">Membership</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Privacy</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Tems</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Support</Link>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Membership</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Privacy</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Tems</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Support</Link>
+                        </div>
                     </div>
                     <div className='Footertxt'>
                         <h5>DISCOVER</h5>
-                        <Link href="#" color="inherit" underline="none">Popular Deals</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Popular Hotels</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">SmiraClub Member</Link><br></br>
-                        <Link href="#" color="inherit" underline="none">Business With Us</Link>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Popular Deals</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Popular Hotels</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">SmiraClub Member</Link><br></br>
+                        </div>
+                        <div className='Footerlink'>
+                            <Link href="#" color="inherit" underline="none">Business With Us</Link>
+                        </div>
                     </div>
                 </div>
                 <div className='footervl'></div>
@@ -58,7 +80,7 @@ const Footer = () => {
                 <Coloredline color="#888" />
             </div>
             <div>
-                <p>By continuing past this page,
+                <p className='Footert'>By continuing past this page,
                     you agree to our Terms of Service, Cookie Policy,
                     Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2018-2022 © SmiraClub All rights reserved.
                 </p>

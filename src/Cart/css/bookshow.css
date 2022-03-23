@@ -1,6 +1,6 @@
 .bookshowbody{
     height: 70px;
-    width: 96%;
+    width: 98%;
     margin-left: 2%;
     display: flex;
     justify-content: center;
@@ -9,6 +9,6 @@
 }
 .bookshow{
     height: 75px;
-    width: 96%;
+    width: 98%;
     margin-left: 2%;
 }
