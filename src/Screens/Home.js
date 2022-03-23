@@ -14,6 +14,8 @@ import Hotels from './../File/icon/Hotels.png';
 import Restaurant from './../File/icon/Restaurant.png';
 import Shopping from './../File/icon/Shopping.png';
 import Villas from './../File/icon/Villas.png';
+import Health from './../File/icon/Health.png';
+import Services from './../File/icon/Services.png';
 import Camping from './../File/icon/Camping.png';
 import Spa_Salons from './../File/icon/Spa _ Salons.png';
 import Travel from './../File/icon/Travel.png';
@@ -59,6 +61,8 @@ const Home = () => {
                     <IconButton img={Camping} title='Camping' />
                     <IconButton img={Spa_Salons} title='Spa & Salons' />
                     <IconButton img={Travel} title='Travel' />
+                    <IconButton img={Health} title='Health'/>
+                    <IconButton img={Services} title='Services'/>
                 </div>
             </div>
             
