@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/Footer.css';
 import Link from '@mui/material/Link';
+import styled from '@emotion/styled';
 
 
 const Coloredline = ({ color }) => (
@@ -13,26 +14,30 @@ const Coloredline = ({ color }) => (
     />
 );
 const Footer = () => {
+    
     return (
         <div>
             <div className='Footerbodyf'>
                 <div className='footerbox'>
-                    <div className='Footertxt'><h5>COMPANY</h5>
-                        <Link href="/" color="inherit" underline="none">Careers</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Contact</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Sitemap</Link>
+                    <div className='Footertxt'>
+                        <h5>COMPANY</h5>
+                        <Link href="#" color="inherit" underline="none">Careers</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Contact</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Sitemap</Link>
                     </div>
-                    <div className='Footertxt'><h4>For You</h4>
-                        <Link href="/" color="inherit" underline="none">Membership</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Privacy</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Tems</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Support</Link>
+                    <div className='Footertxt'>
+                        <h4>For You</h4>
+                        <Link href="#" color="inherit" underline="none">Membership</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Privacy</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Tems</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Support</Link>
                     </div>
-                    <div className='Footertxt'><h5>DISCOVER</h5>
-                        <Link href="/"  color="inherit" underline="none">Popular Deals</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Popular Hotels</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">SmiraClub Member</Link><br></br>
-                        <Link href="/" color="inherit" underline="none">Business With Us</Link>
+                    <div className='Footertxt'>
+                        <h5>DISCOVER</h5>
+                        <Link href="#" color="inherit" underline="none">Popular Deals</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Popular Hotels</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">SmiraClub Member</Link><br></br>
+                        <Link href="#" color="inherit" underline="none">Business With Us</Link>
                     </div>
                 </div>
                 <div className='footervl'></div>
@@ -46,7 +51,7 @@ const Footer = () => {
                             <Link href="/"><img className='Footerimg' src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
 
             <div className='Footerbartwo'>

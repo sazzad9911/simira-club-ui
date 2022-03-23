@@ -1,14 +1,17 @@
 .body {
-    width: 140px;
-    height: 140px;
-    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.35);
-    border-radius: 70px;
+    width: 120px;
+    height: 120px;
+    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.26);
+    border-radius: 60px;
     margin: 10px;
 }
 .img{
-    width: 140px;
-    height: 140px;
-    border-radius: 70px;
-    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.477);
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.304);
     
+}
+.img:hover {
+    opacity: .6;
 }

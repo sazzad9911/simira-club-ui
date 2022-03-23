@@ -14,8 +14,8 @@ const Slider = () => {
       {
           img:"https://www.daily-sun.com/assets/news_images/2019/09/23/Dailysun-2019-04-22-14.jpg"
       }
-  ])
-
+  ]) 
+ 
   const style = {
     width:'98%',
     height:window.innerWidth<500?200:window.innerWidth<800?300:450,

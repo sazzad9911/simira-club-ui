@@ -1,36 +1,36 @@
-import React,{createRef} from 'react';
+import React, { createRef } from 'react';
 import '../Components/css/topbrands.css';
 import Brands from '../Content/Brands';
-import ArrowCircleLeftSharpIcon from '@mui/icons-material/ArrowCircleLeftSharp';
-import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 
 const TopBrands = (props) => {
-    const ref=createRef()
+    const ref = createRef()
 
-    const Left=()=>{
-        ref.current.scrollLeft-=60;
+    const Left = () => {
+        ref.current.scrollLeft -= 60;
     }
-    const Right=()=>{
-        ref.current.scrollLeft+=60;
+    const Right = () => {
+        ref.current.scrollLeft += 60;
     }
     return (
         <div className='box'>
             <div className='arrowLeft1'>
                 <Button onClick={Left}>
-                    <ArrowCircleLeftSharpIcon color="disabled" fontSize='large'
-                    ></ArrowCircleLeftSharpIcon>
+                    <ArrowBackIosNewIcon color="disabled" fontSize='medium'
+                    ></ArrowBackIosNewIcon>
                 </Button>
             </div>
 
             <div className='arrowRight1'>
                 <Button onClick={Right}>
-                    <ArrowCircleRightSharpIcon
-                        fontSize='large'
-                        color="disabled"></ArrowCircleRightSharpIcon>
+                    <ArrowForwardIosIcon
+                        fontSize='medium'
+                        color="disabled"></ArrowForwardIosIcon>
                 </Button>
-            </div> 
-            <h2 >Top brands for you</h2>
+            </div>
+            <h2>Top brands for you</h2>
             <div ref={ref} className='brandShow'>
                 <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
                 <Brands img='https://thumbs.dreamstime.com/b/s-letter-logo-luxury-design-badge-template-brand-unique-texture-letter-s-luxury-logo-204534056.jpg'></Brands>
