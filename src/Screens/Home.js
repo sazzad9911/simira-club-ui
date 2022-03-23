@@ -24,7 +24,6 @@ import Button from '@mui/material/Button';
 import './css/Home.css'
 
 
-
 const Home = () => {
     const ref = createRef()
     const Left = () => {
