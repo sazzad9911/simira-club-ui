@@ -1,11 +1,12 @@
 .HomeIconContainer{
-    width: 100%;
+    width: 96%;
     height: 150px;
     overflow: hidden;
     overflow-x: scroll;
     display: flex;
     float: left;
     scrollbar-width: thin;
+    margin-left:2%;
 }
 .HomeContainer{
     width: 100%;
@@ -25,5 +26,6 @@
 }
 .Home-topBrand{
     background-color: #F5F5F5;
+    width: 100%;
     
 }

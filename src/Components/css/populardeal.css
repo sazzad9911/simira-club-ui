@@ -19,17 +19,16 @@
 .arrowLeft {
     position: absolute;
     background: white;
-    opacity: .7;
     border-radius: 20px;
     margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 20px;
 }
 .arrowRight {
     position: absolute;
     background: #FFFFFF;
-    opacity: .7;
     border-radius: 20px;
     margin-top: 150px;
     right: 20px;

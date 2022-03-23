@@ -34,53 +34,38 @@ const Home = () => {
     }
     return (
         <div className='Home'>
-           
-            
-            
-            
-          
-            {
-                /*
- <Header />
-                <div className='Home-slider'>
-                <Slider />
-            </div>
-            <div className='container'>
-                <div className='HomeContainer'>
-                    <div className='IconButtonarrowLeft'>
-                        <Button onClick={Left}>
-                            <ArrowBackIosNewIcon color="disabled" fontSize='medium'
-                            ></ArrowBackIosNewIcon>
-                        </Button>
-                    </div>
-
-                    <div className='IconButtonarrowRight'>
-                        <Button onClick={Right}>
-                            <ArrowForwardIosIcon
-                                fontSize='medium'
-                                color="disabled"></ArrowForwardIosIcon>
-                        </Button>
-                    </div>
-                    <div ref={ref} className='HomeIconContainer'>
-                        <div></div>
-                        <IconButton img={Hotels} title='Hotels' />
-                        <IconButton img={Restaurant} title='Restaurant' />
-                        <IconButton img={Games} title='Games' />
-                        <IconButton img={Shopping} title='Shopping' />
-                        <IconButton img={Villas} title='Villas' />
-                        <IconButton img={Camping} title='Camping' />
-                        <IconButton img={Spa_Salons} title='Spa & Salons' />
-                        <IconButton img={Travel} title='Travel' />
-                        <div></div>
-                    </div>
-
+            <Slider />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <div className='HomeContainer'>
+                <div className='IconButtonarrowLeft'>
+                    <Button onClick={Left}>
+                        <ArrowBackIosNewIcon color="disabled" fontSize='medium'
+                        ></ArrowBackIosNewIcon>
+                    </Button>
+                </div>
+                <div className='IconButtonarrowRight'>
+                    <Button onClick={Right}>
+                        <ArrowForwardIosIcon
+                            fontSize='medium'
+                            color="disabled"></ArrowForwardIosIcon>
+                    </Button>
+                </div>
+                <div ref={ref} className='HomeIconContainer'>
+                    <IconButton img={Hotels} title='Hotels' />
+                    <IconButton img={Restaurant} title='Restaurant' />
+                    <IconButton img={Games} title='Games' />
+                    <IconButton img={Shopping} title='Shopping' />
+                    <IconButton img={Villas} title='Villas' />
+                    <IconButton img={Camping} title='Camping' />
+                    <IconButton img={Spa_Salons} title='Spa & Salons' />
+                    <IconButton img={Travel} title='Travel' />
                 </div>
             </div>
-            <div style={{ height: 20, width: '100%' }}></div>
+            
             <div className='Home-topBrand'>
                 <TopBrands />
             </div>
-            < div style={{ height: 20, width: '100%' }}></div>
+            <div style={{ height: 20, width: '100%' }}></div>
             <PopularDeal />
             <div style={{ height: 20, width: '100%' }}></div>
             <BookShow />
@@ -90,6 +75,28 @@ const Home = () => {
             <AppOverView />
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
+            {
+                /*
+ <Header />
+            
+           
+
+                
+                
+           
+            
+            <div className='Home-topBrand'>
+                
+            </div>
+            < div style={{ height: 20, width: '100%' }}></div>
+            
+
+            <div style={{ height: 20, width: '100%' }}></div>
+            
+            <div style={{ height: 20, width: '100%' }}></div>
+            
+            <div style={{ height: 20, width: '100%' }}></div>
+            
             <Footer />
            
             

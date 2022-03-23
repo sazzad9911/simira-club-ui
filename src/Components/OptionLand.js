@@ -11,7 +11,7 @@ const OptionLand = (props) => {
                 marginTop: 30,
                 marginBottom: 30,
                 fontSize: 25,
-            }}>Loads of options for you to explore here</h2>
+            }}>Loads of options for you to explore here</h2> 
             <PopularDeals></PopularDeals>
             <PopularHotels></PopularHotels>
             <TopBrands></TopBrands>

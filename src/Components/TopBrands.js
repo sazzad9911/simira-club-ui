@@ -28,7 +28,7 @@ const TopBrands = (props) => {
                     <ArrowForwardIosIcon
                         fontSize='medium'
                         color="disabled"></ArrowForwardIosIcon>
-                </Button>
+                </Button> 
             </div>
             <h2>Top brands for you</h2>
             <div ref={ref} className='brandShow'>

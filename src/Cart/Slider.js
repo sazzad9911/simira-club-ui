@@ -24,8 +24,7 @@ const Slider = () => {
   }
 
   return (
-    <div> 
-      <div>
+    <div className="slider-container">
         <Slide autoplay={true}>
         {
             data.map(({img})=>(
@@ -34,7 +33,6 @@ const Slider = () => {
         }
         </Slide>
       </div>
-    </div>
   );
 };
 

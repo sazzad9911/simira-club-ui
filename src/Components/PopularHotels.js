@@ -1,8 +1,8 @@
 import React,{ createRef} from 'react';
 import HotelCart from '../Cart/HotelCart';
 import '../Components/css/popularhotels.css';
-import ArrowCircleLeftSharpIcon from '@mui/icons-material/ArrowCircleLeftSharp';
-import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 
 const PopularHotels = () => {
@@ -18,16 +18,16 @@ const PopularHotels = () => {
         <div className='popularhotelsBody'>
         <div className='arrowLeft11'>
                 <Button onClick={Left}>
-                    <ArrowCircleLeftSharpIcon color="disabled" fontSize='large'
-                    ></ArrowCircleLeftSharpIcon>
+                    <ArrowBackIosNewIcon color="disabled" fontSize='large'
+                    ></ArrowBackIosNewIcon>
                 </Button>
             </div>
-
+ 
             <div className='arrowRight11'>
                 <Button onClick={Right}>
-                    <ArrowCircleRightSharpIcon
+                    <ArrowForwardIosIcon
                         fontSize='large'
-                        color="disabled"></ArrowCircleRightSharpIcon>
+                        color="disabled"></ArrowForwardIosIcon>
                 </Button>
             </div> 
             <div className='popularhotelsText'>

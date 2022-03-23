@@ -1,9 +1,10 @@
 .popularhotelsBody{
     height: auto;
-    width: auto;
+    width: 96%;
+    margin-left:2%
   
 }
-.popularhotelsCart{
+.popularhotelsBody .popularhotelsCart{
     display: flex;
     float: left;
     width: 100%;
@@ -21,7 +22,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-    opacity: .8;
+    left: 20px;
 }
 .arrowRight11 {
     position: absolute;
@@ -29,11 +30,10 @@
     height: 25px;
     background: #FFFFFF;
     border-radius: 20px;
-    right: 0px;
+    right: 20px;
     margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    opacity: .8;
 }
