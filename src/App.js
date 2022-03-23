@@ -12,6 +12,7 @@ import MyProfile from './Screens/MyProfile';
 import Login from "./Components/LogIn";
 import SignUp from "./Screens/SignUp";
 import Contact from "./Screens/Contact";
+import BusinessWithUs from "./Screens/BusinessWithUs";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Login" element={<Login/>}/>
         <Route path="/SignUp" element={<SignUp/>}/>
         <Route path="Contact" element={<Contact/>}/>
+        <Route path="BusinessWithUs" element={<BusinessWithUs/>}/>
       </Routes>
     </Router>
   );
