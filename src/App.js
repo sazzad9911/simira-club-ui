@@ -11,6 +11,7 @@ import Home from './Screens/Home';
 import MyProfile from './Screens/MyProfile';
 import Login from "./Components/LogIn";
 import SignUp from "./Screens/SignUp";
+import Contact from "./Screens/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Profile" element={<MyProfile/>} />
         <Route path="/Login" element={<Login/>}/>
         <Route path="/SignUp" element={<SignUp/>}/>
+        <Route path="Contact" element={<Contact/>}/>
       </Routes>
     </Router>
   );
