@@ -1,7 +1,7 @@
 import React, { createRef, useState } from 'react';
 import Header from './../Components/Header';
 import './../Content/css/IconButton.css'
-import SliderHead from './../Cart/Slider';
+import Slider from './../Cart/Slider';
 import IconButton from './../Content/IconButton';
 import TopBrands from './../Components/TopBrands';
 import BookShow from './../Cart/BookShow';
@@ -24,7 +24,6 @@ import Button from '@mui/material/Button';
 import './css/Home.css'
 
 
-
 const Home = () => {
     const ref = createRef()
     const Left = () => {
@@ -36,7 +35,7 @@ const Home = () => {
     return (
         <div className='HomeContainer'>
             <Header />
-            <SliderHead />
+            <Slider />
             <div className='HomeContainer'>
                 <div className='IconButtonarrowLeft'>
                     <Button onClick={Left}>

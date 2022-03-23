@@ -5,10 +5,13 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SearchIcon from '@mui/icons-material/Search';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import LogoutIcon from '@mui/icons-material/Logout';
+import Link from '@mui/material/Link';
 
 const Header = () => {
     const width = window.innerWidth
-    
+    const [user, setUser] = React.useState(false)
+
     return (
         <div className="header">
             <div className="header-top">
@@ -28,11 +31,11 @@ const Header = () => {
             </div>
             <div className="header-bottom">
                 <img src={Icon} />
-                <div className='searchContainer' style={{marginRight:50}}>
+                <div className='searchContainer' style={{ marginRight: 50 }}>
                     <input type="text" placeholder="Search" />
                     <SearchIcon />
                 </div>
-                <div style={{marginRight:50,}}>
+                <div style={{ marginRight: 50, }}>
                     <AddBoxIcon />
                     <div className='header-box'>
                         <h5>Became a Member</h5>
@@ -40,20 +43,32 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='divider'></div>
-                <div style={{marginRight:50,}}>
-                    <WorkOutlineIcon/>
+                <div style={{ marginRight: 50, }}>
+                    <WorkOutlineIcon />
                     <div className='header-box'>
                         <h5>Business with us</h5>
                         <p>List your deal and property</p>
                     </div>
                 </div>
                 <div className='divider'></div>
-                <div style={{marginRight:50}}>
-                    <img src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"/>
-                    <div className='header-box'>
-                        <h5>Welcome, Bithi </h5>
-                        <p>Hope you are enjoying!</p>
-                    </div>
+                <div style={{ marginRight: 50 }}>
+                    {
+                        user ?
+                            (
+                                <>
+                                    <img src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg" />
+                                    <div className='header-box'>
+                                        <h5>Welcome, Bithi </h5>
+                                        <p>Hope you are enjoying!</p>
+                                    </div>
+                                </>
+                            ):(
+                                <Link to="/Login">
+                                    <LogoutIcon/>
+                                    <h5>Log In</h5>
+                                </Link>
+                            )
+                    }
                 </div>
             </div>
         </div>
