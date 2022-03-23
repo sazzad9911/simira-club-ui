@@ -2,17 +2,14 @@ import React from 'react';
 import './css/AppOverView.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Link from '@mui/material/Link';
-import  photo from './css/photo.jpeg';
+import photo from './css/photo.jpeg';
 
 const AppOverView = () => {
 
     return (
         <div className='AppOverViewBody'>
             <div className='AppOverViewLaftDiv'>
-                <div className='AppOverViewLaftDivImf'>
-                    <img className='AppOverViewImg' src={photo} />
-                </div>
-
+                <img className='AppOverViewImg' src={photo} />
             </div>
             <div className='AppOverViewRightDiv'>
                 <div style={{ marginTop: '50px' }}>

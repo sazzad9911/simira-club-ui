@@ -46,7 +46,7 @@ const Footer = () => {
                             <Link href="/"><img className='Footerimg' src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
                         </div>
                     </div>
-                </div> 
+                </div>  
             </div>
 
             <div className='Footerbartwo'>

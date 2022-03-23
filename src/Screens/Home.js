@@ -73,7 +73,7 @@ const Home = () => {
             <div style={{ height: 20, width: '100%' }}></div>
             <PopularHotels />
             <div style={{ height: 20, width: '100%' }}></div>
-            
+            <AppOverView />
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
             <Footer />
@@ -86,7 +86,7 @@ const Home = () => {
                
             <BookShow />
             
-            <AppOverView />
+           
             
             */
             }

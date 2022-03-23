@@ -3,8 +3,8 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
     background: #F5F5F5;
+    overflow: hidden;
 }
 
 .Footerbodytwoone {
