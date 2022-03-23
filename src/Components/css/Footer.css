@@ -13,7 +13,12 @@
 
 .Footertxt {
     align-items: center;
-    margin: 13px;
+    padding: 10px;
+}
+.Footertxtt{
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 35px;
 }
 
 .FooterHed {
@@ -63,10 +68,16 @@
     justify-content: space-between;
     align-items: center;
 }
+.Footerlink{
+    margin: 10px;
+}
 
 .footerbox2 {
     width: 40%;
     min-height: 200px;
+}
+.Footert{
+    font-size: 13px;
 }
 
 @media (max-width:700px) {
