@@ -21,6 +21,7 @@
     overflow-x: scroll;
     overflow: hidden;
     scrollbar-width: thin;
+    overflow-x: scroll;
 }
 .brandShow span{
     width: 50px;
