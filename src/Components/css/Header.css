@@ -5,8 +5,6 @@
 .header-top {
     width: 100%;
     background-color:#FC444B;
-    padding-left: 50px;
-    padding-right: 50px;
     display: flex;
     justify-content:space-between;
     color: aliceblue;
@@ -28,8 +26,6 @@
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    padding-left: 50px;
-    padding-right: 50px;
     align-items: center;
 }
 .header-bottom img{
