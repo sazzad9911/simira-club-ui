@@ -11,3 +11,19 @@
     width: 100%;
     overflow: hidden;
 }
+.HomeIconContainer div{
+    width: 2%;
+    height: 100px;
+}
+.Home{
+    width: 100%;
+
+}
+.Home-slider{
+    width: 96%;
+   margin-left:2%
+}
+.Home-topBrand{
+    background-color: #F5F5F5;
+    
+}

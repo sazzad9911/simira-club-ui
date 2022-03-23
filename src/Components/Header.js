@@ -8,6 +8,8 @@ import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Link from '@mui/material/Link';
 import { useSelector } from 'react-redux';
+import member from '../File/icon/member.png'
+import business from '../File/icon/business.png'
 
 const Header = () => {
     const width = window.innerWidth
@@ -37,7 +39,10 @@ const Header = () => {
                     <SearchIcon />
                 </div>
                 <div style={{ marginRight: 50, }}>
-                    <AddBoxIcon />
+                    <img style={{
+                        width:35,
+                        height:35
+                    }} src={member}/>
                     <div className='header-box'>
                         <h5>Became a Member</h5>
                         <p>Save more on Top Brands</p>
@@ -45,7 +50,10 @@ const Header = () => {
                 </div>
                 <div className='divider'></div>
                 <div style={{ marginRight: 50, }}>
-                    <WorkOutlineIcon />
+                <img style={{
+                        width:35,
+                        height:35
+                    }} src={business}/>
                     <div className='header-box'>
                         <h5>Business with us</h5>
                         <p>List your deal and property</p>
@@ -64,7 +72,7 @@ const Header = () => {
                                     </div>
                                 </>
                             ) : (
-                                <Link href="/Login">
+                                <Link underline="none" href="/Login">
                                     <div style={{backgroundColor:'#ffff',width:120,height:60}}>
                                         <LogoutIcon />
                                         <h5>Log In</h5>

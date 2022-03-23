@@ -3,16 +3,18 @@
     overflow: hidden;
 }
 .header-top {
-    width: 100%;
     background-color:#FC444B;
     display: flex;
     justify-content:space-between;
     color: aliceblue;
+    width: 100%;
 }
 .header-top div{
     display: flex;
     justify-content:center;
     align-items:center;
+    padding-left: 2%;
+    padding-right:2%
 }
 .header-top button{
     background: none;
@@ -27,6 +29,8 @@
     justify-content:space-between;
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .header-bottom img{
     width:70px;

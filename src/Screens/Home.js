@@ -18,8 +18,8 @@ import Camping from './../File/icon/Camping.png';
 import Spa_Salons from './../File/icon/Spa _ Salons.png';
 import Travel from './../File/icon/Travel.png';
 import PopularDeal from './../Components/PopularDeal';
-import ArrowCircleLeftSharpIcon from '@mui/icons-material/ArrowCircleLeftSharp';
-import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 import './css/Home.css'
 
@@ -33,39 +33,54 @@ const Home = () => {
         ref.current.scrollLeft += 60
     }
     return (
-        <div className='HomeContainer'>
-            <Header />
-            <Slider />
-            <div className='HomeContainer'>
-                <div className='IconButtonarrowLeft'>
-                    <Button onClick={Left}>
-                        <ArrowCircleLeftSharpIcon color="disabled" fontSize='large'
-                        ></ArrowCircleLeftSharpIcon>
-                    </Button>
-                </div>
+        <div className='Home'>
+           
+            
+            
+            
+          
+            {
+                /*
+ <Header />
+                <div className='Home-slider'>
+                <Slider />
+            </div>
+            <div className='container'>
+                <div className='HomeContainer'>
+                    <div className='IconButtonarrowLeft'>
+                        <Button onClick={Left}>
+                            <ArrowBackIosNewIcon color="disabled" fontSize='medium'
+                            ></ArrowBackIosNewIcon>
+                        </Button>
+                    </div>
 
-                <div className='IconButtonarrowRight'>
-                    <Button onClick={Right}>
-                        <ArrowCircleRightSharpIcon
-                            fontSize='large'
-                            color="disabled"></ArrowCircleRightSharpIcon>
-                    </Button>
-                </div>
-                <div ref={ref} className='HomeIconContainer'>
-                    <IconButton img={Hotels} title='Hotels' />
-                    <IconButton img={Restaurant} title='Restaurant' />
-                    <IconButton img={Games} title='Games' />
-                    <IconButton img={Shopping} title='Shopping' />
-                    <IconButton img={Villas} title='Villas' />
-                    <IconButton img={Camping} title='Camping' />
-                    <IconButton img={Spa_Salons} title='Spa & Salons' />
-                    <IconButton img={Travel} title='Travel' />
-                </div>
+                    <div className='IconButtonarrowRight'>
+                        <Button onClick={Right}>
+                            <ArrowForwardIosIcon
+                                fontSize='medium'
+                                color="disabled"></ArrowForwardIosIcon>
+                        </Button>
+                    </div>
+                    <div ref={ref} className='HomeIconContainer'>
+                        <div></div>
+                        <IconButton img={Hotels} title='Hotels' />
+                        <IconButton img={Restaurant} title='Restaurant' />
+                        <IconButton img={Games} title='Games' />
+                        <IconButton img={Shopping} title='Shopping' />
+                        <IconButton img={Villas} title='Villas' />
+                        <IconButton img={Camping} title='Camping' />
+                        <IconButton img={Spa_Salons} title='Spa & Salons' />
+                        <IconButton img={Travel} title='Travel' />
+                        <div></div>
+                    </div>
 
+                </div>
             </div>
             <div style={{ height: 20, width: '100%' }}></div>
-            <TopBrands />
-            <div style={{ height: 20, width: '100%' }}></div>
+            <div className='Home-topBrand'>
+                <TopBrands />
+            </div>
+            < div style={{ height: 20, width: '100%' }}></div>
             <PopularDeal />
             <div style={{ height: 20, width: '100%' }}></div>
             <BookShow />
@@ -76,15 +91,6 @@ const Home = () => {
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
             <Footer />
-            {
-                /*
-
-                
-            
-            
-               
-            <BookShow />
-            
            
             
             */

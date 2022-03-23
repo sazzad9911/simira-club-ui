@@ -11,6 +11,6 @@ const Brands = (props) => {
         </Link>
 
     );
-};
+}; 
 
 export default Brands; 

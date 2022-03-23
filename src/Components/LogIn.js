@@ -43,8 +43,7 @@ const Login = (props) => {
     }
 
     return (
-        <div>
-            <Header />
+        
             <div style={{justifyContent: 'center'}} className='loginbody'>
 
                 <div className='loginbodyleft'>
@@ -82,8 +81,7 @@ const Login = (props) => {
                 </div>
                 <Alert visible={visibility} close={()=>setVisibility(!visibility)} title={data.title} message={data.message} />
             </div>
-            <Footer />
-        </div>
+            
     );
 };
 
