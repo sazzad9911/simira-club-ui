@@ -12,5 +12,51 @@
     width: auto;
     position: absolute;
     bottom: 0;
+    margin: 50px;
+    margin-left: 20%;
+
+}
+.ScarchImgText{
+    color: #F5F5F5;
+}
+.ScarchBox{
+    flex-direction: row;
+    display: flex;
+    height: 40px;
+    width: auto;
+}
+.ScarchInputBox{
+    height: 40px;
+    width: 700px;
+    display: flex;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+.ScarchSelect{
+    height: 40px;
+    width: 100px;
+    margin-left: 480px;
+    border: none;
+    outline: none;
+    background-color: #F5F5F5;
+    position: absolute;
+
+}
+.ScarchInput{
+    outline: none;
+    border: none;
+    width: 600px;
+    margin-left: 15px;
     
+    
+}
+.ScarchButton{
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    background-color: #64B657;
 }
