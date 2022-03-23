@@ -37,7 +37,7 @@ const Home = () => {
         <div className='HomeContainer'>
             <Header />
             <SliderHead />
-            <div ref={ref} className='HomeIconContainer'>
+            <div className='HomeContainer'>
                 <div className='IconButtonarrowLeft'>
                     <Button onClick={Left}>
                         <ArrowCircleLeftSharpIcon color="disabled" fontSize='large'
@@ -52,20 +52,29 @@ const Home = () => {
                             color="disabled"></ArrowCircleRightSharpIcon>
                     </Button>
                 </div>
-                <IconButton img={Hotels} title='Hotels' />
-                <IconButton img={Restaurant} title='Restaurant' />
-                <IconButton img={Games} title='Games' />
-                <IconButton img={Shopping} title='Shopping' />
-                <IconButton img={Villas} title='Villas' />
-                <IconButton img={Camping} title='Camping' />
-                <IconButton img={Spa_Salons} title='Spa & Salons' />
-                <IconButton img={Travel} title='Travel' />
+                <div ref={ref} className='HomeIconContainer'>
+                    <IconButton img={Hotels} title='Hotels' />
+                    <IconButton img={Restaurant} title='Restaurant' />
+                    <IconButton img={Games} title='Games' />
+                    <IconButton img={Shopping} title='Shopping' />
+                    <IconButton img={Villas} title='Villas' />
+                    <IconButton img={Camping} title='Camping' />
+                    <IconButton img={Spa_Salons} title='Spa & Salons' />
+                    <IconButton img={Travel} title='Travel' />
+                </div>
+
             </div>
+            <div style={{ height: 20, width: '100%' }}></div>
             <TopBrands />
+            <div style={{ height: 20, width: '100%' }}></div>
             <PopularDeal />
+            <div style={{ height: 20, width: '100%' }}></div>
             <BookShow />
+            <div style={{ height: 20, width: '100%' }}></div>
             <PopularHotels />
-            <AppOverView />
+            <div style={{ height: 20, width: '100%' }}></div>
+            
+            <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
             <Footer />
             {

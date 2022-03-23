@@ -7,3 +7,7 @@
     float: left;
     scrollbar-width: thin;
 }
+.HomeContainer{
+    width: 100%;
+    overflow: hidden;
+}

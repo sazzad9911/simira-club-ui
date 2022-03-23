@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
   overflow: hidden;
   overflow-y: scroll;
+  scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #FC444B;
+  outline: 1px solid slategrey;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FC444B;
+  border-radius: 1px;
+  width: 1px;
 }
 
 code {

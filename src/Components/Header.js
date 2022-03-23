@@ -16,7 +16,7 @@ const Header = () => {
                     <LocationOnIcon />
                     <p>Mumbai, Maharashtra</p>
                 </div>
-                <div style={{ marginRight: 100 }}>
+                <div style={{ marginRight: 50 }}>
                     <button style={{
                         borderRight: '1px solid #ffff'
                     }}>We are hiring!</button>
@@ -55,12 +55,6 @@ const Header = () => {
                         <p>Hope you are enjoying!</p>
                     </div>
                 </div>
-            </div>
-            <div className='header-bottom1'>
-
-            </div>
-            <div className='header-bottom2'>
-
             </div>
         </div>
     );
