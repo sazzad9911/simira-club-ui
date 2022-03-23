@@ -1,0 +1,16 @@
+.ScarchBody{
+    height: 200px;
+    position: relative;
+}
+.ScarchImg{
+    height: 200px;
+    width: 100%;
+    opacity: .7;
+}
+.ScarchImgDiv{
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    
+}

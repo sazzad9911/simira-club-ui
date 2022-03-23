@@ -20,6 +20,7 @@ import Contact from "./Screens/Contact";
 import BusinessWithUs from "./Screens/BusinessWithUs";
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Search from "./Screens/Search";
 
 
 function App() {
@@ -48,6 +49,8 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
+        <Route path="/Search" element={<Search/>} />
+        
       </Routes>
       <Footer />
     </Router>
