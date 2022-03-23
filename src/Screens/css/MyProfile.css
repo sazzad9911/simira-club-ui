@@ -1,0 +1,71 @@
+.MyProfileBody{
+    height: auto;
+    width: auto;
+    
+    
+}
+.MyProfileDiv{
+    height: 500px;
+    width: 450px;
+    margin: 50px;
+    border: 1px solid #D8D8D8;
+
+}
+.MyProfileBox{
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+    
+}
+.MyProfileBoxIcon{
+    border: 1px solid #D8D8D8;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.MyProfileIcon{
+    font-size: 30px;
+}
+.MyProfileInputBox{
+    height: 40px;
+    width: auto;
+    display: flex;
+    margin-left: 5px;
+    background-color: #ffffff;
+    justify-content: space-between;
+    border: none;
+}
+.MyProfileInput{
+    outline: none;
+    border: none;
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 15px;
+    border: 1px solid #D8D8D8;
+    
+    
+}
+
+.MyProfileInputEmail{
+    outline: none;
+    border: none;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 15px;
+    border: 1px solid #D8D8D8;
+    background-color: #F5F5F5;
+}
+.MyProfileBoxIconEmail{
+    border: 1px solid #D8D8D8;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #F5F5F5;
+}
