@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
+import './css/slider.css'
 
 const Slider = () => {
   const [data,setData] =useState([
@@ -23,12 +24,12 @@ const Slider = () => {
   }
 
   return (
-    <div>
+    <div> 
       <div>
         <Slide autoplay={true}>
         {
             data.map(({img})=>(
-                <img src={img} style={style}/>
+                <img key={img} src={img} className='slider'/>
             ))
         }
         </Slide>

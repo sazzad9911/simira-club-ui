@@ -13,7 +13,7 @@ const AppOverView = () => {
             </div>
             <div className='AppOverViewRightDiv'>
                 <div style={{ marginTop: '50px' }}>
-                    <text className='AppOverViewBigText'>Get The SmiraClub App</text>
+                    <h2 className='AppOverViewBigText'>Get The SmiraClub App</h2>
                     <div>
                         <p>
                             We'll send you a link that you can open on your phone to<br></br>

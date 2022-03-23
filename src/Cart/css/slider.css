@@ -1,0 +1,17 @@
+.slider{
+    width:98%;
+    height:450px;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+@media (max-width:500px) {
+    .slider{
+        height: 200px;
+    }
+}
+@media (max-width:800px) {
+    .slider{
+        height: 300px;
+    }
+    
+}

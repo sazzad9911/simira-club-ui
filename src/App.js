@@ -10,8 +10,27 @@ import {
 import Home from './Screens/Home';
 import MyProfile from './Screens/MyProfile';
 import Login from "./Components/LogIn";
+import {useDispatch} from 'react-redux'
+import {setUser} from './action'
+import React from 'react'
+import api from './api'
 
 function App() {
+  const dispatch=useDispatch()
+
+  React.useEffect(() => {
+    fetch(api()+"/checkUser").then(res =>res.json())
+    .then(data => {
+      if(data.uid){
+        dispatch(setUser(data));
+      }else{
+        console.log("no user found")
+      }
+    }).catch(err => {
+      console.log(err)
+    })
+  },[])
+  
   return (
     <Router>
       <Routes>

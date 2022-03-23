@@ -7,10 +7,11 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Link from '@mui/material/Link';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
     const width = window.innerWidth
-    const [user, setUser] = React.useState(false)
+    const user=useSelector(state=>state.User)
 
     return (
         <div className="header">
@@ -62,10 +63,12 @@ const Header = () => {
                                         <p>Hope you are enjoying!</p>
                                     </div>
                                 </>
-                            ):(
-                                <Link to="/Login">
-                                    <LogoutIcon/>
-                                    <h5>Log In</h5>
+                            ) : (
+                                <Link href="/Login">
+                                    <div style={{backgroundColor:'#ffff',width:120,height:60}}>
+                                        <LogoutIcon />
+                                        <h5>Log In</h5>
+                                    </div>
                                 </Link>
                             )
                     }
