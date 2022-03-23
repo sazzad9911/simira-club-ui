@@ -1,14 +1,15 @@
 .MyProfileBody{
     height: auto;
     width: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
     
     
 }
-    
-    
-
 .MyProfileDiv{
-    height: 500px;
+    height: auto;
     width: 450px;
     margin: 50px;
     border: 1px solid #D8D8D8;
@@ -35,20 +36,21 @@
 }
 .MyProfileInputBox{
     height: 40px;
-    width: auto;
+    width: 300px;
     display: flex;
-    margin-left: 5px;
+    margin-left: 20px;
     background-color: #ffffff;
-    justify-content: space-between;
     border: none;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
 }
 .MyProfileInput{
     outline: none;
     border: none;
-    width: 300px;
-    border-radius: 20px;
+    width: 250px;
     margin-left: 15px;
-    border: 1px solid #D8D8D8;
     
     
 }
@@ -59,7 +61,6 @@
     width: 300px;
     border-radius: 10px;
     margin-left: 15px;
-    border: 1px solid #D8D8D8;
     background-color: #F5F5F5;
 }
 .MyProfileBoxIconEmail{
@@ -72,8 +73,41 @@
     display: flex;
     background-color: #F5F5F5;
 }
+
+.MyProfileInputBoxEmail{
+    height: 40px;
+    width: 300px;
+    display: flex;
+    margin-left: 20px;
+    background-color: #F5F5F5;
+    border: none;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+}
 .MyProfileText{
     justify-content: center;
     align-items: center;
     display: flex;
+    padding: 20px;
+}
+.MyProfileTextLeftButton{
+    background-color: white;
+    border: none;
+}
+.MyProfileTextRightButton{
+    background-color: white;
+    border: none;
+    margin-left: -5px;
+    color: rgb(255, 0, 0);
+}
+.MyProfileSelect{
+    height: 40px;
+    width: 280px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    
 }
