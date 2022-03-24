@@ -1,6 +1,9 @@
 import React from 'react';
 import './css/Search.css'
 import Img from "./css/Search.PNG"
+import TopBrands from "../Components/TopBrands"
+import PopularHotels from "../Components/PopularHotels"
+import PopularDeal from "../Components/PopularDeal"
 
 function Search(props) {
     return (
@@ -10,7 +13,6 @@ function Search(props) {
             <div className='ScarchImgDiv'>
                 <div className='ScarchImgDivText'>
                     <h1 className='ScarchImgText'>Over 45 hotel & 100+ deals across 10 cities</h1>
-
                 </div>
                 <div className='ScarchBox'>
                     <div className='ScarchInputBox'>
@@ -25,6 +27,7 @@ function Search(props) {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }

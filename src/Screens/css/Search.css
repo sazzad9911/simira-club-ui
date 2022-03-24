@@ -15,11 +15,14 @@
     bottom: 0;
     margin: 50px;
     margin-left: 20%;
+    
 
 }
 .ScarchImgDivText{
     height: auto;
     width: auto;
+    margin: 25px;
+
 }
 .ScarchImgText{
     color: #F5F5F5;
@@ -32,7 +35,7 @@
 }
 .ScarchInputBox{
     height: 40px;
-    width: 700px;
+    width: 54vw;
     display: flex;
     background-color: #ffffff;
     border: none;
