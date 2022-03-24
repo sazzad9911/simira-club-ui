@@ -25,8 +25,6 @@ function Search(props) {
                     </div>
                 </div>
             </div>
-            <div>
-            </div>
         </div>
     );
 }
