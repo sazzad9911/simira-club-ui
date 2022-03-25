@@ -5,8 +5,13 @@ import Img from './Image/Careers.PNG'
 function Career() {
     return (
         <div className="CareerBody">
-            <img src={Img} className='CareerImg'/>
-            fdgfg
+            <div className="CareerBodyDiv">
+                <img src={Img} className='CareerImg' />
+                <div className="CareerImgDiv">
+                    <h1 className="CareerImgText">Careers</h1>
+                </div>
+            </div>
+            <div></div>
         </div>
     );
 }

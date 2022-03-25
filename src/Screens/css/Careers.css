@@ -1,10 +1,30 @@
-.CareerBody{
-    height: 200px;
-    width: 100%;
-    background-color: aqua;
+.CareerBody {
+    height          : auto;
+    width           : auto;
 }
-.CareerImg{
-    height: 200px;
-    width: 100%;
+
+.CareerBodyDiv {
+    height          : 200px;
+    width           : 100%;
+    background-color: aqua;
+    position        : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CareerImg {
+    height : 200px;
+    width  : 100%;
     opacity: .7;
+    
+}
+
+.CareerImgDiv {
+    height  : auto;
+    width   : auto;
+    position: absolute;
+}
+.CareerImgText{
+    color: white;
 }
