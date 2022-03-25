@@ -11,7 +11,21 @@ function Career() {
                     <h1 className="CareerImgText">Careers</h1>
                 </div>
             </div>
-            <div></div>
+            <div className="CareerBox">
+                <div className="CareerBoxDiv">
+                    <div>
+                        <div>
+                            <h2>Sale Associate</h2>
+                            <button>Permanent</button>
+                            <button>Remote</button>
+                            <button>Sales</button>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

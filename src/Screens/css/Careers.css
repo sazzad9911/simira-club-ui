@@ -28,3 +28,12 @@
 .CareerImgText{
     color: white;
 }
+.CareerBox{
+    height: auto;
+    width: auto;
+}
+.CareerBoxDiv{
+    height: auto;
+    width: auto;
+    border: 1px solid #D8D8D8;
+}
