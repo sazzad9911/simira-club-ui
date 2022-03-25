@@ -18,26 +18,6 @@ function Career() {
             button2='Remote'
             button3='Sales'
             ></Cart>
-            <Cart text='Sale Associate'
-            button1='Permanent'
-            button2='Remote'
-            button3='Sales'
-            ></Cart>
-            <Cart text='Sale Associate'
-            button1='Permanent'
-            button2='Remote'
-            button3='Sales'
-            ></Cart>
-            <Cart text='Sale Associate'
-            button1='Permanent'
-            button2='Remote'
-            button3='Sales'
-            ></Cart>
-            <Cart text='Sale Associate'
-            button1='Permanent'
-            button2='Remote'
-            button3='Sales'
-            ></Cart>
         </div>
     );
 }
