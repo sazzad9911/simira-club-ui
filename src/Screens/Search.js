@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/Search.css'
-import Img from "./css/Search.PNG"
+import Img from "./Image/Search.PNG"
 import TopBrands from "../Components/TopBrands"
 import PopularHotels from "../Components/PopularHotels"
 import PopularDeal from "../Components/PopularDeal"

@@ -21,6 +21,7 @@ import BusinessWithUs from "./Screens/BusinessWithUs";
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Search from "./Screens/Search";
+import Career from "./Screens/Careers";
 
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
         <Route path="/Search" element={<Search/>} />
-        
+        <Route path="/Career" element={<Career/>} />
       </Routes>
       <Footer />
     </Router>

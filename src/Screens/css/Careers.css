@@ -1,0 +1,10 @@
+.CareerBody{
+    height: 200px;
+    width: 100%;
+    background-color: aqua;
+}
+.CareerImg{
+    height: 200px;
+    width: 100%;
+    opacity: .7;
+}
