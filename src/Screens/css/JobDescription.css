@@ -42,6 +42,7 @@
     height: auto;
     width: 400px;
     border: 1px solid #D8D8D8;
+    border-radius: 10px;
 }
 .JobBoxDiv{
     flex-direction: row;
@@ -65,4 +66,5 @@
 }
 .JobTextP{
     opacity: .7;
+    font-size: 16px;
 }
