@@ -21,7 +21,7 @@ const TopBrands = (props) => {
     const [data, setData] = useState(null)
     React.useEffect(() => {
         postData(url + "/getData", {
-            tableName: 'brands'
+            tableName: 'brands', orderColumn:'popularity'
         }).then(data => {
             if (data.message) {
                 console.log(data.message)
