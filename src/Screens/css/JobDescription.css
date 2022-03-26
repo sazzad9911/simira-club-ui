@@ -60,3 +60,9 @@
     border: none;
     border-radius: 5px;
 }
+.JobTextBody{
+    margin-top: 50px;
+}
+.JobTextP{
+    opacity: .7;
+}
