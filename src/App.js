@@ -23,6 +23,7 @@ import Footer from './Components/Footer';
 import Search from "./Screens/Search";
 import Career from "./Screens/Careers";
 import TermsAndConditions from "./Screens/TermsAndConditions";
+//import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 function App() {
