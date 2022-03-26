@@ -1,9 +1,12 @@
-import React, { createRef } from 'react';
+import React, { createRef, useState } from 'react';
 import '../Components/css/topbrands.css';
 import Brands from '../Content/Brands';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
+
+import { Oval } from "react-loader-spinner";
+import { postData, url } from "../action";
 
 const TopBrands = (props) => {
     const ref = createRef()
@@ -14,6 +17,22 @@ const TopBrands = (props) => {
     const Right = () => {
         ref.current.scrollLeft += 60;
     }
+
+    const [data, setData] = useState(null)
+    React.useEffect(() => {
+        postData(url + "/getData", {
+            tableName: 'brands'
+        }).then(data => {
+            if (data.message) {
+                console.log(data.message)
+                return
+            }
+            setData(data)
+           // console.log(data)
+        }).catch(err => {
+            console.log(err.message)
+        })
+    }, [])
     return (
         <div className='box'>
             <div className='arrowLeft1'>
@@ -28,20 +47,27 @@ const TopBrands = (props) => {
                     <ArrowForwardIosIcon
                         fontSize='medium'
                         color="disabled"></ArrowForwardIosIcon>
-                </Button> 
+                </Button>
             </div>
             <h2>Top brands for you</h2>
             <div ref={ref} className='brandShow'>
-                <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
-                <Brands img='https://thumbs.dreamstime.com/b/s-letter-logo-luxury-design-badge-template-brand-unique-texture-letter-s-luxury-logo-204534056.jpg'></Brands>
-                <Brands img='https://images-platform.99static.com//7mE4E9xAR_l6DPwFO4Ssv30f7k0=/292x348:1212x1266/fit-in/590x590/99designs-contests-attachments/75/75211/attachment_75211913'></Brands>
-                <Brands img='https://images-platform.99static.com//7mE4E9xAR_l6DPwFO4Ssv30f7k0=/292x348:1212x1266/fit-in/590x590/99designs-contests-attachments/75/75211/attachment_75211913'></Brands>
-                <Brands img='https://thumbs.dreamstime.com/b/s-letter-logo-luxury-design-badge-template-brand-unique-texture-letter-s-luxury-logo-204534056.jpg'></Brands>
-                <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
-                <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
-                <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
-                <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
-                <Brands img='https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg'></Brands>
+                {
+                    data ? (
+                        data.map((db) => (
+                        <Brands key={db.id} img={db.image}/> 
+                        ))
+                    ) : (
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: '100%',
+                            height: '100%'
+                        }}>
+                            <Oval color="#FC444B" height={80} width={80} />
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
