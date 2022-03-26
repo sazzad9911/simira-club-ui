@@ -13,7 +13,16 @@ function JobDescription() {
                 </div>
             </div>
             <div className="JobBox">
-                <div className="JobLeftBox">sss</div>
+                <div className="JobLeftBox">
+                    <div>
+                        <h2>Sale Associate</h2>
+                        <div className="JobBoxDiv">
+                            <button className="JobBoxFirstButton">Permanent</button>
+                            <button className="JobBoxScendButton">Remote</button>
+                            <button className="JobBoxThridButton">Sales</button>
+                        </div>
+                    </div>
+                </div>
                 <div className="JobRightBox">sss</div>
             </div>
         </div>

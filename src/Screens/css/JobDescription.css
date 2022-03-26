@@ -37,10 +37,26 @@
 .JobLeftBox{
     height: auto;
     width: 60%;
-    background-color: aqua;
 }
 .JobRightBox{
     height: auto;
     width: 400px;
     border: 1px solid #D8D8D8;
+}
+.JobBoxDiv{
+    flex-direction: row;
+}
+.JobBoxFirstButton{
+    background-color: #ffffff;
+    border: none;
+    margin-left: 10px;
+}
+.JobBoxScendButton{
+    background-color: #ffffff;
+    border: none;
+}
+.JobBoxThridButton{
+    background-color: #FFE1E3;
+    border: none;
+    border-radius: 5px;
 }
