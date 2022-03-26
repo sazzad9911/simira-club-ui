@@ -1,0 +1,33 @@
+.JobBody{
+    height: auto;
+    width: auto;
+}
+.JobBodyDiv {
+    height          : 200px;
+    width           : 100%;
+    background-color: aqua;
+    position        : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.JobImg {
+    height : 200px;
+    width  : 100%;
+    opacity: .7;
+    
+}
+
+.JobImgDiv {
+    height  : auto;
+    width   : auto;
+    position: absolute;
+}
+.JobImgText{
+    color: white;
+}
+.JobBox{
+    height: auto;
+    width: auto;
+}
