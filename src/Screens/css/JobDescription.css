@@ -30,4 +30,17 @@
 .JobBox{
     height: auto;
     width: auto;
+    flex-direction: row;
+    display: flex;
+    margin: 4%;
+}
+.JobLeftBox{
+    height: auto;
+    width: 60%;
+    background-color: aqua;
+}
+.JobRightBox{
+    height: auto;
+    width: 400px;
+    border: 1px solid #D8D8D8;
 }

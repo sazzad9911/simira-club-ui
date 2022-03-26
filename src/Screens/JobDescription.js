@@ -13,8 +13,8 @@ function JobDescription() {
                 </div>
             </div>
             <div className="JobBox">
-                <div></div>
-                <div></div>
+                <div className="JobLeftBox">sss</div>
+                <div className="JobRightBox">sss</div>
             </div>
         </div>
     );
