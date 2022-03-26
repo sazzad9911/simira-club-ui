@@ -1,0 +1,13 @@
+.TermsBody{
+    height: auto;
+    width: auto;
+    margin: 4%;
+}
+.TermsPDiv{
+    height: auto;
+    width: auto;
+    margin: 10px;
+}
+.TermsP{
+    opacity: .7;
+}

@@ -22,6 +22,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Search from "./Screens/Search";
 import Career from "./Screens/Careers";
+import TermsAndConditions from "./Screens/TermsAndConditions";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
         <Route path="/Search" element={<Search/>} />
         <Route path="/Career" element={<Career/>} />
+        <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
       </Routes>
       <Footer />
     </Router>
