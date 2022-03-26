@@ -21,7 +21,7 @@ function JobDescription() {
                         <button className="JobBoxThridButton">Sales</button>
                     </div>
                     <div className="JobTextBody">
-                        <h2>About Crew</h2><br/>
+                        <p>About Crew</p><br />
                         <p className="JobTextP"> In short : Crew is Superhuman for recruiting <br /><br />
                             Recruiting used to be 100% inbound, almost exclusively done by<br />
                             recruiters, and all ATSs (Lever, Greenhouse, etc.) were built for<br />
@@ -37,22 +37,55 @@ function JobDescription() {
                             European investors.</p>
                     </div>
                     <div className="JobTextBody">
-                        <h2>What you will be doing:</h2><br/>
-                        <p className="JobTextP"> 
-                            As a business associate you will be the first Go-To-Market<br/>
-                            person in the team. A strategic position at the heart of Crew<br/>
-                            activity, and you'll have a great opportunity to work on very<br/>
-                            various topics, such as:<br/><br/>
-                            Help grow the beta waiting list<br/>
-                            Contribute to the Go-To-Market strategy and its execution<br/>
-                            (Lead generation, Sales, Content...)<br/>
-                            Carrying out data analysis and reporting to fuel fast iterations<br/>
-                            Onboard users on the App<br/>
-                            Setting up internal tools and processes to improve teams'<br/>
-                            efficiency (sales, product, care...)<br/>
-                            This list is not exhaustive as it is an agile role where you will be<br/>
-                            asked to take up responsibilities based on the company'<br/>
+                        <p>What you will be doing:</p><br />
+                        <p className="JobTextP">
+                            As a business associate you will be the first Go-To-Market<br />
+                            person in the team. A strategic position at the heart of Crew<br />
+                            activity, and you'll have a great opportunity to work on very<br />
+                            various topics, such as:<br /><br />
+                            Help grow the beta waiting list<br />
+                            Contribute to the Go-To-Market strategy and its execution<br />
+                            (Lead generation, Sales, Content...)<br />
+                            Carrying out data analysis and reporting to fuel fast iterations<br />
+                            Onboard users on the App<br />
+                            Setting up internal tools and processes to improve teams'<br />
+                            efficiency (sales, product, care...)<br />
+                            This list is not exhaustive as it is an agile role where you will be<br />
+                            asked to take up responsibilities based on the company'<br />
                             priorities.</p>
+                    </div>
+                    <div className="JobTextBody">
+                        <p>This might be for you if..</p><br />
+                        <p className="JobTextP">
+                            Education: you have a higher education degree, from a top-tier<br />
+                            business or engineering school.<br />
+                            Efficiency: you are analytical and rigorous, very focused on<br />
+                            details, and you are fond of productivity tools.<br />
+                            Adaptability: you have a strong ability to adapt, you are curious<br />
+                            and independent<br />
+                            Mindset: you have an entrepreneurial spirit, you like challenges,<br />
+                            you welcome feedback and you are willing to get better<br />
+                            everyday to reach excellence. You like to learn and surpass<br />
+                            yourself<br />
+                            Problem solver: you are pragmatic and know how to solve<br />
+                            problems quickly.<br />
+                            Language: you have an excellent level of English, as everything<br />
+                            we do at Crew is in English and our clients are internationals.<br />
+                        </p>
+                    </div>
+                    <div className="JobTextBody">
+                        <p>At Crew, you'll enjoy:</p><br />
+                        <p className="JobTextP">
+                            💰Competitive salary + stock-options.<br />
+                            🏀Strong technical culture, entrepreneurial and strong team<br />
+                            spirit<br />
+                            🌐We are a distributed/remote team - Work wherever you want<br />
+                            💻High-end Apple hardware and ergonomic accessories (Apple<br />
+                            AirPods Max🎧, Herman Miller chair💺, and a standing desk, for a<br />
+                            perfect remote office setup).<br />
+                            ✈️Quarterly team gathering somewhere in the world - Once we<br />
+                            can move freely of course.<br />
+                        </p>
                     </div>
                 </div>
                 <div className="JobRightBox">sss</div>
