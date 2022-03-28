@@ -88,7 +88,7 @@
     flex-direction: row;
 }
 .JobRightInputIcon{
-    color: rgb(254, 17, 17);
+    color: red;
     margin-top: 3px;
     margin-left: -10px;
 }
