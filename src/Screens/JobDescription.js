@@ -1,6 +1,7 @@
 import React from "react";
 import './css/JobDescription.css'
 import Img from './Image/Careers.PNG'
+import StarIcon from '@mui/icons-material/Star';
 
 
 function JobDescription() {
@@ -88,7 +89,23 @@ function JobDescription() {
                         </p>
                     </div>
                 </div>
-                <div className="JobRightBox">sss</div>
+                <div className="JobRightBox">
+                    <div className="JobRightTextDiv">
+                        <h2>Application</h2>
+                        <div className="JobRightInput">
+                            <div>
+                                <div className="JobRightInputDiv">
+                                    <p style={{opacity: .7}}>First Name.</p>
+                                    <StarIcon className="JobRightInputIcon"/>
+                                </div>
+                                <div className="JobRightInputBoxDiv">
+                                <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
+                                </div>
+                            </div>
+                            <div>kk</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

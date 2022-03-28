@@ -68,3 +68,43 @@
     opacity: .7;
     font-size: 16px;
 }
+
+.JobRightTextDiv{
+    height: auto;
+    width: auto;
+    margin: 35px;
+}
+.JobRightInput{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+.JobRightInputDiv{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.JobRightInputIcon{
+    color: red;
+    margin-top: 3px;
+    margin-left: -10px;
+}
+.JobRightInputBoxDiv{
+    height: 40px;
+    width: 150px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    border: none;
+}
+.JobRightInputBox{
+    height: 39px;
+    width: 145px;
+    margin-left: 10px;
+    border-radius: 5px; 
+    background-color: #F5F5F5;
+    border: none;
+}
