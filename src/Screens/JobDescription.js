@@ -112,13 +112,13 @@ function JobDescription() {
                                 </div>
                             </div>
                         </div>
-                        <div className="JobRightInputLeftDiv">
-                            <div className="JobRightInputDiv">
-                                <p style={{ opacity: .7 }}>First Name.</p>
+                        <div className="JobInputMobileDiv">
+                            <div className="JobInputMobileIconDiv">
+                                <p style={{ opacity: .7 }}>Mobile No.</p>
                                 <StarIcon className="JobRightInputIcon" />
                             </div>
-                            <div className="JobRightInputBoxDiv">
-                                <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
+                            <div className="JobMobileBoxDiv">
+                                <input className="JobMobileBox" type='Number' placeholder='Mobile No.' />
                             </div>
                         </div>
                     </div>
