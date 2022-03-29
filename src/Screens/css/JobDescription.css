@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .JobImg {
@@ -30,16 +31,16 @@
 .JobBox{
     height: auto;
     width: auto;
-    flex-direction: row;
     display: flex;
     margin: 4%;
+    flex-wrap: wrap;
 }
 .JobLeftBox{
     height: auto;
     width: 60%;
 }
 .JobRightBox{
-    height: auto;
+    height: 800px;
     width: 400px;
     border: 1px solid #D8D8D8;
     border-radius: 10px;
@@ -94,17 +95,64 @@
 }
 .JobRightInputBoxDiv{
     height: 40px;
-    width: 150px;
+    width: 110px;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #F5F5F5;
     border: none;
 }
 .JobRightInputBox{
     height: 39px;
-    width: 145px;
+    width: 115px;
     margin-left: 10px;
-    border-radius: 5px; 
+    border-radius: 10px; 
     background-color: #F5F5F5;
     border: none;
+    outline: none;
+}
+.JobRightInputLeftDiv{
+    height: auto;
+    width: auto;
+    
+    margin-left: 50px;
+}
+.JobInputMobileDiv{
+    height: auto;
+    width: auto;
+    margin-top: 30px;
+}
+.JobInputMobileIconDiv{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.JobMobileBoxDiv{
+    height: 40px;
+    width: 290px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    border: none;
+}
+.JobMobileBox{
+    height: 39px;
+    width: 285px;
+    margin-left: 10px;
+    border-radius: 10px; 
+    background-color: #F5F5F5;
+    border: none;
+    outline: none;
+}
+.JobBoxButtonx{
+    height: 40px;
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #FC444B;
+    background-color: white;
+}
+.JobBoxButtonP{
+    color: #FC444B;
 }

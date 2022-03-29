@@ -95,15 +95,70 @@ function JobDescription() {
                         <div className="JobRightInput">
                             <div>
                                 <div className="JobRightInputDiv">
-                                    <p style={{opacity: .7}}>First Name.</p>
-                                    <StarIcon className="JobRightInputIcon"/>
+                                    <p style={{ opacity: .7 }}>First Name.</p>
+                                    <StarIcon className="JobRightInputIcon" />
                                 </div>
                                 <div className="JobRightInputBoxDiv">
-                                <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
+                                    <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
                                 </div>
                             </div>
-                            <div>kk</div>
+                            <div className="JobRightInputLeftDiv">
+                                <div className="JobRightInputDiv">
+                                    <p style={{ opacity: .7 }}>Last Name.</p>
+                                    <StarIcon className="JobRightInputIcon" />
+                                </div>
+                                <div className="JobRightInputBoxDiv">
+                                    <input className="JobRightInputBox" type='Text' placeholder='Last name' />
+                                </div>
+                            </div>
                         </div>
+                        <div className="JobInputMobileDiv">
+                            <div className="JobInputMobileIconDiv">
+                                <p style={{ opacity: .7 }}>Mobile No.</p>
+                                <StarIcon className="JobRightInputIcon" />
+                            </div>
+                            <div className="JobMobileBoxDiv">
+                                <input className="JobMobileBox" type='Number' placeholder='Mobile No.' />
+                            </div>
+                        </div>
+                        <div className="JobInputMobileDiv">
+                            <div className="JobInputMobileIconDiv">
+                                <p style={{ opacity: .7 }}>Email</p>
+                                <StarIcon className="JobRightInputIcon" />
+                            </div>
+                            <div className="JobMobileBoxDiv">
+                                <input className="JobMobileBox" type='Email' placeholder='Email' />
+                            </div>
+                        </div>
+                        <div className="JobInputMobileDiv">
+                            <div className="JobInputMobileIconDiv">
+                                <p style={{ opacity: .7 }}>LinkedIn</p>
+                                <StarIcon className="JobRightInputIcon" />
+                            </div>
+                            <div className="JobMobileBoxDiv">
+                                <input className="JobMobileBox" type='Text' placeholder='LinkedIn' />
+                            </div>
+                        </div>
+                        <div className="JobInputMobileDiv">
+                            <div className="JobInputMobileIconDiv">
+                                <p style={{ opacity: .7 }}>Current Job</p>
+                            </div>
+                            <div className="JobMobileBoxDiv">
+                                <input className="JobMobileBox" type='Text' placeholder='Sales Executive @Zomato' />
+                            </div>
+                        </div>
+                        <div className="JobInputMobileDiv">
+                            <div className="JobInputMobileIconDiv">
+                                <p style={{ opacity: .7 }}>Tell us more about you</p>
+                            </div>
+                            <div className="JobMobileBoxDiv">
+                                <input className="JobMobileBox" type='Text' placeholder='Answer...' />
+                            </div>
+                        </div>
+
+                        <button className="JobBoxButtonx">
+                            <p className="JobBoxButtonP">Submit</p>
+                        </button>
                     </div>
                 </div>
             </div>
