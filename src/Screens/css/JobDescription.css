@@ -94,7 +94,7 @@
 }
 .JobRightInputBoxDiv{
     height: 40px;
-    width: 150px;
+    width: 110px;
     margin-left: 10px;
     border-radius: 5px;
     background-color: #F5F5F5;
@@ -102,9 +102,15 @@
 }
 .JobRightInputBox{
     height: 39px;
-    width: 145px;
+    width: 115px;
     margin-left: 10px;
     border-radius: 5px; 
     background-color: #F5F5F5;
     border: none;
+}
+.JobRightInputLeftDiv{
+    height: auto;
+    width: auto;
+    
+    margin-left: 50px;
 }

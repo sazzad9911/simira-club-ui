@@ -95,14 +95,31 @@ function JobDescription() {
                         <div className="JobRightInput">
                             <div>
                                 <div className="JobRightInputDiv">
-                                    <p style={{opacity: .7}}>First Name.</p>
-                                    <StarIcon className="JobRightInputIcon"/>
+                                    <p style={{ opacity: .7 }}>First Name.</p>
+                                    <StarIcon className="JobRightInputIcon" />
                                 </div>
                                 <div className="JobRightInputBoxDiv">
-                                <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
+                                    <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
                                 </div>
                             </div>
-                            <div>kk</div>
+                            <div className="JobRightInputLeftDiv">
+                                <div className="JobRightInputDiv">
+                                    <p style={{ opacity: .7 }}>Last Name.</p>
+                                    <StarIcon className="JobRightInputIcon" />
+                                </div>
+                                <div className="JobRightInputBoxDiv">
+                                    <input className="JobRightInputBox" type='Text' placeholder='Last name' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="JobRightInputLeftDiv">
+                            <div className="JobRightInputDiv">
+                                <p style={{ opacity: .7 }}>First Name.</p>
+                                <StarIcon className="JobRightInputIcon" />
+                            </div>
+                            <div className="JobRightInputBoxDiv">
+                                <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
+                            </div>
                         </div>
                     </div>
                 </div>
