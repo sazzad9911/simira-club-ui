@@ -24,7 +24,11 @@ import Search from "./Screens/Search";
 import Career from "./Screens/Careers";
 import TermsAndConditions from "./Screens/TermsAndConditions";
 import JobDescription from "./Screens/JobDescription";
+<<<<<<< HEAD
 import Checkout from "./Screens/Checkout"
+=======
+import ShowCaseDealBrand from "./Screens/ShowCaseDealBrand";
+>>>>>>> 45e69569432cc08b1b91f8e5fc79decadb1e4436
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
@@ -56,9 +60,13 @@ function App() {
         <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
         <Route path="/Search" element={<Search/>} />
         <Route path="/Career" element={<Career/>} />
-        <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
+        <Route path="/TermsAndConditions" element={<TermsAndConditions/>}/>
         <Route path="/JobDescription" element={<JobDescription/>} />
+<<<<<<< HEAD
         <Route path="/Checkout" element={<Checkout/>} />
+=======
+        <Route path="/ShowCaseDealBrand" element={<ShowCaseDealBrand/>}/>
+>>>>>>> 45e69569432cc08b1b91f8e5fc79decadb1e4436
         
       </Routes>
       <Footer />
