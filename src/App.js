@@ -24,6 +24,7 @@ import Search from "./Screens/Search";
 import Career from "./Screens/Careers";
 import TermsAndConditions from "./Screens/TermsAndConditions";
 import JobDescription from "./Screens/JobDescription";
+import Checkout from "./Screens/Checkout"
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route path="/Career" element={<Career/>} />
         <Route path="TermsAndConditions" element={<TermsAndConditions/>}/>
         <Route path="/JobDescription" element={<JobDescription/>} />
+        <Route path="/Checkout" element={<Checkout/>} />
         
       </Routes>
       <Footer />
