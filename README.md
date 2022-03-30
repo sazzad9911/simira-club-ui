@@ -29,25 +29,25 @@ You may also see any lint errors in the console.
 
 ### API's
 # search data
-import { postData, url } from '../action';</br>
+```js
+import { postData, url } from '../action';
 React.useEffect(() => {</br>
-        postData(url + '/searchData', {</br>
-            tableName: 'hotels',//table name you want</br>
-            searchColumn: 'name', </br>
-            searchData: SearchParam,</br>
-            orderColumn:recentSearch.shortBy,</br>
-
-        }).then(data => {</br>
-            if (Array.isArray(data)) {</br>
-                //your data is here</br>
-                return</br>
-            }</br>
-            console.log(data.message)</br>
-        }).catch(err => {</br>
-            console.log('Error: SearchHotel.js->'+ err.message)</br>
-        })</br>
-    }, [])</br>
-
+        postData(url + '/searchData', {
+            tableName: 'hotels',//table name you want
+            searchColumn: 'name', 
+            searchData: SearchParam,
+            orderColumn:recentSearch.shortBy,
+        }).then(data => {
+            if (Array.isArray(data)) {
+                //your data is here
+                return
+            }
+            console.log(data.message)
+        }).catch(err => {
+            console.log('Error: SearchHotel.js->'+ err.message)
+        })
+    }, [])
+```
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
