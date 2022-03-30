@@ -1,0 +1,52 @@
+.showcasebody1{
+    padding: 3%;
+}
+.cartBottom41 {
+    display: flex;
+}
+.headline1{
+    font-size: 37px;
+    font-weight: 600;
+}
+.hr1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #D8D8D8;
+}
+.text21{
+    font-size: 20px;
+    font-weight: 500;
+    color: #808080;
+}
+.buttonView1{
+    height: 30px;
+    width: 120px;
+    border: 1px solid red;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.buttonView1 p{
+    margin: 0px;
+    font-size: 12px;
+    color: red;
+}
+
+.img41 {
+    height: 150px;
+    width: 150px;
+    border-radius: 90px;
+}
+
+.cartButtomLeft41 {
+    height: 70px;
+}
+
+.cartButtomRight41 {
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+.appoverview{
+    margin-top: 30px;
+}
