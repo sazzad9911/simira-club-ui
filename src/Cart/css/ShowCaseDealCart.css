@@ -1,0 +1,24 @@
+.mainbody{
+    height: 100%;
+    width: 99%;
+    background-color: aqua;
+    border: 1px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+}
+.img61{
+    height: 120px;
+    width: 120px;
+    border-radius: 80px; 
+}
+.headText{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    margin-top: 20px;
+}
