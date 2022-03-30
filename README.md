@@ -27,11 +27,27 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+### API's
+# search data
+```js
+import { postData, url } from '../action';
+React.useEffect(() => {</br>
+        postData(url + '/searchData', {
+            tableName: 'hotels',//table name you want
+            searchColumn: 'name', 
+            searchData: SearchParam,
+            orderColumn:recentSearch.shortBy,
+        }).then(data => {
+            if (Array.isArray(data)) {
+                //your data is here
+                return
+            }
+            console.log(data.message)
+        }).catch(err => {
+            console.log('Error: SearchHotel.js->'+ err.message)
+        })
+    }, [])
+```
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
