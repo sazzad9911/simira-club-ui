@@ -36,7 +36,6 @@ const ShowCaseDealBrand = (props) => {
             <div className='Home-topBrand1'>
                 <TopBrands headText='Try other top brands'/>
             </div>
-            <AppOverView/>
         </div>
     );
 };
