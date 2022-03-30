@@ -36,6 +36,7 @@ function Checkout() {
             <div className="CheckoutRightBody">
                 <h1>2999</h1>
                 <p>/2 years</p>
+                <p>/2 years</p>
             </div>
         </div>
     );
