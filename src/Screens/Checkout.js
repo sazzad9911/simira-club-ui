@@ -33,7 +33,10 @@ function Checkout() {
                     </div>
                 </div>
             </div>
-            <div className="CheckoutRightBody">fgghg</div>
+            <div className="CheckoutRightBody">
+                <h1>2999</h1>
+                <p>/2 years</p>
+            </div>
         </div>
     );
 }

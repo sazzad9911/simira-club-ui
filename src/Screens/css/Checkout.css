@@ -12,7 +12,10 @@
 .CheckoutRightBody{
     height: auto;
     width: 450px;
-    background-color: aqua;
+    border: 1.5px solid #D8D8D8;
+    border-radius: 15px;
+    margin-top: 80px;
+    display: flex;
 }
 .CheckoutLeftP{
     color: #FC444B;
