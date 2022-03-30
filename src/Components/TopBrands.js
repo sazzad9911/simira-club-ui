@@ -49,7 +49,7 @@ const TopBrands = (props) => {
                         color="disabled"></ArrowForwardIosIcon>
                 </Button>
             </div>
-            <h2>Top brands for you</h2>
+            <h2>{props.headText}</h2>
             <div ref={ref} className='brandShow'>
                 {
                     data ? (

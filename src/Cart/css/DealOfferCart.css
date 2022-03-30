@@ -1,0 +1,67 @@
+
+.cartBottom6 {
+    display: flex;
+}
+.headline6{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.hr6{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #D8D8D8;
+}
+.text2{
+    font-size: 15px;
+    font-weight: 500;
+    color: #808080;
+    margin-top: 0px;
+    
+}
+.headlineView{
+    display: flex;
+    align-items: center;
+}
+.buttonView6{
+    display: flex;
+    align-items: center;
+}
+.button6{
+    height: 30px;
+    width: 80px;
+    border-radius: 15px;
+    background-color: #FC444B;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.DealCartIcon{
+    color: #64B657;
+    height: 10px;
+    width: 10px;
+}
+.bottomText{
+    font-size: 12px;
+    font-weight: 400;
+    color: #808080;
+}
+.button6 p{
+    font-size: 12px;
+    font-weight: 500;
+    color:white;
+}
+
+.img6 {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+.cartButtomLeft6 {
+    height: 70px;
+}
+
+.cartButtomRight6 {
+    margin-left: 30px;
+}

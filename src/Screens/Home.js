@@ -67,7 +67,7 @@ const Home = () => {
             </div>
             
             <div className='Home-topBrand'>
-                <TopBrands />
+                <TopBrands headText='Top Brands For You'/>
             </div>
             <div style={{ height: 20, width: '100%' }}></div>
             <PopularDeal />

@@ -1,6 +1,9 @@
 import React from 'react';
 import '../Screens/css/showcasedealbrand.css'
 import Button from '@mui/material/Button';
+import Dealoffercart from '../Cart/DealOfferCart';
+import TopBrands from '../Components/TopBrands';
+import AppOverView from '../Cart/AppOverView';
 
 const ShowCaseDealBrand = (props) => {
     return (
@@ -20,6 +23,20 @@ const ShowCaseDealBrand = (props) => {
                 </div>
             </div>
             <div className='hr'></div>
+            <Dealoffercart />
+            <Dealoffercart />
+            <Dealoffercart />
+            <div className='pageSlide'>
+                <Button variant="text" >1</Button>
+                <Button variant="text" >2</Button>
+                <Button variant="text" >3</Button>
+                <Button variant="text" >4</Button>
+            </div>
+            <div className='hr'></div>
+            <div className='Home-topBrand1'>
+                <TopBrands headText='Try other top brands'/>
+            </div>
+            <AppOverView/>
         </div>
     );
 };
