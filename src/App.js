@@ -27,6 +27,7 @@ import JobDescription from "./Screens/JobDescription";
 import Checkout from "./Screens/Checkout"
 import ShowCaseDealBrand from "./Screens/ShowCaseDealBrand";
 import ShowCaseCategory from "./Screens/ShowCaseCategory";
+import ShowCaseDeal from "./Screens/ShowCaseDeal";
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
@@ -63,6 +64,8 @@ function App() {
         <Route path="/Checkout" element={<Checkout/>} />
         <Route path="/ShowCaseDealBrand" element={<ShowCaseDealBrand/>}/>
         <Route path="/ShowCaseCategory" element={<ShowCaseCategory/>}/>
+        <Route path="/ShowCaseDeal" element={<ShowCaseDeal/>}/>
+
       </Routes>
       <Footer />
     </Router>
