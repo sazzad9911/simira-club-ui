@@ -1,0 +1,52 @@
+.CheckoutBody{
+    height: auto;
+    width: auto;
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+.CheckoutLeftBOX{
+    height: auto;
+    width: 650px;
+}
+.CheckoutRightBody{
+    height: auto;
+    width: 450px;
+    background-color: aqua;
+}
+.CheckoutLeftP{
+    color: #FC444B;
+}
+.CheckoutLeftH2{
+    margin-top: 30px;
+}
+.CheckoutLeftBDiv{
+    display: flex;
+    margin-top: 30px;
+}
+.CheckoutLeftBDivH2{
+    opacity: .7;
+}
+.CheckoutLeftButton{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    border-color: #D8D8D8;
+}
+.CheckoutLeftButtonDiv{
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    background-color: #FC444B;
+}
+.CheckoutLeftIBox{
+    height: auto;
+    width: 400px;
+    border: 1.5px solid #D8D8D8;
+    border-radius: 15px;
+}
+.CheckoutLeftIDiv{
+    margin: 20px;
+}
