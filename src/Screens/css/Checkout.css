@@ -48,5 +48,13 @@
     border-radius: 15px;
 }
 .CheckoutLeftIDiv{
-    margin: 20px;
+    margin: 50px;
+}
+.CheckoutLeftInput{
+    height: 40px;
+    width: 300px;
+    display: flex;
+    background-color: #F5F5F5;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
 }

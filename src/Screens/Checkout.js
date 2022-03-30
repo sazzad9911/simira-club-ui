@@ -26,8 +26,10 @@ function Checkout() {
                 </div>
                 <div className="CheckoutLeftIBox">
                     <div className="CheckoutLeftIDiv">
-                        <p>Card number</p>
-                        <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
+                        <p className="CheckoutLeftBDivH2">Card number</p>
+                        <input className="CheckoutLeftInput" type='Text' placeholder='00000' />
+                        <p className="CheckoutLeftBDivH2">Expiry date</p>
+                        <input className="CheckoutLeftInput" type='Text' placeholder='MM/YY' />
                     </div>
                 </div>
             </div>
