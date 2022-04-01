@@ -8,7 +8,10 @@ function Checkout() {
             <div className="CheckoutLeftBOX">
                 <h1>Start your 30-day trial now!</h1>
                 <p>We won't charge you today. Your payment</p>
-                <p>day will be on<p className="CheckoutLeftP">April 5, 2022</p></p>
+                <div style={{ display: 'flex',}}>
+                    <p>day will be on</p>
+                    <p className="CheckoutLeftP">April 5, 2022</p>
+                </div>
                 <h2 className="CheckoutLeftH2">Payment Method</h2>
                 <div className="CheckoutLeftH2">
                     <div className="CheckoutLeftBDiv">

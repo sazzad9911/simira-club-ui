@@ -19,6 +19,7 @@
 }
 .CheckoutLeftP{
     color: #FC444B;
+    margin-left: -5px;
 }
 .CheckoutLeftH2{
     margin-top: 30px;
@@ -47,6 +48,7 @@
 .CheckoutLeftIBox{
     height: auto;
     width: 400px;
+    margin-top: 30px;
     border: 1.5px solid #D8D8D8;
     border-radius: 15px;
 }
