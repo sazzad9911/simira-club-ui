@@ -4,7 +4,12 @@ import ShowCaseDealCart from '../Cart/ShowCaseDealCart';
 
 const ShowCaseDeal = () => {
     return (
-        <div>
+        <div style={{
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+            marginTop:'20px'
+        }}>
             <ShowCaseDealCart/>
         </div>
     );
