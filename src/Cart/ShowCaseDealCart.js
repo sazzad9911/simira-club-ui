@@ -16,13 +16,16 @@ const ShowCaseDealCart = () => {
                 <div className='offercode'>
                     <p>SMP275</p>
                 </div>
-                <Button >
+                <Button style={{
+                    outline:false
+
+            }}>
                     <div className='offercodebutton'>
                         <p style={{ color: 'red' }}>COPY CODE</p>
                     </div>
                 </Button>
             </div>
-            <div style={{marginLeft:'20px'}}>
+            <div style={{ marginLeft: '20px' }}>
                 <h4>Terms and Conditions</h4>
                 <p>
                     We are happy to serve you special offers with the following terms and conditions:<br></br>
