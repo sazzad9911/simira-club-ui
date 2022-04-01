@@ -8,7 +8,7 @@ function Checkout() {
             <div className="CheckoutLeftBOX">
                 <h1>Start your 30-day trial now!</h1>
                 <p>We won't charge you today. Your payment</p>
-                <div style={{ display: 'flex',}}>
+                <div style={{ display: 'flex', }}>
                     <p>day will be on</p>
                     <p className="CheckoutLeftP">April 5, 2022</p>
                 </div>
@@ -30,9 +30,23 @@ function Checkout() {
                 <div className="CheckoutLeftIBox">
                     <div className="CheckoutLeftIDiv">
                         <p className="CheckoutLeftBDivH2">Card number</p>
-                        <input className="CheckoutLeftInput" type='Text' placeholder='00000' />
-                        <p className="CheckoutLeftBDivH2">Expiry date</p>
-                        <input className="CheckoutLeftInput" type='Text' placeholder='MM/YY' />
+                        <div className="CheckoutLeftInput">
+                            <input className="CheckoutLeftInputBox" type='Text' placeholder='0000 &nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;&nbsp; 0000' />
+                        </div>
+                        <div style={{ display: 'flex', }}>
+                            <div>
+                                <p className="CheckoutLeftBDivH2">Expiry date</p>
+                                <div className="CheckoutLeftInputDiv">
+                                    <input className="CheckoutLeftInputD" type='Text' placeholder='MM/YY' />
+                                </div>
+                            </div>
+                            <div style={{marginLeft:'20px'}}>
+                                <p className="CheckoutLeftBDivH2">CVV</p>
+                                <div className="CheckoutLeftInputLastDiv">
+                                    <input className="CheckoutLeftInputLastD" type='Text' placeholder='...' />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

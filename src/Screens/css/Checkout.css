@@ -62,4 +62,53 @@
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
     border-radius: 20px;
+    align-items: center;
+}
+.CheckoutLeftInputBox{
+    height: 35px;
+    width: 2800px;
+    margin-left: 20px;
+    display: flex;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+.CheckoutLeftInputDiv{
+    height: 40px;
+    width: 180px;
+    display: flex;
+    background-color: #F5F5F5;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    align-items: center;
+}
+.CheckoutLeftInputD{
+    height: 35px;
+    width: 156px;
+    margin-left: 20px;
+    display: flex;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+.CheckoutLeftInputLastDiv{
+    height: 40px;
+    width: 80px;
+    display: flex;
+    background-color: #F5F5F5;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    align-items: center;
+}
+.CheckoutLeftInputLastD{
+    height: 35px;
+    width: 50px;
+    margin-left: 20px;
+    display: flex;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    outline: none;
+    border: none;
 }
