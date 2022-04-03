@@ -40,7 +40,7 @@ function Checkout() {
                                     <input className="CheckoutLeftInputD" type='Text' placeholder='MM/YY' />
                                 </div>
                             </div>
-                            <div style={{marginLeft:'20px'}}>
+                            <div style={{ marginLeft: '20px' }}>
                                 <p className="CheckoutLeftBDivH2">CVV</p>
                                 <div className="CheckoutLeftInputLastDiv">
                                     <input className="CheckoutLeftInputLastD" type='Text' placeholder='...' />
@@ -51,10 +51,14 @@ function Checkout() {
                 </div>
             </div>
             <div className="CheckoutRightBody">
-                <h1>2999</h1>
-                <p>/2 years</p>
+                <div style={{ display: 'flex' }}>
+                    <h1>2999</h1>
+                    <p>/2 years</p>
+                </div>
+                <div className="CheckoutRightLine" />
+                <div></div>
             </div>
-            <div className="CheckoutRightLine"/>
+
         </div>
     );
 }
