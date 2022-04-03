@@ -117,7 +117,8 @@
 
 
 .CheckoutRightLine{
-    height: 2opx;
-    width: 50px;
+    height: 2px;
+    width: 300px;
     background-color: #FC444B;
+    margin-left: 17%;
 }

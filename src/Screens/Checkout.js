@@ -51,12 +51,14 @@ function Checkout() {
                 </div>
             </div>
             <div className="CheckoutRightBody">
-                <div style={{ display: 'flex' }}>
-                    <h1>2999</h1>
-                    <p>/2 years</p>
+                <div style={{ display: 'flex', }}>
+                    <h1 style={{ marginLeft: '40px'}}> ₹2999</h1>
+                    <p style={{marginTop: '40px',marginLeft: '0px'}}>/2 years</p>
                 </div>
                 <div className="CheckoutRightLine" />
-                <div></div>
+                <div>
+                    
+                </div>
             </div>
 
         </div>
