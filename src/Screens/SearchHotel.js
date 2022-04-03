@@ -24,9 +24,9 @@ const SearchHotel = (props) => {
                     display: 'flex'
                 }}>
                     <div style={{
-                        border: '1px solid #D8D8D8',
-                        height: '93%',
-                        width: '0px',
+                        backgroundColor: '#D8D8D8',
+                        height: '94%',
+                        width: '1.5px',
                         margin: '30px'
                     }}>
 
@@ -55,7 +55,8 @@ const SearchHotel = (props) => {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                marginBottom: '20px'
             }}>
                 <Link href="#" underline="none" color="inherit">
                     <p>1</p>
@@ -71,7 +72,7 @@ const SearchHotel = (props) => {
                 </Link>
             </div>
             <AppOverView />
-            <OptionLand/>
+            <OptionLand />
         </div>
     );
 };

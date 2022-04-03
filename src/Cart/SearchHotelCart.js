@@ -23,9 +23,10 @@ const SearchHotelCart = (props) => {
                 </div>
             </div>
             <div style={{
-                border: '1px solid #D8D8D8',
+                border: 'none',
+                backgroundColor:'#D8D8D8',
                 display: 'flex',
-                height: '0px',
+                height: '1.5px',
                 width: '98%',
                 marginTop: '20px',
                 marginBottom: '20px'
