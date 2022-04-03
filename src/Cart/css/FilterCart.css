@@ -1,0 +1,21 @@
+.FilterCartBody{
+    height: auto;
+    width: auto;
+}
+.FilterCartButton{
+    outline: none;
+    border: none;
+    color:  #FC444B;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    background-color: rgb(255, 255, 255);
+    
+}
+.FilterCartDivLine{
+    height: 1.5px;
+    width: 130px;
+    margin-left: 15px;
+    background-color: #D8D8D8;
+    
+}
