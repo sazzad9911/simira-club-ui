@@ -3,9 +3,7 @@ import React from 'react';
 
 const SearchHotelCart = (props) => {
     return (
-        <div style={{
-            width: '100%',
-        }}>
+        <div >
             <div style={{
                 display: 'flex',
             }}>
@@ -29,7 +27,8 @@ const SearchHotelCart = (props) => {
                 display: 'flex',
                 height: '0px',
                 width: '98%',
-                marginTop:'20px'
+                marginTop: '20px',
+                marginBottom: '20px'
             }}>
 
             </div>
