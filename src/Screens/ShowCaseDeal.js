@@ -16,9 +16,9 @@ const ShowCaseDeal = () => {
             }}>
                 <ShowCaseDealCart />
             </div>
-<TopBrands/>
-<AppOverView/>
-<OptionLand/>
+            <TopBrands />
+            <AppOverView />
+            <OptionLand />
         </div>
     );
 };
