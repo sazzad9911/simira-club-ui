@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Cart/css/FilterCart.css'
+import StarIcon from '@mui/icons-material/Star';
 
 const FilterCart = (props) => {
     return (
@@ -19,7 +20,29 @@ const FilterCart = (props) => {
             <div className='FilterCartDivLine' />
             <p>Ratings</p>
             <div style={{ display: 'flex' }}>
-
+            <StarIcon style={{color:'#64B657'}}/>
+            <StarIcon style={{color:'#64B657'}}/>
+            <StarIcon style={{color:'#64B657'}}/>
+            <StarIcon style={{color:'#64B657'}}/>
+            <StarIcon style={{color:'#64B657'}}/>
+            </div>
+            <div style={{ display: 'flex',marginTop:'10px' }}>
+            <StarIcon style={{color:'#B2DBAC'}}/>
+            <StarIcon style={{color:'#B2DBAC'}}/>
+            <StarIcon style={{color:'#B2DBAC'}}/>
+            <StarIcon style={{color:'#B2DBAC'}}/>
+            </div>
+            <div style={{ display: 'flex',marginTop:'10px' }}>
+            <StarIcon style={{color:'#D7FB73'}}/>
+            <StarIcon style={{color:'#D7FB73'}}/>
+            <StarIcon style={{color:'#D7FB73'}}/>
+            </div>
+            <div style={{ display: 'flex',marginTop:'10px' }}>
+            <StarIcon style={{color:'#FBDD73'}}/>
+            <StarIcon style={{color:'#FBDD73'}}/>
+            </div>
+            <div style={{ display: 'flex',marginTop:'10px' }}>
+            <StarIcon style={{color:'#E47768'}}/>
             </div>
         </div>
     );
