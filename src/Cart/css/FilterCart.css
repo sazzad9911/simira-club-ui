@@ -12,3 +12,10 @@
     background-color: rgb(255, 255, 255);
     
 }
+.FilterCartDivLine{
+    height: 1.5px;
+    width: 130px;
+    margin-left: 15px;
+    background-color: #D8D8D8;
+    
+}
