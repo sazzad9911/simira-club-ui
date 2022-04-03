@@ -1,5 +1,6 @@
 import React from "react";
 import './css/Checkout.css'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 function Checkout() {
@@ -49,15 +50,43 @@ function Checkout() {
                         </div>
                     </div>
                 </div>
+                <div className="CheckoutLeftInputPromo">
+                    <input className="CheckoutLeftInputBoxPromo" type='Text' placeholder='Promocode' />
+                </div>
             </div>
+
+
+
             <div className="CheckoutRightBody">
                 <div style={{ display: 'flex', }}>
-                    <h1 style={{ marginLeft: '40px'}}> ₹2999</h1>
-                    <p style={{marginTop: '40px',marginLeft: '0px'}}>/2 years</p>
+                    <h1 style={{ marginLeft: '40px' }}> ₹2999</h1>
+                    <p style={{ marginTop: '40px', marginLeft: '0px' }}>/2 years</p>
                 </div>
                 <div className="CheckoutRightLine" />
-                <div>
-                    
+                <div style={{ width: '10px', height: '50px' }} />
+                <div style={{ marginLeft: '40px', display: 'flex', }}>
+                    <CheckCircleIcon style={{ color: 'red', }} />
+                    <p style={{ color: '#585858', marginTop: '5px' }}>Stays upto 40 nights</p>
+                </div>
+                <div style={{ marginLeft: '40px', display: 'flex', }}>
+                    <CheckCircleIcon style={{ color: 'red', }} />
+                    <p style={{ color: '#585858', marginTop: '5px' }}>Valid on any 5 hotels</p>
+                </div>
+                <div style={{ marginLeft: '40px', display: 'flex', }}>
+                    <CheckCircleIcon style={{ color: 'red', }} />
+                    <p style={{ color: '#585858', marginTop: '5px' }}>Family access upto 3 accounts</p>
+                </div>
+                <div style={{ marginLeft: '40px', display: 'flex', }}>
+                    <CheckCircleIcon style={{ color: 'red', }} />
+                    <p style={{ color: '#585858', marginTop: '5px' }}>10 days prior to reservetion</p>
+                </div>
+                <div style={{ marginLeft: '40px', display: 'flex', }}>
+                    <CheckCircleIcon style={{ color: 'red', }} />
+                    <p style={{ color: '#585858', marginTop: '5px' }}>Weekends booking</p>
+                </div>
+                <div style={{ marginLeft: '40px', display: 'flex', }}>
+                    <CheckCircleIcon style={{ color: 'red', }} />
+                    <p style={{ color: '#585858', marginTop: '5px' }}>Peak days booking</p>
                 </div>
             </div>
 
