@@ -19,3 +19,66 @@
     background-color: #D8D8D8;
     
 }
+.FilterCartButtonPopu{
+    outline: none;
+    height: 25px;
+    width: 100px;
+    border: 1px solid #FC444B;
+    border-radius: 20px;
+    color:  #FC444B;
+    margin-top: 5px;
+    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.FilterCartButtonRat{
+    outline: none;
+    height: 25px;
+    width: 65px;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    color:   #585858;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.FilterCartButtonAme{
+    height: 25px;
+    width: 80px;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    color:   #585858;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.FilterCartButtonDel{
+    outline: none;
+    height: 25px;
+    width: 75px;
+    border: 1px solid #FC444B;
+    border-radius: 20px;
+    color:  #FC444B;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.FilterCartButtonVil{
+    height: 25px;
+    width: 60px;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    color:   #585858;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.FilterCartButtonFarm{
+    height: 25px;
+    width: 100px;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    color:   #585858;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+}
