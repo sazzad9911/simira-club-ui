@@ -23,7 +23,6 @@ function Search(props) {
                             <option value="audi">Deals</option>
                         </select>
                         <button className='ScarchButton'>Search</button>
-
                     </div>
                 </div>
             </div>
