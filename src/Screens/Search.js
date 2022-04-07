@@ -1,14 +1,17 @@
-import React from 'react';
+import React,{useRef,useState} from 'react';
 import './css/Search.css'
 import Img from "./Image/Search.PNG"
+import Link from '@mui/material/Link';
 import TopBrands from "../Components/TopBrands"
 import PopularHotels from "../Components/PopularHotels"
 import PopularDeal from "../Components/PopularDeal"
 
 function Search(props) {
+    const [Select,setSelect]=useState('Hotel');
+
     return (
         <div className='ScarchBody'>
-            <img src={Img} className='ScarchImg'/>
+            <img src={Img} className='ScarchImg' />
 
             <div className='ScarchImgDiv'>
                 <div className='ScarchImgDivText'>
@@ -18,15 +21,17 @@ function Search(props) {
                     <div className='ScarchInputBox'>
                         <input className='ScarchInput' type='text'
                             placeholder='Search by hotel,deal,restaurant' />
-                        <select className='ScarchSelect'>
-                            <option value="opel">Hotel</option>
-                            <option value="audi">Deals</option>
+                        <select onChange={setSelect}  className='ScarchSelect'>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Deal">Deals</option>
                         </select>
-                        <button className='ScarchButton'>Search</button>
+                        <Link href={Select=='Hotel'?'/SearchHotel':'#'} underline='none' color='inherit'>
+                            <button className='ScarchButton'>Search</button>
+                        </Link>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     );
 }

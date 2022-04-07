@@ -36,7 +36,7 @@ function Cart(props) {
                         <button className="CareerBoxThridButton">{props.button3}</button>
                     </div>
                     <div className="CareerBoxLeftDiv">
-                    <Link href="/"><ArrowForwardIosIcon /></Link>
+                    <Link href="/JobDescription"><ArrowForwardIosIcon /></Link>
                     </div>
                 </div>
             </div>

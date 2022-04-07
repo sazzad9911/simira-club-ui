@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { pink } from '@mui/material/colors';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Link from '@mui/material/Link';
 
 const Dealoffercart = (props) => {
     return (
@@ -26,11 +27,11 @@ const Dealoffercart = (props) => {
                     </div>
                     <p className='text2'>Ovenstory</p>
                     <div className='buttonView6'>
-                        <Button variant="text" >
+                        <Link href='/ShowCaseDeal' color='inherit' underline='none' >
                             <div className='button6'>
                                 <p>VIEW</p>
                             </div>
-                        </Button>
+                        </Link>
                         <AcUnitIcon className='DealCartIcon' fontSize='small' />
                         <p className='bottomText'>Free for Members</p>
                     </div>

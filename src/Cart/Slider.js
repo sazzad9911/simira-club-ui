@@ -28,13 +28,15 @@ const Slider = () => {
         marginLeft: '1%',
         borderRadius: '10px',
     }
-
+    const properties = {
+        
+      };
     return (
         <div className="slider-container">
 
             {
                 data ? (
-                    <Slide autoplay={true}>
+                    <Slide {...properties} autoplay={true}>
                         {
                             data.map((d) => (
                                 <img key={d.id} src={d.image} className='slider' />

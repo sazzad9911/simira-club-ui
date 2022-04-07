@@ -21,49 +21,61 @@ const Header = () => {
                     <p>Mumbai, Maharashtra</p>
                 </div>
                 <div style={{ marginRight: 50 }}>
-                    <button style={{
-                        borderRight: '1px solid #ffff'
-                    }}>We are hiring!</button>
+                    <Link href='/Career' underline='none' color='inherit'>
+                        <button style={{
+                            borderRight: '1px solid #ffff'
+                        }}>We are hiring!</button>
+                    </Link>
                     <button style={{
                         borderRight: '1px solid #ffff'
                     }}>How to use</button>
-                    <button>Talk to us</button>
+                    <Link href='/Contact' underline='none' color='inherit'>
+                        <button>Talk to us</button>
+                    </Link>
                 </div>
             </div>
             <div className="header-bottom">
-                <img src={Icon} />
-                <div className='searchContainer' style={{ marginRight: 50 }}>
-                    <input type="text" placeholder="Search" />
-                    <SearchIcon />
-                </div>
+                <Link href='/' color={'inherit'} underline='none'>
+                    <img src={Icon} />
+                </Link>
+                <Link href='/Search' underline='none' color="inherit">
+                    <div className='searchContainer' style={{ marginRight: 50 }}>
+                        <input type="text" placeholder="Search" />
+                        <SearchIcon />
+                    </div>
+                </Link>
                 <div style={{ marginRight: 50, }}>
                     <img style={{
                         width: 35,
                         height: 35
                     }} src={member} />
-                    <div className='header-box'>
-                        <h5>Became a Member</h5>
-                        <p>Save more on Top Brands</p>
-                    </div>
+                    <Link href='/SignUp' color="inherit" underline='none'>
+                        <div className='header-box'>
+                            <h5>Became a Member</h5>
+                            <p>Save more on Top Brands</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='divider'></div>
-                <div style={{ marginRight: 50, }}>
-                    <img style={{
-                        width: 35,
-                        height: 35
-                    }} src={business} />
-                    <div className='header-box'>
-                        <h5>Business with us</h5>
-                        <p>List your deal and property</p>
+                <Link href='/BusinessWithUs' underline='none' color='inherit'>
+                    <div style={{ marginRight: 50, cursor: 'pointer' }}>
+                        <img style={{
+                            width: 35,
+                            height: 35
+                        }} src={business} />
+                        <div className='header-box'>
+                            <h5>Business with us</h5>
+                            <p>List your deal and property</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className='divider'></div>
                 <div style={{ marginRight: 50 }}>
                     {
                         user ?
                             (
                                 <Link href="/Profile" underline='none'>
-                                    <div style={{display:'flex'}}>
+                                    <div style={{ display: 'flex' }}>
                                         <img src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg" />
                                         <div className='header-box'>
                                             <h5>Welcome, Bithi </h5>

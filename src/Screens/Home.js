@@ -24,6 +24,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 import './css/Home.css'
+import Link from '@mui/material/Link';
 
 
 const Home = () => {
@@ -61,13 +62,13 @@ const Home = () => {
                     <IconButton img={Camping} title='Camping' />
                     <IconButton img={Spa_Salons} title='Spa & Salons' />
                     <IconButton img={Travel} title='Travel' />
-                    <IconButton img={Health} title='Health'/>
-                    <IconButton img={Services} title='Services'/>
+                    <IconButton img={Health} title='Health' />
+                    <IconButton img={Services} title='Services' />
                 </div>
             </div>
-            
+
             <div className='Home-topBrand'>
-                <TopBrands headText='Top Brands For You'/>
+                <TopBrands headText='Top Brands For You' />
             </div>
             <div style={{ height: 20, width: '100%' }}></div>
             <PopularDeal />

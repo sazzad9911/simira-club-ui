@@ -9,7 +9,7 @@ import '../Screens/css/signup.css'
 const SignUp = () => {
     return (
         <div>
-            <Header />
+   
             <div className='loginbody1'>
 
                 <div className='loginbodyleft1'>
@@ -50,7 +50,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+        
         </div>
     );
 };

@@ -6,6 +6,7 @@ import NetworkWifi3BarIcon from '@mui/icons-material/NetworkWifi3Bar';
 import TvIcon from '@mui/icons-material/Tv';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import Link from '@mui/material/Link';
 
 const SearchHotelCart = (props) => {
     return (
@@ -19,12 +20,12 @@ const SearchHotelCart = (props) => {
                         width: '350px',
                         borderRadius: '15px',
                     }} src="https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt="img1" />
-                    
+
                 </div>
                 <div style={{
                     height: '250px',
                     width: '210px',
-                    marginLeft:'20px'
+                    marginLeft: '20px'
                 }}>
                     <h3 style={{
                         marginBottom: '3px'
@@ -103,35 +104,38 @@ const SearchHotelCart = (props) => {
                         marginTop: '20px',
                     }}>
                         <div>
-                            <Button style={{
-                                background: '#FC444B',
-                                padding: '0px',
-                                borderRadius: '20px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                height: '30px',
-                                width: '40px',
-                                padding: '3px'
-                            }}>
-                                <p style={{
-                                    color: 'white',
-                                    fontSize: '12px'
-                                }}>VIEW
-                                </p>
-                            </Button>
+                            <Link href='/ShowcaseHotel' underline='none' color='inherit'>
+                                <Button style={{
+                                    background: '#FC444B',
+                                    padding: '0px',
+                                    borderRadius: '20px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    height: '30px',
+                                    width: '40px',
+                                    padding: '3px'
+                                }}>
+                                    <p style={{
+                                        color: 'white',
+                                        fontSize: '12px'
+                                    }}>VIEW
+                                    </p>
+                                </Button>
+                            </Link>
+
                         </div>
                         <div style={{
-                          marginLeft:'5px',
-                          marginRight:'5px'
+                            marginLeft: '5px',
+                            marginRight: '5px'
                         }}>
-                            <AutoFixHighIcon style={{ color: '#64B657' }} sx={{ fontSize: 20, }}/>
+                            <AutoFixHighIcon style={{ color: '#64B657' }} sx={{ fontSize: 20, }} />
                         </div>
                         <div>
                             <p style={{
-                                color:'#808080',
-                                fontSize:'12px',
-                                margin:'0px'
+                                color: '#808080',
+                                fontSize: '12px',
+                                margin: '0px'
                             }}>Free for Members</p>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ import '../Screens/css/BusinessWithUs.css'
 const BusinessWithUs = () => {
     return (
         <div>
-            <Header />
+          
             <div className='loginbody3'>
 
                 <div className='loginbodyleft3'>
@@ -47,7 +47,7 @@ const BusinessWithUs = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+        
         </div>
     );
 };

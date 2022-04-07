@@ -9,7 +9,7 @@ import '../Screens/css/contact.css'
 const Contact = () => {
     return (
         <div>
-            <Header />
+          
             <div className='loginbody2'>
 
                 <div className='loginbodyleft2'>
@@ -47,7 +47,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };
