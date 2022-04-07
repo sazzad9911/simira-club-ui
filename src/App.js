@@ -29,6 +29,7 @@ import ShowCaseDealBrand from "./Screens/ShowCaseDealBrand";
 import ShowCaseCategory from "./Screens/ShowCaseCategory";
 import ShowCaseDeal from "./Screens/ShowCaseDeal";
 import SearchHotel from "./Screens/SearchHotel";
+import ShowcaseHotel from "./Screens/ShowcaseHotel"
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
@@ -67,6 +68,7 @@ function App() {
         <Route path="/ShowCaseCategory" element={<ShowCaseCategory/>}/>
         <Route path="/ShowCaseDeal" element={<ShowCaseDeal/>}/>
         <Route path="/SearchHotel" element={<SearchHotel/>}/>
+        <Route path="/ShowcaseHotel" element={<ShowcaseHotel/>} />
       </Routes>
       <Footer />
     </Router>
