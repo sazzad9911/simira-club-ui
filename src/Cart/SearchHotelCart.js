@@ -8,14 +8,14 @@ const SearchHotelCart = (props) => {
                 display: 'flex',
             }}>
                 <div style={{
-                    height: '300px',
+                    height: '270px',
                     width: '400px',
                     backgroundColor: 'black'
                 }}>
 
                 </div>
                 <div style={{
-                    height: '300px',
+                    height: '270px',
                     width: '400px',
                     backgroundColor: 'red'
                 }}>
