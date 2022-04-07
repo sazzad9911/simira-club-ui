@@ -4,7 +4,7 @@ import Img from "./Image/hotel.PNG";
 import a from "./Image/a.PNG";
 import z from "./Image/z.PNG";
 import s from "./Image/s.PNG";
-import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import './css/ShowcaseHotel.css';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
@@ -45,7 +45,7 @@ const ShowcaseHotel = () => {
                             <ComputerIcon className='showicon' />
                         </div>
                         <div className='showcaseicons'>
-                            <FormatBoldIcon className='showicon' />
+                            <LocalParkingIcon className='showicon' />
                         </div>
                     </div>
                     <div className='showDescription'>
