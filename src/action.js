@@ -20,4 +20,4 @@ export async function postData(url = '', data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
   }
 
-export const url="http://192.168.0.190:4000"
+export const url="http://192.168.0.198:4000"

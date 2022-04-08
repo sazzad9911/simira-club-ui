@@ -6,7 +6,7 @@ const DealCart = (props) => {
 
     return (
         <div className='body12'>
-            <Link href="#" underline='none' color={'black'}>
+            <Link href="/ShowCaseDeal" underline='none' color={'black'}>
             
                 <img className="img1" src={props.img1} alt="img1" />
 

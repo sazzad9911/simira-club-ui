@@ -4,7 +4,7 @@ import '../Content/css/brand.css'
 
 const Brands = (props) => {
     return (
-        <Link href="#">
+        <Link href="/ShowCaseDealBrand">
             <div className='body'>
                 <img className="img" src={props.img} alt="img1" />
             </div>
