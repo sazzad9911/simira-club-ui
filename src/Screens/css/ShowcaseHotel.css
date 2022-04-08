@@ -9,6 +9,7 @@
     width: 90%;
     margin-left: 5%;
     margin-top: 40px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
 }
@@ -35,6 +36,10 @@
 
 .StarBorderIcon {
     margin-top: 3px;
+    margin-left: 3px;
+}
+.showiconpoint{
+    margin-top: 7px;
 }
 
 .Showhed {
@@ -48,9 +53,7 @@
     border-radius: 10px;
     color: aliceblue;
     display: flex;
-    flex-direction: row;
-    margin-left: 5px;
-    padding: 2px;
+    text-align: center;
 }
 
 .showFont {
@@ -218,15 +221,17 @@
 
 .ShowcaseRight {
     width: 30%;
-    height: 55%;
+    height: 400px;
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
-    margin: 1%;
+    margin: 10px;
 }
 
 .ShowcaseRightf {
     margin-left: 5%;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .showrightStar {
@@ -294,8 +299,8 @@
 
 .showbuttonone {
     font-size: 35px;
-    margin-top: -5px;
-    margin-left: 5px;
+    margin-top: -6px;
+    margin-left: 6px;
     color: #808080;
 }
 
@@ -333,6 +338,7 @@
 
     .ShowcaseRight {
         width: 300px;
+        height: 370px;
         margin-left: 70px;
     }
 }

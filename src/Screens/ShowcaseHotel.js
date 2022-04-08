@@ -33,7 +33,7 @@ const ShowcaseHotel = () => {
                             width: '25%'
                         }}>
                             <div className='showcasestar'>
-                                <StarBorderIcon className='StarBorderIcon' /><p>4.3</p>
+                                <StarBorderIcon className='StarBorderIcon' /><p className='showiconpoint'>4.3</p>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ const ShowcaseHotel = () => {
                             </div>
                             <div className='Showstar'>
                                 <div className='showcasestar'>
-                                    <StarBorderIcon className='StarBorderIcon' /><p>4.3</p>
+                                    <StarBorderIcon className='StarBorderIcon' /><p className='showiconpoint'>4.3</p>
                                 </div>
                             </div>
                         </div>
@@ -182,8 +182,7 @@ const ShowcaseHotel = () => {
                             color: '#808080'
                         }}>Check-out<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinput' placeholder='  Date' />
-                            <div className='showdateicon'> <CalendarTodayIcon /></div>
+                            <input className='Showrightinput' type='date' placeholder='  Date' />                            
                         </div>
 
                         <div style={{
