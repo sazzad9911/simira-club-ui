@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from '@mui/material/Link';
-import FilterCart from '../Cart/FilterCart';
 import '../Screens/css/SearchDeal.css';
 import AppOverView from '../Cart/AppOverView';
 import OptionLand from '../Components/OptionLand';
 import Dealoffercart from '../Cart/DealOfferCart';
+import FilterTowCart from './../Cart/FilterTowCart';
 const SearchDeal = (props) => {
     return (
         <div>
@@ -18,7 +18,7 @@ const SearchDeal = (props) => {
                     alignItems: 'center',
                     justifyContent: 'center'
                 }}>
-                    <FilterCart />
+                    <FilterTowCart />
                 </div>
                 <div style={{
                     display: 'flex'
