@@ -1,10 +1,12 @@
 import {createStore,combineReducers} from 'redux'
-import UserInformation from './Reducers/UserInformation'
+import Deals from './Reducers/Deals'
 import User from './Reducers/User'
+import Brands from './Reducers/Brands';
 
 const combine=combineReducers({
-    UserInformation:UserInformation,
-    User:User
+    User:User,
+    Deals:Deals,
+    Brands:Brands,
 })
 
 const store = createStore(combine)

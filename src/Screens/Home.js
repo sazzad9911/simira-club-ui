@@ -35,6 +35,7 @@ const Home = () => {
     const Right = () => {
         ref.current.scrollLeft += 60
     }
+    
     return (
         <div className='Home'>
             <Slider />

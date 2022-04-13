@@ -1,7 +1,12 @@
 export const setUser=(user) => {
     return {type: 'SET_USER',playload:user}
 }
-
+export const setDeals=(deals) => {
+  return {type: 'SET_DEALS',playload:deals}
+}
+export const setBrands=(brands) => {
+  return{type: 'SET_BRANDS',playload:brands}
+}
 export async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
@@ -20,4 +25,4 @@ export async function postData(url = '', data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
   }
 
-export const url="http://192.168.0.198:4000"
+export const url="http://192.168.0.194:4000"

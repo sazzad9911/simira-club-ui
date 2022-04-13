@@ -16,12 +16,19 @@
     padding-left: 2%;
     padding-right:2%
 }
-.header-top button{
-    background: none;
-    outline: none;
+.header-content{
+    min-width: 200px;
+}
+#noDiv{
+    display:none;
     border: none;
+    position:absolute;
+    left:90%;
+}
+#noDiv:hover{
+    background-color:#FC444B;
     color: aliceblue;
-    padding-right: 15px;
+
 }
 .header-bottom{
     width: 100%;
@@ -31,7 +38,29 @@
     align-items: center;
     padding-left: 2%;
     padding-right: 2%;
+    height:66px;
+    overflow: hidden;
+    transition: width 2s, height 4s;
 }
+@media (max-width: 1200px) {
+    .header-content{
+        width: 100%;
+    }
+    #div {
+        display:none
+    }
+    #noDiv{
+        display:initial
+    }
+}
+.header-top button{
+    background: none;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    padding-right: 15px;
+}
+
 .header-bottom img{
     width:70px;
     height: 70px;

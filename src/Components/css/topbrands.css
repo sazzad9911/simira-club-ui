@@ -40,6 +40,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    box-shadow:1px 1px 5px black
 }
 .arrowRight1 {
     position: absolute;
@@ -53,9 +54,10 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    box-shadow:1px 1px 5px black
 }
 .arrowLeft {
-    position: absolute;
+    position: absolute; 
     width: 25px;
     height: 25px;
     background: white;
@@ -66,6 +68,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    box-shadow:1px 1px 5px black
 }
 .arrowRight {
     position: absolute;
@@ -79,4 +82,5 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    box-shadow:1px 1px 5px black
 }

@@ -4,8 +4,14 @@ import '../Components/css/topbrands.css';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
+import { postData, url, setDeals } from '../action';
+import { useDispatch, useSelector } from 'react-redux';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 const PopularDeal = () => {
     const ref = createRef()
+    const dispatch = useDispatch()
+    const deals = useSelector(state => state.Deals)
 
     const Left = () => {
         ref.current.scrollLeft -= 100
@@ -13,8 +19,21 @@ const PopularDeal = () => {
     const Right = () => {
         ref.current.scrollLeft += 100
     }
+    React.useEffect(() => {
+        postData(url + '/getData', {
+            tableName: 'deals',
+            orderColumn: 'date'
+        }).then(data => {
+            if (Array.isArray(data)) {
+                return dispatch(setDeals(data));
+            }
+            console.log(data);
+        }).catch(err => {
+            console.log(err.message);
+        })
+    }, [])
     return (
-        <div style={{ background:'none'}} className='box'>
+        <div style={{ background: 'none' }} className='box'>
 
             <div className='arrowLeft'>
                 <Button onClick={Left}>
@@ -32,37 +51,20 @@ const PopularDeal = () => {
             </div>
             <h2> Popular Deals</h2>
             <div ref={ref} className='brandShow'>
-                <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
+                {
+                    deals ? (
+                        deals.map((d, i) => (
+                            <DealCart key={i} doc={d} img1={d.image}
+                                text={d.name}>
 
-                </DealCart>
+                            </DealCart>
+                        ))
+                    ) : (
+                        <CircularProgress />
+                    )
+                }
 
-                <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
 
-                </DealCart>
-                <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
-
-                </DealCart>
-                <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
-
-                </DealCart>
-                <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
-
-                </DealCart>
-                <DealCart img1='https://happysale.in/hs/img/w/up/ovenstorycouponshappysalejpg1626767947245.jpg'
-                    img2='https://lh3.googleusercontent.com/V3UUzurrfYRckyv8JQ6EqhB972GXgmFOCEJkDF884o_cOITGWAfPWqemkNIY8Wp3d7Y'
-                    text='Flat 35 % OFF On All Orders'>
-
-                </DealCart>
             </div>
         </div>
     );

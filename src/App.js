@@ -12,7 +12,7 @@ import MyProfile from './Screens/MyProfile';
 import Login from "./Components/LogIn";
 
 import { useDispatch } from 'react-redux'
-import { setUser } from './action'
+import { setUser, postData,url} from './action'
 import React from 'react'
 import api from './api'
 import SignUp from "./Screens/SignUp";
@@ -40,7 +40,18 @@ function App() {
     fetch(api() + "/checkUser").then(res => res.json())
       .then(data => {
         if (data.uid) {
-          dispatch(setUser(data));
+          postData(url+'/getData',{
+            tableName:'user',
+            condition:"uid="+"'" + data.uid + "'"
+          }).then(doc =>{
+            if(Array.isArray(doc)){
+              return dispatch(setUser(doc));
+            }
+            console.log(doc.message);
+          }).catch(err =>{
+            console.log(err.message);
+          })
+
         } else {
           console.log("no user found")
         }
