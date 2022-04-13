@@ -23,10 +23,13 @@ const ShowCaseDealBrand = (props) => {
                             </div>
                         </Button>
                     </div>
+                </div> 
+                <div className='hr6'></div>
+                <div>
+                <Dealoffercart />
+                <Dealoffercart />
+                <Dealoffercart />
                 </div>
-                <Dealoffercart />
-                <Dealoffercart />
-                <Dealoffercart />
                 <div className='pageSlide'>
                     <Button variant="text" >1</Button>
                     <Button variant="text" >2</Button>

@@ -30,6 +30,7 @@ import ShowCaseCategory from "./Screens/ShowCaseCategory";
 import ShowCaseDeal from "./Screens/ShowCaseDeal";
 import SearchHotel from "./Screens/SearchHotel";
 import ShowcaseHotel from "./Screens/ShowcaseHotel"
+import SearchDeal from "./Screens/SearchDeal";
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
@@ -80,6 +81,8 @@ function App() {
         <Route path="/ShowCaseDeal" element={<ShowCaseDeal/>}/>
         <Route path="/SearchHotel" element={<SearchHotel/>}/>
         <Route path="/ShowcaseHotel" element={<ShowcaseHotel/>} />
+        <Route path="/SearchDeal" element={<SearchDeal/>} />
+        
       </Routes>
       <Footer />
     </Router>
