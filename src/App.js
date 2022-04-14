@@ -30,6 +30,7 @@ import ShowcaseHotel from "./Screens/ShowcaseHotel"
 import NotFound from "./Screens/NotFound";
 import { useDispatch, useSelector } from 'react-redux'
 import { url, postData, setHotels,setUser } from './action'
+import SearchDeal from "./Screens/SearchDeal";
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
