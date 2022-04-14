@@ -6,10 +6,12 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 
 import { Oval } from "react-loader-spinner";
-import { postData, url } from "../action";
+import { postData, url,setBrands } from "../action";
+import { useDispatch,useSelector } from 'react-redux';
 
 const TopBrands = (props) => {
     const ref = createRef()
+    const dispatch = useDispatch()
 
     const Left = () => {
         ref.current.scrollLeft -= 60;
@@ -17,9 +19,10 @@ const TopBrands = (props) => {
     const Right = () => {
         ref.current.scrollLeft += 60;
     }
-
+    
     const [data, setData] = useState(null)
     React.useEffect(() => {
+        
         postData(url + "/getData", {
             tableName: 'brands', orderColumn:'popularity'
         }).then(data => {
@@ -28,7 +31,8 @@ const TopBrands = (props) => {
                 return
             }
             setData(data)
-           // console.log(data)
+            //dispatch(setBrands(data))
+            //console.log(data)
         }).catch(err => {
             console.log(err.message)
         })

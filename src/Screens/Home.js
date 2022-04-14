@@ -1,5 +1,4 @@
 import React, { createRef, useState } from 'react';
-import Header from './../Components/Header';
 import './../Content/css/IconButton.css'
 import Slider from './../Cart/Slider';
 import IconButton from './../Content/IconButton';
@@ -8,7 +7,6 @@ import BookShow from './../Cart/BookShow';
 import PopularHotels from './../Components/PopularHotels';
 import AppOverView from './../Cart/AppOverView';
 import OptionLand from './../Components/OptionLand';
-import Footer from './../Components/Footer';
 import Games from './../File/icon/Games.png';
 import Hotels from './../File/icon/Hotels.png';
 import Restaurant from './../File/icon/Restaurant.png';
@@ -24,7 +22,6 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 import './css/Home.css'
-import Link from '@mui/material/Link';
 
 
 const Home = () => {
@@ -55,16 +52,16 @@ const Home = () => {
                     </Button>
                 </div>
                 <div ref={ref} className='HomeIconContainer'>
-                    <IconButton img={Hotels} title='Hotels' />
-                    <IconButton img={Restaurant} title='Restaurant' />
-                    <IconButton img={Games} title='Games' />
-                    <IconButton img={Shopping} title='Shopping' />
-                    <IconButton img={Villas} title='Villas' />
-                    <IconButton img={Camping} title='Camping' />
-                    <IconButton img={Spa_Salons} title='Spa & Salons' />
-                    <IconButton img={Travel} title='Travel' />
-                    <IconButton img={Health} title='Health' />
-                    <IconButton img={Services} title='Services' />
+                    <IconButton link='/hotel' img={Hotels} title='Hotels' />
+                    <IconButton link='/restaurant' img={Restaurant} title='Restaurant' />
+                    <IconButton link='/games' img={Games} title='Games' />
+                    <IconButton link='/shopping' img={Shopping} title='Shopping' />
+                    <IconButton link='/villas' img={Villas} title='Villas' />
+                    <IconButton link='/camping' img={Camping} title='Camping' />
+                    <IconButton link='/salon' img={Spa_Salons} title='Spa & Salons' />
+                    <IconButton link='/travel' img={Travel} title='Travel' />
+                    <IconButton link='/health' img={Health} title='Health' />
+                    <IconButton link='/services' img={Services} title='Services' />
                 </div>
             </div>
 

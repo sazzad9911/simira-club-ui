@@ -7,6 +7,9 @@ export const setDeals=(deals) => {
 export const setBrands=(brands) => {
   return{type: 'SET_BRANDS',playload:brands}
 }
+export const setHotels=(hotels) => {
+  return{type: 'SET_HOTELS',playload:hotels}
+}
 export async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {

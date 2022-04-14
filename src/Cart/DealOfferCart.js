@@ -12,12 +12,12 @@ const Dealoffercart = (props) => {
             <div className='hr6'></div>
             <div className='cartBottom6'>
                 <div className='cartButtomLeft6'>
-                    <img className="img6" src="https://etimg.etb2bimg.com/thumb/msid-83333101,imgsize-289635,width-1200,height-900,overlay-etbrandequity/ovenstory-pizza-s-new-campaign-highlights-real-issues-of-mainstream-pizza.jpg" alt="img1" />
+                    <img className="img6" src={props.data.image} alt="img1" />
                 </div>
                 <div className='cartButtomRight6'>
                     <div className='headlineLeft'>
                         <div>
-                            <p className='headline6'>Flat 35% OFF On All Order</p>
+                            <p className='headline6'>{props.data.name}</p>
                         </div>
                         <div className='headlineReft'>
                             <Button>
@@ -32,7 +32,9 @@ const Dealoffercart = (props) => {
                                 <p>VIEW</p>
                             </div>
                         </Link>
-                        <AcUnitIcon className='DealCartIcon' fontSize='small' />
+                        <AcUnitIcon style={{
+                            marginLeft:20
+                        }} className='DealCartIcon' fontSize='small' />
                         <p className='bottomText'>Free for Members</p>
                     </div>
                 </div>

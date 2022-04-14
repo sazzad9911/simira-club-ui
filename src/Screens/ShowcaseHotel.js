@@ -12,11 +12,14 @@ import StarIcon from '@mui/icons-material/Star';
 import SignalWifi3BarIcon from '@mui/icons-material/SignalWifi3Bar';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Link from '@mui/material/Link';
-const ShowcaseHotel = () => {
+const ShowcaseHotel = (props) => {
+    const data = props.data
+    const conditions = props.data.conditions.split(',')
+    const [height, setHeight] = React.useState('50px')
 
     return (
         <div>
-            <img src={Img} className='Hotelimg' />
+            <img src={data.image} className='Hotelimg' />
             <div className='Showcase'>
                 <div style={{
                     width: '60',
@@ -26,55 +29,89 @@ const ShowcaseHotel = () => {
                         <div style={{
                             width: '70%'
                         }}>
-                            <h1 className='Showhed'>Shradha Saburi Palace </h1>
-                            <p style={{ color: "rgb(179, 181, 182)" }}>Shirdi, Maharashtra</p>
+                            <h1 className='Showhed'>{data.name} </h1>
+                            <p style={{ color: "rgb(179, 181, 182)" }}>{data.address}</p>
                         </div>
                         <div style={{
                             width: '25%'
                         }}>
                             <div className='showcasestar'>
-                                <StarBorderIcon className='StarBorderIcon' /><p className='showiconpoint'>4.3</p>
+                                <StarBorderIcon className='StarBorderIcon' /><p className='showiconpoint'>{data.ratings}</p>
                             </div>
                         </div>
                     </div>
                     <div className='showcaseicon'>
-                        <div className='showcaseicons'>
-                            <SignalWifi3BarIcon className='showicon' />
-                        </div>
-                        <div className='showcaseicons'>
-                            <ComputerIcon className='showicon' />
-                        </div>
-                        <div className='showcaseicons'>
-                            <LocalParkingIcon className='showicon' />
-                        </div>
+                        {
+                            conditions ? (
+                                conditions.map((cond, i) => {
+                                    if (cond == 'wifi') {
+                                        return (
+                                            <div key={i} className='showcaseicons'>
+                                                <SignalWifi3BarIcon className='showicon' />
+                                            </div>
+                                        )
+                                    } else if (cond == 'tv') {
+                                        return (
+                                            <div key={i} className='showcaseicons'>
+                                                <ComputerIcon className='showicon' />
+                                            </div>
+                                        )
+                                    } else {
+                                        return (
+                                            <div key={i} className='showcaseicons'>
+                                                <LocalParkingIcon className='showicon' />
+                                            </div>
+                                        )
+                                    }
+                                })
+                            ) : (
+                                <div></div>
+                            )
+                        }
                     </div>
                     <div className='showDescription'>
                         <h3>Description </h3>
-                        <h6 className='showcasetxt'>Shradha Saburi Palace is a budget hotel that provides a comfortable stay for a nominal price. The hotel is located close to a few attractions
-                            in Shirdi including Sai Baba Mandir and more.</h6>
-                        <Link href="#" color="red" underline="none">Read more</Link>
+                        <h6 style={{
+                            height: height,
+                            overflow: 'hidden'
+                        }} className='showcasetxt'>{data.description}</h6>
+                        {
+                            height == '50px' ? (
+                                <button onClick={() => {
+                                    setHeight('auto')
+                                }} style={{
+                                    border: 'none',
+                                    outline: 'none',
+                                    background: 'none',
+                                    color: 'red',
+                                    fontWeight: '700'
+                                }}>Read More</button>
+                            ) : (
+                                <></>
+                            )
+                        }
                     </div>
                     <div className='showcasecheck'>
                         <div className='showcasecheckin'>
                             Check-in
-                            <h3>12:00 PM</h3>
+                            <h3>{data.check_in}</h3>
                         </div>
                         <div className='showcasebar'></div>
                         <div className='showcasecheckin'>
                             Check-out
-                            <h3>10:00 AM</h3>
+                            <h3>{data.check_out}</h3>
                         </div>
 
                     </div>
                     <div className='showcasemap'>
-                    <div className='showCaseMap'><GoogleMapReact/></div>
+                        <div className='showCaseMap'><GoogleMapReact /></div>
                         <h3>What's nearby</h3>
                         <div className='showcasemaps'>
                             <div className='showcaseNearbys'>
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858',fontSize:'15px' }}>500m away from Sai Baba Mandir</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '15px' }}>500m away from Sai Baba Mandir</h2></div>
                             </div>
 
                         </div>
@@ -83,14 +120,14 @@ const ShowcaseHotel = () => {
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858',fontSize:'15px' }}>200m away from Shirdi Bus Stop</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '15px' }}>200m away from Shirdi Bus Stop</h2></div>
                             </div>
 
                         </div>
                         <div className='ShowleftOnefs'>
                             <div style={{
-                            width: '70%'
-                        }}>
+                                width: '70%'
+                            }}>
                                 <h3 className='Showhed'>Reviews </h3>
                             </div>
                             <div className='Showstar'>
@@ -99,70 +136,9 @@ const ShowcaseHotel = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='Showcardhed'>
-                            <div className='Showcardhedone'>
-                                <div><img src={s} className='Showcardimg' /></div>
-                                <div className='showcardname'>
-                                    <div><p className='showtxt'>Rahul Jadhav</p></div>
-                                    <div className='Showcardhedone'> <p className='Platinum'>Platinum</p> <p className='Member'> Member</p></div>
-                                </div>
-                            </div>
-                            <div style={{
-                                color: 'red',
-                                width: '50%'
-                            }}>
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                            </div>
-
-                        </div>
-                        <div className='Showcardhed'>
-                            <div className='Showcardhedone'>
-                                <div><img src={z} className='Showcardimg' /></div>
-                                <div className='showcardname'>
-                                    <div><p className='showtxt'>Rahul Jadhav</p></div>
-                                    <div className='Showcardhedone'> <p className='gold'>Gold</p> <p className='Member'> Member</p></div>
-                                </div>
-                            </div>
-                            <div style={{
-                                color: 'red',
-                                width: '50%'
-                            }}>
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                            </div>
-
-                        </div>
-                        <div className='Showcardhed'>
-                            <div className='Showcardhedone'>
-                                <div><img src={a} className='Showcardimg' /></div>
-                                <div className='showcardname'>
-                                    <div><p className='showtxt'>Rahul Jadhav</p></div>
-                                    <div className='Showcardhedone'> <p className='silver'>silver</p> <p className='Member'> Member</p></div>
-                                </div>
-                            </div>
-                            <div style={{
-                                color: 'red',
-                                width: '50%'
-                            }}>
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                                <StarIcon />
-                            </div>
-
-                        </div>
+                        <Review/>
                     </div>
                 </div>
-
-
 
                 <div className='ShowcaseRight'>
                     <div className='ShowcaseRightf'>
@@ -182,7 +158,7 @@ const ShowcaseHotel = () => {
                             color: '#808080'
                         }}>Check-out<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinput' type='date' placeholder='  Date' />                            
+                            <input className='Showrightinput' type='date' placeholder='  Date' />
                         </div>
 
                         <div style={{
@@ -248,3 +224,27 @@ const ShowcaseHotel = () => {
 };
 
 export default ShowcaseHotel;
+
+const Review = () => {
+    return (
+        <div className='Showcardhed'>
+            <div className='Showcardhedone'>
+                <div><img src={s} className='Showcardimg' /></div>
+                <div className='showcardname'>
+                    <div><p className='showtxt'>Rahul Jadhav</p></div>
+                    <div className='Showcardhedone'> <p className='Platinum'>Platinum</p> <p className='Member'> Member</p></div>
+                </div>
+            </div>
+            <div style={{
+                color: 'red',
+                width: '50%'
+            }}>
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+                <StarIcon />
+            </div>
+        </div>
+    )
+}
