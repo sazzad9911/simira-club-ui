@@ -33,7 +33,6 @@ import { url, postData, setHotels,setUser } from './action'
 import SearchDeal from "./Screens/SearchDeal";
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-
 function App() {
   const dispatch = useDispatch()
   const hotels=useSelector(state => state.Hotels)
