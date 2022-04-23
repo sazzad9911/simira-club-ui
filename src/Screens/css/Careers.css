@@ -4,9 +4,9 @@
 }
 
 .CareerBodyDiv {
-    height          : 200px;
+    height          : 330px;
     width           : 100%;
-    background-color: aqua;
+    background-color: rgb(0, 0, 0, 0.2);
     position        : relative;
     display: flex;
     justify-content: center;
@@ -14,9 +14,10 @@
 }
 
 .CareerImg {
-    height : 200px;
+    height : 330px;
     width  : 100%;
-    opacity: .7;
+    backdrop-filter: blur(54px);
+
     
 }
 
@@ -27,18 +28,21 @@
 }
 .CareerImgText{
     color: white;
+    font-size: 82px;
 }
 .CareerBoxMainButton{
     height: auto;
-    width: auto;
+    width: 185;
     padding: 2%;
     border: 1px solid #D8D8D8;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 .CareerBox{
     height: auto;
     width: auto;
-    padding: 3%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
 }
 .CareerBoxDiv{
     height: auto;
@@ -54,16 +58,27 @@
     flex: 0;
 }
 .CareerBoxFirstButton{
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     border: none;
     margin-left: 10px;
 }
 .CareerBoxScendButton{
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     border: none;
 }
 .CareerBoxThridButton{
     background-color: #FFE1E3;
     border: none;
     border-radius: 5px;
+}
+.CareerBoxText{
+    font-size: 32px;
+    color: #000000;
+}
+.CareerCartDiv{
+    margin-top: 80px;
+}
+.CareerEndDiv{
+    height: 120px;
+    width: auto;
 }
