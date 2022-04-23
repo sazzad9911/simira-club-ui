@@ -29,6 +29,8 @@
 .CareerImgText{
     color: white;
     font-size: 82px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
 }
 .CareerBoxMainButton{
     height: auto;
@@ -74,6 +76,8 @@
 .CareerBoxText{
     font-size: 32px;
     color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
 }
 .CareerCartDiv{
     margin-top: 80px;
