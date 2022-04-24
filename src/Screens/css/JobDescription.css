@@ -3,20 +3,19 @@
     width: auto;
 }
 .JobBodyDiv {
-    height          : 200px;
+    height          : 330px;
     width           : 100%;
-    background-color: aqua;
+    background-color: rgb(0, 0, 0, 0.2);
     position        : relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .JobImg {
-    height : 200px;
+    height : 330px;
     width  : 100%;
-    opacity: .7;
+    backdrop-filter: blur(54px);
     
 }
 
@@ -27,6 +26,9 @@
 }
 .JobImgText{
     color: white;
+    font-size: 82px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
 }
 .JobBox{
     height: auto;
@@ -40,10 +42,10 @@
     width: 60%;
 }
 .JobRightBox{
-    height: 800px;
-    width: 400px;
+    height: 892px;
+    width: 460px;
     border: 1px solid #D8D8D8;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 .JobBoxDiv{
     flex-direction: row;
@@ -64,10 +66,20 @@
 }
 .JobTextBody{
     margin-top: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+.JobPText{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
 }
 .JobTextP{
     opacity: .7;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
 }
 
 .JobRightTextDiv{
@@ -80,6 +92,7 @@
     width: auto;
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
     
 }
 .JobRightInputDiv{
@@ -89,22 +102,23 @@
     flex-direction: row;
 }
 .JobRightInputIcon{
-    color: red;
+    color: #FC444B;
     margin-top: 3px;
     margin-left: -10px;
 }
 .JobRightInputBoxDiv{
-    height: 40px;
-    width: 110px;
+    height: 50px;
+    width: 150px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: #F5F5F5;
     border: none;
 }
 .JobRightInputBox{
-    height: 39px;
-    width: 115px;
-    margin-left: 10px;
+    height: 40px;
+    width: 130px;
+    margin-left: 15px;
+    margin-top: 5px;
     border-radius: 10px; 
     background-color: #F5F5F5;
     border: none;
@@ -113,8 +127,7 @@
 .JobRightInputLeftDiv{
     height: auto;
     width: auto;
-    
-    margin-left: 50px;
+    margin-left: 40px;
 }
 .JobInputMobileDiv{
     height: auto;
@@ -128,8 +141,8 @@
     flex-direction: row;
 }
 .JobMobileBoxDiv{
-    height: 40px;
-    width: 290px;
+    height: 50px;
+    width: 350px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -138,15 +151,16 @@
 .JobMobileBox{
     height: 39px;
     width: 285px;
-    margin-left: 10px;
+    margin-top: 5px;
+    margin-left: 15px;
     border-radius: 10px; 
     background-color: #F5F5F5;
     border: none;
     outline: none;
 }
 .JobBoxButtonx{
-    height: 40px;
-    width: 300px;
+    height: 50px;
+    width: 350px;
     margin-top: 30px;
     margin-left: 10px;
     border-radius: 10px;
@@ -155,4 +169,13 @@
 }
 .JobBoxButtonP{
     color: #FC444B;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+}
+.JobText{
+    font-size: 32px;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
 }

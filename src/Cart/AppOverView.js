@@ -2,20 +2,30 @@ import React from 'react';
 import './css/AppOverView.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Link from '@mui/material/Link';
-import photo from './css/photo.jpeg';
+import Photo from './css/Mockup (Will be updated later).png'
+import { Checkbox } from '@mui/material';
+import { useState } from "react";
+
+
 
 const AppOverView = () => {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+    };
 
     return (
         <div className='AppOverViewBody'>
             <div className='AppOverViewLaftDiv'>
-                <img className='AppOverViewImg' src={photo} />
+                <img className='AppOverViewImg' src={Photo} />
             </div>
             <div className='AppOverViewRightDiv'>
-                <div style={{ marginTop: '50px' }}>
+                <div>
                     <h2 className='AppOverViewBigText'>Get The SmiraClub App</h2>
                     <div>
-                        <p>
+                        <p className='AppOverViewSamllText'>
                             We'll send you a link that you can open on your phone to<br></br>
                             download the app.
                         </p>
@@ -25,9 +35,16 @@ const AppOverView = () => {
                 <div style={{ height: '20px', width: 'auto' }}></div>
                 <div className='AppOverViewButtonDiv'>
                     <div className='AppOverViewButtonDiv'>
-                        <button className='AppOverViewButton'>
-                            <CheckCircleIcon className='AppOverViewIcon' />
-                        </button>
+
+                        <input
+                            type="checkbox"
+                            id="topping"
+                            name="topping"
+                            value="Paneer"
+                            checked={isChecked}
+                            onChange={handleOnChange}
+                            className="topping"
+                        />
                         <h2 className='AppOverViewHtext'>Email</h2>
                     </div>
                     <div className='AppOverViewButtonLastDiv'>
@@ -36,7 +53,10 @@ const AppOverView = () => {
                     </div>
                 </div>
                 <div className='AppOverViewFromBox'>
-                    <input className='AppOverViewFrom' type='text' placeholder='Email' />
+                    {isChecked ? <input className='AppOverViewFrom' type='email' placeholder='Email' />
+                        :
+                        <input className='AppOverViewFrom' type='number' placeholder='Phone' />}
+
                     <button className='AppOverViewFromButton'>Send</button>
                 </div>
 
@@ -52,6 +72,8 @@ const AppOverView = () => {
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 };

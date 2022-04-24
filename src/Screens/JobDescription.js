@@ -15,14 +15,14 @@ function JobDescription() {
             </div>
             <div className="JobBox">
                 <div className="JobLeftBox">
-                    <h2>Sale Associate</h2>
+                    <h2 className="JobText">Sale Associate</h2>
                     <div className="JobBoxDiv">
                         <button className="JobBoxFirstButton">Permanent</button>
                         <button className="JobBoxScendButton">Remote</button>
                         <button className="JobBoxThridButton">Sales</button>
                     </div>
                     <div className="JobTextBody">
-                        <p>About Crew</p><br />
+                        <p className="JobPText">About Crew</p><br />
                         <p className="JobTextP"> In short : Crew is Superhuman for recruiting <br /><br />
                             Recruiting used to be 100% inbound, almost exclusively done by<br />
                             recruiters, and all ATSs (Lever, Greenhouse, etc.) were built for<br />
@@ -38,7 +38,7 @@ function JobDescription() {
                             European investors.</p>
                     </div>
                     <div className="JobTextBody">
-                        <p>What you will be doing:</p><br />
+                        <p className="JobPText">What you will be doing:</p><br />
                         <p className="JobTextP">
                             As a business associate you will be the first Go-To-Market<br />
                             person in the team. A strategic position at the heart of Crew<br />
@@ -56,7 +56,7 @@ function JobDescription() {
                             priorities.</p>
                     </div>
                     <div className="JobTextBody">
-                        <p>This might be for you if..</p><br />
+                        <p className="JobPText">This might be for you if..</p><br />
                         <p className="JobTextP">
                             Education: you have a higher education degree, from a top-tier<br />
                             business or engineering school.<br />
@@ -75,7 +75,7 @@ function JobDescription() {
                         </p>
                     </div>
                     <div className="JobTextBody">
-                        <p>At Crew, you'll enjoy:</p><br />
+                        <p className="JobPText">At Crew, you'll enjoy:</p><br />
                         <p className="JobTextP">
                             💰Competitive salary + stock-options.<br />
                             🏀Strong technical culture, entrepreneurial and strong team<br />
@@ -91,11 +91,11 @@ function JobDescription() {
                 </div>
                 <div className="JobRightBox">
                     <div className="JobRightTextDiv">
-                        <h2>Application</h2>
+                        <h2 className="JobPText">Application</h2>
                         <div className="JobRightInput">
                             <div>
                                 <div className="JobRightInputDiv">
-                                    <p style={{ opacity: .7 }}>First Name.</p>
+                                    <p style={{ opacity: .7  }}>First Name.</p>
                                     <StarIcon className="JobRightInputIcon" />
                                 </div>
                                 <div className="JobRightInputBoxDiv">
