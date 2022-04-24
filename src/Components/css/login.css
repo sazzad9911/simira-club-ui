@@ -1,7 +1,7 @@
 .loginbody {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .loginbodyleft {
@@ -30,7 +30,11 @@
     justify-content: center;
 }
 .loginbodyrightbody h1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-align: left;
+    font-weight: 500;
+    font-size: 32px;
+    color: #000000;
 }
 
 .textinputview {
@@ -58,14 +62,13 @@
 .loginButton{
     width: 400px;
     height: 55px;
-    border: 1px solid red;
+    border: 1px solid #FC444B;
     border-radius: 30px;
     text-align: center;
     align-items: center;
-    margin-top: 20px;
 }
 .submitText{
-    color: red;
+    color: #FC444B;
     font-weight: 300;
     font-size: 20px;
 }
@@ -84,12 +87,18 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #D8D8D8;
     border-radius: 30px;
 }
 .googleText{
-    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
-    font-size: 15px;
-    margin-left: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+.bt{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
 }

@@ -44,7 +44,7 @@ const BusinessWithUs = () => {
                             <p>Or call us on</p>
                         </div>
                         <Button style={{
-                            display:'flex',
+                
                             borderRadius:'50px'
                         }}>
                             <div className='googleButton3'>
