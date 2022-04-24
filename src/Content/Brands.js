@@ -10,7 +10,7 @@ const Brands = (props) => {
             </div>
         </Link>
 
-    );
+    ); 
 }; 
 
 export default Brands; 

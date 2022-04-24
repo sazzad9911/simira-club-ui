@@ -1,17 +1,18 @@
 .body {
-    width: 120px;
-    height: 120px;
-    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.26);
-    border-radius: 60px;
+    width: 177px;
+    height: 177px;
+    border-radius: 280px;
     margin: 10px;
 }
-.img{
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.304);
-    
+
+.img {
+    width: 177px;
+    height: 177px;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.35);
+    border-radius: 280px;
+
 }
+
 .img:hover {
     opacity: .6;
 }
