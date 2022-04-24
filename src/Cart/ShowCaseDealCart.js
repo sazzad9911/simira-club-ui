@@ -17,16 +17,25 @@ const ShowCaseDealCart = () => {
                     <p>SMP275</p>
                 </div>
                 <Button style={{
-                    outline:false
+                    outline: false,
+                    marginTop: '20px',
+                    height: '90px',
+                    width: '500px',
+                    borderRadius: '55px',
 
-            }}>
+                }}>
                     <div className='offercodebutton'>
-                        <p style={{ color: 'red' }}>COPY CODE</p>
+                        <p style={{ 
+                            color: '#FC444B',
+                            fontSize:'24px',
+                            fontWeight:500,
+
+                         }}>COPY CODE</p>
                     </div>
                 </Button>
             </div>
-            <div style={{ marginLeft: '20px' }}>
-                <h4>Terms and Conditions</h4>
+            <div style={{ marginLeft: '20px' }} className={'condition'}>
+                <h4 >Terms and Conditions</h4>
                 <p>
                     We are happy to serve you special offers with the following terms and conditions:<br></br>
                     • It is the responsibility of a customer to read, understand and remain knowledgeable of the terms and conditions.<br></br>
@@ -36,11 +45,11 @@ const ShowCaseDealCart = () => {
                     • This voucher is valid on all days.<br></br>
                 </p>
                 <Button underline='false'>
-                    <p style={{ color: 'red' }}>Read more</p>
+                    <p style={{ color: '#FC444B' }}>Read more</p>
                 </Button>
 
             </div>
-        </div>
+        </div >
     );
 };
 
