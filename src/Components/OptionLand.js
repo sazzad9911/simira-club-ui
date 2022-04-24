@@ -8,9 +8,8 @@ const OptionLand = (props) => {
     return (
         <div className='optionLandBody'>
             <h2 style={{
-                marginTop: 30,
-                marginBottom: 30,
-                fontSize: 25,
+                marginTop:'50px',
+                marginBottom:'40px'
             }}>Loads of options for you to explore here</h2> 
             <PopularDeals></PopularDeals>
             <PopularHotels></PopularHotels>
@@ -18,14 +17,16 @@ const OptionLand = (props) => {
             <CitiesWeOffer></CitiesWeOffer>
         </div>
     );
-};
+}; 
 
 export default OptionLand;
 
 const PopularDeals = (props) => {
     return (
         <div>
-            <h2 >Popular Deals</h2>
+            <h2 style={{ 
+                color:'#585858'
+            }}>Popular Deals</h2>
             <div className='popularDealsView'>
                 <PopularDealsName PDT='Deals near me'></PopularDealsName>
                 <PopularDealsName PDT='Deals near me'></PopularDealsName>
@@ -63,7 +64,9 @@ const PopularDealsName = (props) => {
 const PopularHotels = (props) => {
     return (
         <div>
-            <h2 >Popular Hotels</h2>
+            <h2 style={{ 
+                color:'#585858'
+            }}>Popular Hotels</h2>
             <div className='popularDealsView1'>
                 <PopularHotelsName PHT='Hotels near me'></PopularHotelsName>
                 <PopularHotelsName PHT='Hotels near me'></PopularHotelsName>
@@ -95,7 +98,9 @@ const PopularHotelsName = (props) => {
 const TopBrands = (props) => {
     return ( 
         <div>
-            <h2 >Top Brands With Us</h2>
+            <h2 style={{ 
+                color:'#585858'
+            }}>Top Brands With Us</h2>
             <div className='popularDealsView'>
                 <TopBrandsName TBWU='Oven Story'></TopBrandsName>
                 <TopBrandsName TBWU='Oven Story'></TopBrandsName>
@@ -136,7 +141,9 @@ const TopBrandsName = (props) => {
 const CitiesWeOffer = (props) => {
     return (
         <div>
-            <h2 >Cities We Offer</h2>
+            <h2 style={{ 
+                color:'#585858'
+            }}>Cities We Offer</h2>
             <div className='popularDealsView'>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>

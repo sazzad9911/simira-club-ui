@@ -29,7 +29,7 @@ const ShowCaseDealBrand = (props) => {
                             </Button>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div className='hr6'></div>
                 <div>
                     <Dealoffercart />
