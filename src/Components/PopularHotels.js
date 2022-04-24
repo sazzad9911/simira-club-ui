@@ -34,7 +34,7 @@ const PopularHotels = () => {
                 </Button>
             </div>
             <div className='popularhotelsText'>
-                <h2>Popular Hotels</h2>
+                <h2 className='PopularHotelsHText'>Popular Hotels</h2>
             </div>
             <div ref={ref} className='popularhotelsCart'>
 

@@ -49,7 +49,7 @@ const PopularDeal = () => {
                         color="disabled"></ArrowForwardIosIcon>
                 </Button>
             </div>
-            <h2 className='PopularDealText'> Popular Deals</h2>
+            <p className='PopularDealText'> Popular Deals</p>
             <div ref={ref} className='brandShow'>
                 {
                     deals ? (
