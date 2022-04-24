@@ -7,7 +7,7 @@
 
 .loginbodyleft3 {
     width: 400px;
-    height: 650px;
+    height: 800px;
     background-color: #C4C4C4;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 90px;
 }
 
 .loginbodyrightbody3 {
@@ -30,17 +30,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+
 }
 
 .loginbodyrightbody3 h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-align: left;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 32px;
+    color: #000000;
 }
 
 .textinputview3 {
     width: 400px;
-    height: 50px;
+    height: 80px;
     display: flex;
     border-radius: 30px;
     background-color: #F5F5F5;
@@ -76,36 +80,44 @@
 .forgotPlink3 {
     width: 400px;
 }
+.forgotPlink3 p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: left;
+    font-weight: 500;
+    font-size: 22px;
+    color: #000000;
+}
 
 .loginButton3 {
     width: 400px;
-    height: 55px;
-    border: 1px solid red;
-    border-radius: 30px;
-    text-align: center;
+    height: 84px;
+    border: 1px solid #fc444b;
+    border-radius: 50px;
+    display: flex;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
 }
 
 .submitText3 {
-    color: red;
-    font-weight: 300;
-    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #FC444B;
+    font-weight: 400;
+    font-size: 24px;
 }
-
+ 
 .googleButton3 {
     width: 400px;
-    height: 50px;
-    border-radius: 30px;
+    height: 80px;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 30px;
+    border: 1px solid #64b657;
 }
 
 .googleText3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: #000000;
     font-weight: 400;
     font-size: 15px;

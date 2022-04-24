@@ -10,14 +10,14 @@ const Contact = () => {
     return (
         <div>
           
-            <div className='loginbody2'>
-
+            <div className='loginbody2'  style={{justifyContent: 'center'}}>
+ 
                 <div className='loginbodyleft2'>
-                    <img src="https://theupay.com/bank/Assets/login.jpg" height={650} width={400}></img>
+                    <img src="https://theupay.com/bank/Assets/login.jpg" height={800} width={400}></img>
                 </div>
                 <div className='loginbodyright2'>
                     <div className='loginbodyrightbody2'>
-                        <h1>We’re here to help and answer  <br/>any question you might have.</h1>
+                        <h1>We’re here to help and answer any question you might have.</h1>
                         <div className='textinputview2'>
                             <input className='textinput2' type='text' placeholder='Rajesh Chaudhari' />
 
@@ -30,7 +30,12 @@ const Contact = () => {
                             <input className='textinputMess2' type='text' placeholder='Your message' />
                         </div>
                         
-                        <Button >
+                        <Button style={{
+                            height:'84px',
+                            width:'400px',
+                            borderRadius:'50px',
+                            marginTop:'20px' 
+                        }}>
                             <div className='loginButton2'>
                                 <p className='submitText2'>SUBMIT</p>
                             </div>
@@ -38,16 +43,19 @@ const Contact = () => {
                         <div className='forgotPlink2'>
                             <p>Or call us on</p>
                         </div>
-                        <Button >
+                        <Button style={{
+                            display:'flex',
+                            borderRadius:'50px'
+                        }}>
                             <div className='googleButton2'>
-                                <WhatsAppIcon color="#4CAF50"></WhatsAppIcon>
+                                <WhatsAppIcon ></WhatsAppIcon>
                                 <p className='googleText2'>+91 98337 33477 / +91 98337 33977</p>
                             </div>
                         </Button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     );
 };
 

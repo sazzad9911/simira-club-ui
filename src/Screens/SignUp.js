@@ -9,8 +9,8 @@ import '../Screens/css/signup.css'
 const SignUp = () => {
     return (
         <div>
-   
-            <div className='loginbody1'>
+    
+            <div style={{justifyContent: 'center'}} className='loginbody1'>
 
                 <div className='loginbodyleft1'>
                     <img src="https://theupay.com/bank/Assets/login.jpg" height={600} width={400}></img>
