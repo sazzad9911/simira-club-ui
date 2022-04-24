@@ -1,5 +1,6 @@
 .AppOverViewBody{
     width:100%;
+    height: auto;
     background-color: #FFF5F6;
     flex-direction: row;
     align-items: center;
@@ -11,29 +12,34 @@
 
 }
 .AppOverViewLaftDiv{
-    width: 400px;
+    width: 511px;
     background-color: #FFF5F6;
-    margin-right: 20px;
     display: flex;
-    justify-content:center
+    margin-top: -30px;
+    margin-left: 0px;
 }
 .AppOverViewRightDiv{
     height: 450px;
-    width: 400px;
+    width: 657px;
     background-color: #FFF5F6;
-    margin-left: 20px;
 }
 .AppOverViewBigText{
-    font-size: 38px;
-    margin-left: 5px;
+    font-size: 55px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+}
+.AppOverViewSamllText{
+    font-size: 22px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    color: #585858;
 }
 .AppOverViewButton{
-    height: 20px;
-    width: 20px;
-    border-radius: 10px;
+    height: 30px;
+    width: 30px;
     align-items: center;
-    display: flex;
     justify-content: center;
+
 }
 .AppOverViewButtonDiv{
     align-items: center;
@@ -91,9 +97,15 @@
     opacity: .6;
 }
 .AppOverViewImg{
-    height: 450px;
-    width: 250px;
+    height: 511px;
+    width: 411px;
     border-radius: 10px;
     margin-top: 50px;
-    box-shadow:-2px -2px 12px rgba(0, 0, 0, 0.128);
+}
+.topping{
+    color: #FC444B;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #FC444B;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import './css/Careers.css'
 import Img from './Image/Careers.PNG'
 import Link from '@mui/material/Link';
+import AppOverView from '../Cart/AppOverView'
 
 function Career() {
     return (
@@ -26,6 +27,7 @@ function Career() {
                 ></Cart>
                 <div className="CareerEndDiv" />
             </div>
+            <AppOverView/>
         </div>
     );
 }

@@ -15,14 +15,14 @@ function JobDescription() {
             </div>
             <div className="JobBox">
                 <div className="JobLeftBox">
-                    <h2>Sale Associate</h2>
+                    <h2 className="JobText">Sale Associate</h2>
                     <div className="JobBoxDiv">
                         <button className="JobBoxFirstButton">Permanent</button>
                         <button className="JobBoxScendButton">Remote</button>
                         <button className="JobBoxThridButton">Sales</button>
                     </div>
                     <div className="JobTextBody">
-                        <p>About Crew</p><br />
+                        <p className="JobPText">About Crew</p><br />
                         <p className="JobTextP"> In short : Crew is Superhuman for recruiting <br /><br />
                             Recruiting used to be 100% inbound, almost exclusively done by<br />
                             recruiters, and all ATSs (Lever, Greenhouse, etc.) were built for<br />
@@ -38,7 +38,7 @@ function JobDescription() {
                             European investors.</p>
                     </div>
                     <div className="JobTextBody">
-                        <p>What you will be doing:</p><br />
+                        <p className="JobPText">What you will be doing:</p><br />
                         <p className="JobTextP">
                             As a business associate you will be the first Go-To-Market<br />
                             person in the team. A strategic position at the heart of Crew<br />
@@ -56,7 +56,7 @@ function JobDescription() {
                             priorities.</p>
                     </div>
                     <div className="JobTextBody">
-                        <p>This might be for you if..</p><br />
+                        <p className="JobPText">This might be for you if..</p><br />
                         <p className="JobTextP">
                             Education: you have a higher education degree, from a top-tier<br />
                             business or engineering school.<br />
@@ -75,7 +75,7 @@ function JobDescription() {
                         </p>
                     </div>
                     <div className="JobTextBody">
-                        <p>At Crew, you'll enjoy:</p><br />
+                        <p className="JobPText">At Crew, you'll enjoy:</p><br />
                         <p className="JobTextP">
                             💰Competitive salary + stock-options.<br />
                             🏀Strong technical culture, entrepreneurial and strong team<br />
@@ -91,12 +91,12 @@ function JobDescription() {
                 </div>
                 <div className="JobRightBox">
                     <div className="JobRightTextDiv">
-                        <h2>Application</h2>
+                        <h2 className="JobPText">Application</h2>
                         <div className="JobRightInput">
                             <div>
                                 <div className="JobRightInputDiv">
-                                    <p style={{ opacity: .7 }}>First Name.</p>
-                                    <StarIcon className="JobRightInputIcon" />
+                                    <p style={{ opacity: .7  }}>First Name.</p>
+                                    <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                                 </div>
                                 <div className="JobRightInputBoxDiv">
                                     <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
@@ -105,7 +105,7 @@ function JobDescription() {
                             <div className="JobRightInputLeftDiv">
                                 <div className="JobRightInputDiv">
                                     <p style={{ opacity: .7 }}>Last Name.</p>
-                                    <StarIcon className="JobRightInputIcon" />
+                                    <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                                 </div>
                                 <div className="JobRightInputBoxDiv">
                                     <input className="JobRightInputBox" type='Text' placeholder='Last name' />
@@ -115,7 +115,7 @@ function JobDescription() {
                         <div className="JobInputMobileDiv">
                             <div className="JobInputMobileIconDiv">
                                 <p style={{ opacity: .7 }}>Mobile No.</p>
-                                <StarIcon className="JobRightInputIcon" />
+                                <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                             </div>
                             <div className="JobMobileBoxDiv">
                                 <input className="JobMobileBox" type='Number' placeholder='Mobile No.' />
@@ -124,7 +124,7 @@ function JobDescription() {
                         <div className="JobInputMobileDiv">
                             <div className="JobInputMobileIconDiv">
                                 <p style={{ opacity: .7 }}>Email</p>
-                                <StarIcon className="JobRightInputIcon" />
+                                <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                             </div>
                             <div className="JobMobileBoxDiv">
                                 <input className="JobMobileBox" type='Email' placeholder='Email' />
@@ -133,7 +133,7 @@ function JobDescription() {
                         <div className="JobInputMobileDiv">
                             <div className="JobInputMobileIconDiv">
                                 <p style={{ opacity: .7 }}>LinkedIn</p>
-                                <StarIcon className="JobRightInputIcon" />
+                                <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                             </div>
                             <div className="JobMobileBoxDiv">
                                 <input className="JobMobileBox" type='Text' placeholder='LinkedIn' />

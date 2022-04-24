@@ -1,12 +1,14 @@
 .showcasebody1{
     padding: 3%;
-}
+} 
 .cartBottom41 {
     display: flex;
 }
 .headline1{
-    font-size: 37px;
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 62px;
+    font-weight: 700;
+    color: #000000;
 }
 .hr1{
     margin-top: 30px;
@@ -14,7 +16,8 @@
     border: 1px solid #D8D8D8;
 }
 .text21{
-    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
     font-weight: 500;
     color: #808080;
 }
@@ -34,14 +37,14 @@
 }
 
 .img41 {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border-radius: 90px;
 }
 
 .cartButtomLeft41 {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     margin-top: -20px;
 }
 

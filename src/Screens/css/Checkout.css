@@ -9,20 +9,46 @@
     height: auto;
     width: 650px;
 }
+.CheckoutText{
+    font-size: 42px;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+}
+.CheckoutTextP{
+    font-size: 22px;
+    color: #585858;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+}
+.CheckoutTextPdiv{
+    margin-top: -15px;
+    display: flex;
+}
 
 .CheckoutLeftP{
     color: #FC444B;
     margin-left: -5px;
+    font-size: 22px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
 }
 .CheckoutLeftH2{
-    margin-top: 30px;
+    margin-top: 35px;
+    font-size: 22px;
+    color: #585858;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
 }
 .CheckoutLeftBDiv{
     display: flex;
     margin-top: 30px;
 }
 .CheckoutLeftBDivH2{
-    opacity: .7;
+    font-size: 20px;
+    color: #808080;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
 }
 .CheckoutLeftButton{
     height: 30px;
@@ -40,7 +66,7 @@
 }
 .CheckoutLeftIBox{
     height: auto;
-    width: 400px;
+    width: 500px;
     margin-top: 30px;
     border: 1.5px solid #D8D8D8;
     border-radius: 15px;
@@ -49,12 +75,12 @@
     margin: 50px;
 }
 .CheckoutLeftInput{
-    height: 40px;
-    width: 300px;
+    height: 50px;
+    width: 400px;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
-    border-radius: 20px;
+    border-radius: 35px;
     align-items: center;
 }
 .CheckoutLeftInputBox{
@@ -68,12 +94,12 @@
     border: none;
 }
 .CheckoutLeftInputDiv{
-    height: 40px;
-    width: 180px;
+    height: 50px;
+    width: 240px;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
-    border-radius: 20px;
+    border-radius: 35px;
     align-items: center;
 }
 .CheckoutLeftInputD{
@@ -87,12 +113,12 @@
     border: none;
 }
 .CheckoutLeftInputLastDiv{
-    height: 40px;
-    width: 80px;
+    height: 50px;
+    width: 140px;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
-    border-radius: 20px;
+    border-radius: 35px;
     align-items: center;
 }
 .CheckoutLeftInputLastD{
@@ -106,18 +132,18 @@
     border: none;
 }
 .CheckoutLeftInputPromo{
-    height: 35px;
-    width: 400px;
+    height: 50px;
+    width: 500px;
     display: flex;
     margin-top: 20px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 16px;
     border: 1.5px solid #D8D8D8;
 }
 .CheckoutLeftInputBoxPromo{
-    height: 30px;
+    height: 48px;
     width: 380px;
-    margin-left: 20px;
+    margin-left: 30px;
     display: flex;
     background-color: #ffffff;
     border-radius: 10px;
@@ -128,16 +154,40 @@
 
 
 .CheckoutRightBody{
-    height: 380px;
-    width: 350px;
+    height: 600px;
+    width: 500px;
     border: 1.5px solid #D8D8D8;
     border-radius: 15px;
     margin-top: 80px;
    
 }
 .CheckoutRightLine{
-    height: 2px;
-    width: 230px;
+    height: 1.7px;
+    width: 352px;
     background-color: #F5F5F5;;
-    margin-left: 17%;
+    margin-left: 50px;
+}
+.CheckoutRightBodyText{
+    font-size: 42px;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-left: 50px;
+}
+.CheckoutRightBodyTextP{
+    font-size: 21px;
+    color: #373737;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 53px;
+    margin-left: 0px;
+}
+.CheckoutRightText{
+    font-size: 24px;
+    color: #585858;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-left: 17px;
 }
