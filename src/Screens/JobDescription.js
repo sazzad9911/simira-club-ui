@@ -96,7 +96,7 @@ function JobDescription() {
                             <div>
                                 <div className="JobRightInputDiv">
                                     <p style={{ opacity: .7  }}>First Name.</p>
-                                    <StarIcon className="JobRightInputIcon" />
+                                    <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                                 </div>
                                 <div className="JobRightInputBoxDiv">
                                     <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
@@ -105,7 +105,7 @@ function JobDescription() {
                             <div className="JobRightInputLeftDiv">
                                 <div className="JobRightInputDiv">
                                     <p style={{ opacity: .7 }}>Last Name.</p>
-                                    <StarIcon className="JobRightInputIcon" />
+                                    <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                                 </div>
                                 <div className="JobRightInputBoxDiv">
                                     <input className="JobRightInputBox" type='Text' placeholder='Last name' />
@@ -115,7 +115,7 @@ function JobDescription() {
                         <div className="JobInputMobileDiv">
                             <div className="JobInputMobileIconDiv">
                                 <p style={{ opacity: .7 }}>Mobile No.</p>
-                                <StarIcon className="JobRightInputIcon" />
+                                <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                             </div>
                             <div className="JobMobileBoxDiv">
                                 <input className="JobMobileBox" type='Number' placeholder='Mobile No.' />
@@ -124,7 +124,7 @@ function JobDescription() {
                         <div className="JobInputMobileDiv">
                             <div className="JobInputMobileIconDiv">
                                 <p style={{ opacity: .7 }}>Email</p>
-                                <StarIcon className="JobRightInputIcon" />
+                                <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                             </div>
                             <div className="JobMobileBoxDiv">
                                 <input className="JobMobileBox" type='Email' placeholder='Email' />
@@ -133,7 +133,7 @@ function JobDescription() {
                         <div className="JobInputMobileDiv">
                             <div className="JobInputMobileIconDiv">
                                 <p style={{ opacity: .7 }}>LinkedIn</p>
-                                <StarIcon className="JobRightInputIcon" />
+                                <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }}/>
                             </div>
                             <div className="JobMobileBoxDiv">
                                 <input className="JobMobileBox" type='Text' placeholder='LinkedIn' />
