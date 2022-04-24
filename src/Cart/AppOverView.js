@@ -45,11 +45,22 @@ const AppOverView = () => {
                             onChange={handleOnChange}
                             className="topping"
                         />
-                        <h2 className='AppOverViewHtext'>Email</h2>
+                        
+                        {isChecked ? <h2 className='AppOverViewHtext'>Email</h2>
+                        :
+                        <h2>Email</h2>}
                     </div>
                     <div className='AppOverViewButtonLastDiv'>
-                        <button className='AppOverViewButton'></button>
-                        <h2>Phone</h2>
+                        <input
+                            type="checkbox"
+                            id="topping"
+                            name="topping"
+                            value="Paneer"
+                            className="topping"
+                        />
+                        {isChecked ? <h2 >Phone</h2>
+                        :
+                        <h2 className='AppOverViewHtext'>Phone</h2>}
                     </div>
                 </div>
                 <div className='AppOverViewFromBox'>
@@ -57,17 +68,20 @@ const AppOverView = () => {
                         :
                         <input className='AppOverViewFrom' type='number' placeholder='Phone' />}
 
-                    <button className='AppOverViewFromButton'>Send</button>
+                    <button className='AppOverViewFromButton'>
+
+                        <p className='AppOverViewFromButtonP'>Send</p>
+                    </button>
                 </div>
 
-                <div style={{ margin: '50px', }}>
+                <div >
                     <h5 className='AppOverViewh5'>Download app from</h5>
                     <div className='AppOverViewLink'>
                         <div >
                             <Link href="/"><img className='Footerimg' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png' /></Link>
                         </div>
                         <div >
-                            <Link href="/"><img className='Footerimg' src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
+                            <Link href="/"><img className='FooterimgEnd' src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
                         </div>
                     </div>
                 </div>
