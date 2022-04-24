@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
+} 
 
 .loginbodyleft1 {
     width: 400px;
@@ -32,6 +32,7 @@
 }
 
 .loginbodyrightbody1 h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-align: left;
     font-weight: 500;
     font-size: 30px;
@@ -64,15 +65,15 @@
 .loginButton1 {
     width: 400px;
     height: 55px;
-    border: 1px solid red;
+    border: 1px solid #FC444B;
     border-radius: 30px;
     text-align: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 .submitText1 {
-    color: red;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #FC444B;
     font-weight: 300;
     font-size: 20px;
 }
@@ -98,6 +99,7 @@
 }
 
 .googleText1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: #000000;
     font-weight: 400;
     font-size: 15px;
