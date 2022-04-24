@@ -37,7 +37,7 @@ const TopBrands = (props) => {
             console.log(err.message)
         })
     }, [])
-    return (
+    return ( 
         <div className='box'>
             <div className='arrowLeft1'>
                 <Button onClick={Left}>
