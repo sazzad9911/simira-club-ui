@@ -1,14 +1,14 @@
 .body12 {
-    width: 300px;
-    height: 200px;
+    width: 304px;
+    height: 212px;
     box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
     margin: 10px;
     
 }
 .img1{
-    width: 300px;
-    height: 120px;
+    width: 304px;
+    height: 121px;
     border-radius: 10px;
     margin: 0;
     
@@ -35,4 +35,10 @@
     justify-content: center;
     align-items: center;
     display: flex;
+}
+.cartText{
+    font-size: 20px;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
 }

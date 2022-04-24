@@ -3,6 +3,7 @@ import '../Cart/css/dealcart.css';
 import Link from '@mui/material/Link';
 import { postData, url, setBrands} from '../action';
 import { useDispatch, useSelector } from 'react-redux';
+import Img from './css/TopBrands (4).png'
 const DealCart = (props) => {
 const [brand,setBrand]= React.useState(null)
 const dispatch = useDispatch()
@@ -37,7 +38,7 @@ const dispatch = useDispatch()
 
                     </div>
                     <div className='cartButtomRight'>
-                        <p>{props.text}</p>
+                        <p className='cartText'>{props.text}</p>
                     </div>
                 </div>
             </Link>
