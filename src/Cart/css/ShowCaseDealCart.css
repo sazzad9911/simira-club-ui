@@ -1,7 +1,7 @@
-.mainbody{
+.mainbody {
     height: 100%;
     width: 100%;
-    border: 1px dashed black;
+    border: 1px dashed #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,30 +10,63 @@
     padding-bottom: 50px;
     flex-direction: column;
 }
-.img61{
-    height: 120px;
-    width: 120px;
-    border-radius: 80px; 
+
+.img61 {
+    height: 200px;
+    width: 200px;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.35);
+    border-radius: 110px;
 }
-.headText{
-    font-size: 20px;
+
+.headText {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
     color: black;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 30px;
 }
-.offercode{
-    height: 40px;
-    width: 220px;
-    border-radius: 30px;
+
+.offercode {
+    height: 90px;
+    width: 500px;
+    border-radius: 55px;
     background-color: #F5F5F5;
-    text-align: center;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.offercodebutton{
-    height: 40px;
-    width: 220px;
-    border-radius: 30px;
-    border: 1px solid red;
+.offercode p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    color: black;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.offercodebutton {
+    height: 90px;
+    width: 500px;
+    border-radius: 55px;
+    border: 1.81194px solid #FC444B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 20px;
+}
+.offercodebutton p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.condition h4{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #292929;
+}
+.condition p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #585858;
 }
