@@ -1,6 +1,6 @@
 .hotelcartBody{
-    height: 250px;
-    width: 220px;
+    height: 313px;
+    width: 297px;
     border-radius: 10px;
     margin-top: 20px;
     margin: 10px;
@@ -9,22 +9,43 @@
    
 }
 .hotelcartImg{
-    height: 250px;
-    width: 220px;
+    height: 313px;
+    width: 297px;
     border-radius: 10px;
     opacity: .7;
 }
 .hotelcartBodydiv{
     position: absolute;
     bottom: 0;
+    margin-left: 19px;
 
 }
 .hotelcartText{
-    color:#fff;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
 }
-
+.hotelcartTextP{
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    margin-left: 15px;
+}
+.hotelcartTextLast{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 5px;
+}
 .hotelcartIconDiv{
     display: flex;
+}
+.hotelcartSVG{
+    margin-left: 15px;
 }
 .hotelcartIcon{
     color: #64B657;
