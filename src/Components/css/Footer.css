@@ -4,7 +4,17 @@
     display: flex;
     flex-wrap: wrap;
     background: #F5F5F5;
+    font-family: 'Plus Jakarta Sans';
     overflow: hidden;
+}
+
+.Footerfont-style {
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    text-transform: uppercase;
 }
 
 .Footerbodytwoone {
@@ -15,22 +25,26 @@
     align-items: center;
     padding: 10px;
 }
-.Footertxtt{
+
+.Footertxtt {
     align-items: center;
     padding: 10px;
     margin-bottom: 35px;
+
 }
 
 .FooterHed {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    font-size: 22px;
     margin-top: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    color: #000000;
 }
 
-.Footerimg {
+.Footer-img {
     height: 40px;
     width: 135px;
 }
@@ -59,16 +73,18 @@
     height: 145px;
     margin-top: 30px;
 }
+
 .footerbox {
     width: 55%;
     margin-left: 2%;
-    margin-right:2%;
+    margin-right: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.Footerlink{
+
+.Footerlink {
     margin: 10px;
 }
 
@@ -76,19 +92,13 @@
     width: 40%;
     min-height: 200px;
 }
-.Footert{
-    font-size: 13px;
-}
 
-@media (max-width:700px) {
-    .footervl {
-        display: none;
-    }
-    .Footerimg {
-        height: 40px;
-        width: 107px;
-    }
-    .Footertxtt{
-        margin-bottom: 28px;
-    }
+.Footert {
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #808080;
 }
