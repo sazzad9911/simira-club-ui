@@ -6,27 +6,33 @@
     border-radius: 20px;
     border: 0px;
     margin: 10px;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    padding:10px
-
+    padding: 10px
 }
-.iconButtonbox:hover{
+
+.iconButtonbox:hover {
     opacity: .6;
 }
+
 .iconButtonbox img {
     width: 50px;
     height: 40px;
     margin: 5px;
 }
-.iconButtonbox h5{
-    font-size:14px;
+
+.iconButtonbox h5 {
     margin: 2px;
-    font-weight:500
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
 }
-.icon-bottom{
+
+.icon-bottom {
     text-decoration: none;
 }
 
@@ -35,7 +41,7 @@
     width: 25px;
     height: 25px;
     background: white;
-    box-shadow:1px 1px 5px black;
+    box-shadow: 1px 1px 5px black;
     border-radius: 20px;
     margin-top: 50px;
     display: flex;
@@ -44,12 +50,13 @@
     left: 20px;
     z-index: 1;
 }
+
 .IconButtonarrowRight {
     position: absolute;
     width: 25px;
     height: 25px;
     background: #FFFFFF;
-    box-shadow:1px 1px 5px black;
+    box-shadow: 1px 1px 5px black;
     border-radius: 20px;
     right: 20px;
     margin-top: 50px;
@@ -59,54 +66,3 @@
     z-index: 1;
 }
 
-
-/*
-
-import ArrowCircleLeftSharpIcon from '@mui/icons-material/ArrowCircleLeftSharp';
-import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
-import Button from '@mui/material/Button';
-
-
-            <div className='IconButtonarrowLeft1'>
-                <Button >
-                    <ArrowCircleLeftSharpIcon color="disabled" fontSize='large'
-                    ></ArrowCircleLeftSharpIcon>
-                </Button>
-            </div>
-
-            <div className='IconButtonarrowRight1'>
-                <Button>
-                    <ArrowCircleRightSharpIcon
-                        fontSize='large'
-                        color="disabled"></ArrowCircleRightSharpIcon>
-                </Button>
-            </div>
-
-
-.IconButtonarrowLeft1 {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: white;
-    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.445);
-    border-radius: 20px;
-    margin-top: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.IconButtonarrowRight1 {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: #FFFFFF;
-    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.445);
-    border-radius: 20px;
-    right: 20px;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-*/

@@ -1,110 +1,124 @@
-.MyProfileBody{
+.MyProfileBody {
     height: auto;
     width: auto;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.MyProfileDiv{
-    height: auto;
-    width: 450px;
+
+.MyProfileDiv {
+    width: 500px;
     margin: 50px;
     border: 1px solid #D8D8D8;
+    border-radius: 20px;
 
 }
-.MyProfileBox{
+.MyProfileBox {
     flex-direction: row;
     display: flex;
     margin-left: 30px;
     margin-top: 20px;
-    
+
 }
-.MyProfileBoxIcon{
+
+.MyProfileBoxIcon {
     border: 1px solid #D8D8D8;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
+    height: 85px;
+    width: 85px;
+    border-radius: 41.5px;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.MyProfileIcon{
-    font-size: 30px;
+
+.MyProfileIcon {
+    font-size: 3px;
 }
-.MyProfileInputBox{
-    height: 40px;
-    width: 300px;
+
+.MyProfileInputBox {
+    height: 85px;
+    width: 320px;
     display: flex;
-    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-left: 15px;
     background-color: #ffffff;
     border: none;
     border: 1px solid #D8D8D8;
-    border-radius: 20px;
+    border-radius: 50px;
     flex-direction: row;
     align-items: center;
 }
-.MyProfileInput{
+::placeholder {
+    color: #000000;
+  }
+
+
+.MyProfileInput {
     outline: none;
     border: none;
     width: 250px;
     margin-left: 15px;
-    
-    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
 }
 
-.MyProfileInputEmail{
-    outline: none;
-    border: none;
-    width: 300px;
-    border-radius: 10px;
-    margin-left: 15px;
-    background-color: #F5F5F5;
-}
-.MyProfileBoxIconEmail{
+.MyProfileBoxIconEmail {
     border: 1px solid #D8D8D8;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
+    height: 85px;
+    width: 85px;
+    border-radius: 41.5px;
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #F5F5F5;
 }
 
-.MyProfileInputBoxEmail{
-    height: 40px;
-    width: 300px;
-    display: flex;
-    margin-left: 20px;
-    background-color: #F5F5F5;
-    border: none;
-    border: 1px solid #D8D8D8;
-    border-radius: 20px;
-    flex-direction: row;
-    align-items: center;
-}
-.MyProfileText{
+.MyProfileText {
     justify-content: center;
     align-items: center;
     display: flex;
     padding: 20px;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+
 }
-.MyProfileTextLeftButton{
+
+.MyProfileTextLeftButton {
     background-color: white;
     border: none;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
 }
-.MyProfileTextRightButton{
+
+.MyProfileTextRightButton {
     background-color: white;
     border: none;
     margin-left: -5px;
-    color: rgb(255, 0, 0);
+    color: rgba(237, 11, 11, 0.896);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
 }
-.MyProfileSelect{
+
+.MyProfileSelect {
     height: 40px;
     width: 280px;
     margin-left: 15px;
     border: none;
     border-radius: 20px;
     outline: none;
-    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+
 }

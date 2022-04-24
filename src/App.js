@@ -29,13 +29,13 @@ import SearchHotel from "./Screens/SearchHotel";
 import ShowcaseHotel from "./Screens/ShowcaseHotel"
 import NotFound from "./Screens/NotFound";
 import { useDispatch, useSelector } from 'react-redux'
-import { url, postData, setHotels,setUser } from './action'
+import { url, postData, setHotels, setUser } from './action'
 import SearchDeal from "./Screens/SearchDeal";
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   const dispatch = useDispatch()
-  const hotels=useSelector(state => state.Hotels)
+  const hotels = useSelector(state => state.Hotels)
 
   React.useEffect(() => {
     fetch(api() + "/checkUser").then(res => res.json())
@@ -97,11 +97,11 @@ function App() {
         <Route path="/ShowCaseDeal" element={<ShowCaseDeal />} />
         <Route path="/SearchHotel" element={<SearchHotel />} />
         {
-          hotels?(
-            hotels.map((d,i)=>(
-              <Route key={i} path={"/ShowcaseHotel"+"/"+d.id} element={<ShowcaseHotel data={d} />} />
+          hotels ? (
+            hotels.map((d, i) => (
+              <Route key={i} path={"/ShowcaseHotel" + "/" + d.id} element={<ShowcaseHotel data={d} />} />
             ))
-          ):(
+          ) : (
             <></>
           )
         }

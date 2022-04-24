@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     background: #F5F5F5;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'Plus Jakarta Sans', sans-serif;
     overflow: hidden;
 }
 
@@ -96,7 +96,7 @@
 .Footert {
     text-align: center;
     letter-spacing: 0.03em;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
