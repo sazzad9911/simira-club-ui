@@ -6,10 +6,10 @@ import GoogleIcon from '@mui/icons-material/Google';
 import Header from './Header';
 import Footer from './Footer';
 import { useDispatch } from 'react-redux';
-import { setUser, postData } from './../action';
+import { setUser, postData, url } from './../action';
 import Alert from '../Content/Alert';
-import api from '../api'
-
+import {getAuth,signInWithEmailAndPassword} from 'firebase/auth'
+import app from '../firebase'
 
 const Login = (props) => {
     const dispatch = useDispatch()
@@ -17,6 +17,8 @@ const Login = (props) => {
     const [Password, setPassword] = React.useState()
     const [visibility, setVisibility] = React.useState(false)
     const [data, setData] = React.useState({ title: '', message: '' })
+    const auth=getAuth(app)
+    const [Message, setMessage] =React.useState(null)
 
     const Submit = () => {
         if (!Email || !Password) {
@@ -24,22 +26,20 @@ const Login = (props) => {
             setData({ title: 'Invalid', message: 'Email and Password cant be empty' })
             return
         }
-        postData(api() + '/login', { email: Email, password: Password }).then(res => {
-            //console.log(res)
-            if (res.uid) {
-                dispatch(setUser(res))
-                setVisibility(true)
-                setData({ title: 'Success!', message: "Successfully log into your account" })
-                window.location.href = '/'
-                return
-            }
-            setVisibility(true)
-            setData({ title: 'Faild!', message: res.message })
-
+        signInWithEmailAndPassword(auth,Email,Password).then(userCredentials => {
+            let user=userCredentials.user
+            postData(url+'/getData',{
+                tableName:'user',
+                condition: "uid="+"'"+user.uid+"'"
+            }).then(data => {
+                dispatch(setUser(data))
+                window.location.href='/'
+            })
+            
         }).catch(err => {
-            setVisibility(true)
-            setData({ title: 'Faild!', message: err.message })
+            setMessage(err.code)
         })
+        
     }
 
     return (
@@ -59,6 +59,10 @@ const Login = (props) => {
                     <div className='textinputview'>
                         <input onChange={(e) => setPassword(e.target.value)} className='textinput' type='password' placeholder='Password' />
                     </div>
+                    <p style={{
+                        color:'red',
+                        fontSize:'18px',
+                    }}>{Message}</p>
                     <div className='forgotPlink'>
                         <Link underline="none" color="black" href="#">Forgot Password?</Link>
                     </div>

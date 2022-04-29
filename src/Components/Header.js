@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React, { useRef } from 'react';
 import Icon from '../File/icon/icon.png'
 import './css/Header.css'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -9,15 +9,24 @@ import { useSelector } from 'react-redux';
 import member from '../File/icon/member.png'
 import business from '../File/icon/business.png'
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import WebIcon from '@mui/icons-material/Web';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import HotelIcon from '@mui/icons-material/Hotel';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 
 const Header = () => {
     const width = window.innerWidth
     const user = useSelector(state => state.User)
-    const [height,setHeight]= React.useState('66px')
-    let name=''
-    if(user) {
-        name=user[0].name.split(' ')
-        name=name[0]
+    const [height, setHeight] = React.useState('66px')
+    let name = ''
+    if (user) {
+        name = user[0].name.split(' ')
+        name = name[0]
     }
 
 
@@ -42,7 +51,7 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
-            <div style={{height:height}} className="header-bottom">
+            <div style={{ height: height }} className="header-bottom">
                 <div className='header-content'>
                     <Link href='/' color={'inherit'} underline='none'>
                         <img src={Icon} />
@@ -53,8 +62,8 @@ const Header = () => {
                             <SearchIcon />
                         </div>
                     </Link>
-                    <button onClick={(e)=>{
-                        setHeight(height=='auto'?'66px':'auto');
+                    <button onClick={(e) => {
+                        setHeight(height == 'auto' ? '66px' : 'auto');
                     }} id='noDiv'>
                         <MenuIcon />
                     </button>
@@ -73,7 +82,7 @@ const Header = () => {
                 </div>
                 <div id='div' className='divider'></div>
                 <Link href='/BusinessWithUs' underline='none' color='inherit'>
-                    <div  className='header-content' style={{ marginRight: 50, cursor: 'pointer' }}>
+                    <div className='header-content' style={{ marginRight: 50, cursor: 'pointer' }}>
                         <img style={{
                             width: 35,
                             height: 35
@@ -91,7 +100,7 @@ const Header = () => {
                             (
                                 <Link href="/Profile" underline='none'>
                                     <div style={{ display: 'flex' }}>
-                                        <img src={user[0].image?user[0].image:'https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-2.png'} />
+                                        <img src={user[0].image ? user[0].image : 'https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-2.png'} />
                                         <div className='header-box'>
                                             <h5>Welcome, {name} </h5>
                                             <p>Hope you are enjoying!</p>
@@ -124,3 +133,105 @@ const Header = () => {
 };
 
 export default Header;
+
+export const AdminHeader = (props) => {
+    const drawer = props.drawer
+    return (
+        <div id='drawer' style={{
+            minWidth: '50px',
+            height: '100%',
+            backgroundColor: '#FC444B',
+            overflowY: 'scroll',
+            padding: '10px',
+            bottom: '0',
+        }}>
+            <div style={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'flex-end'
+            }}>
+                <button onClick={() => {
+                    props.setDrawer(!drawer)
+                }} style={{
+                    backgroundColor: '#FC444B',
+                    outline: 'none',
+                    border: 'none'
+                }}>
+                    <CloseFullscreenIcon style={{ color: '#ffff' }} />
+                </button>
+            </div>
+
+            <div onClick={()=>props.setOption('Dashboard')} id="container">
+                <DashboardIcon />
+                {
+                    drawer ? (
+                        <p>Dashboard</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+
+            <div onClick={()=>props.setOption('Page Settings')} id="container">
+                <WebIcon />
+                {
+                    drawer ? (
+                        <p>Page Settings</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+            <div onClick={()=>props.setOption('Hotels')} id="container">
+                <HotelIcon />
+                {
+                    drawer ? (
+                        <p>Hotels</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+            <div onClick={()=>props.setOption('Brands')} id="container">
+                <BookmarkBorderIcon />
+                {
+                    drawer ? (
+                        <p>Brands</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+            <div onClick={()=>props.setOption('Members')} id="container">
+                <AccountCircleIcon />
+                {
+                    drawer ? (
+                        <p>Members</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+            <div onClick={()=>props.setOption('Notifications')} id="container">
+                <NotificationsIcon />
+                {
+                    drawer ? (
+                        <p>Notifications</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+            <div onClick={()=>props.setOption('Customer Point')} id="container">
+                <SupportAgentIcon />
+                {
+                    drawer ? (
+                        <p>Customer Point</p>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+        </div>
+    )
+}

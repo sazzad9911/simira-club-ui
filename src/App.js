@@ -31,35 +31,35 @@ import NotFound from "./Screens/NotFound";
 import { useDispatch, useSelector } from 'react-redux'
 import { url, postData, setHotels, setUser } from './action'
 import SearchDeal from "./Screens/SearchDeal";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import app from './firebase'
+import Dashboard from "./Admin/Dashboard";
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   const dispatch = useDispatch()
   const hotels = useSelector(state => state.Hotels)
+  const auth = getAuth(app)
+  const [admin, setAdmin] = React.useState(false)
 
   React.useEffect(() => {
-    fetch(api() + "/checkUser").then(res => res.json())
-      .then(data => {
-        if (data.uid) {
-          postData(url + '/getData', {
-            tableName: 'user',
-            condition: "uid=" + "'" + data.uid + "'"
-          }).then(doc => {
-            if (Array.isArray(doc)) {
-              return dispatch(setUser(doc));
+    onAuthStateChanged(auth, user => {
+      if (user) {
+        postData(url + '/getData', {
+          tableName: 'user',
+          condition: "uid=" + "'" + user.uid + "'"
+        }).then(data => {
+          if (Array.isArray(data)) {
+            if(data[0].admin==1){
+              setAdmin(true);
             }
-            console.log(doc.message);
-          }).catch(err => {
-            console.log(err.message);
-          })
-
-        } else {
-          console.log("no user found")
-        }
-      }).catch(err => {
-        console.log(err)
-      })
-
+            dispatch(setUser(data))
+          }
+        })
+      } else {
+        dispatch(setUser(null));
+      }
+    })
     postData(url + "/getData", {
       tableName: 'hotels',
       orderColumn: 'popularity'
@@ -75,41 +75,47 @@ function App() {
       console.log(err.message)
     })
   }, [])
+  if (admin) {
+    return (
+      <Dashboard />
+    )
+  } else {
+    return (
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Profile" element={<MyProfile />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
+          <Route path="/Search" element={<Search />} />
+          <Route path="/Career" element={<Career />} />
+          <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+          <Route path="/JobDescription" element={<JobDescription />} />
+          <Route path="/Checkout" element={<Checkout />} />
+          <Route path="/ShowCaseDealBrand" element={<ShowCaseDealBrand />} />
+          <Route path="/ShowCaseCategory/restaurant" element={<ShowCaseCategory name="restaurant" />} />
+          <Route path="/ShowCaseCategory/hotel" element={<ShowCaseCategory name="hotel" />} />
+          <Route path="/ShowCaseDeal" element={<ShowCaseDeal />} />
+          <Route path="/SearchHotel" element={<SearchHotel />} />
+          {
+            hotels ? (
+              hotels.map((d, i) => (
+                <Route key={i} path={"/ShowcaseHotel" + "/" + d.id} element={<ShowcaseHotel data={d} />} />
+              ))
+            ) : (
+              <></>
+            )
+          }
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
+    );
+  }
 
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Profile" element={<MyProfile />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
-        <Route path="/Search" element={<Search />} />
-        <Route path="/Career" element={<Career />} />
-        <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
-        <Route path="/JobDescription" element={<JobDescription />} />
-        <Route path="/Checkout" element={<Checkout />} />
-        <Route path="/ShowCaseDealBrand" element={<ShowCaseDealBrand />} />
-        <Route path="/ShowCaseCategory/restaurant" element={<ShowCaseCategory name="restaurant" />} />
-        <Route path="/ShowCaseCategory/hotel" element={<ShowCaseCategory name="hotel" />} />
-        <Route path="/ShowCaseDeal" element={<ShowCaseDeal />} />
-        <Route path="/SearchHotel" element={<SearchHotel />} />
-        {
-          hotels ? (
-            hotels.map((d, i) => (
-              <Route key={i} path={"/ShowcaseHotel" + "/" + d.id} element={<ShowcaseHotel data={d} />} />
-            ))
-          ) : (
-            <></>
-          )
-        }
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
 }
 
 export default App;
