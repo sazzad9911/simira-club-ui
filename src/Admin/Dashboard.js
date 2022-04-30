@@ -5,6 +5,11 @@ import { CChart } from '@coreui/react-chartjs';
 import { AdminHeader } from '../Components/Header';
 import Onboarding from './Onboarding';
 import PageSettings from './PageSettings';
+import Hotels from './Hotels';
+import Brands from './Brands';
+import Membership from './Membership';
+import Notification from './Notification';
+import Customer from './Customer';
 
 const Dashboard = () => {
     const User = useSelector(state => state.User)
@@ -21,17 +26,29 @@ const Dashboard = () => {
                 flexBasis: drawer ? '250px' : '65px',
                 flexGrow: '0',
                 flexShrink: '0',
+                top:'0',
+                left:'0',
             }}>
                 <AdminHeader setOption={setOption}
                     option={option} drawer={drawer} setDrawer={setDrawer} />
             </div>
-            <div style={{ height: '100%', overflowY: 'scroll' }}>
+            <div style={{ height: '100%', overflowY: 'scroll', width: '100%' }}>
                 {
                     option == 'Dashboard' ? (
                         <Onboarding />
                     ) : option == 'Page Settings' ? (
                         <PageSettings />
-                    ) :
+                    ) : option == 'Hotels' ? (
+                        <Hotels />
+                    ) :option == 'Brands' ?(
+                        <Brands/>
+                    ):option == 'Membership'?(
+                        <Membership/>
+                    ):option == 'Notifications'?(
+                        <Notification/>
+                    ):option == 'Customer Point'?(
+                        <Customer/>
+                    ):
                     (
                         <div></div>
                     )

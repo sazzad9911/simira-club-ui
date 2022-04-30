@@ -148,14 +148,15 @@ export const AdminHeader = (props) => {
             <div style={{
                 width: '100%',
                 display: 'flex',
-                justifyContent: 'flex-end'
+                justifyContent: 'flex-end',
             }}>
                 <button onClick={() => {
                     props.setDrawer(!drawer)
                 }} style={{
                     backgroundColor: '#FC444B',
                     outline: 'none',
-                    border: 'none'
+                    border: 'none',
+                    width:'50px'
                 }}>
                     <CloseFullscreenIcon style={{ color: '#ffff' }} />
                 </button>
@@ -202,11 +203,11 @@ export const AdminHeader = (props) => {
                     )
                 }
             </div>
-            <div onClick={()=>props.setOption('Members')} id="container">
+            <div onClick={()=>props.setOption('Membership')} id="container">
                 <AccountCircleIcon />
                 {
                     drawer ? (
-                        <p>Members</p>
+                        <p>Membership</p>
                     ) : (
                         <p></p>
                     )

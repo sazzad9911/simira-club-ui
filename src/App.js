@@ -34,13 +34,14 @@ import SearchDeal from "./Screens/SearchDeal";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from './firebase'
 import Dashboard from "./Admin/Dashboard";
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   const dispatch = useDispatch()
   const hotels = useSelector(state => state.Hotels)
   const auth = getAuth(app)
-  const [admin, setAdmin] = React.useState(false)
+  const [admin, setAdmin] = React.useState(true)
 
   React.useEffect(() => {
     onAuthStateChanged(auth, user => {
@@ -50,7 +51,7 @@ function App() {
           condition: "uid=" + "'" + user.uid + "'"
         }).then(data => {
           if (Array.isArray(data)) {
-            if(data[0].admin==1){
+            if (data[0].admin == 1) {
               setAdmin(true);
             }
             dispatch(setUser(data))
@@ -75,9 +76,22 @@ function App() {
       console.log(err.message)
     })
   }, [])
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#FC444B" // This is an orange looking color
+      },
+      secondary: {
+        main: '#48A6DB'
+      },
+
+    }
+  });
   if (admin) {
     return (
-      <Dashboard />
+      <ThemeProvider theme={theme}>
+        <Dashboard />
+      </ThemeProvider>
     )
   } else {
     return (

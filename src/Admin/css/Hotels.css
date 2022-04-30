@@ -1,0 +1,10 @@
+.add-hotels{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.hotel-cart{
+    width: 100%;
+    min-height: 100px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0)
+}
