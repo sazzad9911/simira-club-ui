@@ -41,7 +41,7 @@ function App() {
   const dispatch = useDispatch()
   const hotels = useSelector(state => state.Hotels)
   const auth = getAuth(app)
-  const [admin, setAdmin] = React.useState(true)
+  const [admin, setAdmin] = React.useState(false)
   const action=useSelector(state => state.pageSettings.action)
 
   React.useEffect(() => {

@@ -64,10 +64,18 @@ const Home = () => {
                     <IconButton link='/services' img={Services} title='Services' />
                 </div>
             </div>
-
             <div className='Home-topBrand'>
-                <TopBrands headText='Top Brands For You' />
+                <TopBrands headText='Top Brands For You' /> 
             </div>
+           
+            {
+                /*
+ <Header />
+            
+           
+
+                
+                
             <div style={{ height: 20, width: '100%' }}></div>
             <PopularDeal />
             <div style={{ height: 20, width: '100%' }}></div>
@@ -78,14 +86,6 @@ const Home = () => {
             <AppOverView />
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
-            {
-                /*
- <Header />
-            
-           
-
-                
-                
            
             
             <div className='Home-topBrand'>
