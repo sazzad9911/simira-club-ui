@@ -10,12 +10,14 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useSelector, useDispatch } from 'react-redux'
 
 const Brands = () => {
     const [openDiv, setOpenDiv] = React.useState(false)
     const [openSecond, setOpenSecond] = React.useState(false)
     const [category, setCategory] = React.useState('');
     const [open, setOpen] = React.useState(false);
+    const Deals = useSelector(state => state.Deals)
     const handleChange = (event) => {
         setCategory(event.target.value);
     }
@@ -95,16 +97,24 @@ const Brands = () => {
                     )
                 }
             </div>
-            <div className='page-div'>
-                <p>1</p>
-                <img src={'https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'} />
-                <p>Lorem Ipsum is simply dummy text of </p>
-                <Button style={{ margin: '5px',width:'200px',height:'40px' }} 
-                variant="outlined" >
-                    <DeleteIcon />
-                     Delete
-                </Button>
-            </div>
+            {
+                Deals ? (
+                    Deals.map((d, i) => (
+                        <div key={i} className='page-div'>
+                            <p>{i+1}</p>
+                            <img src={d.image} />
+                            <p>{d.name}</p>
+                            <Button style={{ margin: '5px', width: '200px', height: '40px' }}
+                                variant="outlined" >
+                                <DeleteIcon />
+                                Delete
+                            </Button>
+                        </div>
+                    ))
+                ):(
+                    <h5 style={{width: '100%', textAlign: 'center'}}>Loading...</h5>
+                )
+            }
         </div>
     );
 };

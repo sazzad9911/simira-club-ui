@@ -4,23 +4,11 @@ import 'react-slideshow-image/dist/styles.css'
 import './css/slider.css'
 import { Oval } from "react-loader-spinner";
 import { postData, url } from "../action";
+import { useSelector } from "react-redux";
 
 const Slider = () => {
-    const [data, setData] = useState(null)
-    React.useEffect(() => {
-        postData(url+"/getData",{
-            tableName:'slider'
-        }).then(data=>{
-            if(data.message){
-                console.log(data.message)
-                return
-            }
-            setData(data)
-            //console.log(data)
-        }).catch(err=>{
-            console.log(err.message)
-        })
-    }, [])
+   const data= useSelector(state => state.Banners)
+    
 
     const style = {
         width: '98%',

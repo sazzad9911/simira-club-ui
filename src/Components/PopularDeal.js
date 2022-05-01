@@ -19,19 +19,7 @@ const PopularDeal = () => {
     const Right = () => {
         ref.current.scrollLeft += 100
     }
-    React.useEffect(() => {
-        postData(url + '/getData', {
-            tableName: 'deals',
-            orderColumn: 'date'
-        }).then(data => {
-            if (Array.isArray(data)) {
-                return dispatch(setDeals(data));
-            }
-            console.log(data);
-        }).catch(err => {
-            console.log(err.message);
-        })
-    }, [])
+    
     return (
         <div style={{ background: 'none' }} className='box'>
 

@@ -162,7 +162,9 @@ export const AdminHeader = (props) => {
                 </button>
             </div>
 
-            <div onClick={()=>props.setOption('Dashboard')} id="container">
+            <div style={{
+                opacity:props.option=='Dashboard'?.4:1
+            }} onClick={()=>props.setOption('Dashboard')} id="container">
                 <DashboardIcon />
                 {
                     drawer ? (
@@ -173,7 +175,9 @@ export const AdminHeader = (props) => {
                 }
             </div>
 
-            <div onClick={()=>props.setOption('Page Settings')} id="container">
+            <div style={{
+                opacity:props.option=='Page Settings'?.4:1
+            }} onClick={()=>props.setOption('Page Settings')} id="container">
                 <WebIcon />
                 {
                     drawer ? (
@@ -183,7 +187,9 @@ export const AdminHeader = (props) => {
                     )
                 }
             </div>
-            <div onClick={()=>props.setOption('Hotels')} id="container">
+            <div style={{
+                opacity:props.option=='Hotels'?.4:1
+            }} onClick={()=>props.setOption('Hotels')} id="container">
                 <HotelIcon />
                 {
                     drawer ? (
@@ -193,7 +199,9 @@ export const AdminHeader = (props) => {
                     )
                 }
             </div>
-            <div onClick={()=>props.setOption('Brands')} id="container">
+            <div style={{
+                opacity:props.option=='Brands'?.4:1
+            }} onClick={()=>props.setOption('Brands')} id="container">
                 <BookmarkBorderIcon />
                 {
                     drawer ? (
@@ -203,7 +211,9 @@ export const AdminHeader = (props) => {
                     )
                 }
             </div>
-            <div onClick={()=>props.setOption('Membership')} id="container">
+            <div style={{
+                opacity:props.option=='Membership'?.4:1
+            }} onClick={()=>props.setOption('Membership')} id="container">
                 <AccountCircleIcon />
                 {
                     drawer ? (
@@ -213,7 +223,9 @@ export const AdminHeader = (props) => {
                     )
                 }
             </div>
-            <div onClick={()=>props.setOption('Notifications')} id="container">
+            <div style={{
+                opacity:props.option=='Notifications'?.4:1
+            }} onClick={()=>props.setOption('Notifications')} id="container">
                 <NotificationsIcon />
                 {
                     drawer ? (
@@ -223,7 +235,9 @@ export const AdminHeader = (props) => {
                     )
                 }
             </div>
-            <div onClick={()=>props.setOption('Customer Point')} id="container">
+            <div style={{
+                opacity:props.option=='Customer Point'?.4:1
+            }} onClick={()=>props.setOption('Customer Point')} id="container">
                 <SupportAgentIcon />
                 {
                     drawer ? (

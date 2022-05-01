@@ -11,6 +11,12 @@ const pageSettings =(state=initialState,action)=>{
             loader:action.playload,
             action:state.action
         }
+    }else if(action.type=='SET_ACTION'){
+        return state={
+            loader:state.action,
+            action:action.playload
+        }
     }
+    return state
 }
 export default pageSettings

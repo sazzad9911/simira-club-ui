@@ -10,6 +10,24 @@ export const setBrands=(brands) => {
 export const setHotels=(hotels) => {
   return{type: 'SET_HOTELS',playload:hotels}
 }
+export const setUsers=(users) => {
+  return{type: 'SET_USERS',playload:users}
+}
+export const setAction=(action) => {
+  return{type: 'SET_ACTION',playload:action}
+}
+export const setHotelBooking=(action) => {
+  return{type: 'SET_HOTEL_BOOKING',playload:action}
+}
+export const setBookAppointment=(action) => {
+  return {type: 'SET_BOOK_APPOINTMENT',playload:action}
+}
+export const setCustomerMessages=(action) => {
+  return{type: 'SET_CUSTOMER_MESSAGES',playload:action}
+}
+export const setBanners=(doc)=>{
+  return{type: 'SET_BANNERS',playload:doc}
+}
 export async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {

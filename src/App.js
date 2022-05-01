@@ -29,7 +29,7 @@ import SearchHotel from "./Screens/SearchHotel";
 import ShowcaseHotel from "./Screens/ShowcaseHotel"
 import NotFound from "./Screens/NotFound";
 import { useDispatch, useSelector } from 'react-redux'
-import { url, postData, setHotels, setUser } from './action'
+import { url, postData, setHotels, setUser,setBrands, setBanners,setDeals } from './action'
 import SearchDeal from "./Screens/SearchDeal";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from './firebase'
@@ -42,6 +42,7 @@ function App() {
   const hotels = useSelector(state => state.Hotels)
   const auth = getAuth(app)
   const [admin, setAdmin] = React.useState(true)
+  const action=useSelector(state => state.pageSettings.action)
 
   React.useEffect(() => {
     onAuthStateChanged(auth, user => {
@@ -75,7 +76,45 @@ function App() {
     }).catch(err => {
       console.log(err.message)
     })
-  }, [])
+  }, [action])
+  React.useEffect(() => {
+    postData(url + "/getData", {
+      tableName: 'brands',
+    }).then(data => {
+      if(Array.isArray(data)){
+        return dispatch(setBrands(data));
+      }
+      //dispatch(setBrands(data))
+      //console.log(data)
+    }).catch(err => {
+      console.log(err.message)
+    })
+  }, [action])
+  React.useEffect(() => {
+    postData(url+"/getData",{
+        tableName:'slider'
+    }).then(data=>{
+        if(Array.isArray(data)){
+          dispatch(setBanners(data))
+        }
+        //console.log(data)
+    }).catch(err=>{
+        console.log(err.message)
+    })
+}, [action])
+React.useEffect(() => {
+  postData(url + '/getData', {
+      tableName: 'deals',
+      orderColumn: 'date'
+  }).then(data => {
+      if (Array.isArray(data)) {
+          return dispatch(setDeals(data));
+      }
+      console.log(data);
+  }).catch(err => {
+      console.log(err.message);
+  })
+}, [action])
   const theme = createTheme({
     palette: {
       primary: {

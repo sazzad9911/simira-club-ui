@@ -23,7 +23,7 @@
 }
 .add-banners{
     width: 100%;
-    height: 100px;
+    height: auto;
     padding:10px;
     display: inline-block
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import './css/Dashboard.css'
 import { CChart } from '@coreui/react-chartjs';
 import { AdminHeader } from '../Components/Header';
@@ -10,11 +10,55 @@ import Brands from './Brands';
 import Membership from './Membership';
 import Notification from './Notification';
 import Customer from './Customer';
+import {postData, url,setUsers, setBookAppointment} from '../action'
+import { setHotelBooking, setCustomerMessages } from './../action';
 
 const Dashboard = () => {
     const User = useSelector(state => state.User)
     const [drawer, setDrawer] = React.useState(false)
     const [option, setOption] = React.useState('Dashboard')
+    const dispatch = useDispatch()
+    const action = useSelector(state => state.pageSettings.action)
+
+    React.useEffect(() =>{
+        postData(url +'/getData',{
+            tableName: 'user'
+        }).then((data) =>{
+            if(Array.isArray(data)){
+                return dispatch(setUsers(data))
+            }
+        })
+    },[])
+    React.useEffect(()=>{
+        postData(url +'/getData',{
+            tableName: 'hotel_booking',
+            orderColumn: 'date'
+        }).then((data) =>{
+            if(Array.isArray(data)){
+                return dispatch(setHotelBooking(data))
+            }
+        })
+    },[])
+    React.useEffect(() => {
+        postData(url +'/getData',{
+            tableName:'book_appointment',
+            orderColumn: 'date'
+        }).then(data => {
+            if(Array.isArray(data)){
+                dispatch(setBookAppointment(data))
+            }
+        })
+    },[])
+    React.useEffect(() => {
+        postData(url +'/getData',{
+            tableName: 'customer_messages',
+            orderColumn: 'date'
+        }).then((data) => {
+            if(Array.isArray(data)){
+                dispatch(setCustomerMessages(data))
+            }
+        })
+    },[])
     if (User && User[0].admin != 1) {
         window.location.href = '/'
     }
