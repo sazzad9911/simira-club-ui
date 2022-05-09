@@ -87,9 +87,12 @@ const Hotels = () => {
                             'popularity', 'image', 'ratings', 'check_in', 'check_out', 'conditions',
                             'discount', 'description', 'categories'],
                         values: [HotelName, HotelAddress, 'Free For Members', convertDate(new Date())
-                            , 0, url + "/" + res.data.originalname, 0, CheckIn, CheckOut, conditions, 0, Description, category]
+                            , 0, url + "/" + res.data.originalname, 0, CheckIn, CheckOut, conditions, 
+                            0, Description, category]
                     }).then(res => {
-                        console.log(res);
+                        if(res.message){
+                            console.log(res.message);
+                        }
                         setImageLoading(false)
                         dispatch(setAction(!action))
                     })
