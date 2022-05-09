@@ -7,27 +7,51 @@
 .loginbodyleft {
     width: 400px;
     height: 600px;
-    background-color: #C4C4C4;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
- 
+@media only screen and (max-width: 600px) {
+    .loginbodyleft {
+        width: 300px;
+        height: 400px;
+        margin-bottom: 0px;
+    }
+}
+.leftImg1 {
+    width: 400px;
+    height: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+    .leftImg1 {
+        width: 300px;
+        height: 400px;
+    }
+}   
 .loginbodyright {
     width: 600px;
     height: 600px;
-    background-color: rgb(252, 252, 252);
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
+@media only screen and (max-width: 600px) {
+    .loginbodyright {
+        height: 450px;
+        margin-bottom: 70px;
+        background-color: #ffffff;
+        
+    }
+}
 .loginbodyrightbody{
     width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
 }
 .loginbodyrightbody h1{
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -36,7 +60,11 @@
     font-size: 32px;
     color: #000000;
 }
-
+@media only screen and (max-width: 600px) {
+    .loginbodyrightbody h1 {
+        margin-top: 0px; 
+    }
+}
 .textinputview {
     width: 400px;
     height: 50px;
@@ -67,10 +95,18 @@
     text-align: center;
     align-items: center;
 }
+.loginButton:hover {
+    background-color: #FC444B;
+
+}
 .submitText{
     color: #FC444B;
     font-weight: 300;
     font-size: 20px;
+}
+.submitText:hover {
+    color: #ffffff;
+
 }
 .underline{
     width: 400px;
@@ -90,6 +126,11 @@
     border: 1px solid #D8D8D8;
     border-radius: 30px;
 }
+.googleButton:hover {
+    background-color: #c7c6c657;
+
+}
+
 .googleText{
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
