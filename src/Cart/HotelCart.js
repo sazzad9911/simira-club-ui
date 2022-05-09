@@ -23,6 +23,7 @@ const HotelCart = (props) => {
                     </div>
                 </div>
             </div>
+            
         </Link>
     );
 };

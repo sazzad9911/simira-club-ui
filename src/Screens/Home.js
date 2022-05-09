@@ -71,7 +71,7 @@ const Home = () => {
             <PopularDeal />
             <div style={{ height: 20, width: '100%' }}></div>
             <BookShow />
-            <div style={{ height: 20, width: '100%' }}></div>
+            <div style={{ height: 50, width: '100%' }}></div>
             <PopularHotels />
             <div style={{ height: 20, width: '100%' }}></div>
             <AppOverView />
