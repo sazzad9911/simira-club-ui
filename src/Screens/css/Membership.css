@@ -1,0 +1,175 @@
+.Membershiphed {
+    height: 330px;
+    width: 98%;
+    margin: 1%;
+}
+
+.membername {
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 82px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-20%, -20%);
+}
+
+.container {
+    position: relative;
+}
+
+.Membershipcard {
+    height: auto;
+    width: auto;
+    display: flex;
+    margin: 2%;
+}
+
+.MemberLeftohed {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.MemberLeftohedo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Membershipcard-left {
+    width: 29%;
+    height: 380px;
+    margin-left: 20px;
+    background-color: #FC444B;
+    border-radius: 10px;
+}
+
+.memberbar {
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5%;
+    align-items: center;
+}
+
+.memberl {
+    height: 250px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.MemberLeft {
+    height: 60px;
+    background-color: #FFFFFF;
+    margin: 4px;
+    border-radius: 5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.Membershipcard-right {
+    width: 68%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.membershipfoote {
+    color: #d70d0d;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.membershipfootee {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #000000;
+}
+
+.MemberCard {
+    width: 50%;
+    height: 350px;
+    margin-left: 1.5%;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.membercardft {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15px;
+    margin-top: 45px;
+    border-radius: 5px;
+    background: #F3B038;
+
+}
+
+.membercardf {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15px;
+    margin-top: 45px;
+    border-radius: 5px;
+    background: #FC444B;
+}
+
+.membertext {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.membercardfs {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    font-weight: 700;
+}
+
+.membercardfss {
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    color: #585858;
+
+}
+
+@media only screen and (max-width: 730px) {
+    .Membershipcard-right {
+        display: block;
+    }
+
+    .MemberCard {
+        width: 90%;
+        margin-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    .Membershipcard-left {
+        width: 50%;
+        margin-left: 40px;
+    }
+}
+@media only screen and (max-width: 930px) {
+    .membername{
+        font-size: 72px;
+        left: 25%;
+    }
+}
