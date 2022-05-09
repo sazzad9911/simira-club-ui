@@ -7,7 +7,6 @@ const BookShow = () => {
 
         <Link className='bookshowbody' href="#">
             <img className="bookshow" src={require(`../File/icon/Divider Poster.png`)} alt="bookshow" />
-
         </Link>
     );
 };
