@@ -19,18 +19,14 @@ const ShowCaseDealCart = () => {
                 <Button style={{
                     outline: false,
                     marginTop: '20px',
-                    height: '90px',
-                    width: '500px',
-                    borderRadius: '55px',
+                    width: '400px',
+                    height: '55px',
+                    borderRadius: '30px',
+                    padding: '0px'
 
                 }}>
                     <div className='offercodebutton'>
-                        <p style={{ 
-                            color: '#FC444B',
-                            fontSize:'24px',
-                            fontWeight:500,
-
-                         }}>COPY CODE</p>
+                        <p className='offercodebuttonText'>COPY CODE</p>
                     </div>
                 </Button>
             </div>

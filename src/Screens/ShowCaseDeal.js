@@ -12,10 +12,11 @@ const ShowCaseDeal = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: '20px'
+                marginTop: '20px',
+                marginLeft:'50px'
             }}>
                 <ShowCaseDealCart />
-            </div>
+            </div> 
             <TopBrands />
             <AppOverView />
             <OptionLand />
