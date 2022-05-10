@@ -56,10 +56,15 @@ const Header = () => {
                     <Link href='/' color={'inherit'} underline='none'>
                         <img src={Icon} />
                     </Link>
-                    <Link href='/Search' underline='none' color="inherit">
+                    <Link href='/Search' underline='none' color="#585858">
                         <div className='searchContainer' style={{ marginRight: 50 }}>
                             <input type="text" placeholder="Search" />
-                            <SearchIcon />
+                            <svg width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Search">
+                                    <path id="Ellipse_739 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M10.238 1.99855C5.84189 1.99855 2.27811 5.45434 2.27811 9.71727C2.27811 13.9802 5.84189 17.436 10.238 17.436C14.6342 17.436 18.198 13.9802 18.198 9.71727C18.198 5.45434 14.6342 1.99855 10.238 1.99855ZM0.339966 9.71727C0.339966 4.41637 4.77148 0.119141 10.238 0.119141C15.7046 0.119141 20.1361 4.41637 20.1361 9.71727C20.1361 15.0182 15.7046 19.3154 10.238 19.3154C4.77148 19.3154 0.339966 15.0182 0.339966 9.71727Z" fill="#585858" />
+                                    <path id="Line_181 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M15.7621 15.5251C16.14 15.1577 16.7536 15.1569 17.1325 15.5234L20.6332 18.9092C21.0122 19.2757 21.0129 19.8707 20.635 20.2381C20.257 20.6056 19.6435 20.6063 19.2645 20.2398L15.7639 16.8541C15.3849 16.4876 15.3841 15.8926 15.7621 15.5251Z" fill="#585858" />
+                                </g>
+                            </svg>
                         </div>
                     </Link>
                     <button onClick={(e) => {
@@ -156,15 +161,15 @@ export const AdminHeader = (props) => {
                     backgroundColor: '#FC444B',
                     outline: 'none',
                     border: 'none',
-                    width:'50px'
+                    width: '50px'
                 }}>
                     <CloseFullscreenIcon style={{ color: '#ffff' }} />
                 </button>
             </div>
 
             <div style={{
-                opacity:props.option=='Dashboard'?.4:1
-            }} onClick={()=>props.setOption('Dashboard')} id="container">
+                opacity: props.option == 'Dashboard' ? .4 : 1
+            }} onClick={() => props.setOption('Dashboard')} id="container">
                 <DashboardIcon />
                 {
                     drawer ? (
@@ -176,8 +181,8 @@ export const AdminHeader = (props) => {
             </div>
 
             <div style={{
-                opacity:props.option=='Page Settings'?.4:1
-            }} onClick={()=>props.setOption('Page Settings')} id="container">
+                opacity: props.option == 'Page Settings' ? .4 : 1
+            }} onClick={() => props.setOption('Page Settings')} id="container">
                 <WebIcon />
                 {
                     drawer ? (
@@ -188,8 +193,8 @@ export const AdminHeader = (props) => {
                 }
             </div>
             <div style={{
-                opacity:props.option=='Hotels'?.4:1
-            }} onClick={()=>props.setOption('Hotels')} id="container">
+                opacity: props.option == 'Hotels' ? .4 : 1
+            }} onClick={() => props.setOption('Hotels')} id="container">
                 <HotelIcon />
                 {
                     drawer ? (
@@ -200,8 +205,8 @@ export const AdminHeader = (props) => {
                 }
             </div>
             <div style={{
-                opacity:props.option=='Brands'?.4:1
-            }} onClick={()=>props.setOption('Brands')} id="container">
+                opacity: props.option == 'Brands' ? .4 : 1
+            }} onClick={() => props.setOption('Brands')} id="container">
                 <BookmarkBorderIcon />
                 {
                     drawer ? (
@@ -212,8 +217,8 @@ export const AdminHeader = (props) => {
                 }
             </div>
             <div style={{
-                opacity:props.option=='Membership'?.4:1
-            }} onClick={()=>props.setOption('Membership')} id="container">
+                opacity: props.option == 'Membership' ? .4 : 1
+            }} onClick={() => props.setOption('Membership')} id="container">
                 <AccountCircleIcon />
                 {
                     drawer ? (
@@ -224,8 +229,8 @@ export const AdminHeader = (props) => {
                 }
             </div>
             <div style={{
-                opacity:props.option=='Notifications'?.4:1
-            }} onClick={()=>props.setOption('Notifications')} id="container">
+                opacity: props.option == 'Notifications' ? .4 : 1
+            }} onClick={() => props.setOption('Notifications')} id="container">
                 <NotificationsIcon />
                 {
                     drawer ? (
@@ -236,8 +241,8 @@ export const AdminHeader = (props) => {
                 }
             </div>
             <div style={{
-                opacity:props.option=='Customer Point'?.4:1
-            }} onClick={()=>props.setOption('Customer Point')} id="container">
+                opacity: props.option == 'Customer Point' ? .4 : 1
+            }} onClick={() => props.setOption('Customer Point')} id="container">
                 <SupportAgentIcon />
                 {
                     drawer ? (

@@ -70,11 +70,11 @@
     border: none;
     border-radius: 5px;
     margin-left: 15px;
-    width: 400px;
+    width: 70%;
 }
 .AppOverViewFromBox{
     border: 1px solid black;
-    width: 460px;
+    width: 85%;
     height: 50px;
     display: flex;
     border-radius: 5px;
@@ -86,7 +86,7 @@
 }
 .AppOverViewFromButton{
     height: 49px;
-    width: 145px;
+    width: 120px;
     background-color: #FC444B;
     color:rgb(255, 255, 255);
     border: none;

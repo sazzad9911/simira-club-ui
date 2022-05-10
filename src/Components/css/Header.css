@@ -113,6 +113,7 @@
 
 .searchContainer {
     border: 1px solid black;
+    border-color: #D8D8D8;
     width: 240px;
     height: 38px;
     border-radius: 20px;
