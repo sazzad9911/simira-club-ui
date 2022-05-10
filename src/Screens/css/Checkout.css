@@ -7,7 +7,7 @@
 }
 .CheckoutLeftBOX{
     height: auto;
-    width: 650px;
+    width: auto;
 }
 .CheckoutText{
     font-size: 38px;
@@ -69,7 +69,7 @@
 }
 .CheckoutLeftIBox{
     height: auto;
-    width: 500px;
+    width: 100%;
     margin-top: 30px;
     border: 1.5px solid #D8D8D8;
     border-radius: 15px;
@@ -79,7 +79,7 @@
 }
 .CheckoutLeftInput{
     height: 50px;
-    width: 90%;
+    width: 100%;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
@@ -98,7 +98,7 @@
 }
 .CheckoutLeftInputDiv{
     height: 50px;
-    width: 190px;
+    width: 90%;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
@@ -107,7 +107,7 @@
 }
 .CheckoutLeftInputD{
     height: 35px;
-    width: 145px;
+    width: 75%;
     margin-left: 20px;
     display: flex;
     background-color: #F5F5F5;
@@ -136,7 +136,7 @@
 }
 .CheckoutLeftInputPromo{
     height: 50px;
-    width: 500px;
+    width: 100%;
     display: flex;
     margin-top: 20px;
     background-color: #ffffff;
@@ -144,34 +144,43 @@
     border: 1.5px solid #D8D8D8;
 }
 .CheckoutLeftInputBoxPromo{
-    height: 48px;
-    width: 380px;
+    height: 40px;
+    width: 85%;
+    margin-top: 3px;
     margin-left: 30px;
     display: flex;
     background-color: #ffffff;
     border-radius: 10px;
     outline: none;
     border: none;
+    justify-content: center;
 }
 
 
 
 .CheckoutRightBody{
-    height: 600px;
-    width: 500px;
+    height: auto;
+    width: 40%;
     border: 1.5px solid #D8D8D8;
     border-radius: 15px;
     margin-top: 80px;
-   
+    margin-left: 100px;   
+}
+@media screen and (max-width: 600px) {
+    .CheckoutRightBody{
+      margin-left: 0px;
+      width: auto;
+    }
 }
 .CheckoutRightLine{
     height: 1.7px;
-    width: 352px;
+    width: 80%;
+
     background-color: #F5F5F5;;
     margin-left: 50px;
 }
 .CheckoutRightBodyText{
-    font-size: 42px;
+    font-size: 38px;
     color: #000000;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
@@ -179,7 +188,7 @@
     margin-left: 50px;
 }
 .CheckoutRightBodyTextP{
-    font-size: 21px;
+    font-size: 18px;
     color: #373737;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
@@ -187,10 +196,27 @@
     margin-left: 0px;
 }
 .CheckoutRightText{
-    font-size: 24px;
+    font-size: 18px;
     color: #585858;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     margin-top: 5px;
     margin-left: 17px;
+}
+.CheckoutMeadiaBox{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.CheckoutMeadiaRightDiv{
+    height: auto;
+}
+.CheckoutMeadiaLefttDiv{
+    margin-left: 20px;
+}
+@media screen and (max-width: 600px) {
+    .CheckoutMeadiaLefttDiv {
+        margin-left: 0px;
+    }
 }
