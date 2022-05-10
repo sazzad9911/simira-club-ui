@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import Loader from './../Content/Loader';
 import { postData, url } from '../action'
 import SearchHotelCart from '../Cart/SearchHotelCart';
-
+  
 const ShowCaseCategory = (props) => {
     const [data, setData] = useState(null)
     React.useEffect(() => {
@@ -58,7 +58,9 @@ const ShowCaseCategory = (props) => {
                         )
                 }
             </div>
-            <div className='appoverview'>
+            <div style={{
+                marginTop: '-320px'
+            }}>
                 <AppOverView />
             </div>
             <div>

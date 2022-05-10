@@ -59,7 +59,7 @@ const Login = (props) => {
                     <div className='textinputview'>
                         <input onChange={(e) => setPassword(e.target.value)} className='textinput' type='password' placeholder='Password' />
                     </div>
-                    <p style={{
+                    <p style={{ 
                         color:'red',
                         fontSize:'18px',
                     }}>{Message}</p>

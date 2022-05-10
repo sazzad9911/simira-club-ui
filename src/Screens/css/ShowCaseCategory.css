@@ -1,27 +1,48 @@
-.showcasebody1{
+.showcasebody1 {
     padding: 3%;
-} 
+}
+
 .cartBottom41 {
     display: flex;
 }
-.headline1{
+
+.headline1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 62px;
     font-weight: 700;
     color: #000000;
 }
-.hr1{
+@media only screen and (max-width: 600px) {
+    .headline1 {
+        font-size: 35px;
+        font-weight: 600;
+        margin-top: 0px;
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+}
+.hr1 {
     margin-top: 30px;
     margin-bottom: 30px;
     border: 1px solid #D8D8D8;
 }
-.text21{
+
+.text21 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 26px;
     font-weight: 500;
     color: #808080;
 }
-.buttonView1{
+@media only screen and (max-width: 600px) {
+    .text21 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+
+.buttonView1 {
     height: 30px;
     width: 120px;
     border: 1px solid red;
@@ -30,7 +51,8 @@
     justify-content: center;
     display: flex;
 }
-.buttonView1 p{
+
+.buttonView1 p {
     margin: 0px;
     font-size: 12px;
     color: red;
@@ -42,16 +64,33 @@
     border-radius: 90px;
 }
 
+@media only screen and (max-width: 600px) {
+    .img41 {
+        height: 150px;
+        width: 150px;
+        border-radius: 110px;
+
+    }
+}
+
 .cartButtomLeft41 {
     height: 200px;
-    width: 200px;
     margin-top: -20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .cartButtomLeft41 {
+        height: 150px;
+        margin-top: 10px;
+
+    }
 }
 
 .cartButtomRight41 {
     margin-left: 20px;
     margin-bottom: 40px;
 }
-.appoverview{
+
+.appoverview {
     margin-top: 30px;
 }
