@@ -19,7 +19,7 @@ const ShowCaseDealCart = () => {
                 <Button style={{
                     outline: false,
                     marginTop: '20px',
-                    width: '400px',
+                    width: '300px',
                     height: '55px',
                     borderRadius: '30px',
                     padding: '0px'

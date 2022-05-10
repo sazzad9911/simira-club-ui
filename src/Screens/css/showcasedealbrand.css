@@ -1,33 +1,51 @@
-.showcasebody{ 
+.showcasebody {
     padding: 3%;
 }
-.text{
+
+.text {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: '#585858';
 }
+
 .cartBottom4 {
     display: flex;
 }
-.headline{
+
+.headline {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 62px;
     font-weight: 700;
     color: '#000000';
+    margin-left: 0px;
 }
-.hr{
+
+@media only screen and (max-width: 650px) {
+    .headline {
+        font-size: 40px;
+        font-weight: 600;
+        margin-top: 0px;
+    }
+}
+
+.hr {
     margin-top: 30px;
     margin-bottom: 30px;
     border: 1px solid #D8D8D8;
 }
-.text2{
+
+.text2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 26px;
     font-weight: 500;
     color: '#808080';
+    margin-left: 0px;
+    
 }
-.buttonView{
+
+
+.buttonView {
     height: 50px;
     width: 153px;
     border: 1px solid #fc444b;
@@ -36,11 +54,42 @@
     justify-content: center;
     display: flex;
 }
-.buttonView p{
+
+@media only screen and (max-width: 650px) {
+    .buttonView {
+        height: 35px;
+        width: 130px;
+
+    }
+}
+
+.buttonView:hover {
+    background-color: #fc444b;
+
+}
+
+.buttonViewTxt {
     margin: 0px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    color: #fc444b;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+    .buttonViewTxt {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.buttonViewTxt:hover {
+    color: #ffffff;
+
 }
 
 .img4 {
@@ -48,20 +97,37 @@
     width: 200px;
     border-radius: 110px;
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.35);
-    
+
+}
+
+@media only screen and (max-width: 650px) {
+    .img4 {
+        height: 150px;
+        width: 150px;
+        border-radius: 110px;
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.35);
+    }
 }
 
 .cartButtomLeft4 {
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cartButtomRight4 {
     margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.pageSlide{
+
+.pageSlide {
     text-align: center;
 }
-.Home-topBrand1{
+
+.Home-topBrand1 {
     background-color: #F5F5F5;
     width: 100%;
 }

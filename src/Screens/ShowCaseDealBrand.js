@@ -16,20 +16,28 @@ const ShowCaseDealBrand = (props) => {
                     </div>
                     <div className='cartButtomRight4'>
                         <div style={{
-                            marginTop:'7px'
+                            marginTop: '7px'
                         }}>
                             <p className='headline'>Oven Story</p>
                             <p className='text2'>18 Offers Available</p>
-                            <Button variant="text" >
-                                <div className='buttonView'>
-                                    <p style={{
-                                        color:'#fc444b'
-                                    }}> VISIT STORE</p>
-                                </div>
-                            </Button>
+                            <div style={{
+                                marginTop:'20px'
+                            }}>
+                                <Button variant="text" style={{
+                                    width: '130px',
+                                    height: '35px',
+                                    borderRadius: '30px',
+                                    padding: '0px'
+                                }}>
+                                    <div className='buttonView'>
+                                        <p className='buttonViewTxt'> VISIT STORE</p>
+                                    </div>
+                                </Button>
+                            </div>
+
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div className='hr6'></div>
                 <div>
                     <Dealoffercart />
@@ -43,11 +51,13 @@ const ShowCaseDealBrand = (props) => {
                     <Button variant="text" ><p className='text'>4</p></Button>
                 </div>
                 <div className='hr'></div>
-                <div className='Home-topBrand1'>
-                    <TopBrands headText='Try other top brands' />
-                </div>
+
+
             </div>
-            <div>
+            <TopBrands headText='Try other top brands' />
+            <div style={{
+                marginTop: '-320px'
+            }}>
                 <AppOverView />
             </div>
             <div>
