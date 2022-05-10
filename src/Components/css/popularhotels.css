@@ -1,7 +1,6 @@
 .popularhotelsBody{
     height: auto;
     width: 96%;
-    margin-left:2%
   
 }
 .popularhotelsBody .popularhotelsCart{
@@ -46,4 +45,7 @@
     color: #000000;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
+}
+.topBrandsDive{
+    margin: 22px;
 }

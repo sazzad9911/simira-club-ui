@@ -69,6 +69,7 @@ const PopularHotels = () => {
                 <h2>Popular Hotels</h2>
             </div>
             <div ref={ref} className='popularhotelsCart'>
+                <div className='topBrandsDive'></div>
 
                 {
                     hotels ? (
@@ -79,6 +80,7 @@ const PopularHotels = () => {
                         <Loader />
                     )
                 }
+                <div className='topBrandsDive'></div>
             </div>
 
         </div>

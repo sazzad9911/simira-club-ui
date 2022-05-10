@@ -1,6 +1,6 @@
 .box {
-    width: 96%;
-    margin-left: 2%;
+    width: 100%;
+
     background: #F5F5F5;
     overflow: hidden;
     padding-top:20px;
@@ -89,4 +89,7 @@
     color: #000000;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
+}
+.topBrandsDive{
+    margin: 22px;
 }

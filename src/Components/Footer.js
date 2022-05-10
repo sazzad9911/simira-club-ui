@@ -35,7 +35,7 @@ const Footer = () => {
                         <h4 className='Footerfont-style'>For You</h4>
                         <div className='Footerlink'>
                             <Link href="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Membership</Link><br></br>
-                        </div>
+                        </div> 
                         <div className='Footerlink'>
                             <Link href="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Privacy</Link><br></br>
                         </div>

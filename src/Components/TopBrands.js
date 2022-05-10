@@ -88,10 +88,14 @@ const TopBrands = (props) => {
             </div>
             <h2>{props.headText}</h2>
             <div ref={ref} className='brandShow'>
+                <div className='topBrandsDive'>
+                
+                </div>
                 {
                     data ? (
                         data.map((db) => (
                             <Brands key={db.id} img={db.image} />
+
                         ))
                     ) : (
                         <div style={{
@@ -105,6 +109,7 @@ const TopBrands = (props) => {
                         </div>
                     )
                 }
+                <div className='topBrandsDive'></div>
             </div>
         </div>
     );

@@ -10,13 +10,14 @@
     width: 650px;
 }
 .CheckoutText{
-    font-size: 42px;
+    font-size: 38px;
     color: #000000;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
 }
 .CheckoutTextP{
-    font-size: 22px;
+    font-size: 18px;
+    margin-left: 0px;
     color: #585858;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
@@ -29,13 +30,15 @@
 .CheckoutLeftP{
     color: #FC444B;
     margin-left: -5px;
-    font-size: 22px;
+    font-size: 18px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
+    
 }
 .CheckoutLeftH2{
-    margin-top: 35px;
-    font-size: 22px;
+    margin-top: 30px;
+    margin-left: 0px;
+    font-size: 18px;
     color: #585858;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
@@ -45,7 +48,7 @@
     margin-top: 30px;
 }
 .CheckoutLeftBDivH2{
-    font-size: 20px;
+    font-size: 18px;
     color: #808080;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
@@ -76,7 +79,7 @@
 }
 .CheckoutLeftInput{
     height: 50px;
-    width: 400px;
+    width: 90%;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
@@ -85,7 +88,7 @@
 }
 .CheckoutLeftInputBox{
     height: 35px;
-    width: 280px;
+    width: 90%;
     margin-left: 20px;
     display: flex;
     background-color: #F5F5F5;
@@ -95,7 +98,7 @@
 }
 .CheckoutLeftInputDiv{
     height: 50px;
-    width: 240px;
+    width: 190px;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
@@ -104,7 +107,7 @@
 }
 .CheckoutLeftInputD{
     height: 35px;
-    width: 156px;
+    width: 145px;
     margin-left: 20px;
     display: flex;
     background-color: #F5F5F5;
@@ -114,7 +117,7 @@
 }
 .CheckoutLeftInputLastDiv{
     height: 50px;
-    width: 140px;
+    width: 110px;
     display: flex;
     background-color: #F5F5F5;
     border: 1px solid #D8D8D8;
@@ -123,7 +126,7 @@
 }
 .CheckoutLeftInputLastD{
     height: 35px;
-    width: 50px;
+    width: 65px;
     margin-left: 20px;
     display: flex;
     background-color: #F5F5F5;
