@@ -5,7 +5,7 @@ import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import '../Screens/css/contact.css'
-
+ 
 const Contact = () => {
     return (
         <div>
@@ -13,7 +13,7 @@ const Contact = () => {
             <div className='loginbody2'  style={{justifyContent: 'center'}}>
  
                 <div className='loginbodyleft2'>
-                    <img src="https://theupay.com/bank/Assets/login.jpg" height={800} width={400}></img>
+                    <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg123'></img>
                 </div>
                 <div className='loginbodyright2'>
                     <div className='loginbodyrightbody2'>
@@ -31,10 +31,11 @@ const Contact = () => {
                         </div>
                         
                         <Button style={{
-                            height:'84px',
+                            height:'50px',
                             width:'400px',
                             borderRadius:'50px',
-                            marginTop:'20px' 
+                            marginTop:'20px' ,
+                            padding: '0px'
                         }}>
                             <div className='loginButton2'>
                                 <p className='submitText2'>SUBMIT</p>
@@ -44,8 +45,11 @@ const Contact = () => {
                             <p>Or call us on</p>
                         </div>
                         <Button style={{
-                            display:'flex',
-                            borderRadius:'50px'
+                            width: '400px',
+                            height: '50px',
+                            borderRadius: '30px',
+                            padding: '0px',
+                            marginBottom:'150px'
                         }}>
                             <div className='googleButton2'>
                                 <WhatsAppIcon ></WhatsAppIcon>

@@ -4,26 +4,50 @@
     flex-wrap: wrap;
     background-color: white;
 }
-
+ 
 .loginbodyleft2 {
     width: 400px;
-    height: 800px;
+    height: 600px;
     background-color: #C4C4C4;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@media only screen and (max-width: 600px) {
+    .loginbodyleft2 {
+        width: 300px;
+        height: 400px;
+        margin-bottom: 0px;
+    }
+}
+.leftImg123 {
+    width: 400px;
+    height: 600px;
+}
 
+@media only screen and (max-width: 600px) {
+    .leftImg123 {
+        width: 300px;
+        height: 400px;
+    }
+}
 .loginbodyright2 {
     width: 600px;
-    height: 600px;
+    height: 500px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-margin-top: 90px;
+    margin-top: 90px;
 }
-
+@media only screen and (max-width: 600px) {
+    .loginbodyright2 {
+        height: 450px;
+        margin-bottom: 70px;
+        background-color: #ffffff;
+        margin-top: 0px;
+}
+}
 .loginbodyrightbody2 {
     width: 400px;
     display: flex;
@@ -38,11 +62,16 @@ margin-top: 90px;
     font-weight: 500;
     font-size: 32px;
     color: #000000;
+    
 }
-
+@media only screen and (max-width: 600px) {
+    .loginbodyrightbody2 h1 {
+        margin-top: 150px; 
+    }
+}
 .textinputview2 {
     width: 400px;
-    height: 80px;
+    height: 50px;
     display: flex;
     border-radius: 30px;
     background-color: #F5F5F5;
@@ -58,7 +87,7 @@ margin-top: 90px;
 }
  
 .textinput2 {
-    width: 400px;
+    width: 350px;
     background-color: #F5F5F5;
     outline: none;
     border: none;
@@ -87,31 +116,46 @@ margin-top: 90px;
 }
 .loginButton2 {
     width: 400px;
-    height: 84px;
+    height: 50px;
     border: 1px solid #fc444b;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.loginButton2:hover {
+    background-color: #FC444B;
 
+}
 .submitText2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #FC444B;
     font-weight: 400;
     font-size: 24px;
+    width: 100%;
+    height: 100%;
+    margin-top: 17px;
 }
- 
+.submitText2:hover {
+    color: #ffffff;
+
+}
 .googleButton2 {
     width: 400px;
-    height: 80px;
+    height: 50px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     border: 1px solid #64b657;
+    
 }
+.googleButton2:hover {
+    background-color: #c7c6c657;
+
+}
+
 
 .googleText2 {
     font-family: 'Plus Jakarta Sans', sans-serif;

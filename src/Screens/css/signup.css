@@ -32,7 +32,7 @@
         height: 400px;
     }
 } 
-
+ 
 .loginbodyright1 {
     width: 600px;
     height: 600px;
@@ -80,7 +80,7 @@
 }
 
 .textinput1 {
-    width: 400px;
+    width: 350px;
     background-color: #F5F5F5;
     outline: none;
     border: none;
@@ -112,6 +112,9 @@
     color: #FC444B;
     font-weight: 300;
     font-size: 20px;
+    width: 100%;
+    height: 100%;
+    
 }
 
 .submitText1:hover {

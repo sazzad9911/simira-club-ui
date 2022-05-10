@@ -5,15 +5,15 @@ import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import '../Screens/css/BusinessWithUs.css'
- 
+
 const BusinessWithUs = () => {
     return (
         <div>
-          
-            <div className='loginbody3' style={{justifyContent: 'center'}}>
+
+            <div className='loginbody3' style={{ justifyContent: 'center' }}>
 
                 <div className='loginbodyleft3'  >
-                    <img src="https://theupay.com/bank/Assets/login.jpg" height={800} width={400}></img>
+                    <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg12'></img>
                 </div>
                 <div className='loginbodyright3'>
                     <div className='loginbodyrightbody3'>
@@ -31,10 +31,11 @@ const BusinessWithUs = () => {
                         </div>
 
                         <Button style={{
-                            height:'84px',
-                            width:'400px',
-                            borderRadius:'50px',
-                            marginTop:'20px'
+                            marginTop: '20px',
+                            width: '400px',
+                            height: '55px',
+                            borderRadius: '30px',
+                            padding: '0px'
                         }}>
                             <div className='loginButton3'>
                                 <p className='submitText3'>SUBMIT</p>
@@ -44,8 +45,10 @@ const BusinessWithUs = () => {
                             <p>Or call us on</p>
                         </div>
                         <Button style={{
-                
-                            borderRadius:'50px'
+                            width: '400px',
+                            height: '50px',
+                            borderRadius: '30px',
+                            padding: '0px'
                         }}>
                             <div className='googleButton3'>
                                 <WhatsAppIcon color="#4CAF50"></WhatsAppIcon>
@@ -55,7 +58,7 @@ const BusinessWithUs = () => {
                     </div>
                 </div>
             </div>
-        
+
         </div>
     );
 };
