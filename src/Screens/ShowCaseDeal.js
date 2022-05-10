@@ -13,7 +13,7 @@ const ShowCaseDeal = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 marginTop: '20px',
-                marginLeft: '50px'
+               
             }}>
                 <ShowCaseDealCart />
             </div>
