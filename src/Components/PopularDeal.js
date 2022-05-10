@@ -71,6 +71,7 @@ const PopularDeal = () => {
             </div>
             <h2> Popular Deals</h2>
             <div ref={ref} className='brandShow'>
+                <div className='topBrandsDive'></div>
                 {
                     deals ? (
                         deals.map((d, i) => (
@@ -83,6 +84,7 @@ const PopularDeal = () => {
                         <CircularProgress />
                     )
                 }
+                <div className='topBrandsDive'></div>
 
 
             </div>
