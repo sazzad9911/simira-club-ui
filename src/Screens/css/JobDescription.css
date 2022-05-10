@@ -40,6 +40,12 @@
 .JobLeftBox{
     height: auto;
     width: 60%;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 1250px) {
+    .JobLeftBox {
+        width: 100%;
+    }
 }
 .JobRightBox{
     height: 892px;
@@ -49,6 +55,7 @@
 }
 .JobBoxDiv{
     flex-direction: row;
+    margin-left: -6px;
 }
 .JobBoxFirstButton{
     background-color: #ffffff;
@@ -69,6 +76,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     font-size: 24px;
+    margin-bottom: 50px;
 }
 .JobPText{
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -158,25 +166,32 @@
     background-color: #F5F5F5;
     border: none;
     outline: none;
-}
+} 
 .JobBoxButtonx{
     height: 50px;
     width: 350px;
-    margin-top: 30px;
-    margin-left: 10px;
     border-radius: 10px;
     border: 1px solid #FC444B;
     background-color: white;
+}
+.JobBoxButtonx:hover{
+    background-color: #FC444B;
 }
 .JobBoxButtonP{
     color: #FC444B;
     font-size: 16px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
+    height: 100%;
+    width: 100%;
+}
+.JobBoxButtonP:hover{
+    color: #ffffff;
 }
 .JobText{
     font-size: 32px;
     color: #000000;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
+    margin-left: 6px;
 }
