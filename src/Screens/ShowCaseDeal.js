@@ -13,12 +13,16 @@ const ShowCaseDeal = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 marginTop: '20px',
-                marginLeft:'50px'
+                marginLeft: '50px'
             }}>
                 <ShowCaseDealCart />
-            </div> 
-            <TopBrands />
-            <AppOverView />
+            </div>
+            <TopBrands headText='Top Brands For You' />
+            <div style={{
+                marginTop:'-320px'
+            }}>
+                <AppOverView />
+            </div>
             <OptionLand />
         </div>
     );
