@@ -1,13 +1,14 @@
 import React from 'react';
 import './../Screens/css/Membership.css'
+import Img from './Image/Capture.PNG'
 
 
 const Membership = () => {
     return (
         <div>
             <div className='container'>
+                <img src={Img} className='MembershiphedImg' />
                 <p className='membername'>SmiraClub Membership</p>
-                <img className='Membershiphed' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKGv8P0QGVsvRvc2hl66PMqdokQTI3g41moQ&usqp=CAU" />
             </div>
             <div className='Membershipcard'>
                 <div className='Membershipcard-left'>

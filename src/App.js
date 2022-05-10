@@ -28,6 +28,7 @@ import ShowCaseDeal from "./Screens/ShowCaseDeal";
 import SearchHotel from "./Screens/SearchHotel";
 import ShowcaseHotel from "./Screens/ShowcaseHotel"
 import NotFound from "./Screens/NotFound";
+import Membership from "./Screens/Membership"
 import { useDispatch, useSelector } from 'react-redux'
 import { url, postData, setHotels, setUser,setBrands, setBanners,setDeals } from './action'
 import SearchDeal from "./Screens/SearchDeal";
@@ -134,6 +135,7 @@ React.useEffect(() => {
         <Route path="/ShowCaseCategory/restaurant" element={<ShowCaseCategory name="restaurant" />} />
         <Route path="/ShowCaseCategory/hotel" element={<ShowCaseCategory name="hotel" />} />
         <Route path="/ShowCaseDeal" element={<ShowCaseDeal />} />
+        <Route path="/Membership" element={<Membership />} />
         <Route path="/SearchHotel" element={<SearchHotel />} />
         {
           hotels ? (
