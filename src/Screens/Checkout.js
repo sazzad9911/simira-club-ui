@@ -48,7 +48,7 @@ function Checkout() {
                     <div className="CheckoutLeftIDiv">
                         <p className="CheckoutLeftBDivH2">Card number</p>
                         <div className="CheckoutLeftInput">
-                            <input className="CheckoutLeftInputBox" type='Text' placeholder='0000 &nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;&nbsp; 0000' />
+                            <input className="CheckoutLeftInputBox" type='number' placeholder='0000 &nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;&nbsp; 0000' />
                         </div>
                         <div style={{ display: 'flex', marginTop: '30px' }}>
                             <div>
