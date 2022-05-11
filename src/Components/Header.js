@@ -38,7 +38,7 @@ const Header = () => {
                     <p>Mumbai, Maharashtra</p>
                 </div>
                 <div style={{ marginRight: 50 }}>
-                    <Link href='/Career' underline='none' color='inherit'>
+                    <Link href='/Career' underline='none'  color='inherit'>
                         <button style={{
                             borderRight: '1px solid #ffff'
                         }}>We are hiring!</button>
@@ -53,7 +53,7 @@ const Header = () => {
             </div>
             <div style={{ height: height }} className="header-bottom">
                 <div className='header-content'>
-                    <Link href='/' color={'inherit'} underline='none'>
+                    <Link href='/' color={'inherit'} style={{marginLeft:'30px' }}  underline='none'>
                         <img src={Icon} />
                     </Link>
                     <Link href='/Search' underline='none' color="#585858">
@@ -99,7 +99,7 @@ const Header = () => {
                     </div>
                 </Link>
                 <div id='div' className='divider'></div>
-                <div className='header-content' style={{ marginRight: 50 }}>
+                <div className='header-content' style={{ marginRight: 100 }}>
                     {
                         user ?
                             (

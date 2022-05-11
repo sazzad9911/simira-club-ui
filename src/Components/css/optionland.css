@@ -17,8 +17,9 @@
 
 .popularDealsView {
     float: left;
-    margin-left: 14px;
+    margin-left: 5%;
     margin-bottom: 14px;
+
 }
 
 .PopularDealsNameCart {
@@ -49,8 +50,8 @@
 
 .popularDealsView1 {
     float: left;
-    margin-left: 14px;
     margin-bottom: 14px;
+    margin-left: 5%;
 }
 
 .PopularDealsNameCart1 {

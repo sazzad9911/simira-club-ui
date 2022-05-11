@@ -1,10 +1,10 @@
 .ScarchBody{
-    height: 200px;
+    height: 300px;
     width: 100%;
     position: relative;
 }
 .ScarchImg{
-    height: 200px;
+    height: 300px;
     width: 100%;
     opacity: .7;
 }
@@ -12,20 +12,30 @@
     height: auto;
     width: auto;
     position: absolute;
-    bottom: 0;
-    margin: 50px;
-    margin-left: 20%;
-    
-
+    bottom: 30%;
+    margin-left: 23%;
 }
+@media screen and (max-width: 600px) {
+    .ScarchImgDiv {
+        margin-left: 3%;
+        bottom: 20%;
+    }
+  }
 .ScarchImgDivText{
     height: auto;
     width: auto;
     margin: 25px;
-
 }
+@media screen and (max-width: 600px) {
+    .ScarchImgDivText {
+        margin-left: 40px;
+    }
+  }
 .ScarchImgText{
     color: #F5F5F5;
+    font-size: 35px;
+    margin-left: -20px;
+
 }
 .ScarchBox{
     flex-direction: row;
@@ -35,27 +45,34 @@
 }
 .ScarchInputBox{
     height: 40px;
-    width: 54vw;
+    width: 100%;
     display: flex;
-    background-color: #ffffff;
+    background-color: #f10202;
     border: none;
     border-radius: 20px;
 }
 .ScarchSelect{
     height: 40px;
     width: 100px;
-    margin-left: 480px;
     border: none;
     outline: none;
     background-color: #F5F5F5;
     position: absolute;
 
 }
+.ScarchScDiv{
+    flex: 2;
+    flex-direction: row;
+    display: flex;
+    border-radius: 25px;
+}
 .ScarchInput{
     outline: none;
     border: none;
-    width: 600px;
-    margin-left: 15px;
+    width: 70%;
+    margin-left: 3%;
+    background-color: #ffffff;
+    flex: 4;
 }
 .ScarchButton{
     height: 40px;
@@ -63,4 +80,17 @@
     border-radius: 20px;
     border: none;
     background-color: #64B657;
+    margin-left: 70px;
+    
+}
+
+
+
+.ScarchDiv{
+    height: 40px;
+    width: 95%;
+    background-color: #ffffff;
+    margin-left: 1%;
+    border-radius: 25px;
+    display: flex;
 }
