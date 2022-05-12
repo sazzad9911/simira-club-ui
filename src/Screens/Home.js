@@ -39,10 +39,10 @@ const Home = () => {
             <Slider />
             <div style={{
             height:'1.5px',
-            width:'91%',
+            width:'85%',
             marginTop:'25px',
             backgroundColor:'#D8D8D8',
-            marginLeft:'4.5%',
+            marginLeft:'7%',
             }}>
             </div>
             <div style={{ height: 20, width: '100%' }}></div>

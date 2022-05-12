@@ -26,7 +26,7 @@ function Search(props) {
                             <option value="Deal">Deals</option>
                         </select>
                         <Link href={Select == 'Hotel' ? '/SearchHotel' : '#'} underline='none' color='inherit'>
-                            <button className='ScarchButton'>Search</button>
+                            <button className='ScarchButton'><p className='ScarchButtonP'>Search</p></button>
                         </Link>
                     </div>
                 </div>
