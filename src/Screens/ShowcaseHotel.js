@@ -12,6 +12,8 @@ import StarIcon from '@mui/icons-material/Star';
 import SignalWifi3BarIcon from '@mui/icons-material/SignalWifi3Bar';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+
 const ShowcaseHotel = (props) => {
     const data = props.data
     const conditions = props.data.conditions.split(',')
@@ -21,16 +23,13 @@ const ShowcaseHotel = (props) => {
         <div>
             <img src={data.image} className='Hotelimg' />
             <div className='Showcase'>
-                <div style={{
-                    width: '60',
-                    margin: '1'
-                }}>
+                <div className='ShowcaseOne'>
                     <div className='ShowleftOne'>
                         <div style={{
                             width: '70%'
                         }}>
                             <h1 className='Showhed'>{data.name} </h1>
-                            <p style={{ color: "rgb(179, 181, 182)" }}>{data.address}</p>
+                            <p className='showttx'>{data.address}</p>
                         </div>
                         <div style={{
                             width: '25%'
@@ -41,33 +40,41 @@ const ShowcaseHotel = (props) => {
                         </div>
                     </div>
                     <div className='showcaseicon'>
-                        {
-                            conditions ? (
-                                conditions.map((cond, i) => {
-                                    if (cond == 'wifi') {
-                                        return (
-                                            <div key={i} className='showcaseicons'>
-                                                <SignalWifi3BarIcon className='showicon' />
-                                            </div>
-                                        )
-                                    } else if (cond == 'tv') {
-                                        return (
-                                            <div key={i} className='showcaseicons'>
-                                                <ComputerIcon className='showicon' />
-                                            </div>
-                                        )
-                                    } else {
-                                        return (
-                                            <div key={i} className='showcaseicons'>
-                                                <LocalParkingIcon className='showicon' />
-                                            </div>
-                                        )
-                                    }
-                                })
-                            ) : (
-                                <div></div>
-                            )
-                        }
+                        <div className='showcaseiconss'>
+                            {
+                                conditions ? (
+                                    conditions.map((cond, i) => {
+                                        if (cond == 'wifi') {
+                                            return (
+                                                <Button>
+                                                    <div key={i} className='showcaseicons'>
+                                                        <SignalWifi3BarIcon className='showicon' />
+                                                    </div>
+                                                </Button>
+                                            )
+                                        } else if (cond == 'tv') {
+                                            return (
+                                                <Button>
+                                                    <div key={i} className='showcaseicons'>
+                                                        <ComputerIcon className='showicon' />
+                                                    </div>
+                                                </Button>
+                                            )
+                                        } else {
+                                            return (
+                                                <Button>
+                                                    <div key={i} className='showcaseicons'>
+                                                        <LocalParkingIcon className='showicon' />
+                                                    </div>
+                                                </Button>
+                                            )
+                                        }
+                                    })
+                                ) : (
+                                    <div></div>
+                                )
+                            }
+                        </div>
                     </div>
                     <div className='showDescription'>
                         <h3>Description </h3>
@@ -136,9 +143,13 @@ const ShowcaseHotel = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <Review/>
+                        <Review />
                     </div>
                 </div>
+
+
+
+
 
                 <div className='ShowcaseRight'>
                     <div className='ShowcaseRightf'>
@@ -148,7 +159,7 @@ const ShowcaseHotel = (props) => {
                             color: '#808080'
                         }}>Check-in<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinput' placeholder='  23 March 2022' />
+                            <input className='Showrightinputs' placeholder='  23 March 2022' />
                         </div>
 
                     </div>
@@ -170,13 +181,17 @@ const ShowcaseHotel = (props) => {
                                 <p className='showold'>Older 12 years</p>
                             </div>
                             <div className='showAdultss'>
-                                <button className='showbutton'>
-                                    <p className='showbuttonone'>-</p>
-                                </button>
-                                <p className='showbuttonTwo'>2</p>
-                                <button className='showbutton'>
-                                    <p className='showbuttontwo'>+</p>
-                                </button>
+                                <Button>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
+                                <p className='showbuttonTwon'>2</p>
+                                <Button>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
                             </div>
                         </div>
                         <div style={{
@@ -188,13 +203,17 @@ const ShowcaseHotel = (props) => {
                                 <p className='showold'>5 - 12 years old</p>
                             </div>
                             <div className='showAdultss'>
-                                <button className='showbutton'>
-                                    <p className='showbuttonone'>-</p>
-                                </button>
-                                <p className='showbuttonTwo'>2</p>
-                                <button className='showbutton'>
-                                    <p className='showbuttontwo'>+</p>
-                                </button>
+                                <Button>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
+                                <p className='showbuttonTwon'>2</p>
+                                <Button>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
                             </div>
                         </div>
                         <div style={{
@@ -205,19 +224,36 @@ const ShowcaseHotel = (props) => {
                                 <p className='showadu'>Room</p>
                             </div>
                             <div className='showAdultss'>
-                                <button className='showbutton'>
-                                    <p className='showbuttonone'>-</p>
-                                </button>
+                                <Button>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
                                 <p className='showbuttonTwo'>2</p>
-                                <button className='showbutton'>
-                                    <p className='showbuttontwo'>+</p>
-                                </button>
+                                <Button>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
                             </div>
                         </div>
 
 
                     </div>
                 </div>
+
+            </div>
+            <div className='showconButton'>
+                <Button style={{
+                    marginTop: '20px',
+                    width: '400px',
+                    height: '55px',
+                    borderRadius: '30px'
+                }}>
+                    <div className='showconFButton'>
+                        <p className='submitText'>CONFIRM BOOKING</p>
+                    </div>
+                </Button>
             </div>
         </div>
     );

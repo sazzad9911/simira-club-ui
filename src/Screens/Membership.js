@@ -17,6 +17,7 @@ const Membership = () => {
                         <div className='memberbar'></div>
                         <p className='MemberLeftohedo'> Unlimited enjoyment • Unlimited savings!</p>
                     </div>
+            
                     <div className='MemberLeft'>
                         <p className='MemberLeft'>Claim your free month</p>
                     </div>
@@ -42,8 +43,8 @@ const Membership = () => {
                     </div>
                     <div className='MemberCard'>
                         <div className='membercardfs'>
-                            <p style={{ color: '#F3B038', marginTop: 38, fontSize: 22, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Gold</p>
-                            <p style={{ marginLeft: -3, marginTop: 38, fontSize: 22, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Membership</p>
+                            <p style={{ color: '#F3B038', marginTop: 38, fontSize: 19 }}>Gold</p>
+                            <p style={{ marginLeft: -3, marginTop: 38, fontSize: 19 }}>Membership</p>
                         </div>
                         <div className='membercardfss'>
                             <p style={{ marginTop: 18, fontSize: 14, fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 500 }}>Hotel stays of up to 40 nights</p>
@@ -58,7 +59,7 @@ const Membership = () => {
                     </div>
                 </div>
             </div>
-            <div style={{ textAlign: 'center' }}>
+            <div className='membershipHave'>
                 <p className='membershipfootee'>Have a family code?</p>
                 <p className='membershipfoote'>Apply it here</p>
             </div>

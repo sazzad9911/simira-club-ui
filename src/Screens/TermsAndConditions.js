@@ -35,7 +35,7 @@ function TermsAndConditions() {
                     16. Any legal issues will be resolved by an arbitrator in Mumbai jurisdiction only errors and omissions
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expected.</p>
             </div>
-            <h2 className="cancel">Cancellation Policys</h2> 
+            <h2>Cancellation Policys</h2> 
             <div className="TermsPDiv">
                 <p className="TermsP">Member can cancel the policy at its own discretion, but NO REFUND will be processed for the same to
                     discontinue membership email us at support@smira.club

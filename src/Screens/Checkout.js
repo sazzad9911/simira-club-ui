@@ -12,6 +12,7 @@ function Checkout() {
 
     return (
         <div className="CheckoutBody">
+        
             <div className="CheckoutLeftBOX">
                 <h1 className="CheckoutText">Start your 30-day trial now!</h1>
                 <p className="CheckoutTextP">We won't charge you today. Your payment</p>

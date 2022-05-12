@@ -16,6 +16,7 @@ const Contact = () => {
                     <img src="https://theupay.com/bank/Assets/login.jpg" height={800} width={400}></img>
                 </div>
                 <div className='loginbodyright2'>
+                    
                     <div className='loginbodyrightbody2'>
                         <h1>We’re here to help and answer any question you might have.</h1>
                         <div className='textinputview2'>
