@@ -91,8 +91,15 @@ const Home = () => {
                         </svg>
 
                     </Button>
+                    <div style={{
+                        height:'150px',
+                        marginTop:'35px',
+                        width:'30px',
+                        background:'red'
+                    }}></div>
                 </div>
                 <div ref={ref} className='HomeIconContainer'>
+
                     <div className='topBrandsDive'></div>
                     <IconButton link='/hotel' img={Hotels} title='Hotels' />
                     <IconButton link='/restaurant' img={Restaurant} title='Restaurant' />
