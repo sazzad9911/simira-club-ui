@@ -10,7 +10,7 @@ import MaleIcon from '@mui/icons-material/Male';
 import TransgenderIcon from '@mui/icons-material/Transgender';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import Button from '@mui/material/Button';
 
 
 const MyProfile = (props) => {
@@ -57,8 +57,8 @@ const MyProfile = (props) => {
                             </svg>
 
                         </div>
-                        <div className='MyProfileInputBox'>
-                            <input className='MyProfileInput' type='Email' placeholder='Email' />
+                        <div className='MyProfileInputBoxs'>
+                            <input className='MyProfileInputs' type='Email' placeholder='Email' />
                         </div>
                     </div>
 
@@ -102,9 +102,16 @@ const MyProfile = (props) => {
                             <input className='MyProfileInput' type='text' placeholder='Location' />
                         </div>
                     </div>
-                    <div className='MyProfileText'>
-                        <button variant="text" className='MyProfileTextLeftButton'>Forgot password?</button>
-                        <button variant="text" className='MyProfileTextRightButton'>Change password</button>
+                    <div className='MyProfileTexts'>
+                        <Button style={{
+                            marginTop: '20px',
+                            color:'#000000'
+                        }}>Forgot password?</Button>
+                        <Button style={{
+                            marginTop: '20px',
+                            marginLeft:'-10px',
+                            color:'red',
+                        }}>Change password</Button>
                     </div>
                 </div>
             </div>

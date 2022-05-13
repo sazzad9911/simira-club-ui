@@ -1,18 +1,20 @@
 .MyProfileBody {
     height: auto;
-    width: auto;
+    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 .MyProfileDiv {
-    width: 500px;
-    margin: 50px;
+    width: auto;
+    height: auto;
+    margin: 70px;
+    padding: 30px;
     border: 1px solid #D8D8D8;
     border-radius: 20px;
-
 }
+
 .MyProfileBox {
     flex-direction: row;
     display: flex;
@@ -34,32 +36,51 @@
 .MyProfileIcon {
     font-size: 3px;
 }
-
-.MyProfileInputBox {
+.MyProfileInputBoxs{
     height: 85px;
-    width: 320px;
+    width: 400px;
     display: flex;
+    background-color: #F5F5F5;
     margin-bottom: 5px;
     margin-left: 15px;
-    background-color: #ffffff;
     border: none;
     border: 1px solid #D8D8D8;
     border-radius: 50px;
     flex-direction: row;
     align-items: center;
 }
+.MyProfileInputs{
+    outline: none;
+    border: none;
+    width: 350px;
+    margin-left: 25px;
+    font-weight: 400;
+    background-color: #F5F5F5;
+    font-size: 24px;
+}
+.MyProfileInputBox {
+    height: 85px;
+    width: 400px;
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    border: none;
+    border: 1px solid #D8D8D8;
+    border-radius: 50px;
+    flex-direction: row;
+    align-items: center;
+}
+
 ::placeholder {
     color: #000000;
-  }
+}
 
 
 .MyProfileInput {
     outline: none;
     border: none;
-    width: 250px;
-    margin-left: 15px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-style: normal;
+    width: 350px;
+    margin-left: 25px;
     font-weight: 400;
     font-size: 24px;
 }
@@ -70,6 +91,7 @@
     width: 85px;
     border-radius: 41.5px;
     justify-content: center;
+    background-color: #F5F5F5;
     align-items: center;
     display: flex;
 }
@@ -79,12 +101,17 @@
     align-items: center;
     display: flex;
     padding: 20px;
-    font-family: 'Plus Jakarta Sans';
-    font-style: normal;
+    margin-top: -30px;
     font-weight: 500;
     color: #000000;
     font-size: 32px;
 
+}
+.MyProfileTexts {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px;
 }
 
 .MyProfileTextLeftButton {
@@ -110,13 +137,10 @@
 
 .MyProfileSelect {
     height: 40px;
-    width: 280px;
-    margin-left: 15px;
+    width: 350px;
+    margin-left: 25px;
     border: none;
-    border-radius: 20px;
     outline: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
     color: #000000;

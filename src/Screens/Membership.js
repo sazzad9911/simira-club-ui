@@ -1,6 +1,10 @@
 import React from 'react';
 import './../Screens/css/Membership.css'
 import Img from './Image/Capture.PNG'
+import TopBrands from './../Components/TopBrands';
+import PopularHotels from './../Components/PopularHotels';
+import AppOverView from './../Cart/AppOverView';
+import OptionLand from './../Components/OptionLand';
 
 
 const Membership = () => {
@@ -63,6 +67,15 @@ const Membership = () => {
                 <p className='membershipfootee'>Have a family code?</p>
                 <p className='membershipfoote'>Apply it here</p>
             </div>
+            <div className='Home-topBrand'>
+                <TopBrands headText='Top Brands For You' />
+            </div>
+            <div style={{ height: 50, width: '100%' }}></div>
+            <PopularHotels />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <AppOverView />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <OptionLand />
         </div>
 
 

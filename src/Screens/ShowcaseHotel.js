@@ -4,6 +4,9 @@ import Img from "./Image/hotel.PNG";
 import a from "./Image/a.PNG";
 import z from "./Image/z.PNG";
 import s from "./Image/s.PNG";
+import OptionLand from './../Components/OptionLand';
+import PopularHotels from './../Components/PopularHotels';
+import AppOverView from './../Cart/AppOverView'
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import './css/ShowcaseHotel.css';
@@ -77,7 +80,11 @@ const ShowcaseHotel = (props) => {
                         </div>
                     </div>
                     <div className='showDescription'>
-                        <h3>Description </h3>
+                        <h3 style={{
+                            fontWeight: '700px',
+                            fontSize: '30px',
+                            color: '#292929'
+                        }}>Description </h3>
                         <h6 style={{
                             height: height,
                             overflow: 'hidden'
@@ -112,13 +119,13 @@ const ShowcaseHotel = (props) => {
                     </div>
                     <div className='showcasemap'>
                         <div className='showCaseMap'><GoogleMapReact /></div>
-                        <h3>What's nearby</h3>
+                        <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px' }}>What's nearby</h3>
                         <div className='showcasemaps'>
                             <div className='showcaseNearbys'>
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '15px' }}>500m away from Sai Baba Mandir</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>500m away from Sai Baba Mandir</h2></div>
                             </div>
 
                         </div>
@@ -127,7 +134,7 @@ const ShowcaseHotel = (props) => {
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '15px' }}>200m away from Shirdi Bus Stop</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>200m away from Shirdi Bus Stop</h2></div>
                             </div>
 
                         </div>
@@ -135,7 +142,9 @@ const ShowcaseHotel = (props) => {
                             <div style={{
                                 width: '70%'
                             }}>
-                                <h3 className='Showhed'>Reviews </h3>
+                                <div className='Showhed'>
+                                    <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px' }}> Reviews </h3>
+                                </div>
                             </div>
                             <div className='Showstar'>
                                 <div className='showcasestar'>
@@ -143,7 +152,44 @@ const ShowcaseHotel = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <Review />
+                        <div>
+                            <Review />
+                            <div style={{
+                                width: '86%',
+                                marginLeft: '1%',
+                            }}>
+                                <p style={{ color: '#808080', fontSize: '22px', fontWeight: '400px' }}>
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                    Velit officia consequat duis enim velit mollit.
+                                    Exercitation veniam consequat sunt nostrud amet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{
+                        height: '0px',
+                        width: '84%',
+                        border: '1px solid #D8D8D8',
+                        marginTop: '25px',
+                        background: 'black'
+                    }}>
+
+                    </div>
+                    <div className='showconButton'>
+                        <Button style={{
+                            marginTop: '20px',
+                            width: '160px',
+                            height: '45px',
+                            border: '1px solid #CACACA',
+                            borderRadius: '15px'
+                        }}>
+                            <p style={{
+                                fontWeight: '500px',
+                                fontSize: '18px',
+                                color: '#959595'
+                            }}>Show more</p>
+
+                        </Button>
                     </div>
                 </div>
 
@@ -237,24 +283,20 @@ const ShowcaseHotel = (props) => {
                                 </Button>
                             </div>
                         </div>
-
-
+                        <div className='showconFButtons'>
+                            <div className='showconFButton'>
+                                <p className='ShowsubmitText'>CONFIRM BOOKING</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-            <div className='showconButton'>
-                <Button style={{
-                    marginTop: '20px',
-                    width: '400px',
-                    height: '55px',
-                    borderRadius: '30px'
-                }}>
-                    <div className='showconFButton'>
-                        <p className='submitText'>CONFIRM BOOKING</p>
-                    </div>
-                </Button>
-            </div>
+            <div style={{ height: 50, width: '100%' }}></div>
+            <PopularHotels />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <AppOverView />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <OptionLand />
         </div>
     );
 };

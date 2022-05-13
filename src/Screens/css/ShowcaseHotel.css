@@ -13,7 +13,11 @@
     display: flex;
     flex-direction: row;
 }
-
+.Showstar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .showttx {
     color: rgb(179, 181, 182);
     margin-left: 0px;
@@ -237,7 +241,7 @@
 
 .ShowcaseRight {
     width: 40%;
-    height: 400px;
+    height: 510px;
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
@@ -357,11 +361,28 @@
 .showbuttonTwon {
     margin-top: 32px;
 }
+.ShowsubmitText{
+    font-size: 16px;
+    font-weight: 500;
+    color:#FC444B;
+    ;
+}
 .showconFButton{
-    width: 400px;
-    height: 55px;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #FC444B;
     border-radius: 30px;
+}
+.showconFButtons{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 .showconButton{
     width: 90%;
@@ -402,7 +423,7 @@
 
     .ShowcaseRight {
         width: 300px;
-        height: 370px;
+        height: 500px;
         margin-left: 70px;
     }
 }
