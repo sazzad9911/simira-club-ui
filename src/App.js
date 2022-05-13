@@ -121,6 +121,7 @@ React.useEffect(() => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/Profile" element={<MyProfile />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
@@ -148,6 +149,7 @@ React.useEffect(() => {
         }
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
       <Footer />
     </Router>
   );

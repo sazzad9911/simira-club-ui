@@ -19,7 +19,7 @@ const MyProfile = (props) => {
         <div className='MyProfileBody'>
             <div className='MyProfileDiv'>
                 <div className='MyProfileText'>
-                    <h3>MyProfile</h3>
+                    <h3>My Profile</h3>
                 </div>
                 <div className='MyProfile-all_text'>
 

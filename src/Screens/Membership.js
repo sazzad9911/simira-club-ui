@@ -76,6 +76,7 @@ const Membership = () => {
             <AppOverView />
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
+            <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
         </div>
 
 

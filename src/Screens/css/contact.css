@@ -2,15 +2,14 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(245, 245, 245);
-    margin-bottom: 40px;
+    background-color: rgb(166, 26, 26);
+    margin-bottom: -250px;
 }
 
 .loginbodyleft2 {
     width: 400px;
     height: 800px;
-    background-color: #C4C4C4;
-    margin-left: 0px;
+    margin-left: -40px;
     display: flex;
     justify-content: center;
     align-items: center;

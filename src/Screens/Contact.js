@@ -7,11 +7,8 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import '../Screens/css/contact.css'
 
 const Contact = () => {
-    return (
-        <div>
-          
+    return (     
             <div className='loginbody2'  style={{justifyContent: 'center'}}>
- 
                 <div className='loginbodyleft2'>
                     <img src="https://theupay.com/bank/Assets/login.jpg" height={800} width={400}></img>
                 </div>
@@ -56,7 +53,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div> 
     );
 };
 
