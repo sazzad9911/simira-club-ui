@@ -4,6 +4,9 @@ import Img from "./Image/hotel.PNG";
 import a from "./Image/a.PNG";
 import z from "./Image/z.PNG";
 import s from "./Image/s.PNG";
+import OptionLand from './../Components/OptionLand';
+import PopularHotels from './../Components/PopularHotels';
+import AppOverView from './../Cart/AppOverView'
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import './css/ShowcaseHotel.css';
@@ -12,6 +15,8 @@ import StarIcon from '@mui/icons-material/Star';
 import SignalWifi3BarIcon from '@mui/icons-material/SignalWifi3Bar';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+
 const ShowcaseHotel = (props) => {
     const data = props.data
     const conditions = props.data.conditions.split(',')
@@ -21,16 +26,13 @@ const ShowcaseHotel = (props) => {
         <div>
             <img src={data.image} className='Hotelimg' />
             <div className='Showcase'>
-                <div style={{
-                    width: '60',
-                    margin: '1'
-                }}>
+                <div className='ShowcaseOne'>
                     <div className='ShowleftOne'>
                         <div style={{
                             width: '70%'
                         }}>
                             <h1 className='Showhed'>{data.name} </h1>
-                            <p style={{ color: "rgb(179, 181, 182)" }}>{data.address}</p>
+                            <p className='showttx'>{data.address}</p>
                         </div>
                         <div style={{
                             width: '25%'
@@ -41,36 +43,48 @@ const ShowcaseHotel = (props) => {
                         </div>
                     </div>
                     <div className='showcaseicon'>
-                        {
-                            conditions ? (
-                                conditions.map((cond, i) => {
-                                    if (cond == 'wifi') {
-                                        return (
-                                            <div key={i} className='showcaseicons'>
-                                                <SignalWifi3BarIcon className='showicon' />
-                                            </div>
-                                        )
-                                    } else if (cond == 'tv') {
-                                        return (
-                                            <div key={i} className='showcaseicons'>
-                                                <ComputerIcon className='showicon' />
-                                            </div>
-                                        )
-                                    } else {
-                                        return (
-                                            <div key={i} className='showcaseicons'>
-                                                <LocalParkingIcon className='showicon' />
-                                            </div>
-                                        )
-                                    }
-                                })
-                            ) : (
-                                <div></div>
-                            )
-                        }
+                        <div className='showcaseiconss'>
+                            {
+                                conditions ? (
+                                    conditions.map((cond, i) => {
+                                        if (cond == 'wifi') {
+                                            return (
+                                                <Button>
+                                                    <div key={i} className='showcaseicons'>
+                                                        <SignalWifi3BarIcon className='showicon' />
+                                                    </div>
+                                                </Button>
+                                            )
+                                        } else if (cond == 'tv') {
+                                            return (
+                                                <Button>
+                                                    <div key={i} className='showcaseicons'>
+                                                        <ComputerIcon className='showicon' />
+                                                    </div>
+                                                </Button>
+                                            )
+                                        } else {
+                                            return (
+                                                <Button>
+                                                    <div key={i} className='showcaseicons'>
+                                                        <LocalParkingIcon className='showicon' />
+                                                    </div>
+                                                </Button>
+                                            )
+                                        }
+                                    })
+                                ) : (
+                                    <div></div>
+                                )
+                            }
+                        </div>
                     </div>
                     <div className='showDescription'>
-                        <h3>Description </h3>
+                        <h3 style={{
+                            fontWeight: '700px',
+                            fontSize: '30px',
+                            color: '#292929'
+                        }}>Description </h3>
                         <h6 style={{
                             height: height,
                             overflow: 'hidden'
@@ -105,13 +119,13 @@ const ShowcaseHotel = (props) => {
                     </div>
                     <div className='showcasemap'>
                         <div className='showCaseMap'><GoogleMapReact /></div>
-                        <h3>What's nearby</h3>
+                        <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px' }}>What's nearby</h3>
                         <div className='showcasemaps'>
                             <div className='showcaseNearbys'>
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '15px' }}>500m away from Sai Baba Mandir</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>500m away from Sai Baba Mandir</h2></div>
                             </div>
 
                         </div>
@@ -120,7 +134,7 @@ const ShowcaseHotel = (props) => {
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '15px' }}>200m away from Shirdi Bus Stop</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>200m away from Shirdi Bus Stop</h2></div>
                             </div>
 
                         </div>
@@ -128,7 +142,9 @@ const ShowcaseHotel = (props) => {
                             <div style={{
                                 width: '70%'
                             }}>
-                                <h3 className='Showhed'>Reviews </h3>
+                                <div className='Showhed'>
+                                    <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px' }}> Reviews </h3>
+                                </div>
                             </div>
                             <div className='Showstar'>
                                 <div className='showcasestar'>
@@ -136,9 +152,50 @@ const ShowcaseHotel = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <Review/>
+                        <div>
+                            <Review />
+                            <div style={{
+                                width: '86%',
+                                marginLeft: '1%',
+                            }}>
+                                <p style={{ color: '#808080', fontSize: '22px', fontWeight: '400px' }}>
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                    Velit officia consequat duis enim velit mollit.
+                                    Exercitation veniam consequat sunt nostrud amet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{
+                        height: '0px',
+                        width: '84%',
+                        border: '1px solid #D8D8D8',
+                        marginTop: '25px',
+                        background: 'black'
+                    }}>
+
+                    </div>
+                    <div className='showconButton'>
+                        <Button style={{
+                            marginTop: '20px',
+                            width: '160px',
+                            height: '45px',
+                            border: '1px solid #CACACA',
+                            borderRadius: '15px'
+                        }}>
+                            <p style={{
+                                fontWeight: '500px',
+                                fontSize: '18px',
+                                color: '#959595'
+                            }}>Show more</p>
+
+                        </Button>
                     </div>
                 </div>
+
+
+
+
 
                 <div className='ShowcaseRight'>
                     <div className='ShowcaseRightf'>
@@ -148,7 +205,7 @@ const ShowcaseHotel = (props) => {
                             color: '#808080'
                         }}>Check-in<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinput' placeholder='  23 March 2022' />
+                            <input className='Showrightinputs' placeholder='  23 March 2022' />
                         </div>
 
                     </div>
@@ -170,13 +227,17 @@ const ShowcaseHotel = (props) => {
                                 <p className='showold'>Older 12 years</p>
                             </div>
                             <div className='showAdultss'>
-                                <button className='showbutton'>
-                                    <p className='showbuttonone'>-</p>
-                                </button>
-                                <p className='showbuttonTwo'>2</p>
-                                <button className='showbutton'>
-                                    <p className='showbuttontwo'>+</p>
-                                </button>
+                                <Button>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
+                                <p className='showbuttonTwon'>2</p>
+                                <Button>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
                             </div>
                         </div>
                         <div style={{
@@ -188,13 +249,17 @@ const ShowcaseHotel = (props) => {
                                 <p className='showold'>5 - 12 years old</p>
                             </div>
                             <div className='showAdultss'>
-                                <button className='showbutton'>
-                                    <p className='showbuttonone'>-</p>
-                                </button>
-                                <p className='showbuttonTwo'>2</p>
-                                <button className='showbutton'>
-                                    <p className='showbuttontwo'>+</p>
-                                </button>
+                                <Button>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
+                                <p className='showbuttonTwon'>2</p>
+                                <Button>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
                             </div>
                         </div>
                         <div style={{
@@ -205,20 +270,33 @@ const ShowcaseHotel = (props) => {
                                 <p className='showadu'>Room</p>
                             </div>
                             <div className='showAdultss'>
-                                <button className='showbutton'>
-                                    <p className='showbuttonone'>-</p>
-                                </button>
+                                <Button>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
                                 <p className='showbuttonTwo'>2</p>
-                                <button className='showbutton'>
-                                    <p className='showbuttontwo'>+</p>
-                                </button>
+                                <Button>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
                             </div>
                         </div>
-
-
+                        <div className='showconFButtons'>
+                            <div className='showconFButton'>
+                                <p className='ShowsubmitText'>CONFIRM BOOKING</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div style={{ height: 50, width: '100%' }}></div>
+            <PopularHotels />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <AppOverView />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <OptionLand />
         </div>
     );
 };

@@ -4,30 +4,39 @@
     margin: 1%;
 }
 
+.MembershiphedImg {
+    height: 250px;
+    width: 100%;
+    opacity: .3;
+
+}
+
 .membername {
     color: #FFFFFF;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
-    font-size: 82px;
+    font-size: 60px;
     position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-20%, -20%);
 }
 
 .container {
-    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: rgba(148, 21, 21, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Membershipcard {
     height: auto;
-    width: auto;
+    width: 90%;
     display: flex;
-    margin: 2%;
+    margin-top: 50px;
+    margin: 5%;
 }
 
 .MemberLeftohed {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 48px;
     text-align: center;
     color: #FFFFFF;
@@ -35,7 +44,6 @@
 }
 
 .MemberLeftohedo {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -47,7 +55,6 @@
 .Membershipcard-left {
     width: 29%;
     height: 380px;
-    margin-left: 20px;
     background-color: #FC444B;
     border-radius: 10px;
 }
@@ -68,7 +75,7 @@
 .MemberLeft {
     height: 60px;
     background-color: #FFFFFF;
-    margin: 4px;
+    margin: 10%;
     border-radius: 5px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
@@ -81,7 +88,7 @@
 
 .Membershipcard-right {
     width: 68%;
-    margin-left: 30px;
+    margin-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,6 +117,7 @@
     border-radius: 10px;
 }
 
+
 .membercardft {
     width: 90%;
     margin-left: 5%;
@@ -137,10 +145,12 @@
 }
 
 .membercardfs {
-    width: 100%;
+    width: 98%;
     justify-content: center;
     display: flex;
     font-weight: 700;
+    margin-left: 2px;
+    margin-right: 4px;
 }
 
 .membercardfss {
@@ -151,25 +161,43 @@
 
 }
 
+.membershipHave {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+
 @media only screen and (max-width: 730px) {
     .Membershipcard-right {
+        width: 90%;
+        margin: 3%;
         display: block;
     }
 
     .MemberCard {
-        width: 90%;
-        margin-left: 10px;
-        margin-bottom: 15px;
+        width: 100%;
+        height: 350px;
+        margin-top: 25px;
+        
     }
 
     .Membershipcard-left {
-        width: 50%;
-        margin-left: 40px;
+        width: 96%;
+        height: 400px;
+        margin-left: 2%;
+        margin-top: 20px;
+    }
+
+    .Membershipcard {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0px;
     }
 }
-@media only screen and (max-width: 930px) {
-    .membername{
-        font-size: 72px;
-        left: 25%;
+
+@media only screen and (max-width: 380px) {
+    
+    .MemberCard{
+        height: 400px;
     }
 }

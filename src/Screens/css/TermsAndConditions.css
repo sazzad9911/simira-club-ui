@@ -1,10 +1,15 @@
 .TermsBody{
     height: auto;
     width: auto;
-    margin: 4%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
 }
 .TermsBody h2{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    margin-left: 22px;
     font-weight: 500;
     font-size: 32px;
     color: #000000;
@@ -17,8 +22,8 @@
 }
 .TermsP{
     opacity: .7;
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 200;
     font-size: 24px;
     color: #585858;
+    margin-left: 12px;
 }

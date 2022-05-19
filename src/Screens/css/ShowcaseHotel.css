@@ -13,9 +13,23 @@
     display: flex;
     flex-direction: row;
 }
+.Showstar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showttx {
+    color: rgb(179, 181, 182);
+    margin-left: 0px;
+}
+
+.ShowcaseOne {
+    width: 65%;
+    margin: 1
+}
 
 .ShowleftOne {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: row;
 }
@@ -38,7 +52,8 @@
     margin-top: 3px;
     margin-left: 3px;
 }
-.showiconpoint{
+
+.showiconpoint {
     margin-top: 7px;
 }
 
@@ -65,14 +80,16 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 10px;
+    height: 55px;
 }
-
+.showcaseiconss{
+    margin-left: -18px;
+}
 .showcaseicons {
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    background-color: #ebe6e6;
+    background-color: #e9e6eb;
     margin-left: 10px;
     margin-top: 3px;
     text-align: center;
@@ -84,7 +101,7 @@
 }
 
 .showDescription {
-    margin-left: 2.5%;
+    margin-left: 3px;
 }
 
 .showcasetxt {
@@ -104,7 +121,9 @@
     border-style: solid;
     border-width: 1px;
     margin-top: 50px;
+    border: 1px solid #D8D8D8;
 }
+
 /*
 .showCaseMap {
     width: 60%;
@@ -112,6 +131,7 @@
     border-radius: 10px;
     margin-top: 30px;
     background-color: #585858;
+    border: 1px solid #D8D8D8;
 }*/
 
 .showcasecheckin {
@@ -220,16 +240,18 @@
 
 
 .ShowcaseRight {
-    width: 30%;
-    height: 400px;
+    width: 40%;
+    height: 510px;
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
-    margin: 10px;
+    border: 1px solid #D8D8D8;
+    margin: 25px;
 }
 
 .ShowcaseRightf {
-    margin-left: 5%;
+    width: 90%;
+    margin-left: 20px;
     justify-content: space-evenly;
     flex-direction: row;
 }
@@ -243,15 +265,28 @@
 .Showrightinput {
     outline: none;
     border: none;
-    width: 145px;
+    width: 98%;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    color:#D8D8D8;;
+    height: 25px;
+    background: #F5F5F5;
+}
+
+.Showrightinputs {
+    outline: none;
+    border: 1px solid #D8D8D8;
+    width: 98%;
     border-radius: 5px;
     height: 25px;
+    background-color: rgb(254, 251, 251);
 }
 
 .Showinputbox {
-    width: 60%;
+    width: 90%;
     margin-top: -20px;
     display: flex;
+    background: #F5F5F5;
 }
 
 .showdateicon {
@@ -296,26 +331,68 @@
     background-color: #F5F5F5;
     border: 0px;
 }
+.showbuttont{
+    height: 35px;
+    width: 35px;
+    border-radius: 17.5px;
+    margin-top: 10px;
+    background: #FFE1E3;
+    border: 0px;
+}
 
 .showbuttonone {
     font-size: 35px;
-    margin-top: -6px;
-    margin-left: 6px;
+    margin-top: -16px;
+    margin-left: 9px;
     color: #808080;
 }
 
 .showbuttontwo {
     font-size: 25px;
-    margin-left: 4px;
-    margin-top: 3px;
+    margin-top: -5px;
+    margin-left: 9px;
     color: red;
 }
 
 .showbuttonTwo {
-    margin-top: 17px;
+    margin-top: 23px;
 }
 
-@media only screen and (max-width: 600px) {
+.showbuttonTwon {
+    margin-top: 32px;
+}
+.ShowsubmitText{
+    font-size: 16px;
+    font-weight: 500;
+    color:#FC444B;
+    ;
+}
+.showconFButton{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FC444B;
+    border-radius: 30px;
+}
+.showconFButtons{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.showconButton{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+@media only screen and (max-width: 700px) {
     .Showrightinput {
         width: 200px;
     }
@@ -327,9 +404,17 @@
         margin-left: 5%;
     }
 
+    .Showinputbox {
+        width: 100%;
+    }
+
     .Showcase {
         width: 500px;
         flex-direction: column;
+    }
+
+    .Showrightinput {
+        width: 83%;
     }
 
     .ShowleftOne {
@@ -338,7 +423,13 @@
 
     .ShowcaseRight {
         width: 300px;
-        height: 370px;
+        height: 500px;
         margin-left: 70px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .showcasecheck {
+        width: 85%;
     }
 }

@@ -3,6 +3,7 @@ import './css/Careers.css'
 import Img from './Image/Careers.PNG'
 import Link from '@mui/material/Link';
 import AppOverView from '../Cart/AppOverView'
+import OptionLand from './../Components/OptionLand';
 
 function Career() {
     return (
@@ -25,9 +26,18 @@ function Career() {
                     button2='Remote'
                     button3='Sales'
                 ></Cart>
-                <div className="CareerEndDiv" />
+
+                <Cart text='Sale Associate'
+                    button1='Permanent'
+                    button2='Remote'
+                    button3='Sales'
+                ></Cart>
             </div>
-            <AppOverView/>
+            <div style={{ marginTop:'-320px' }}>
+                <AppOverView />
+            </div>
+            <div style={{ height: 20, width: '100%' }}></div>
+            <OptionLand />
         </div>
     );
 }

@@ -4,8 +4,8 @@ import {
   Routes,
   Route,
   Link,
-  useRouteMatch,
-  useParams
+  useParams,
+  useRouteMatch
 } from "react-router-dom";
 import Home from './Screens/Home';
 import MyProfile from './Screens/MyProfile';
@@ -28,6 +28,7 @@ import ShowCaseDeal from "./Screens/ShowCaseDeal";
 import SearchHotel from "./Screens/SearchHotel";
 import ShowcaseHotel from "./Screens/ShowcaseHotel"
 import NotFound from "./Screens/NotFound";
+import Membership from "./Screens/Membership"
 import { useDispatch, useSelector } from 'react-redux'
 import { url, postData, setHotels, setUser,setBrands, setBanners,setDeals } from './action'
 import SearchDeal from "./Screens/SearchDeal";
@@ -119,33 +120,12 @@ React.useEffect(() => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Profile" element={<MyProfile />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
-        <Route path="/Search" element={<Search />} />
-        <Route path="/Career" element={<Career />} />
-        <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
-        <Route path="/JobDescription" element={<JobDescription />} />
-        <Route path="/Checkout" element={<Checkout />} />
-        <Route path="/ShowCaseDealBrand" element={<ShowCaseDealBrand />} />
-        <Route path="/ShowCaseCategory/restaurant" element={<ShowCaseCategory name="restaurant" />} />
-        <Route path="/ShowCaseCategory/hotel" element={<ShowCaseCategory name="hotel" />} />
-        <Route path="/ShowCaseDeal" element={<ShowCaseDeal />} />
-        <Route path="/SearchHotel" element={<SearchHotel />} />
-        {
-          hotels ? (
-            hotels.map((d, i) => (
-              <Route key={i} path={"/ShowcaseHotel" + "/" + d.id} element={<ShowcaseHotel data={d} />} />
-            ))
-          ) : (
-            <></>
-          )
-        }
-        <Route path="*" element={<NotFound />} />
+      <Route exact path="/" element={<Home />} />
+
+     
+        <Route path="*" element={<NotFound />} />     
       </Routes>
+      <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
       <Footer />
     </Router>
   );

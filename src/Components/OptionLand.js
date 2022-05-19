@@ -9,7 +9,8 @@ const OptionLand = (props) => {
         <div className='optionLandBody'>
             <h2 style={{
                 marginTop:'50px',
-                marginBottom:'40px'
+                marginBottom:'40px',
+            marginLeft:'5%',
             }}>Loads of options for you to explore here</h2> 
             <PopularDeals></PopularDeals>
             <PopularHotels></PopularHotels>
@@ -25,7 +26,8 @@ const PopularDeals = (props) => {
     return (
         <div>
             <h2 style={{ 
-                color:'#585858'
+                color:'#585858',
+                marginLeft:'5%',
             }}>Popular Deals</h2>
             <div className='popularDealsView'>
                 <PopularDealsName PDT='Deals near me'></PopularDealsName>
@@ -65,7 +67,8 @@ const PopularHotels = (props) => {
     return (
         <div>
             <h2 style={{ 
-                color:'#585858'
+                color:'#585858',
+                marginLeft:'5%',
             }}>Popular Hotels</h2>
             <div className='popularDealsView1'>
                 <PopularHotelsName PHT='Hotels near me'></PopularHotelsName>
@@ -99,7 +102,7 @@ const TopBrands = (props) => {
     return ( 
         <div>
             <h2 style={{ 
-                color:'#585858'
+                color:'#585858',marginLeft:'5%',
             }}>Top Brands With Us</h2>
             <div className='popularDealsView'>
                 <TopBrandsName TBWU='Oven Story'></TopBrandsName>
@@ -142,7 +145,8 @@ const CitiesWeOffer = (props) => {
     return (
         <div>
             <h2 style={{ 
-                color:'#585858'
+                color:'#585858',
+                marginLeft:'5%',
             }}>Cities We Offer</h2>
             <div className='popularDealsView'>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>

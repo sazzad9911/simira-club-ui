@@ -69,7 +69,9 @@ const PopularDeal = () => {
 
                 </Button>
             </div>
-            <h2> Popular Deals</h2>
+            <h2 style={{
+            marginLeft:'5%'
+            }}> Popular Deals</h2>
             <div ref={ref} className='brandShow'>
                 <div className='topBrandsDive'></div>
                 {

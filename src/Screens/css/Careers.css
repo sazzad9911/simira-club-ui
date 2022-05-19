@@ -34,7 +34,7 @@
 }
 .CareerBoxMainButton{
     height: auto;
-    width: 185;
+    width: auto;
     padding: 2%;
     border: 1px solid #D8D8D8;
     border-radius: 25px;
@@ -46,6 +46,12 @@
     padding-right: 100px;
     margin-top: 20px;
 }
+@media screen and (max-width: 400px) {
+    .CareerBox {
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+  }
 .CareerBoxDiv{
     height: auto;
     width: auto;

@@ -2,13 +2,14 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: rgb(166, 26, 26);
+    margin-bottom: -250px;
 }
  
 .loginbodyleft2 {
     width: 400px;
-    height: 600px;
-    background-color: #C4C4C4;
+    height: 800px;
+    margin-left: -40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,9 +34,10 @@
 }
 .loginbodyright2 {
     width: 600px;
-    height: 500px;
+    height: 700px;
     background-color: white;
     display: flex;
+    margin-left: 40px;
     justify-content: center;
     align-items: center;
     margin-top: 90px;
@@ -78,6 +80,7 @@
     border: none;
     margin-bottom: 10px;
 }
+
 .textinputviewMess2 {
     width: 400px;
     height: 100px;
@@ -85,7 +88,7 @@
     background-color: #F5F5F5;
     border: none;
 }
- 
+
 .textinput2 {
     width: 350px;
     background-color: #F5F5F5;
@@ -94,6 +97,7 @@
     border-radius: 30px;
     margin-left: 30px;
 }
+
 .textinputMess2 {
     width: 360px;
     background-color: #F5F5F5;
@@ -107,13 +111,15 @@
 .forgotPlink2 {
     width: 400px;
 }
-.forgotPlink2 p{
+
+.forgotPlink2 p {
     font-family: 'Plus Jakarta Sans', sans-serif;
     text-align: left;
     font-weight: 500;
     font-size: 22px;
     color: #000000;
 }
+
 .loginButton2 {
     width: 400px;
     height: 50px;
@@ -140,6 +146,7 @@
     color: #ffffff;
 
 }
+
 .googleButton2 {
     width: 400px;
     height: 50px;

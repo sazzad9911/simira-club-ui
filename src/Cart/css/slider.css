@@ -3,12 +3,13 @@
     margin-left:2%
 }
 .slider{
-    width:100%;
+    width:95%;
     height:420px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-left: 2.5%;
 }
 @media (max-width:500px) {
     .slider{

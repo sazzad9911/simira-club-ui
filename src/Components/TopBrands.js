@@ -86,7 +86,9 @@ const TopBrands = (props) => {
 
                 </Button>
             </div>
-            <h2>{props.headText}</h2>
+            <h2 style={{
+            marginLeft:'5%'
+            }}>{props.headText}</h2>
             <div ref={ref} className='brandShow'>
                 <div className='topBrandsDive'>
                 

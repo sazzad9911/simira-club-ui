@@ -1,5 +1,7 @@
 import React from "react";
 import './css/TermsAndConditions.css'
+import OptionLand from './../Components/OptionLand';
+import AppOverView from './../Cart/AppOverView';
 import Img from './Image/Careers.PNG'
 
 function TermsAndConditions() {
@@ -8,7 +10,7 @@ function TermsAndConditions() {
             <h2>Terms & Conditions</h2>
             <div className="TermsPDiv">
                 <p className="TermsP">1. &nbsp;&nbsp;&nbsp;It is the responsibility of a customer to read, understand and remain knowledgeable of the terms and
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conditions.<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conditions.<br />
                     2. &nbsp;&nbsp;Booking confirmation letter is required at the time of check-in.<br />
                     3. &nbsp;&nbsp;Customer is eligible for a stay from Sunday to Thursday at all mentioned locations.<br />
                     4. &nbsp;&nbsp;Offer is not valid for single occupancy.<br />
@@ -34,14 +36,20 @@ function TermsAndConditions() {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fulfilled by Smira Club.<br />
                     16. Any legal issues will be resolved by an arbitrator in Mumbai jurisdiction only errors and omissions
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expected.</p>
-            </div>
-            <h2 className="cancel">Cancellation Policys</h2> 
-            <div className="TermsPDiv">
-                <p className="TermsP">Member can cancel the policy at its own discretion, but NO REFUND will be processed for the same to
-                    discontinue membership email us at support@smira.club
+                <h2>Cancellation Policys</h2>
+                <div className="TermsPDiv">
+                    <p className="TermsP">Member can cancel the policy at its own discretion, but NO REFUND will be processed for the same to
+                        discontinue membership email us at support@smira.club
 
-                </p>
+                    </p>
+                </div>
             </div>
+
+
+            <AppOverView />
+            <div style={{ height: 20, width: '100%' }}></div>
+            <OptionLand />
+            <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
 
         </div>
     );
