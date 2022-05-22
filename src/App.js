@@ -36,6 +36,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from './firebase'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch()

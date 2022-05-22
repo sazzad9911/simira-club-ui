@@ -1,15 +1,17 @@
 .slider-container{
-    width: 96%;
-    margin-left:2%
+    width: 100%;
+    padding-left:4%;
+    padding-right:4%;
 }
 .slider{
-    width:95%;
     height:420px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-left: 2.5%;
+    width: 92%;
+    margin-left:4%;
+
 }
 @media (max-width:500px) {
     .slider{

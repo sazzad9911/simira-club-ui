@@ -5,6 +5,8 @@ import './css/slider.css'
 import { Oval } from "react-loader-spinner";
 import { postData, url } from "../action";
 import { useSelector } from "react-redux";
+import Carousel from 'react-bootstrap/Carousel'
+import { AiFillAccountBook } from "react-icons/ai";
 
 const Slider = () => {
    const data= useSelector(state => state.Banners)
@@ -20,17 +22,16 @@ const Slider = () => {
         
       };
     return (
-        <div className="slider-container">
-
-            {
+        <Carousel nextIcon={()=>(
+           <AiFillAccountBook/>
+        )} fade>
+         {
                 data ? (
-                    <Slide {...properties} autoplay={true}>
-                        {
-                            data.map((d) => (
-                                <img key={d.id} src={d.image} className='slider' />
+                    data.map((d) => (
+                                <Carousel.Item  interval={3000} key={d.id}>
+                                <img  src={d.image} className='slider' />
+                                </Carousel.Item>
                             ))
-                        }
-                    </Slide>
                 ) : (
                     <div style={{
                         display: 'flex',
@@ -43,7 +44,7 @@ const Slider = () => {
                     </div>
                 )
             }
-        </div>
+        </Carousel>
     );
 };
 

@@ -35,10 +35,10 @@ const Header = () => {
             <div className="header-top">
                 <div>
                     <LocationOnIcon />
-                    <p>Mumbai, Maharashtra</p>
+                    <p style={{ margin:'0px'}}>Mumbai, Maharashtra</p>
                 </div>
                 <div>
-                    <Link to='/Career' underline='none'  color='inherit'>
+                    <Link to='/Career' style={{textDecoration: 'none'}}>
                         <button style={{
                             borderRight: '1px solid #ffff'
                         }}>We are hiring!</button>
@@ -46,17 +46,17 @@ const Header = () => {
                     <button style={{
                         borderRight: '1px solid #ffff'
                     }}>How to use</button>
-                    <Link to='/Contact' underline='none' color='inherit'>
+                    <Link to='/Contact' style={{textDecoration: 'none'}}>
                         <button>Talk to us</button>
                     </Link>
                 </div>
             </div>
             <div style={{ height: height }} className="header-bottom">
                 <div className='header-content'>
-                    <Link to='/' color={'inherit'} style={{marginLeft:'30px' }}  underline='none'>
+                    <Link to='/' style={{textDecoration: 'none'}} >
                         <img src={Icon} />
                     </Link>
-                    <Link to='/Search' underline='none' color="#585858">
+                    <Link to='/Search' style={{textDecoration: 'none'}}>
                         <div className='searchContainer' style={{ marginRight: 50 }}>
                             <input type="text" placeholder="Search" />
                             <svg width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,12 +73,12 @@ const Header = () => {
                         <MenuIcon />
                     </button>
                 </div>
-                <div className='header-content' style={{ marginRight: 50, }}>
+                <div className='header-content'>
                     <img style={{
                         width: 35,
                         height: 35
                     }} src={member} />
-                    <Link to='/SignUp' color="inherit" underline='none'>
+                    <Link to='/SignUp' style={{textDecoration: 'none'}}>
                         <div className='header-box'>
                             <h5>Became a Member</h5>
                             <p>Save more on Top Brands</p>
@@ -86,8 +86,8 @@ const Header = () => {
                     </Link>
                 </div>
                 <div id='div' className='divider'></div>
-                <Link to='/BusinessWithUs' underline='none' color='inherit'>
-                    <div className='header-content' style={{ marginRight: 50, cursor: 'pointer' }}>
+                <Link to='/BusinessWithUs' style={{textDecoration: 'none'}}>
+                    <div className='header-content'>
                         <img style={{
                             width: 35,
                             height: 35
@@ -99,11 +99,11 @@ const Header = () => {
                     </div>
                 </Link>
                 <div id='div' className='divider'></div>
-                <div className='header-content' style={{ marginRight: 100 }}>
+                <div className='header-content'>
                     {
                         user ?
                             (
-                                <Link to="/Profile" underline='none'>
+                                <Link to="/Profile" style={{textDecoration: 'none'}}>
                                     <div style={{ display: 'flex' }}>
                                         <img src={user[0].image ? user[0].image : 'https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-2.png'} />
                                         <div className='header-box'>
@@ -114,7 +114,7 @@ const Header = () => {
                                 </Link>
 
                             ) : (
-                                <Link underline="none" to="/Login" color="inherit">
+                                <Link style={{textDecoration: 'none'}} to="/Login" color="inherit">
                                     <div style={{
                                         backgroundColor: '#ffff',
                                         width: 120,
