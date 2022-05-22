@@ -93,7 +93,7 @@ const PopularHotelsName = (props) => {
             <Link href="#" color="inherit" underline="none">
                 <h4>{props.PHT}</h4>
             </Link>
-            <h3 className='dot1'>.</h3>
+            <h3 className='dot1'>.</h3> 
         </div>
     );
 };

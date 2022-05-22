@@ -23,14 +23,28 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 import './css/Home.css'
 
-
+ 
 const Home = () => {
     const ref = createRef()
+    const [left,setLeft]=React.useState(false)
+
+    React.useEffect(() =>{
+        //console.log(ref.current.scrollLeft)
+    },[])
+    const scroll=()=>{
+        console.log(ref.current.scrollLeft)
+        console.log(ref.current.clientWidth)
+        if(ref.current.scrollLeft==0) {
+            setLeft(false);
+        }else{
+            setLeft(true);
+        }
+    }
     const Left = () => {
-        ref.current.scrollLeft -= 60
+        ref.current.scrollLeft -= 100
     }
     const Right = () => {
-        ref.current.scrollLeft += 60
+        ref.current.scrollLeft += 100
     }
 
     return (
@@ -47,7 +61,9 @@ const Home = () => {
             </div>
             <div style={{ height: 20, width: '100%' }}></div>
             <div className='HomeContainer'>
-                <div className='IconButtonarrowLeft'>
+                {
+                    left ? (
+                        <div className='IconButtonarrowLeft'>
                     <Button onClick={Left}>
                         <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_181_2301)">
@@ -69,6 +85,8 @@ const Home = () => {
                         </svg>
                     </Button>
                 </div>
+                    ):(<></>)
+                }
                 <div className='IconButtonarrowRight'>
                     <Button onClick={Right}>
                         <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +116,7 @@ const Home = () => {
                         background:'red'
                     }}></div>
                 </div>
-                <div ref={ref} className='HomeIconContainer'>
+                <div ref={ref} onScroll={scroll} id='scroll' className='HomeIconContainer'>
 
                     <div className='topBrandsDive'></div>
                     <IconButton link='/hotel' img={Hotels} title='Hotels' />
@@ -123,7 +141,7 @@ const Home = () => {
             <BookShow />
             <div style={{ height: 50, width: '100%' }}></div>
             <PopularHotels />
-            <div style={{ height: 20, width: '100%' }}></div>
+            <div style={{ marginTop:'380px' }}></div>
             <AppOverView />
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />

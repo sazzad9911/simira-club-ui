@@ -18,11 +18,12 @@
 .box .brandShow{
     display: flex;
     float: left;
-    width: 100%;
+    width: 92%;
     overflow-x: scroll;
     overflow: hidden;
     scrollbar-width: thin;
     overflow-x: scroll;
+    margin-left: 4%;
 }
 .brandShow span{
     width: 50px;
@@ -34,9 +35,9 @@
     width: 25px;
     height: 25px;
     background: white;
-    left: 20px;
+    left: 50px;
     border-radius: 20px;
-    margin-top: 130px;
+    margin-top: 140px;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -49,8 +50,8 @@
     height: 25px;
     background: #FFFFFF;
     border-radius: 20px;
-    right: 20px;
-    margin-top: 130px;
+    right: 50px;
+    margin-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,9 +63,9 @@
     width: 25px;
     height: 25px;
     background: white;
-    left: 20px;
+    left: 50px;
     border-radius: 20px;
-    margin-top: 140px;
+    margin-top: 150px;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -77,8 +78,8 @@
     height: 25px;
     background: #FFFFFF;
     border-radius: 20px;
-    right: 20px;
-    margin-top: 140px;
+    right: 50px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,5 +93,5 @@
     font-weight: 500;
 }
 .topBrandsDive{
-    margin: 22px;
+    margin: 0px;
 }

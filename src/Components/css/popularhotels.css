@@ -1,6 +1,7 @@
 .popularhotelsBody{
     height: auto;
-    width: 96%;
+    width: 92%;
+    margin-left:4%;
   
 }
 .popularhotelsBody .popularhotelsCart{
@@ -16,12 +17,12 @@
     height: 25px;
     background: white;
     border-radius: 20px;
-    margin-top: 185px;
+    margin-top: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    left: 20px;
+    left: 50px;
     box-shadow:1px 1px 5px black;
     padding: 1px;
 }
@@ -31,8 +32,8 @@
     height: 25px;
     background: #FFFFFF;
     border-radius: 20px;
-    right: 20px;
-    margin-top: 185px;
+    right: 50px;
+    margin-top: 190px;
     display: flex;
     align-items: center;
     justify-content: center;

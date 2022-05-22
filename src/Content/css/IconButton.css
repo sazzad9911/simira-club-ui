@@ -43,11 +43,11 @@
     background: white;
     box-shadow: 1px 1px 5px black;
     border-radius: 20px;
-    margin-top: 55px;
+    margin-top: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 40px;
+    left: 50px;
     z-index: 1;
 }
 
@@ -59,7 +59,7 @@
     box-shadow: 1px 1px 5px black;
     border-radius: 20px;
     right: 50px;
-    margin-top: 55px;
+    margin-top: 75px;
     display: flex;
     align-items: center;
     justify-content: center;

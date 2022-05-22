@@ -20,13 +20,14 @@ const AppOverView = () => {
         <div className='AppOverViewBody'>
                 <div className='AppOverViewLaftDiv'>
                     <img className='AppOverViewImg' src={Photo} />
-                </div>
+                </div> 
                 <div className='AppOverViewRightDiv'>
-                    <div>
+                   <div>
+                   <div>
                         <h2 className='AppOverViewBigText'>Get The SmiraClub App</h2>
                         <div>
                             <p className='AppOverViewSamllText'>
-                                We'll send you a link that you can open on your phone to
+                                We'll send you a link that you can open on your phone to<br/>
                                 download the app.
                             </p>
                         </div>
@@ -37,7 +38,7 @@ const AppOverView = () => {
                         <div className='AppOverViewButtonDiv'>
 
                             <input
-                                type="checkbox"
+                                type="radio"
                                 id="topping"
                                 name="topping"
                                 value="Paneer"
@@ -52,7 +53,7 @@ const AppOverView = () => {
                         </div>
                         <div className='AppOverViewButtonLastDiv'>
                             <input
-                                type="checkbox"
+                                type="radio"
                                 id="topping"
                                 name="topping"
                                 value="Paneer"
@@ -85,6 +86,7 @@ const AppOverView = () => {
                             </div>
                         </div>
                     </div>
+                   </div>
                 </div>
 
         </div>

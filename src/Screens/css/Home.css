@@ -1,5 +1,5 @@
 .HomeIconContainer{
-    width: 100%;
+    width: 92%;
     height: 165px;
     overflow: hidden;
     padding: 5px;
@@ -7,10 +7,11 @@
     display: flex;
     float: left;
     scrollbar-width: thin;
+    margin-left: 4%;
 
 }
 .topBrandsDive{
-    margin: 25px;
+    margin: 0px;
 }
 .HomeContainer{
     width: 100%;

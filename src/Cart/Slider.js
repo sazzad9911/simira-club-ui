@@ -22,9 +22,7 @@ const Slider = () => {
         
       };
     return (
-        <Carousel nextIcon={()=>(
-           <AiFillAccountBook/>
-        )} fade>
+        <Carousel fade>
          {
                 data ? (
                     data.map((d) => (

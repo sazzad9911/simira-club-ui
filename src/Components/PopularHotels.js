@@ -66,9 +66,7 @@ const PopularHotels = () => {
                 </Button>
             </div>
             <div className='popularhotelsText'>
-                <h2 style={{
-                    marginLeft: '5%'
-                }}>Popular Hotels</h2>
+                <h2>Popular Hotels</h2>
             </div>
             <div ref={ref} className='popularhotelsCart'>
                 <div className='topBrandsDive'></div>
