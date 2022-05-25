@@ -30,7 +30,7 @@ import ShowcaseHotel from "./Screens/ShowcaseHotel"
 import NotFound from "./Screens/NotFound";
 import Membership from "./Screens/Membership"
 import { useDispatch, useSelector } from 'react-redux'
-import { url, postData, setHotels, setUser,setBrands, setBanners,setDeals } from './action'
+import { url, postData, setHotels, setUser,setBrands, setBanners,setDeals,setUsers } from './action'
 import SearchDeal from "./Screens/SearchDeal";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from './firebase'
@@ -76,6 +76,14 @@ function App() {
       //console.log(data)
     }).catch(err => {
       console.log(err.message)
+    })
+    postData(url +'/getData',{
+      tableName: 'user'
+    }).then(data => {
+      if(Array.isArray(data)){
+        return dispatch(setUsers(data));
+      }
+      console.log(data.message)
     })
   }, [action])
   React.useEffect(() => {
@@ -127,6 +135,10 @@ React.useEffect(() => {
       <Route path="/ShowCaseCategory/:type" element={<ShowCaseCategory/>} />
       <Route path="/ShowCaseDealBrand/:id" element={<ShowCaseDealBrand />} />
       <Route path={"/ShowcaseHotel/:id"} element={<ShowcaseHotel />} />
+      <Route path="/Contact" element={<Contact />} />
+      <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Membership" element={<Membership />} />
         <Route path="*" element={<NotFound />} />     
       </Routes>
       <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>

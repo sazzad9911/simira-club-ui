@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '@mui/material/Link';
+
 import '../Components/css/login.css'
 import Button from '@mui/material/Button';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -10,6 +10,7 @@ import { setUser, postData, url } from './../action';
 import Alert from '../Content/Alert';
 import {getAuth,signInWithEmailAndPassword} from 'firebase/auth'
 import app from '../firebase'
+import { Link } from 'react-router-dom';
 
 const Login = (props) => {
     const dispatch = useDispatch()
@@ -42,7 +43,7 @@ const Login = (props) => {
         
     }
 
-    return (
+    return ( 
 
         <div style={{ justifyContent: 'center' }} className='loginbody'>
 
@@ -64,7 +65,10 @@ const Login = (props) => {
                         fontSize:'18px',
                     }}>{Message}</p>
                     <div className='forgotPlink'>
-                        <Link underline="none" color="black" href="#">Forgot Password?</Link>
+                        <Link style={{
+                            textDecoration: 'none',
+                            color:'#FC444B',
+                        }} to="#">Forgot Password?</Link>
                     </div>
                     <Button style={{
                         marginTop: '20px',
@@ -97,7 +101,10 @@ const Login = (props) => {
                             <p className='googleText'>Continue with Google</p>
                         </div>
                     </Button>
-                    <p className='bt'>Don’t have a account? <Link underline="none" color="#FC444B" href="/SignUp">Signup</Link></p>
+                    <p className='bt'>Don’t have a account? <Link underline="none" style={{
+                        textDecoration: 'none',
+                        color:"#FC444B"
+                    }} to="/SignUp">Signup</Link></p>
                 </div>
             </div>
             <Alert visible={visibility} close={() => setVisibility(!visibility)} title={data.title} message={data.message} />

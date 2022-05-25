@@ -11,12 +11,13 @@
     margin-top: 40px;
     margin-bottom: 30px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 .Showstar{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .showttx {
     color: rgb(179, 181, 182);
@@ -24,7 +25,7 @@
 }
 
 .ShowcaseOne {
-    width: 65%;
+    width: 60%;
     margin: 1
 }
 
@@ -54,7 +55,8 @@
 }
 
 .showiconpoint {
-    margin-top: 7px;
+    margin: 0;
+    margin-left: 3px;
 }
 
 .Showhed {
@@ -62,13 +64,15 @@
 }
 
 .showcasestar {
-    height: 30px;
-    width: 70px;
+    height: 50px;
+    width: 90px;
     background-color: green;
     border-radius: 10px;
     color: aliceblue;
     display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .showFont {
@@ -83,21 +87,27 @@
     height: 55px;
 }
 .showcaseiconss{
-    margin-left: -18px;
+    display: flex;
+    margin-left: -10px;
+    justify-content: center;
+    align-items: center;
 }
 .showcaseicons {
     height: 40px;
     width: 40px;
     border-radius: 20px;
     background-color: #e9e6eb;
-    margin-left: 10px;
-    margin-top: 3px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .showicon {
-    margin-top: 10px;
     color: #808080;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
 }
 
 .showDescription {
@@ -108,10 +118,11 @@
     width: 85%;
     color: #b8b3b3;
     font-size: 13px;
+    line-height: 20px;
 }
 
 .showcasecheck {
-    width: 60%;
+    width: 100%;
     height: 200px;
     display: flex;
     justify-content: space-evenly;
@@ -122,6 +133,7 @@
     border-width: 1px;
     margin-top: 50px;
     border: 1px solid #D8D8D8;
+    margin-bottom: 50px;
 }
 
 /*
@@ -145,10 +157,9 @@
 }
 
 .showcasebar {
-    height: 80px;
-    width: 1.8px;
-    margin-top: 10px;
-    background-color: #585858;
+    height: 70%;
+    width: 1.3px;
+    background-color: #D8D8D8;
 
 }
 
@@ -188,7 +199,9 @@
 .Showcardhedone {
     width: 60%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    height: auto;
+   
 }
 
 .ShowcardhedTwo {
@@ -197,19 +210,21 @@
 }
 
 .showcardname {
-    margin-top: -18px;
+    margin-left: 15px;
 }
 
 .Showcardimg {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 65px;
+    height: 65px;
+    border-radius: 30px;
+    margin: 5px;
 }
 
 .Platinum {
-    margin-top: -0.80px;
     color: #CBCBCB;
-    font-size: 13px;
+    font-size: 20px;
+    margin: 0;
+    font-weight:600
 }
 
 .gold {
@@ -224,36 +239,46 @@
 
 .showtxt {
     font-weight: 700;
-    margin-top: 19px;
+    font-size: 20px;
+    margin: 5px;
 }
 
 .Member {
     margin: 0px;
     color: rgb(26, 25, 25);
-    font-size: 13px;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
-
-
-
-
-
-
 .ShowcaseRight {
-    width: 40%;
-    height: 510px;
+    width: 400px;
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
     border: 1px solid #D8D8D8;
     margin: 25px;
+    padding:20px;
+    height: 530px;
+
+}
+@media (max-width:1100px) {
+    .ShowcaseRight{
+        width: 100%;
+    }
+    .ShowcaseOne{
+        width: 100%;
+    }
 }
 
 .ShowcaseRightf {
-    width: 90%;
-    margin-left: 20px;
     justify-content: space-evenly;
-    flex-direction: row;
+
+}
+.ShowcaseRightf h3{
+   margin-top: 5px;
+}
+.ShowcaseRightf h4{
+    margin-top: 10px;
 }
 
 .showrightStar {
@@ -276,27 +301,25 @@
 .Showrightinputs {
     outline: none;
     border: 1px solid #D8D8D8;
-    width: 98%;
+    width: 100%;
     border-radius: 5px;
-    height: 25px;
+    height: 40px;
     background-color: rgb(254, 251, 251);
 }
 
 .Showinputbox {
-    width: 90%;
-    margin-top: -20px;
+    width: 100%;
     display: flex;
     background: #F5F5F5;
+    margin-top: 10px;
 }
 
 .showdateicon {
-    margin-left: -25px;
     color: #D8D8D8;
 }
 
 .showAdults {
     width: 40%;
-
 }
 
 .showAdultss {
@@ -365,11 +388,11 @@
     font-size: 16px;
     font-weight: 500;
     color:#FC444B;
-    ;
+    margin: 0;
 }
 .showconFButton{
-    width: 250px;
-    height: 50px;
+    width: 100%;
+    height: 60px;
     display: flex;
     margin-top: 30px;
     justify-content: center;
@@ -383,6 +406,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    align-items: center;
 }
 .showconButton{
     width: 90%;
@@ -390,46 +414,4 @@
     justify-content: center;
     align-items: center;
     margin: 5%;
-}
-
-@media only screen and (max-width: 700px) {
-    .Showrightinput {
-        width: 200px;
-    }
-
-    .Hotelimg {
-        height: 300px;
-        width: 90%;
-        border-radius: 35px;
-        margin-left: 5%;
-    }
-
-    .Showinputbox {
-        width: 100%;
-    }
-
-    .Showcase {
-        width: 500px;
-        flex-direction: column;
-    }
-
-    .Showrightinput {
-        width: 83%;
-    }
-
-    .ShowleftOne {
-        width: 300px;
-    }
-
-    .ShowcaseRight {
-        width: 300px;
-        height: 500px;
-        margin-left: 70px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .showcasecheck {
-        width: 85%;
-    }
 }

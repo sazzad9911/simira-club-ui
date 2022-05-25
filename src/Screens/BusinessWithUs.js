@@ -9,7 +9,7 @@ import '../Screens/css/BusinessWithUs.css'
 const BusinessWithUs = () => {
     return (
         <div>
-
+ 
             <div className='loginbody3' style={{ justifyContent: 'center' }}>
 
                 <div className='loginbodyleft3'  >

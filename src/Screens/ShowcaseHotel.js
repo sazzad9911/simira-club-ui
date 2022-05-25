@@ -17,12 +17,23 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import Button from '@mui/material/Button';
 import { Link,useParams } from 'react-router-dom';
 import {postData, url} from '../action'
+import CCTV from '../Asset/Font/CCTV.svg'
+import Wifi from '../Asset/Font/Free Wifi.svg'
+import Gym from '../Asset/Font/Gym.svg'
+import Parking from '../Asset/Font/Parking.svg'
+import Swimming from '../Asset/Font/Swimming Pool.svg'
+import TV from '../Asset/Font/TV.svg'
+import { ReactSVG } from 'react-svg'
+import {useSelector} from 'react-redux'
 
 const ShowcaseHotel = (props) => {
     const {id}=useParams()
     const [Data,setData]= React.useState(null)
-    const [height, setHeight] = React.useState('50px')
+    const [height, setHeight] = React.useState('78px')
     const [conditions,setConditions] = React.useState(null)
+    const [Reviews,setReviews] = React.useState(null)
+    const users =useSelector(state => state.Users)
+
     React.useEffect(() => {
         postData(url +'/getData',{
             tableName:'hotels',
@@ -34,10 +45,21 @@ const ShowcaseHotel = (props) => {
             }
             console.log(data.message)
         })
+        postData(url +'/getData',{
+            tableName: 'hotel_reviews',
+            condition:'hotel_id='+"'"+id+"'"
+        }).then(data => {
+            if(Array.isArray(data)){
+                return setReviews(data)
+            }
+            console.log(data.message)
+        })
     },[id])
-
     return (
-        <div>
+        <div style={{
+            width:'100%',
+            overflowX: 'hidden'
+        }}>
             <img style={{marginTop:'30px'}} src={Data?Data.image:''} className='Hotelimg' />
             <div className='Showcase'>
                 <div className='ShowcaseOne'>
@@ -60,35 +82,39 @@ const ShowcaseHotel = (props) => {
                         <div className='showcaseiconss'>
                             {
                                 conditions ? (
-                                    conditions.map((cond, i) => {
-                                        if (cond == 'wifi') {
-                                            return (
-                                                <Button>
-                                                    <div key={i} className='showcaseicons'>
-                                                        <SignalWifi3BarIcon className='showicon' />
-                                                    </div>
-                                                </Button>
-                                            )
-                                        } else if (cond == 'tv') {
-                                            return (
-                                                <Button>
-                                                    <div key={i} className='showcaseicons'>
-                                                        <ComputerIcon className='showicon' />
-                                                    </div>
-                                                </Button>
-                                            )
-                                        } else {
-                                            return (
-                                                <Button>
-                                                    <div key={i} className='showcaseicons'>
-                                                        <LocalParkingIcon className='showicon' />
-                                                    </div>
-                                                </Button>
-                                            )
-                                        }
+                                    conditions.map((doc, i) => {
+                                        if (doc == 'wifi') {
+                                    return (
+                                        <img key={i} src={Wifi} className='showicon' />
+                                    )
+                                } else if (doc == 'tv') {
+                                    return (
+                                        <img key={i} src={TV} className='showicon' />
+                                    )
+                                } else if(doc=='parking'){
+                                    return (
+                                        <img key={i} src={Parking} className='showicon'/>
+                                    )
+                                }else if (doc=='gym'){
+                                    return (
+                                           
+                                        <img key={i} src={Gym} className='showicon'/>
+                                       
+                                    )
+                                }else if (doc=='cctv'){
+                                    return (
+                                        <img key={i} src={Swimming} className='showicon'/>
+                                    )
+                                }else{
+                                    return (
+                                        <img key={i} src={Swimming} className='showicon'/>
+                                    )
+                                }
                                     })
                                 ) : (
-                                    <div></div>
+                                    <div>
+                                   
+                                    </div>
                                 )
                             }
                         </div>
@@ -97,27 +123,27 @@ const ShowcaseHotel = (props) => {
                         <h3 style={{
                             fontWeight: '700px',
                             fontSize: '30px',
-                            color: '#292929'
+                            color: '#292929',
+                            marginTop: '30px'
                         }}>Description </h3>
                         <h6 style={{
                             height: height,
                             overflow: 'hidden'
                         }} className='showcasetxt'>{Data?Data.description:''}</h6>
-                        {
-                            height == '50px' ? (
-                                <button onClick={() => {
-                                    setHeight('auto')
+                        <button onClick={() => {
+                                    if(height == '78px'){
+                                        setHeight('auto')
+                                    }else{
+                                        setHeight('78px')
+                                    }
                                 }} style={{
                                     border: 'none',
                                     outline: 'none',
                                     background: 'none',
                                     color: 'red',
-                                    fontWeight: '700'
-                                }}>Read More</button>
-                            ) : (
-                                <></>
-                            )
-                        }
+                                    fontWeight: '700',
+                                    marginLeft: '-8px'
+                                }}>Read {height == '78px'?'More':'Less'}</button>
                     </div>
                     <div className='showcasecheck'>
                         <div className='showcasecheckin'>
@@ -133,31 +159,42 @@ const ShowcaseHotel = (props) => {
                     </div>
                     <div className='showcasemap'>
                         <div className='showCaseMap'><GoogleMapReact /></div>
-                        <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px' }}>What's nearby</h3>
-                        <div className='showcasemaps'>
+                        <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px',marginBottom: '30px'}}>What's nearby</h3>
+                        {
+                            Data?(
+                                <div className='showcasemaps'>
                             <div className='showcaseNearbys'>
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>500m away from Sai Baba Mandir</h2></div>
-                            </div>
-
-                        </div> 
-                        <div className='showcasemaps'>
-                            <div className='showcaseNearbys'>
-                                <div className='showcaseNearby'></div>
-                            </div>
-                            <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>200m away from Shirdi Bus Stop</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>{Data.near_by.split(',')[0]}</h2></div>
                             </div>
 
                         </div>
-                        <div className='ShowleftOnefs'>
+                            ):(<></>)
+                        } 
+                        {
+                            Data && Data.near_by.split(',').length > 1?(
+                                <div className='showcasemaps'>
+                            <div className='showcaseNearbys'>
+                                <div className='showcaseNearby'></div>
+                            </div>
+                            <div className='showFont'>
+                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>{Data.near_by.split(',')[1]}</h2></div>
+                            </div>
+
+                        </div>
+                            ):(<></>)
+                        }
+                        {
+                            Reviews && Reviews.length > 0 ?(
+                                <div className='ShowleftOnefs'>
                             <div style={{
                                 width: '70%'
                             }}>
                                 <div className='Showhed'>
-                                    <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px' }}> Reviews </h3>
+                                    <h3 style={{ color: '#292929', fontSize: '30px',
+                                     fontWeight: '700px',marginTop:'30px',marginBottom:'30px' }}> Reviews </h3>
                                 </div>
                             </div>
                             <div className='Showstar'>
@@ -166,51 +203,45 @@ const ShowcaseHotel = (props) => {
                                 </div>
                             </div>
                         </div>
+                            ):(<></>)
+                        }
                         <div>
-                            <Review />
-                            <div style={{
-                                width: '86%',
-                                marginLeft: '1%',
-                            }}>
-                                <p style={{ color: '#808080', fontSize: '22px', fontWeight: '400px' }}>
-                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                                    Velit officia consequat duis enim velit mollit.
-                                    Exercitation veniam consequat sunt nostrud amet.
-                                </p>
-                            </div>
+                            {
+                                Reviews?(
+                                    Reviews.map((doc,i)=>(
+                                        <Review key={i} data={doc} />
+                                    ))
+                                ):(<></>)
+                            }
+                            
                         </div>
                     </div>
-                    <div style={{
-                        height: '0px',
-                        width: '84%',
-                        border: '1px solid #D8D8D8',
-                        marginTop: '25px',
-                        background: 'black'
-                    }}>
-
-                    </div>
+                    {
+                        Reviews && Reviews.length > 5 ?(
+                            
                     <div className='showconButton'>
                         <Button style={{
                             marginTop: '20px',
                             width: '160px',
                             height: '45px',
                             border: '1px solid #CACACA',
-                            borderRadius: '15px'
+                            borderRadius: '15px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
                         }}>
                             <p style={{
                                 fontWeight: '500px',
                                 fontSize: '18px',
-                                color: '#959595'
+                                color: '#959595',
+                                margin:'0px'
                             }}>Show more</p>
 
                         </Button>
                     </div>
+                        ):(<></>)
+                    }
                 </div>
-
-
-
-
-
                 <div className='ShowcaseRight'>
                     <div className='ShowcaseRightf'>
                         <h3>Booking Details</h3>
@@ -229,14 +260,16 @@ const ShowcaseHotel = (props) => {
                             color: '#808080'
                         }}>Check-out<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinput' type='date' placeholder='  Date' />
+                            <input className='Showrightinputs' type='date' placeholder='  Date' />
                         </div>
 
                         <div style={{
                             display: 'flex',
-                            width: '90%'
+                           marginLeft: '10px',
+                           marginRight: '10px',
+                           marginTop: '5px'
                         }} >
-                            <div className='showAdults'>
+                            <div style={{marginTop:'10px'}} className='showAdults'>
                                 <p className='showadu'>Adults</p>
                                 <p className='showold'>Older 12 years</p>
                             </div>
@@ -255,8 +288,10 @@ const ShowcaseHotel = (props) => {
                             </div>
                         </div>
                         <div style={{
-                            display: 'flex',
-                            width: '90%'
+                           display: 'flex',
+                           marginLeft: '10px',
+                           marginRight: '10px',
+                           marginTop: '5px'
                         }} >
                             <div className='showAdults'>
                                 <p className='showadu'>Children</p>
@@ -277,8 +312,10 @@ const ShowcaseHotel = (props) => {
                             </div>
                         </div>
                         <div style={{
-                            display: 'flex',
-                            width: '90%'
+                           display: 'flex',
+                           marginLeft: '10px',
+                           marginRight: '10px',
+                           marginTop: '5px'
                         }} >
                             <div className='showAdults'>
                                 <p className='showadu'>Room</p>
@@ -297,18 +334,22 @@ const ShowcaseHotel = (props) => {
                                 </Button>
                             </div>
                         </div>
-                        <div className='showconFButtons'>
-                            <div className='showconFButton'>
-                                <p className='ShowsubmitText'>CONFIRM BOOKING</p>
-                            </div>
+                        <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '100%'}}>
+                        <Button style={{
+                            border: '1px solid #FC444B',
+                            borderRadius: '30px'
+                        }} className='showconFButton'>
+                        <p className='ShowsubmitText'>CONFIRM BOOKING</p>
+                        </Button>
                         </div>
                     </div>
                 </div>
             </div>
             <div style={{ height: 50, width: '100%' }}></div>
             <PopularHotels />
-            <div style={{ height: 20, width: '100%' }}></div>
+            <div style={{ marginTop:'400px' }}>
             <AppOverView />
+            </div>
             <div style={{ height: 20, width: '100%' }}></div>
             <OptionLand />
         </div>
@@ -319,12 +360,16 @@ export default ShowcaseHotel;
 
 const Review = () => {
     return (
+        <div>
         <div className='Showcardhed'>
             <div className='Showcardhedone'>
                 <div><img src={s} className='Showcardimg' /></div>
                 <div className='showcardname'>
                     <div><p className='showtxt'>Rahul Jadhav</p></div>
-                    <div className='Showcardhedone'> <p className='Platinum'>Platinum</p> <p className='Member'> Member</p></div>
+                    <div className='Showcardhedone'> 
+                    <p className='Platinum'>Platinum</p> 
+                    <p className='Member'> Member</p>
+                    </div>
                 </div>
             </div>
             <div style={{
@@ -337,6 +382,27 @@ const Review = () => {
                 <StarIcon />
                 <StarIcon />
             </div>
+            
+        </div>
+        <div style={{
+                    width: '86%',
+                    marginLeft: '1%',
+                    marginTop: '10px'
+                }}>
+                </div>
+                <p style={{ color: '#808080', fontSize: '20px', fontWeight: '200' }}>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                Velit officia consequat duis enim velit mollit.
+                 Exercitation veniam consequat sunt nostrud amet                       </p>
+                 <div style={{
+                        height: '0px',
+                        width: '100%',
+                        border: '.1px solid #D8D8D8',
+                        marginTop: '25px',
+                        background: 'black',
+                    }}>
+
+                    </div>
         </div>
     )
 }

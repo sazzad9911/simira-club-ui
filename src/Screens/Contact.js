@@ -12,7 +12,7 @@ const Contact = () => {
                 <div className='loginbodyleft2'>
                     <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg123'></img>
                 </div>
-                <div className='loginbodyright2'>
+                <div className='loginbodyright2'> 
                     
                     <div className='loginbodyrightbody2'>
                         <h1>We’re here to help and answer any question you might have.</h1>

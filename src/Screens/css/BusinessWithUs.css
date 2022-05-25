@@ -7,7 +7,6 @@
 
 .loginbodyleft3 {
     width: 400px;
-    height: 600px;
     background-color: #C4C4C4;
     display: flex;
     justify-content: center;
@@ -21,19 +20,17 @@
     }
 }
 .leftImg12 {
-    width: 400px;
-    height: 600px;
+   width: 100%;
+   height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     .leftImg12 {
         width: 300px;
-        height: 400px;
     }
 } 
 .loginbodyright3 {
     width: 600px;
-    height: 600px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -42,7 +39,6 @@
 }
 @media only screen and (max-width: 600px) {
     .loginbodyright3 {
-        height: 450px;
         margin-bottom: 70px;
         background-color: #ffffff;
         margin-top: 0px;

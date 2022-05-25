@@ -78,7 +78,7 @@ const Header = () => {
                         width: 35,
                         height: 35
                     }} src={member} />
-                    <Link to='/SignUp' style={{textDecoration: 'none'}}>
+                    <Link to='/Membership' style={{textDecoration: 'none'}}>
                         <div className='header-box'>
                             <h5>Became a Member</h5>
                             <p>Save more on Top Brands</p>
