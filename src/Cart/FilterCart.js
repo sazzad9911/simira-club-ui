@@ -4,8 +4,8 @@ import StarIcon from '@mui/icons-material/Star';
 
 const FilterCart = (props) => {
     return (
-        <div className='FilterCartBody'>
-            <div style={{ display: 'flex' }}>
+        <div> 
+            <div style={{ display: 'flex',justifyContent:'space-between' }}>
                 <h2>Filters</h2>
                 <button className='FilterCartButton'>Clear All</button>
             </div>

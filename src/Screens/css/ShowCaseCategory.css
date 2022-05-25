@@ -1,9 +1,12 @@
 .showcasebody1 {
-    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .cartBottom41 {
     display: flex;
+    margin-top: 80px;
+    margin-bottom: 0;
 }
 
 .headline1 {
@@ -88,7 +91,6 @@
 
 .cartButtomRight41 {
     margin-left: 20px;
-    margin-bottom: 40px;
 }
 
 .appoverview {

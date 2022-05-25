@@ -6,16 +6,15 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
-const Dealoffercart = (props) => {
+const DealList = (props) => {
     const data=props.data
     const deals =useSelector(state => state.Deals)
+    const brands =useSelector(state => state.Brands)
 
     return (
         <div > 
             <div className='cartBottom6'>
-                <div className='cartButtomLeft6'>
-                   <img className="img6" src={data.image} alt={data.name}/>
-                </div>
+                
                 <div className='cartButtomRight6'>
                     <div className='headlineLeft'>
                          <div>
@@ -27,9 +26,9 @@ const Dealoffercart = (props) => {
                             </Button>
                         </div>
                     </div>
-                    <p className='text2'>{deals?deals.filter(d=>d.brand_id==data.id).length+' Offers Available':'0'+' Offers Available'}</p>
+                    <p className='text2'>{brands?brands.filter(d=>d.id ==data.brand_id)[0].name:''}</p>
                     <div className='buttonView6'>
-                        <Link to={'/ShowCaseDealBrand/'+data.id} style={{textDecoration: 'none'}} >
+                        <Link to='/ShowCaseDeal' style={{textDecoration: 'none'}} >
                             <div className='button6'>
                                 <p>VIEW</p>
                             </div>
@@ -50,4 +49,4 @@ const Dealoffercart = (props) => {
     );
 };
 
-export default Dealoffercart;
+export default DealList;

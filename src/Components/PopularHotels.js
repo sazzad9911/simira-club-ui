@@ -7,10 +7,29 @@ import Button from '@mui/material/Button';
 import { useSelector } from 'react-redux';
 import Loader from '../Content/Loader';
 
+import { Oval } from "react-loader-spinner";
+
 const PopularHotels = () => {
     const hotels = useSelector(state => state.Hotels)
     const ref = createRef()
+    const [left,setLeft]= React.useState(false)
+    const [right,setRight]= React.useState(true)
 
+    const scroll=()=>{
+        if(ref.current.scrollLeft==0) {
+            setLeft(false);
+        }else{
+            setLeft(true);
+        }
+        if(ref.current.scrollLeft>=(ref.current.scrollWidth-ref.current.clientWidth)){
+            setRight(false);
+        }else if(ref.current.scrollWidth==ref.current.clientWidth){
+            setRight(false)
+        }else{
+            setRight(true);
+        }
+        
+    }
     const Left = () => {
         ref.current.scrollLeft -= 60;
     }
@@ -19,7 +38,9 @@ const PopularHotels = () => {
     }
     return (
         <div className='popularhotelsBody'>
-            <div className='arrowLeft11'>
+           {
+            left?(
+                <div className='arrowLeft11'>
                 <Button onClick={Left}>
                     <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_181_2301)">
@@ -41,8 +62,12 @@ const PopularHotels = () => {
                     </svg>
                 </Button>
             </div>
+            ):(<></>)
+           }
 
-            <div className='arrowRight11'>
+           {
+            right?(
+                <div className='arrowRight11'>
                 <Button onClick={Right}>
                     <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_132_519)">
@@ -65,10 +90,12 @@ const PopularHotels = () => {
 
                 </Button>
             </div>
+            ):(<></>)
+           }
             <div className='popularhotelsText'>
                 <h2>Popular Hotels</h2>
             </div>
-            <div ref={ref} className='popularhotelsCart'>
+            <div ref={ref} onScroll={scroll} className='popularhotelsCart'>
                 <div className='topBrandsDive'></div>
 
                 {
@@ -78,7 +105,7 @@ const PopularHotels = () => {
                         ))
                     ) : (
                         <Loader />
-                    )
+                    ) 
                 }
                 <div className='topBrandsDive'></div>
             </div>

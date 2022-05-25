@@ -3,20 +3,31 @@ import '../Screens/css/ShowCaseCategory.css'
 import Dealoffercart from '../Cart/DealOfferCart';
 import AppOverView from '../Cart/AppOverView';
 import OptionLand from '../Components/OptionLand';
-import Hotels from './../File/icon/Hotels.png';
-import Restaurant from './../File/icon/Restaurant.png';
 import { useSelector } from 'react-redux';
 import Loader from './../Content/Loader';
 import { postData, url } from '../action'
 import SearchHotelCart from '../Cart/SearchHotelCart';
+import {useParams} from 'react-router-dom';
+import Games from './../File/icon/Games.svg';
+import Hotels from './../File/icon/Hotels.svg';
+import Restaurant from './../File/icon/Restaurant.svg';
+import Shopping from './../File/icon/Shopping.svg';
+import Villas from './../File/icon/Villas.svg';
+import Health from './../File/icon/Health.svg';
+import Services from './../File/icon/Services.svg';
+import Camping from './../File/icon/Camping.svg';
+import Spa_Salons from './../File/icon/Spa & Salons.svg';
+import Travel from './../File/icon/Travel.svg';
   
 const ShowCaseCategory = (props) => {
     const [data, setData] = useState(null)
+    const {type}=useParams()
     React.useEffect(() => {
 
         postData(url + "/getData", {
-            tableName: props.name == 'restaurant' ? 'brands' : 'hotels',
-            orderColumn: 'popularity'
+            tableName: 'brands',
+            orderColumn: 'id',
+            condition:'type='+"'"+type+"'"
         }).then(data => {
             if (data.message) {
                 console.log(data.message)
@@ -34,32 +45,34 @@ const ShowCaseCategory = (props) => {
             <div className='showcasebody1'>
                 <div className='cartBottom41'>
                     <div className='cartButtomLeft41'>
-                        <img className="img41" src={props.name == 'restaurant' ? 'https://i.pinimg.com/originals/4e/24/f5/4e24f523182e09376bfe8424d556610a.png' : 'https://static.vecteezy.com/system/resources/thumbnails/000/627/396/small/illust58-5847-01.jpg'} alt="img1" />
+                        <img className="img41" src={type=='Restaurant'?Restaurant
+                        :type=='Hotel'?Hotels:type=='Games'?Games:type=='Health'?Health:
+                        type=='Villas'?Villas:type=='Shopping'?Shopping:type=='Services'?Services:
+                        type=='Camping'?Camping:type=='Travel'?Travel:Spa_Salons} alt="img1" />
                     </div>
                     <div className='cartButtomRight41'>
-                        <p className='headline1'>{props.name == 'restaurant' ? 'Restaurant' : 'Hotels'}</p>
+                        <p className='headline1'>{type}</p>
                         <p className='text21'>{data ? data.length : '0'} Options Available</p>
                     </div>
                     
                 </div>
-                <div className='hr6'></div>
+                <div style={{marginTop:'10px'}} className='hr6'></div>
                 {
-                    props.name == 'restaurant' && data ? (
-                        data.map((d, i) => (
+                     data ? (
+                        data.length>0?(
+                            data.map((d, i) => (
                             <Dealoffercart data={d} key={i} />
                         ))
-                    ) :
-                        props.name == 'hotel' && data ? (
-                            data.map((d, i) => (
-                                <SearchHotelCart data={d} key={i} />
-                            ))
-                        ) : (
-                            <Loader />
+                        ):(
+                            <p>No {type} Available</p>
                         )
+                    ) :(
+                        <Loader/>
+                    )
                 }
             </div>
             <div style={{
-                marginTop: '-320px'
+               marginTop: '50px'
             }}>
                 <AppOverView />
             </div>

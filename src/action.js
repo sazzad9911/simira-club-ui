@@ -28,6 +28,7 @@ export const setCustomerMessages=(action) => {
 export const setBanners=(doc)=>{
   return{type: 'SET_BANNERS',playload:doc}
 }
+
 export async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {

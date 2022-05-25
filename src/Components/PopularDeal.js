@@ -8,22 +8,56 @@ import { postData, url, setDeals } from '../action';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+
+import { Oval } from "react-loader-spinner";
+
 const PopularDeal = () => {
     const ref = createRef()
     const dispatch = useDispatch()
     const deals = useSelector(state => state.Deals)
+    const [left,setLeft]= React.useState(false)
+    const [right,setRight]= React.useState(true)
+    const brands =useSelector(state => state.Brands)
+    const [Data,setData]= React.useState(null)
 
+    const scroll=()=>{
+        if(ref.current.scrollLeft==0) {
+            setLeft(false);
+        }else{
+            setLeft(true);
+        }
+        if(ref.current.scrollLeft>=(ref.current.scrollWidth-ref.current.clientWidth)){
+            setRight(false);
+        }else if(ref.current.scrollWidth==ref.current.clientWidth){
+            setRight(false)
+        }else{
+            setRight(true);
+        }
+        
+    }
     const Left = () => {
         ref.current.scrollLeft -= 100
     }
     const Right = () => {
         ref.current.scrollLeft += 100
     }
-
+    React.useEffect(() => {
+        postData(url +'/getData',{
+            tableName: 'poster',
+            orderColumn: 'date'
+        }).then((data) => {
+            if(Array.isArray(data)){
+                return setData(data)
+            }
+            console.log(data.message)
+        })
+    },[])
     return (
         <div style={{ background: 'none' }} className='box'>
 
-            <div className='arrowLeft'>
+           {
+            left?(
+                <div className='arrowLeft'>
                 <Button onClick={Left}>
                     <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_181_2301)">
@@ -45,8 +79,12 @@ const PopularDeal = () => {
                     </svg>
                 </Button>
             </div>
+            ):(<></>)
+           }
 
-            <div className='arrowRight'>
+           {
+            right?(
+                <div className='arrowRight'>
                 <Button onClick={Right}>
                     <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_132_519)">
@@ -69,21 +107,31 @@ const PopularDeal = () => {
 
                 </Button>
             </div>
+            ):(<></>)
+           }
             <h2 style={{
             marginLeft:'5%'
             }}> Popular Deals</h2>
-            <div ref={ref} className='brandShow'>
+            <div onScroll={scroll} ref={ref} className='brandShow'>
                 <div className='topBrandsDive'></div>
                 {
-                    deals ? (
-                        deals.map((d, i) => (
+                    Data ? (
+                        Data.map((d, i) => (
                             <DealCart key={i} doc={d} img1={d.image}
                                 text={d.name}>
 
                             </DealCart>
                         ))
                     ) : (
-                        <CircularProgress />
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: '100%',
+                            height: '100%'
+                        }}>
+                            <Oval color="#FC444B" height={80} width={80} />
+                        </div>
                     )
                 }
                 <div className='topBrandsDive'></div>

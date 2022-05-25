@@ -7,7 +7,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 0px;
+    margin: 0px;
     color: '#000000';
     
 } 
@@ -34,16 +34,20 @@
     width: 101px;
     border-radius: 30px;
     background-color: #FC444B;
-    align-items: center;
     justify-content: center;
     display: flex;
+    align-items: center;
 }
-.button6 p{
+.buttonView6 p{
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: '#ffffff';
     font-size: 16px;
     font-weight: 500;
+    margin:0
 
+}
+.buttonView6 div {
+    display: flex;
 }
 .DealCartIcon{
     margin-left: 10px;

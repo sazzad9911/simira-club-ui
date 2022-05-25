@@ -1,43 +1,77 @@
 .ScarchBox1{
-    flex-direction: row;
     display: flex;
     height: 40px;
     width: auto;
-    border: 1px solid gray;
     border-radius: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom:30px;
+}
+.left-filter-bar{
+    width:20%;
+    position: relative;
+}
+.right-filter-bar{
+    width:80%;
+}
+.right-menu{
+    width: 50px;
+    height: 25px;
+    background-color: #f5f5f5;
+    display:none
+}
+@media (max-width:1000px) {
+    .left-filter-bar{
+        position:absolute;
+        width: 0px;
+        overflow: hidden;
+        background-color: #fff;
+
+    }
+    .right-filter-bar{
+        width:100%;
+    }
+    .right-menu{
+        display: flex;
+    }
 }
 .ScarchInputBox1{
     height: 40px;
-    width: 54vw;
+    width: 100%;
     display: flex;
     background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    flex-direction: row;
+    border-radius: 22.5px;
     align-items: center;
+    border: 1px solid gray;
 }
 .ScarchInput1{
     outline: none;
     border: none;
-    width: 600px;
-    margin-left: 5px;   
+    width: 80%;
+    margin-left: 20px;
+}
+.ScarchInput1::placeholder{
+    color: #808080;
 }
 .ScarchSelect1{
-    height: 40px;
-    width: 100px;
-    margin-left: 480px;
+    width: 150px;
     border: none;
     outline: none;
     background-color: #F5F5F5;
-    position: absolute;
-
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .ScarchButton1{
     height: 40px;
     width: 150px;
-    border-radius: 20px;
-    border: none;
     background-color: #64B657;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+.ScarchButton1 p{
+    margin: 0px
 }

@@ -1,21 +1,18 @@
 .FilterCartBody{
-    height: auto;
-    width: auto;
+    width: 100%;
+    height: 100%;
 }
 .FilterCartButton{
     outline: none;
     border: none;
     color:  #FC444B;
     font-size: 10px;
-    margin-top: 5px;
-    margin-left: 20px;
     background-color: rgb(255, 255, 255);
     
 }
 .FilterCartDivLine{
     height: 1.5px;
-    width: 130px;
-    margin-left: 15px;
+    width: 100%;
     background-color: #D8D8D8;
     
 }
@@ -26,8 +23,6 @@
     border: 1px solid #FC444B;
     border-radius: 20px;
     color:  #FC444B;
-    margin-top: 5px;
-    margin-left: 15px;
     background-color: rgb(255, 255, 255);
 }
 .FilterCartButtonRat{
@@ -37,8 +32,7 @@
     border: 1px solid #D8D8D8;
     border-radius: 20px;
     color:   #585858;
-    margin-top: 20px;
-    margin-left: 15px;
+   
     background-color: rgb(255, 255, 255);
 }
 .FilterCartButtonAme{
@@ -47,8 +41,7 @@
     border: 1px solid #D8D8D8;
     border-radius: 20px;
     color:   #585858;
-    margin-top: 20px;
-    margin-left: 15px;
+    
     background-color: rgb(255, 255, 255);
 }
 .FilterCartButtonDel{
@@ -58,8 +51,7 @@
     border: 1px solid #FC444B;
     border-radius: 20px;
     color:  #FC444B;
-    margin-left: 15px;
-    margin-top: 20px;
+    
     background-color: rgb(255, 255, 255);
 }
 .FilterCartButtonVil{
@@ -68,8 +60,7 @@
     border: 1px solid #D8D8D8;
     border-radius: 20px;
     color:   #585858;
-    margin-top: 20px;
-    margin-left: 15px;
+   
     background-color: rgb(255, 255, 255);
 }
 .FilterCartButtonFarm{
@@ -78,7 +69,6 @@
     border: 1px solid #D8D8D8;
     border-radius: 20px;
     color:   #585858;
-    margin-top: 10px;
-    margin-left: 15px;
+    
     background-color: rgb(255, 255, 255);
 }

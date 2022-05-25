@@ -27,18 +27,25 @@ import './css/Home.css'
 const Home = () => {
     const ref = createRef()
     const [left,setLeft]=React.useState(false)
+    const [right,setRight]=React.useState(true)
 
     React.useEffect(() =>{
         //console.log(ref.current.scrollLeft)
     },[])
     const scroll=()=>{
-        console.log(ref.current.scrollLeft)
-        console.log(ref.current.clientWidth)
         if(ref.current.scrollLeft==0) {
             setLeft(false);
         }else{
             setLeft(true);
         }
+        if(ref.current.scrollLeft>=(ref.current.scrollWidth-ref.current.clientWidth)){
+            setRight(false);
+        }else if(ref.current.scrollWidth==ref.current.clientWidth){
+            setRight(false)
+        }else{
+            setRight(true);
+        }
+        
     }
     const Left = () => {
         ref.current.scrollLeft -= 100
@@ -87,8 +94,10 @@ const Home = () => {
                 </div>
                     ):(<></>)
                 }
-                <div className='IconButtonarrowRight'>
-                    <Button onClick={Right}>
+                {
+                    right?(
+                        <div className='IconButtonarrowRight'>
+                <Button onClick={Right}>
                         <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_132_519)">
                                 <rect x="10.0022" y="7.83301" width="39.9955" height="40" rx="19.9977" fill="white" />
@@ -109,26 +118,22 @@ const Home = () => {
                         </svg>
 
                     </Button>
-                    <div style={{
-                        height:'150px',
-                        marginTop:'35px',
-                        width:'30px',
-                        background:'red'
-                    }}></div>
                 </div>
+                    ):(<></>)
+                }
                 <div ref={ref} onScroll={scroll} id='scroll' className='HomeIconContainer'>
 
                     <div className='topBrandsDive'></div>
-                    <IconButton link='/hotel' img={Hotels} title='Hotels' />
-                    <IconButton link='/restaurant' img={Restaurant} title='Restaurant' />
-                    <IconButton link='/games' img={Games} title='Games' />
-                    <IconButton link='/shopping' img={Shopping} title='Shopping' />
-                    <IconButton link='/villas' img={Villas} title='Villas' />
-                    <IconButton link='/camping' img={Camping} title='Camping' />
-                    <IconButton link='/salon' img={Spa_Salons} title='Spa & Salons' />
-                    <IconButton link='/travel' img={Travel} title='Travel' />
-                    <IconButton link='/health' img={Health} title='Health' />
-                    <IconButton link='/services' img={Services} title='Services' />
+                    <IconButton link='/Hotel' img={Hotels} title='Hotels' />
+                    <IconButton link='/Restaurant' img={Restaurant} title='Restaurant' />
+                    <IconButton link='/Games' img={Games} title='Games' />
+                    <IconButton link='/Shopping' img={Shopping} title='Shopping' />
+                    <IconButton link='/Villas' img={Villas} title='Villas' />
+                    <IconButton link='/Camping' img={Camping} title='Camping' />
+                    <IconButton link='/Salon' img={Spa_Salons} title='Spa & Salons' />
+                    <IconButton link='/Travel' img={Travel} title='Travel' />
+                    <IconButton link='/Health' img={Health} title='Health' />
+                    <IconButton link='/Services' img={Services} title='Services' />
                     <div className='topBrandsDive'></div>
                 </div>
             </div>

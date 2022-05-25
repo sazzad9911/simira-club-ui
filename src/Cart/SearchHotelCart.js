@@ -11,6 +11,7 @@ import Link from '@mui/material/Link';
 const SearchHotelCart = (props) => {
     const conditions = props.data.conditions.split(',')
 
+    
 
     return (
         <div >

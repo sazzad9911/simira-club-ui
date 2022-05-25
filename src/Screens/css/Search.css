@@ -1,40 +1,33 @@
 .ScarchBody{
-    height: 300px;
     width: 100%;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .ScarchImg{
-    height: 300px;
+    height: 100%;
     width: 100%;
-    opacity: .7;
+    opacity: .9;
 }
 .ScarchImgDiv{
     height: auto;
-    width: auto;
+    width: auto; 
     position: absolute;
-    bottom: 30%;
-    margin-left: 23%;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
-@media screen and (max-width: 600px) {
-    .ScarchImgDiv {
-        margin-left: 3%;
-        bottom: 20%;
-    }
-  }
 .ScarchImgDivText{
-    height: auto;
-    width: auto;
-    margin: 25px;
+    font-weight: 600;
+    font-size:15px;
+    margin: 0;
+    text-align:center;
 }
-@media screen and (max-width: 600px) {
-    .ScarchImgDivText {
-        margin-left: 40px;
-    }
-  }
+
 .ScarchImgText{
     color: #F5F5F5;
-    font-size: 35px;
-    margin-left: -20px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align:center;
 
 }
 .ScarchBox{
@@ -74,6 +67,9 @@
     background-color: #ffffff;
     flex: 4;
 }
+.searchInput::placeholder{
+    color: #808080;
+}
 .ScarchButton{
     height: 40px;
     width: 150px;
@@ -81,16 +77,18 @@
     border: none;
     background-color: #64B657;
     margin-left: 70px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff
 }
 
 
 
 .ScarchDiv{
     height: 40px;
-    width: 95%;
+    width: 100%;
     background-color: #ffffff;
-    margin-left: 1%;
     border-radius: 25px;
     display: flex;
 }

@@ -9,6 +9,7 @@ import HotelBooking from './Reducers/HotelBooking';
 import BookAppointment from './Reducers/BookAppointment';
 import CustomerMessages from './Reducers/CustomerMessages';
 import Banners from './Reducers/Banners';
+import Action from './Reducers/Action';
 
 const combine=combineReducers({
     User:User,
@@ -21,6 +22,7 @@ const combine=combineReducers({
     BookAppointment:BookAppointment,
     CustomerMessages:CustomerMessages,
     Banners:Banners,
+    Action:Action
 })
 
 const store = createStore(combine)

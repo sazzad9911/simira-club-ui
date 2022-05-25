@@ -1,12 +1,12 @@
 import React from 'react';
 import './css/hotelcart.css';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 const HotelCart = (props) => {
     const data = props.data;
     return (
-        <Link href={'/ShowcaseHotel' + '/' + data.id} color='inherit' underline='none'>
+        <Link to={'/ShowcaseHotel' + '/' + data.id} style={{textDecoration: 'none'}}>
             <div className='hotelcartBody'>
                 <img className='hotelcartImg' src={data.image} />
                 <div className='hotelcartBodydiv'>
