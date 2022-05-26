@@ -1,12 +1,51 @@
 import React from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import GoogleIcon from '@mui/icons-material/Google';
 import '../Screens/css/signup.css'
+import { Link } from 'react-router-dom';
+import {postData, url} from '../action'
+import app from './../firebase';
+import { getAuth,createUserWithEmailAndPassword } from 'firebase/auth';
+import Loader from './../Content/Loader';
 
 const SignUp = () => {
+    const [Error,setError]= React.useState()
+    const [Name,setName]= React.useState()
+    const [Email, setEmail]= React.useState()
+    const [Password, setPassword]= React.useState()
+    const [Loading, setLoading]= React.useState(false)
+    const auth = getAuth(app)
+
+    const SignUp = ()=>{
+        if(!Name || !Email || !Password){
+            setError('Field can not be empty.')
+            return
+        }
+        if(Password.length<6){
+            setError('Password must be at least 6 characters')
+            return
+        }
+        setLoading(true)
+        createUserWithEmailAndPassword(auth, Email, Password)
+            .then(userCredentials => {
+                postData(url + '/setData', {
+                    auth: userCredentials.user,
+                    tableName: 'user',
+                   columns: ['name', 'email', 'uid'],
+                   values:[Name,Email,userCredentials.user.uid]
+                           }).then(data => {
+         setLoading(false)
+         window.location.href='/'
+                              console.log(data)     
+            }).catch(err => {
+                setError('Email address is invalid.')
+                console.log(err.message)
+           setLoading(false)
+         })     
+    })
+}
     return (
         <div>
             <div style={{ justifyContent: 'center' }} className='loginbody1'>
@@ -18,20 +57,28 @@ const SignUp = () => {
                     <div className='loginbodyrightbody1'>
                         <h1>Create account and become a membe</h1>
                         <div className='textinputview1'>
-                            <input className='textinput1' type='text' placeholder='Full Name' />
+                            <input onChange={e=>setName(e.target.value)} className='textinput1' type='text' placeholder='Full Name' />
 
                         </div>
                         <div className='textinputview1'>
-                            <input className='textinput1' type='email' placeholder='Email' />
+                            <input onChange={(e) =>setEmail(e.target.value)} className='textinput1' type='email' placeholder='Email' />
 
                         </div>
                         <div className='textinputview1'>
-                            <input className='textinput1' type='password' placeholder='Password' />
+                            <input onChange={(e) =>setPassword(e.target.value)} className='textinput1' type='password' placeholder='Password' />
                         </div>
+                        <p style={{
+                            color: 'red'
+                        }}>{Error}</p>
+                        {
+                            Loading?(
+                                <Loader/>
+                            ):(<></>)
+                        }
                         <div className='forgotPlink1'>
-                            <Link underline="none" color="black" href="#">Forgot Password?</Link>
+                            <Link style={{textDecoration: 'none',color:"#FC444B"}} underline="none" color="black" to="#">Forgot Password?</Link>
                         </div>
-                        <Button style={{
+                        <Button onClick={SignUp} style={{
                             marginTop: '20px',
                             width: '400px',
                             height: '55px',
@@ -61,7 +108,8 @@ const SignUp = () => {
                                 <p className='googleText1'>Continue with Google</p>
                             </div>
                         </Button>
-                        <p className='bt'>Already have a account?<Link underline="none" color="#FC444B" href="/Login">Login</Link></p>
+                        <p className='bt'>Already have a account?
+                        <Link style={{textDecoration: 'none',color:"#FC444B"}} underline="none"  to="/Login">Login</Link></p>
                     </div>
                 </div>
             </div>

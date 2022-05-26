@@ -4,9 +4,12 @@ import ShowCaseDealCart from '../Cart/ShowCaseDealCart';
 import TopBrands from '../Components/TopBrands';
 import AppOverView from '../Cart/AppOverView';
 import OptionLand from '../Components/OptionLand';
+import {useSelector} from 'react-redux'
 
 
 const ShowCaseDeal = () => {
+    const brands=useSelector(state => state.Brands)
+
     return (
         <div>
             <div style={{
@@ -20,11 +23,14 @@ const ShowCaseDeal = () => {
             </div>
             <TopBrands headText='Top Brands For You' />
             <div style={{
-                marginTop:'-320px'
+                marginTop: '50px',
+                
             }}>
                 <AppOverView />
             </div>
+            <div style={{marginTop: '50px'}}>
             <OptionLand />
+            </div>
         </div>
     );
 };

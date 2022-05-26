@@ -6,36 +6,74 @@ import Img from './Image/Careers.PNG'
 
 function TermsAndConditions() {
     return (
+       <div>
         <div className="TermsBody">
             <h2>Terms & Conditions</h2>
             <div className="TermsPDiv">
-                <p className="TermsP">1. &nbsp;&nbsp;&nbsp;It is the responsibility of a customer to read, understand and remain knowledgeable of the terms and
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conditions.<br />
-                    2. &nbsp;&nbsp;Booking confirmation letter is required at the time of check-in.<br />
-                    3. &nbsp;&nbsp;Customer is eligible for a stay from Sunday to Thursday at all mentioned locations.<br />
-                    4. &nbsp;&nbsp;Offer is not valid for single occupancy.<br />
-                    5. &nbsp;&nbsp;To avail of the offer, the customer will be required to pay Rs. 999/- per person per night, children from <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5-12
-                    &nbsp;years of age have to pay Rs. 599/- directly to the hotel or Smira Club account in advance for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unlimited &nbsp;breakfast & dinner (veg/non-veg, as per the respective hotel's policy, Non-Veg Breakfast &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Includes Egg
-                    &nbsp;Items Only and Non-Veg Dinner Includes Chicken Items Only)<br />
-                    6. &nbsp;&nbsp;Booking should be done prior according to the membership plan.<br />
-                    7. &nbsp;&nbsp;In case of non-availability, each customer shall be compensated with a stay at any other property/place<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offered by participating service provider.<br />
-                    8. &nbsp;&nbsp;Any other services other than the above-mentioned services are chargeable at the resort.<br />
-                    9. &nbsp;&nbsp;In case of conflict, the decision of the participating service provider shall be final and abiding.<br />
-                    10. This membership cannot be encashed, refunded, or extended. The customer has to use this offer within &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the
-                    mentioned validity period.<br />
-                    11. This membership is not valid during bank holidays, public holidays, long weekends, 7 days of Diwali, and<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from 24th December to 1st January. If a customer would like to book on the above-mentioned days then &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;an
-                    extra amount will be charged as per the participating service provider's rate policy.<br />
-                    12. Any confirmed booking is non-refundable and cannot be canceled.<br />
-                    13. Smira Club has no refund policy.<br />
-                    14. Smira Club is not responsible and will not intervene in case of service-related issues with the
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;participating service provider. We kindly request you to coordinate directly with the participating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service
-                    provider.<br />
-                    15. Any other commitment given by the executive other than the above-mentioned terms shall not be<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fulfilled by Smira Club.<br />
-                    16. Any legal issues will be resolved by an arbitrator in Mumbai jurisdiction only errors and omissions
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expected.</p>
+                <div>
+                <p>1.</p>
+                <p>It is the responsibility of a customer to read, understand and remain knowledgeable of the terms and conditions.</p>
+                </div>
+                <div>
+                <p>2.</p>
+                <p>Booking confirmation letter is required at the time of check-in.</p>
+                </div>
+                <div>
+                <p>3.</p>
+                <p>Customer is eligible for a stay from Sunday to Thursday at all mentioned locations.</p>
+                </div>
+                <div>
+                <p>4.</p>
+                <p>Offer is not valid for single occupancy.</p>
+                </div>
+                <div>
+                <p>5.</p>
+                <p>To avail of the offer, the customer will be required to pay Rs. 999/- per person per night, children from 5-12 years of age have to pay Rs. 599/- directly to the hotel or Smira Club account in advance for unlimited breakfast & dinner (veg /non-veg, as per the respective hotel’s policy, Non-Veg Breakfast Includes Egg Items Only and Non-Veg Dinner Includes Chicken Items Only)</p>
+                </div>
+                <div>
+                <p>6.</p>
+                <p>Booking should be done prior according to the membership plan.</p>
+                </div>
+                <div>
+                <p>7.</p>
+                <p>In case of non-availability, each customer shall be compensated with a stay at any other property/place offered by participating service provider.</p>
+                </div>
+                <div>
+                <p>8.</p>
+                <p>Any other services other than the above-mentioned services are chargeable at the resort.</p>
+                </div>
+                <div>
+                <p>9.</p>
+                <p>In case of conflict, the decision of the participating service provider shall be final and abiding.</p>
+                </div>
+                <div>
+                <p>10.</p>
+                <p>This membership cannot be encashed, refunded, or extended. The customer has to use this offer within the mentioned validity period.</p>
+                </div>
+                <div>
+                <p>11.</p>
+                <p>This membership is not valid during bank holidays, public holidays, long weekends, 7 days of Diwali, and from 24th December to 1st January. If a customer would like to book on the above-mentioned days then an extra amount will be charged as per the participating service provider’s rate policy.</p>
+                </div>
+                <div>
+                    <p>12.</p>
+                    <p>Any confirmed booking is non-refundable and cannot be canceled.</p>
+                </div>
+                <div>
+                <p>13.</p>
+                <p>Smira Club has no refund policy.</p>
+                </div>
+                <div>
+                <p>14.</p>
+                <p>Smira Club is not responsible and will not intervene in case of service-related issues with the participating service provider. We kindly request you to coordinate directly with the participating service provider.</p>
+                </div>
+                <div>
+                    <p>15.</p>
+                    <p>Any other commitment given by the executive other than the above-mentioned terms shall not be fulfilled by Smira Club.</p>
+                </div>
+                <div>
+                <p>16</p>
+                <p>Any legal issues will be resolved by an arbitrator in Mumbai jurisdiction only errors and omissions expected</p>
+                </div>
                 <h2>Cancellation Policys</h2>
                 <div className="TermsPDiv">
                     <p className="TermsP">Member can cancel the policy at its own discretion, but NO REFUND will be processed for the same to
@@ -44,14 +82,13 @@ function TermsAndConditions() {
                     </p>
                 </div>
             </div>
-
-
+        </div>
+        <div style={{ marginTop:'50px' }}>
             <AppOverView />
-            <div style={{ height: 20, width: '100%' }}></div>
+            </div>
             <OptionLand />
             <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
-
-        </div>
+       </div>
     );
 }
 

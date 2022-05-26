@@ -11,6 +11,7 @@ import Alert from '../Content/Alert';
 import {getAuth,signInWithEmailAndPassword} from 'firebase/auth'
 import app from '../firebase'
 import { Link } from 'react-router-dom';
+import Loader from './../Content/Loader';
 
 const Login = (props) => {
     const dispatch = useDispatch()
@@ -20,6 +21,7 @@ const Login = (props) => {
     const [data, setData] = React.useState({ title: '', message: '' })
     const auth=getAuth(app)
     const [Message, setMessage] =React.useState(null)
+    const [Loading, setLoading]= React.useState(false)
 
     const Submit = () => {
         if (!Email || !Password) {
@@ -27,6 +29,7 @@ const Login = (props) => {
             setData({ title: 'Invalid', message: 'Email and Password cant be empty' })
             return
         }
+        setLoading(true)
         signInWithEmailAndPassword(auth,Email,Password).then(userCredentials => {
             let user=userCredentials.user
             postData(url+'/getData',{
@@ -39,6 +42,7 @@ const Login = (props) => {
             
         }).catch(err => {
             setMessage(err.code)
+            setLoading(false)
         })
         
     }
@@ -64,6 +68,11 @@ const Login = (props) => {
                         color:'red',
                         fontSize:'18px',
                     }}>{Message}</p>
+                    {
+                        Loading ? (
+                            <Loader/>
+                        ):(<></>)
+                    }
                     <div className='forgotPlink'>
                         <Link style={{
                             textDecoration: 'none',

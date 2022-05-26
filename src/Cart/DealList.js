@@ -28,7 +28,7 @@ const DealList = (props) => {
                     </div>
                     <p className='text2'>{brands?brands.filter(d=>d.id ==data.brand_id)[0].name:''}</p>
                     <div className='buttonView6'>
-                        <Link to='/ShowCaseDeal' style={{textDecoration: 'none'}} >
+                        <Link to={'/ShowCaseDeal/'+data.id} style={{textDecoration: 'none'}} >
                             <div className='button6'>
                                 <p>VIEW</p>
                             </div>

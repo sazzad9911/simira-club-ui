@@ -146,7 +146,7 @@ const CitiesWeOffer = (props) => {
         <div>
             <h2 style={{ 
                 color:'#585858',
-                marginLeft:'5%',
+                marginLeft:'5%', 
             }}>Cities We Offer</h2>
             <div className='popularDealsView'>
                 <CitiesWeOfferName CWO='Alibaug'></CitiesWeOfferName>
@@ -183,7 +183,7 @@ const CitiesWeOfferName = (props) => {
     return (
         <div className='PopularDealsNameCart3'>
             <Link
-                href="#" color="inherit" underline="none">
+                to="#" color="inherit" underline="none">
                 <h4>{props.CWO}</h4>
             </Link>
         </div>

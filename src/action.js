@@ -48,3 +48,7 @@ export async function postData(url = '', data = {}) {
   }
 
 export const url="http://165.232.178.79:4000"
+export const convertDate = (date) => {
+  let data = '';
+  return data = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate())
+}

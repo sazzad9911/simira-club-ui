@@ -20,6 +20,17 @@
     margin: 10px;
     margin-left: 15px;
 }
+.TermsPDiv div {
+    display: flex;
+    
+}
+.TermsPDiv p{
+    opacity: .7;
+    font-weight: 200;
+    font-size: 24px;
+    color: #585858;
+    margin-left: 12px;
+}
 .TermsP{
     opacity: .7;
     font-weight: 200;

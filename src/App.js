@@ -139,9 +139,14 @@ React.useEffect(() => {
       <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Membership" element={<Membership />} />
+      <Route path="/Checkout/:id" element={<Checkout />} />
+      <Route path="/Profile" element={<MyProfile />} />
+      <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+      <Route path="/SignUp" element={<SignUp />} />
+      <Route path="/ShowCaseDeal/:id" element={<ShowCaseDeal />} />
         <Route path="*" element={<NotFound />} />     
       </Routes>
-      <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
+      <div style={{ height: 50, width: '100%',marginTop:'0px' }}></div>
       <Footer />
     </Router>
   );

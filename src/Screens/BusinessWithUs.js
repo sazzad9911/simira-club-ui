@@ -35,14 +35,14 @@ const BusinessWithUs = () => {
                             width: '400px',
                             height: '55px',
                             borderRadius: '30px',
-                            padding: '0px'
+                            padding: '0px',
                         }}>
                             <div className='loginButton3'>
                                 <p className='submitText3'>SUBMIT</p>
                             </div>
                         </Button>
                         <div className='forgotPlink3'>
-                            <p>Or call us on</p>
+                            <p>Or call us on</p> 
                         </div>
                         <Button style={{
                             width: '400px',

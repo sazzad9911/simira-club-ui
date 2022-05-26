@@ -268,18 +268,21 @@
     .ShowcaseOne{
         width: 100%;
     }
+    .Hotelimg{
+        height: 400px
+    }
 }
 
 .ShowcaseRightf {
     justify-content: space-evenly;
-
+    align-items: center;
 }
 .ShowcaseRightf h3{
    margin-top: 5px;
 }
 .ShowcaseRightf h4{
     margin-top: 10px;
-}
+}ia
 
 .showrightStar {
     margin: 1px;
@@ -305,6 +308,7 @@
     border-radius: 5px;
     height: 40px;
     background-color: rgb(254, 251, 251);
+    padding-left: 10px;
 }
 
 .Showinputbox {
@@ -347,33 +351,35 @@
 }
 
 .showbutton {
-    height: 35px;
-    width: 35px;
-    border-radius: 17.5px;
-    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-top: 5px;
     background-color: #F5F5F5;
     border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .showbuttont{
-    height: 35px;
-    width: 35px;
-    border-radius: 17.5px;
-    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
     background: #FFE1E3;
-    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .showbuttonone {
     font-size: 35px;
-    margin-top: -16px;
-    margin-left: 9px;
+    margin: 0px;
     color: #808080;
 }
 
 .showbuttontwo {
     font-size: 25px;
-    margin-top: -5px;
-    margin-left: 9px;
+    margin: 0px;
     color: red;
 }
 

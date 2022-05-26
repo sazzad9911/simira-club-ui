@@ -16,7 +16,7 @@ import SignalWifi3BarIcon from '@mui/icons-material/SignalWifi3Bar';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Button from '@mui/material/Button';
 import { Link,useParams } from 'react-router-dom';
-import {postData, url} from '../action'
+import {postData, url,convertDate} from '../action'
 import CCTV from '../Asset/Font/CCTV.svg'
 import Wifi from '../Asset/Font/Free Wifi.svg'
 import Gym from '../Asset/Font/Gym.svg'
@@ -25,6 +25,8 @@ import Swimming from '../Asset/Font/Swimming Pool.svg'
 import TV from '../Asset/Font/TV.svg'
 import { ReactSVG } from 'react-svg'
 import {useSelector} from 'react-redux'
+import { getAuth } from 'firebase/auth';
+import app from './../firebase';
 
 const ShowcaseHotel = (props) => {
     const {id}=useParams()
@@ -33,6 +35,15 @@ const ShowcaseHotel = (props) => {
     const [conditions,setConditions] = React.useState(null)
     const [Reviews,setReviews] = React.useState(null)
     const users =useSelector(state => state.Users)
+    const [Adults,setAdults] = React.useState(0)
+    const [Children,setChildren] = React.useState(0)
+    const [Room,setRoom]= React.useState(0)
+    const [CheckIn,setCheckIn] = React.useState()
+    const [CheckOut,setCheckOut] = React.useState()
+    const [Error,setError]= React.useState()
+    const [Loader,setLoader] = React.useState(false)
+    const auth = getAuth(app)
+    const user=useSelector(state => state.User)
 
     React.useEffect(() => {
         postData(url +'/getData',{
@@ -55,6 +66,29 @@ const ShowcaseHotel = (props) => {
             console.log(data.message)
         })
     },[id])
+    const Confirm = () => {
+        if(user && user[0].membership_type){
+            setLoader(true)
+        postData(url + '/setData', {
+            auth: auth.currentUser,
+            tableName: 'hotel_booking',
+            columns: ['check_in', 'check_out', 'adult', 'children', 'room', 'date', 'user_id', 'hotel_id','type'],
+            values: [convertDate(CheckIn), convertDate(CheckOut), Adults, Children, Room, convertDate(new Date()), auth.currentUser.uid, id,'veg']
+        }).then(data => {
+            if (data.insertId) {
+                setLoader(false)
+                setError('Successful! We will sent you an email')
+                return
+            }
+            setError(data.message)
+            setLoader(false)
+        }).catch(err => {
+            setLoader(false)
+        })
+        }else{
+            window.location.href='/Membership'
+        }
+    }
     return (
         <div style={{
             width:'100%',
@@ -250,7 +284,9 @@ const ShowcaseHotel = (props) => {
                             color: '#808080'
                         }}>Check-in<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinputs' placeholder='  23 March 2022' />
+                            <input className='Showrightinputs' onChange={e=>{
+                                setCheckIn(e.target.value)
+                            }} type='date' placeholder='23 March 2022' />
                         </div>
 
                     </div>
@@ -260,12 +296,14 @@ const ShowcaseHotel = (props) => {
                             color: '#808080'
                         }}>Check-out<p className='showrightStar'>*</p></h4>
                         <div className='Showinputbox'>
-                            <input className='Showrightinputs' type='date' placeholder='  Date' />
+                            <input className='Showrightinputs' onChange={e=>{
+                                setCheckOut(e.target.value)
+                            }} type='date' placeholder='Date' />
                         </div>
 
                         <div style={{
                             display: 'flex',
-                           marginLeft: '10px',
+                           marginLeft: '10px', 
                            marginRight: '10px',
                            marginTop: '5px'
                         }} >
@@ -274,13 +312,19 @@ const ShowcaseHotel = (props) => {
                                 <p className='showold'>Older 12 years</p>
                             </div>
                             <div className='showAdultss'>
-                                <Button>
+                                <Button onClick={()=>{
+                                    if(Adults>0){
+                                        setAdults(Adults-1)
+                                    }
+                                }}>
                                     <div className='showbutton'>
                                         <p className='showbuttonone'>-</p>
                                     </div>
                                 </Button>
-                                <p className='showbuttonTwon'>2</p>
-                                <Button>
+                                <p className='showbuttonTwon'>{Adults}</p>
+                                <Button onClick={() =>{
+                                    setAdults(Adults+1)
+                                }}>
                                     <div className='showbuttont'>
                                         <p className='showbuttontwo'>+</p>
                                     </div>
@@ -298,13 +342,19 @@ const ShowcaseHotel = (props) => {
                                 <p className='showold'>5 - 12 years old</p>
                             </div>
                             <div className='showAdultss'>
-                                <Button>
+                                <Button onClick={() =>{
+                                    if(Children>0){
+                                        setChildren(Children-1)
+                                    }
+                                }}>
                                     <div className='showbutton'>
                                         <p className='showbuttonone'>-</p>
                                     </div>
                                 </Button>
-                                <p className='showbuttonTwon'>2</p>
-                                <Button>
+                                <p className='showbuttonTwon'>{Children}</p>
+                                <Button onClick={() =>{
+                                    setChildren(Children+1)
+                                }}>
                                     <div className='showbuttont'>
                                         <p className='showbuttontwo'>+</p>
                                     </div>
@@ -321,13 +371,19 @@ const ShowcaseHotel = (props) => {
                                 <p className='showadu'>Room</p>
                             </div>
                             <div className='showAdultss'>
-                                <Button>
+                                <Button onClick={() =>{
+                                    if(Room>0){
+                                        setRoom(Room-1);
+                                    }
+                                }}>
                                     <div className='showbutton'>
                                         <p className='showbuttonone'>-</p>
                                     </div>
                                 </Button>
-                                <p className='showbuttonTwo'>2</p>
-                                <Button>
+                                <p className='showbuttonTwo'>{Room}</p>
+                                <Button onClick={() =>{
+                                    setRoom(Room+1)
+                                }}>
                                     <div className='showbuttont'>
                                         <p className='showbuttontwo'>+</p>
                                     </div>
@@ -335,7 +391,8 @@ const ShowcaseHotel = (props) => {
                             </div>
                         </div>
                         <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '100%'}}>
-                        <Button style={{
+                        <p style={{color: 'red'}}>{Error}</p>
+                        <Button onClick={Confirm} style={{
                             border: '1px solid #FC444B',
                             borderRadius: '30px'
                         }} className='showconFButton'>

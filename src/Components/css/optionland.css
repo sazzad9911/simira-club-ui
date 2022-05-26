@@ -18,7 +18,9 @@
 .popularDealsView {
     float: left;
     margin-left: 5%;
+    margin-right:5% ;
     margin-bottom: 14px;
+
 
 }
 
@@ -112,10 +114,10 @@
 }
 
 .PopularDealsNameCart3 {
-
     display: flex;
     float: left;
     width: 20%;
+    flex-wrap: wrap;
 }
 
 .PopularDealsNameCart3 h4 {
@@ -127,4 +129,5 @@
     margin-bottom: 10px;
     margin-right: 5px;
     margin-left: 5px;
+    width: 100%;
 }

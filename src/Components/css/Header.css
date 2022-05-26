@@ -24,14 +24,14 @@
 }
 
 .header-content {
-    min-width: 200px;
+
 }
 
 #noDiv {
     display: none;
     border: none;
     position: absolute;
-    left: 90%;
+    right: 5%;
 }
 
 #noDiv:hover {
@@ -41,32 +41,15 @@
 }
 
 .header-bottom {
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
     height: 66px;
     overflow: hidden;
     transition: width 2s, height 4s;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-@media (max-width: 1200px) {
-    .header-content {
-        width: 100%;
-    }
-
-    #div {
-        display: none
-    }
-
-    #noDiv {
-        display: initial
-    }
+    justify-content:space-between;
+    margin-left:5%
 }
 
 .header-top button {
@@ -120,7 +103,7 @@
 }
 
 .searchContainer {
-    border: 1px solid black;
+    border: 1.2px solid black;
     border-color: #D8D8D8;
     width: 240px;
     height: 38px;
@@ -128,15 +111,14 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-left:10px
+    padding:10px;
+    margin-left: 20px;
 }
 
 .searchContainer input {
     outline: none;
     border: none;
-    height: 30px;
-    margin-right: 10px;
-    
+    width: 200px;
 }
 .searchContainer input::placeholder {
     color: #585858;
@@ -170,3 +152,21 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 1200px) {
+    .header-content {
+        width: 100%;
+    }
+
+    #div {
+        display: none
+    }
+
+    #noDiv {
+        display: initial
+    }
+    .searchContainer{
+        margin-left: 0;
+    }
+}
+

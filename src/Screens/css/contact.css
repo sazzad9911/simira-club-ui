@@ -9,8 +9,8 @@
 }
   
 .loginbodyleft2 {
-    width: 30%;
-    height: 30vw;
+    width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +26,9 @@
 .loginbodyright2 {
     background-color: white;
     display: flex;
-    margin-left: 40px;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 @media only screen and (max-width: 600px) {
     .loginbodyright2 {
@@ -53,6 +52,8 @@
     font-weight: 500;
     font-size: 32px;
     color: #000000;
+    margin-bottom: 15px;
+    margin-top:5px
     
 }
 @media only screen and (max-width: 600px) {
@@ -99,6 +100,7 @@
 
 .forgotPlink2 {
     width: 400px;
+    margin-top: 10px;
 }
 
 .forgotPlink2 p {

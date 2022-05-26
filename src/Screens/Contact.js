@@ -56,7 +56,7 @@ const Contact = () => {
                         </Button>
                     </div>
                 </div>
-            </div>
+            </div> 
     );
 };
 

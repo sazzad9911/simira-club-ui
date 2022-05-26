@@ -52,12 +52,12 @@ const Header = () => {
                 </div>
             </div>
             <div style={{ height: height }} className="header-bottom">
-                <div className='header-content'>
+                <div className='header-content'> 
                     <Link to='/' style={{textDecoration: 'none'}} >
                         <img src={Icon} />
                     </Link>
                     <Link to='/Search' style={{textDecoration: 'none'}}>
-                        <div className='searchContainer' style={{ marginRight: 50 }}>
+                        <div className='searchContainer'>
                             <input type="text" placeholder="Search" />
                             <svg width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Search">

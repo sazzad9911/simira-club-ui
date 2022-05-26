@@ -1,33 +1,36 @@
 .MyProfileBody {
     height: auto;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-left: 5%;
+    overflow-x: hidden;
 }
 
 .MyProfileDiv {
     width: auto;
-    height: auto;
-    margin: 70px;
+    height: auto; 
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 30px;
     border: 1px solid #D8D8D8;
     border-radius: 20px;
 }
 
 .MyProfileBox {
-    flex-direction: row;
     display: flex;
-    margin-left: 30px;
-    margin-top: 20px;
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .MyProfileBoxIcon {
     border: 1px solid #D8D8D8;
-    height: 85px;
-    width: 85px;
-    border-radius: 41.5px;
+    height: 70px;
+    width: 70px;
+    border-radius:35px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -37,7 +40,7 @@
     font-size: 3px;
 }
 .MyProfileInputBoxs{
-    height: 85px;
+    height: 70px;
     width: 400px;
     display: flex;
     background-color: #F5F5F5;
@@ -52,14 +55,14 @@
 .MyProfileInputs{
     outline: none;
     border: none;
-    width: 350px;
+    width: 85%;
     margin-left: 25px;
     font-weight: 400;
     background-color: #F5F5F5;
     font-size: 24px;
 }
 .MyProfileInputBox {
-    height: 85px;
+    height: 70px;
     width: 400px;
     display: flex;
     margin-bottom: 5px;
@@ -79,17 +82,18 @@
 .MyProfileInput {
     outline: none;
     border: none;
-    width: 350px;
+    width: 90%;
     margin-left: 25px;
+    margin-right: 25px;
     font-weight: 400;
     font-size: 24px;
 }
 
 .MyProfileBoxIconEmail {
     border: 1px solid #D8D8D8;
-    height: 85px;
-    width: 85px;
-    border-radius: 41.5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
     justify-content: center;
     background-color: #F5F5F5;
     align-items: center;
@@ -101,7 +105,6 @@
     align-items: center;
     display: flex;
     padding: 20px;
-    margin-top: -30px;
     font-weight: 500;
     color: #000000;
     font-size: 32px;
@@ -137,12 +140,37 @@
 
 .MyProfileSelect {
     height: 40px;
-    width: 350px;
+    width: 90%;
     margin-left: 25px;
+    margin-right: 25px;
     border: none;
     outline: none;
     font-weight: 400;
     font-size: 24px;
     color: #000000;
+    background:none
 
+}
+@media (max-width:600px) {
+    .MyProfileBoxIcon{
+        width:50px;
+        height:50px;
+    }
+    .MyProfileInputBox{
+        width: 60%;
+    }
+    .MyProfileInputBoxs{
+        width: 60%;
+    }
+    .MyProfileBoxIconEmail{
+        width:50px;
+        height:50px;
+    }
+    .MyProfileInputBox{
+        height: 50px
+    }
+    .MyProfileInputBoxs{
+        height: 50px
+    }
+    
 }
