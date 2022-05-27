@@ -57,7 +57,7 @@ const SearchHotel = (props) => {
                
                </div>
                </Modal>
-               <button onClick={() =>{
+               <button  onClick={() =>{
                 setVisibility(!Visibility)
                }} className='right-menu'>
                <FilterListIcon style={{color:"#FC444B",marginRight:'5px'}}/>

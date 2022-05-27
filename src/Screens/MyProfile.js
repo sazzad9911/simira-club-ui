@@ -50,7 +50,7 @@ const MyProfile = (props) => {
         })
     }
     return (
-        <div className='MyProfileBody'>
+        <div style={{marginTop:'100px',marginBottom:'100px'}} className='MyProfileBody'>
             <div className='MyProfileDiv'> 
                 <div className='MyProfileText'>
                     <h3>My Profile</h3>

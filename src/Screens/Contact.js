@@ -8,7 +8,7 @@ import '../Screens/css/contact.css'
  
 const Contact = () => {
     return (     
-            <div className='loginbody2'  style={{justifyContent: 'center'}}>
+            <div style={{marginTop:'100px', marginBottom:'100px' }} className='loginbody2'  style={{justifyContent: 'center'}}>
                 <div className='loginbodyleft2'>
                     <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg123'></img>
                 </div>

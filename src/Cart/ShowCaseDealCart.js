@@ -17,6 +17,7 @@ const ShowCaseDealCart = () => {
     const [Loading, setLoading]= React.useState(false)
     const [Error,setError]= React.useState()
     const auth = getAuth(app)
+    const user= useSelector(state => state.User)
 
     React.useEffect(() => {
         postData(url +'/getData',{
@@ -30,7 +31,7 @@ const ShowCaseDealCart = () => {
         })
     },[id])
     const book=()=>{
-        if (Data && Data.code=='null') {
+        if (Data && Data.code=='null' && user) {
             setLoading(true);
             postData(url + '/setData', {
                 auth: auth.currentUser,
@@ -49,7 +50,14 @@ const ShowCaseDealCart = () => {
                 setLoading(false);
                 console.log(err.message)
             })
-
+            postData(url +'/sendEmail',{
+                from:'info@smira.club',
+                to:auth.currentUser.email,
+                subject:'Your Appointment Request has been received - Smira Club',
+                text:"<p>Dear <strong>"+user[0].name.split(' ')[0]+"</strong>,</p><p>We have received your request for a appointment on <strong>"+convertDate(new Date())+"</strong> for "+Data.name+"<p>Smira Club</p><p>Ranjit Studio Compound,</p><p> Ground & 1st Floor, </p><p>C-Block, Plot No. 115, </p><p>Dada Saheb Phalke Marg, </p><p>Opp. Bharatkshetra, Hindmata, </p><p>Dadar East, Mumbai, </p><p>Maharashtra 400014 </p><p>Contact No. </p><p>9819812456</p><p>9833733477</p><p>9820342389</p><p> Email - support@smira.club</p>"
+            }).then(data=>{
+                console.log(data)
+            })
         } else {
             setError('Coupon code is copied.')
         }

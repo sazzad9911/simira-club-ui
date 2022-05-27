@@ -22,7 +22,6 @@
     border: none;
     margin: 0px;
     background-color: none;
-    display: flex;
     justify-content: center;
     align-items: center;
     background:none;
@@ -85,5 +84,6 @@
     }
     .right-menu{
         display: flex;
+
     }
 }

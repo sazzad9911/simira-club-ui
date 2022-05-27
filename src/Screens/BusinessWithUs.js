@@ -10,7 +10,7 @@ const BusinessWithUs = () => {
     return (
         <div>
  
-            <div className='loginbody3' style={{ justifyContent: 'center' }}>
+            <div className='loginbody3' style={{ justifyContent: 'center',marginTop:'100px',marginBottom:'100px' }}>
 
                 <div className='loginbodyleft3'  >
                     <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg12'></img>
