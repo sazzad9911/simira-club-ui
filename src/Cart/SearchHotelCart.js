@@ -6,7 +6,7 @@ import NetworkWifi3BarIcon from '@mui/icons-material/NetworkWifi3Bar';
 import TvIcon from '@mui/icons-material/Tv';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
-import Link from '@mui/material/Link';
+import { Link,useParams } from 'react-router-dom';
 
 const SearchHotelCart = (props) => {
     const conditions = props.data.conditions.split(',')
@@ -17,22 +17,20 @@ const SearchHotelCart = (props) => {
         <div >
             <div style={{
                 display: 'flex',
+                width: '100%',
             }}>
-                <div >
-                    <img style={{
+                <img style={{
                         height: '250px',
-                        width: '350px',
+                        width: '40%',
                         borderRadius: '15px',
                     }} src={props.data.image} alt="img1" />
-
-                </div>
                 <div style={{
                     height: '250px',
-                    width: '210px',
+                    width: '60%',
                     marginLeft: '20px'
                 }}>
                     <h3 style={{
-                        marginBottom: '3px'
+                        marginBottom: '3px' 
                     }}>{props.data.name}</h3>
                     <p style={{
                         color: '#585858',
@@ -127,7 +125,9 @@ const SearchHotelCart = (props) => {
                         marginTop: '20px',
                     }}>
                         <div>
-                            <Link href={'/ShowcaseHotel'+'/'+props.data.id} underline='none' color='inherit'>
+                            <Link style={{
+                                textDecoration: 'none'
+                            }} to={'/ShowcaseHotel'+'/'+props.data.id} underline='none' color='inherit'>
                                 <Button style={{
                                     background: '#FC444B',
                                     padding: '0px',
@@ -135,13 +135,14 @@ const SearchHotelCart = (props) => {
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    height: '30px',
+                                    height: '35px',
                                     width: '40px',
                                     padding: '3px'
                                 }}>
                                     <p style={{
                                         color: 'white',
-                                        fontSize: '12px'
+                                        fontSize: '12px',
+                                        margin: '0px'
                                     }}>VIEW
                                     </p>
                                 </Button>

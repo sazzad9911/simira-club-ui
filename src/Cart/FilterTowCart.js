@@ -3,10 +3,12 @@ import '../Cart/css/FilterTowCart.css'
 
 const FilterTowCart = (props) => {
     return (
-        <div className='FilterCartBody'>
+        <div className='FilterCartBody'> 
             <div style={{ display: 'flex' }}>
                 <h2>Filters</h2>
-                <button className='FilterCartButton'>Clear All</button>
+                <button style={{
+                    fontSize: '18px'
+                }} className='FilterCartButton'>Clear All</button>
             </div>
             <div className='FilterCartDivLine' />
             <p style={{ marginLeft: '15px', marginTop: '30px' }}>Sort by</p>
@@ -20,7 +22,7 @@ const FilterTowCart = (props) => {
             <div style={{ display: 'grid', marginTop: '20px' }}>
                 <button className='FilterCartButtonPopu'>Ovenstory</button>
                 <button className='FilterCartButtonRat'>Dominoes</button>
-                <button className='FilterCartButtonSmo'>SmokinJoe's</button>
+                <button className='FilterCartButtonRat'>SmokinJoe's</button>
             </div>
             <div style={{ marginTop: '30px' }} />
             

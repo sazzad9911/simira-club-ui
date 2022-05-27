@@ -6,9 +6,11 @@
     outline: none;
     border: none;
     color:  #FC444B;
-    font-size: 10px;
+    font-size: 20px;
     background-color: rgb(255, 255, 255);
-    
+}
+.FilterCartButton:hover{
+    opacity: .6;
 }
 .FilterCartDivLine{
     height: 1.5px;
@@ -18,57 +20,47 @@
 }
 .FilterCartButtonPopu{
     outline: none;
-    height: 25px;
-    width: 100px;
     border: 1px solid #FC444B;
     border-radius: 20px;
     color:  #FC444B;
     background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+.FilterCartButtonPopu:hover {
+    opacity: .5;
 }
 .FilterCartButtonRat{
     outline: none;
-    height: 25px;
-    width: 65px;
+    padding: 10px;
     border: 1px solid #D8D8D8;
     border-radius: 20px;
     color:   #585858;
-   
     background-color: rgb(255, 255, 255);
 }
-.FilterCartButtonAme{
-    height: 25px;
-    width: 80px;
-    border: 1px solid #D8D8D8;
-    border-radius: 20px;
-    color:   #585858;
-    
-    background-color: rgb(255, 255, 255);
+.FilterCartButtonRat:hover {
+    opacity: .5;
 }
 .FilterCartButtonDel{
     outline: none;
-    height: 25px;
-    width: 75px;
     border: 1px solid #FC444B;
     border-radius: 20px;
     color:  #FC444B;
-    
     background-color: rgb(255, 255, 255);
 }
+.FilterCartButtonDel:hover{
+    opacity: .5;
+}
 .FilterCartButtonVil{
-    height: 25px;
-    width: 60px;
     border: 1px solid #D8D8D8;
     border-radius: 20px;
     color:   #585858;
    
     background-color: rgb(255, 255, 255);
 }
-.FilterCartButtonFarm{
-    height: 25px;
-    width: 100px;
-    border: 1px solid #D8D8D8;
-    border-radius: 20px;
-    color:   #585858;
-    
-    background-color: rgb(255, 255, 255);
+.FilterCartButtonVil:hover {
+    opacity: .5;
 }

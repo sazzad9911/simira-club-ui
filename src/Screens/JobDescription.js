@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 
 function JobDescription() {
     return (
-        <div className="JobBody">
+        <div className="JobBody"> 
             <div className="JobBodyDiv">
                 <img src={Img} className='JobImg' />
                 <div className="JobImgDiv">
@@ -103,7 +103,7 @@ function JobDescription() {
                                     <input className="JobRightInputBox" type='Text' placeholder='Fiest name' />
                                 </div>
                             </div>
-                            <div className="JobRightInputLeftDiv">
+                            <div>
                                 <div className="JobRightInputDiv">
                                     <p style={{ opacity: .7 }}>Last Name.</p>
                                     <StarIcon className="JobRightInputIcon" sx={{ fontSize: 10 }} />
@@ -158,12 +158,12 @@ function JobDescription() {
                         </div>
 
                         <Button style={{
-                            width: '350px',
+                            width: '94%',
                             padding: '0px',
                             height: '50px',
                             marginTop: '30px',
-                            marginLeft: '10px',
-                            borderRadius: '10px'
+                            marginLeft: '3%',
+                            borderRadius: '10px',
                         }}>
                             <div className="JobBoxButtonx">
                                 <p className="JobBoxButtonP">Submit</p>

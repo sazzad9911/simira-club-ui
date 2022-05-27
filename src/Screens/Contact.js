@@ -47,7 +47,7 @@ const Contact = () => {
                             height: '50px',
                             borderRadius: '30px',
                             padding: '0px',
-                            marginBottom:'150px'
+                            marginBottom:'50px'
                         }}>
                             <div className='googleButton2'>
                                 <WhatsAppIcon ></WhatsAppIcon>

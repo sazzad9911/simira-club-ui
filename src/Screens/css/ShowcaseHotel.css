@@ -258,7 +258,7 @@
     border: 1px solid #D8D8D8;
     margin: 25px;
     padding:20px;
-    height: 530px;
+    height: 570px;
 
 }
 @media (max-width:1100px) {
@@ -330,7 +330,6 @@
     width: 50%;
     display: flex;
     margin-left: 14px;
-    margin-top: -5px;
     text-align: center;
     justify-content: center;
 }

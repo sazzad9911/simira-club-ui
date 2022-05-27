@@ -19,10 +19,8 @@ function Search(props) {
     return (
         <div>
             <div className='ScarchBody'>
-                <img src={Img} className='ScarchImg' />
- 
                 <div className='ScarchImgDiv'>
-                    <div className='ScarchImgDivText'>
+                     <div className='ScarchImgDivText'>
                         <p className='ScarchImgText'>Over 45 hotel & 100+ deals across 10 cities</p>
                     </div>
                     <div className='ScarchDiv'>

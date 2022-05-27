@@ -63,6 +63,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
 @media only screen and (max-width: 500px) {
@@ -81,9 +82,8 @@
     color: #FC444B;
     font-size: 24px;
     font-weight: 500;
-    height: 55px;
     width: 400px;
-    margin-top: 20px;
+    margin: 0px;
 }
 
 .offercodebuttonText:hover {

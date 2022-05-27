@@ -3,6 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-image: url('../Image//Search.PNG');
+    background-position: cover;
+    min-height: 280px;
 }
 .ScarchImg{
     height: 100%;
@@ -21,6 +25,7 @@
     font-size:15px;
     margin: 0;
     text-align:center;
+    max-width: 100%;
 }
 
 .ScarchImgText{
@@ -87,7 +92,8 @@
 
 .ScarchDiv{
     height: 40px;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     background-color: #ffffff;
     border-radius: 25px;
     display: flex;

@@ -132,6 +132,7 @@ React.useEffect(() => {
       <Route exact path="/" element={<Home />} />
       <Route path="/Search" element={<Search />} />
       <Route path="/SearchHotel/:search" element={<SearchHotel />} />
+      <Route path="/SearchDeal/:search" element={<SearchDeal />} />
       <Route path="/ShowCaseCategory/:type" element={<ShowCaseCategory/>} />
       <Route path="/ShowCaseDealBrand/:id" element={<ShowCaseDealBrand />} />
       <Route path={"/ShowcaseHotel/:id"} element={<ShowcaseHotel />} />
@@ -144,6 +145,8 @@ React.useEffect(() => {
       <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
       <Route path="/SignUp" element={<SignUp />} />
       <Route path="/ShowCaseDeal/:id" element={<ShowCaseDeal />} />
+      <Route path="/Career" element={<Career />} />
+      <Route path="/JobDescription" element={<JobDescription />} />
         <Route path="*" element={<NotFound />} />     
       </Routes>
       <div style={{ height: 50, width: '100%',marginTop:'0px' }}></div>

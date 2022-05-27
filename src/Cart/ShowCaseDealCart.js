@@ -2,14 +2,21 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import '../Cart/css/ShowCaseDealCart.css'
 import {useSelector} from 'react-redux';
-import {postData, url} from '../action'
 import { Link,useParams } from 'react-router-dom';
+import app from './../firebase';
+import { getAuth } from 'firebase/auth';
+import {postData, url,convertDate} from '../action'
+import { Oval } from 'react-loader-spinner';
+
 
 const ShowCaseDealCart = () => {
     const brands =useSelector(state => state.Brands)
     const [Data,setData]= React.useState(null)
     const {id}=useParams()
     const [Height,setHeight]= React.useState('85px')
+    const [Loading, setLoading]= React.useState(false)
+    const [Error,setError]= React.useState()
+    const auth = getAuth(app)
 
     React.useEffect(() => {
         postData(url +'/getData',{
@@ -22,6 +29,31 @@ const ShowCaseDealCart = () => {
             console.log(data.message)
         })
     },[id])
+    const book=()=>{
+        if (Data && Data.code=='null') {
+            setLoading(true);
+            postData(url + '/setData', {
+                auth: auth.currentUser,
+                tableName: 'book_appointment',
+                columns: ['uid', 'deal_id', 'date'],
+                values: [auth.currentUser.uid, Data.id, convertDate(new Date())]
+            }).then(data => {
+                if (data && data.insertId) {
+                    setLoading(false);
+                    setError('Appointment booked successfully')
+                    return
+                }
+                setLoading(false);
+                console.log(data.message)
+            }).catch(err => {
+                setLoading(false);
+                console.log(err.message)
+            })
+
+        } else {
+            setError('Coupon code is copied.')
+        }
+    }
     return (
         <div>
             <div className='mainbody'>
@@ -35,7 +67,15 @@ const ShowCaseDealCart = () => {
                 <div className='offercode'>
                     <p>{Data && Data.code!='null'?Data.code:'NO PROMOCODE'}</p>
                 </div>
-                <Button style={{
+                <p style={{color: 'red',margin:'0px'}}>{Error}</p>
+                {
+                    Loading?(
+                        <Oval/>
+                    ):(<></>)
+                }
+                <Button onClick={() =>{
+                    book()
+                }} style={{
                     outline: false,
                     marginTop: '20px',
                     width: '300px',
@@ -45,7 +85,7 @@ const ShowCaseDealCart = () => {
 
                 }}>
                     <div className='offercodebutton'>
-                        <p className='offercodebuttonText'>{Data && Data.code!='null'?'BOOK APPOINTMENT':'COPY CODE'}</p>
+                        <p className='offercodebuttonText'>{Data && Data.code=='null'?'BOOK APPOINTMENT':'COPY CODE'}</p>
                     </div>
                 </Button>
             </div>

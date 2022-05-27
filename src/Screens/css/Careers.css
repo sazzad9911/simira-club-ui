@@ -42,14 +42,11 @@
 .CareerBox{
     height: auto;
     width: auto;
-    padding-left: 100px;
-    padding-right: 100px;
     margin-top: 20px;
 }
 @media screen and (max-width: 400px) {
     .CareerBox {
-        padding-left: 40px;
-        padding-right: 30px;
+    
     }
   }
 .CareerBoxDiv{
@@ -86,7 +83,9 @@
     font-weight: 700;
 }
 .CareerCartDiv{
-    margin-top: 80px;
+    margin-top: 50px;
+    width:90%;
+    margin-left: 5%;
 }
 .CareerEndDiv{
     height: 120px;

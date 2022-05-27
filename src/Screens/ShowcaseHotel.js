@@ -394,7 +394,8 @@ const ShowcaseHotel = (props) => {
                         <p style={{color: 'red'}}>{Error}</p>
                         <Button onClick={Confirm} style={{
                             border: '1px solid #FC444B',
-                            borderRadius: '30px'
+                            borderRadius: '30px',
+                            marginTop: '10px'
                         }} className='showconFButton'>
                         <p className='ShowsubmitText'>CONFIRM BOOKING</p>
                         </Button>

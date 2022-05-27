@@ -3,18 +3,34 @@ import '../Cart/css/FilterCart.css'
 import StarIcon from '@mui/icons-material/Star';
 
 const FilterCart = (props) => {
-    return (
-        <div> 
+    return ( 
+        <div className='filterBox'> 
             <div style={{ display: 'flex',justifyContent:'space-between' }}>
                 <h2>Filters</h2>
-                <button className='FilterCartButton'>Clear All</button>
+                <button className='FilterCartButton'>
+                <p style={{margin:'0px'}}>Clear All</p></button>
             </div>
             <div className='FilterCartDivLine' />
             <p style={{ marginLeft: '15px', marginTop: '30px' }}>Sort by</p>
-            <div style={{ display: 'grid', marginTop: '20px' }}>
-                <button className='FilterCartButtonPopu'>Popularity</button>
-                <button className='FilterCartButtonRat'>Ratings</button>
-                <button className='FilterCartButtonAme'>Amenities</button>
+            <div style={{ display: 'grid', marginTop: '20px'}}>
+                <button style={{
+                    height: 'auto',
+                    width: 'auto',
+                    padding: '5px'
+                }} className='FilterCartButtonPopu'>   Popularity
+                </button>
+                <button style={{
+                    height: 'auto',
+                    width: 'auto',
+                    padding: '5px'
+                }}  className='FilterCartButtonRat'> Ratings
+               </button>
+                <button style={{
+                    height: 'auto',
+                    width: 'auto',
+                    padding: '5px'
+                }} className='FilterCartButtonRat'> Amenities
+                </button>
             </div>
             <div style={{ marginTop: '30px' }} />
             <div className='FilterCartDivLine' />
@@ -68,10 +84,22 @@ const FilterCart = (props) => {
             <div className='FilterCartDivLine' />
             <p style={{ marginTop: '30px', marginLeft: '15px' }}>Categories</p>
             <div style={{ display: 'flex' }}>
-                <button className='FilterCartButtonDel'>Deluxe</button>
-                <button className='FilterCartButtonVil'>Villas</button>
+                <button style={{
+                    height: 'auto',
+                    width: 'auto',
+                    padding: '5px'
+                }}  className='FilterCartButtonDel'>Deluxe</button>
+                <button style={{
+                    height: 'auto',
+                    width: 'auto',
+                    padding: '5px'
+                }}  className='FilterCartButtonVil'>Villas</button>
             </div>
-            <button className='FilterCartButtonFarm'>Farm House</button>
+            <button style={{
+                    height: 'auto',
+                    width: 'auto',
+                    padding: '5px'
+                }} className='FilterCartButtonVil'>Farm House</button>
         </div>
     );
 };
