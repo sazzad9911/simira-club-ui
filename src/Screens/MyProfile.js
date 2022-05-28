@@ -29,6 +29,7 @@ const MyProfile = (props) => {
     const auth = getAuth(app)
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         if(user){
             setName(user[0].name)
             setPhone(user[0].phone)

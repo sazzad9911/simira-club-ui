@@ -14,6 +14,7 @@ import Modal from '@mui/material/Modal';
 import FilterTowCart from '../Cart/FilterTowCart'
 import Dealoffercart from '../Cart/DealOfferCart';
 import DealList from './../Cart/DealList';
+import Pagination from './../Content/Pagination';
 
 const SearchDeal = (props) => {
     const [Data,setData]= React.useState(null)
@@ -22,8 +23,11 @@ const SearchDeal = (props) => {
     const [SearchData,setSearchData]=useState()
     const [width,setWidth]= React.useState('0px')
     const [Visibility,setVisibility]= useState(false)
+    const [Low,setLow]= React.useState(0)
+    const [High,setHigh]= React.useState(10)
     
     React.useEffect(()=>{
+        window.scrollTo(0, 0);
        if(search) {
         postData(url +'/searchData',{
             tableName:'deals',
@@ -39,6 +43,9 @@ const SearchDeal = (props) => {
         setData([])
        }
     },[search])
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[Low])
     return (
         <div style={{width: '100%',marginTop:'30px',overflowX:'hidden'}}>
             <div style={{display: 'flex',width:'90%',height:'100%',marginLeft:'5%'}}>
@@ -87,7 +94,9 @@ const SearchDeal = (props) => {
                         {
                             Data?(
                                 Data.map((data,i) =>(
-                                    <DealList key={i} data={data} />
+                                    i>=Low && i<High?(
+                                        <DealList key={i} data={data} />
+                                    ):(<></>)
                                 ))
                             ):(<Loader/>)
                         }
@@ -100,10 +109,11 @@ const SearchDeal = (props) => {
                 justifyContent: 'center',
                 marginBottom: '20px'
              }}>
-                <Button to="#" underline="none" color="inherit">
-                    <p style={{color: '#FC444B'}}>1</p>
-                </Button>
-                
+                {
+                    Data?(
+                        <Pagination lowLevel={setLow} highLevel={setHigh} length={Data.length} perPage={10}/>
+                    ):(<></>)
+                }
             </div>
             <AppOverView />
             <OptionLand />

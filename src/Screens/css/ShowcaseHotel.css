@@ -169,8 +169,8 @@
 }
 
 .showcaseNearby {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 5px;
     background-color: black;
 }
@@ -186,7 +186,7 @@
 }
 
 .showcaseNearbys {
-    margin-top: 15px;
+    margin-top: 7px;
 }
 
 .Showcardhed {
@@ -335,7 +335,7 @@
 }
 
 .showadu {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
     color: #585858;
     margin-left: -1px;
@@ -399,6 +399,7 @@
     width: 100%;
     height: 60px;
     display: flex;
+    margin: 0px;
     margin-top: 30px;
     justify-content: center;
     align-items: center;

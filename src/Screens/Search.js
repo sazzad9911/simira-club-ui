@@ -15,23 +15,26 @@ function Search(props) {
     const [Select, setSelect] = useState('SearchHotel');
     const [SearchData,setSearchData] = useState(null)
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     
     return (
         <div>
             <div className='ScarchBody'>
                 <div className='ScarchImgDiv'>
                      <div className='ScarchImgDivText'>
-                        <p className='ScarchImgText'>Over 45 hotel & 100+ deals across 10 cities</p>
+                        <p className='ScarchImgText'>Over 45 hotels & 100+ deals across 10 cities</p>
                     </div>
                     <div className='ScarchDiv'>
-                        <input onChange={(e) =>setSearchData(e.target.value)} className='ScarchInput' type='text'
-                            placeholder='Search by hotel,deal,restaurant' />
+                        <input  onChange={(e) =>setSearchData(e.target.value)} className='ScarchInput' type='text'
+                            placeholder='Search hotels, deals, restaurants' autoFocus={true} />
                         <div className='ScarchScDiv'>
                             <select value={Select} onChange={(e) =>setSelect(e.target.value)} className='ScarchSelect'>
                                 <option value="SearchHotel">Hotel</option>
                                 <option value="SearchDeal">Deals</option>
                             </select>
-                            <Link style={{textDecoration: 'none'}} to={'/'+Select+'/'+SearchData} className='ScarchButton'>Search</Link>
+                            <Link style={{textDecoration: 'none',color:'#ffff'}} to={'/'+Select+'/'+SearchData} className='ScarchButton'>Search</Link>
                         </div>
                     </div>
                     {

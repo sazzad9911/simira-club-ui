@@ -23,7 +23,7 @@ const ShowCaseCategory = (props) => {
     const [data, setData] = useState(null)
     const {type}=useParams()
     React.useEffect(() => {
-
+        window.scrollTo(0, 0);
         postData(url + "/getData", {
             tableName: 'brands',
             orderColumn: 'id',
@@ -45,14 +45,17 @@ const ShowCaseCategory = (props) => {
             <div className='showcasebody1'>
                 <div className='cartBottom41'>
                     <div className='cartButtomLeft41'>
-                        <img className="img41" src={type=='Restaurant'?Restaurant
+                        <img style={{
+                            height: '175px',
+                            width: '175px'
+                        }} className="img41" src={type=='Restaurant'?Restaurant
                         :type=='Hotel'?Hotels:type=='Games'?Games:type=='Health'?Health:
                         type=='Villas'?Villas:type=='Shopping'?Shopping:type=='Services'?Services:
                         type=='Camping'?Camping:type=='Travel'?Travel:Spa_Salons} alt="img1" />
                     </div>
-                    <div className='cartButtomRight41'>
-                        <p className='headline1'>{type}</p>
-                        <p className='text21'>{data ? data.length : '0'} Options Available</p>
+                    <div style={{marginTop:'-40px',marginLeft:'30px'}} className='cartButtomRight41'>
+                        <p style={{fontSize:'32px',margin:'0px'}} className='headline1'>{type}</p>
+                        <p style={{fontSize:'24px',margin:'0px'}} className='text21'>{data ? data.length : '0'} Options Available</p>
                     </div>
                     
                 </div>

@@ -17,9 +17,10 @@
 
 .headline {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 62px;
+    font-size: 54px;
     font-weight: 700;
     color: '#000000';
+    margin-bottom: 0px;
     margin-left: 0px;
 }
 

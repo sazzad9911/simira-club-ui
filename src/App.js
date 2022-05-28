@@ -5,7 +5,7 @@ import {
   Route,
   Link,
   useParams,
-  useRouteMatch
+  useRouteMatch,useLocation
 } from "react-router-dom";
 import Home from './Screens/Home';
 import MyProfile from './Screens/MyProfile';

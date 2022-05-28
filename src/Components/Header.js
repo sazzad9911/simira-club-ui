@@ -43,9 +43,11 @@ const Header = () => {
                             borderRight: '1px solid #ffff'
                         }}>We are hiring!</button>
                     </Link>
+                    <Link to='/TermsAndConditions' style={{textDecoration: 'none'}}>
                     <button style={{
                         borderRight: '1px solid #ffff'
                     }}>How to use</button>
+                    </Link>
                     <Link to='/Contact' style={{textDecoration: 'none'}}>
                         <button>Talk to us</button>
                     </Link>
@@ -80,7 +82,7 @@ const Header = () => {
                     }} src={member} />
                     <Link to='/Membership' style={{textDecoration: 'none'}}>
                         <div className='header-box'>
-                            <h5>Became a Member</h5>
+                            <h5>Become a Member</h5>
                             <p>Save more on Top Brands</p>
                         </div>
                     </Link>

@@ -11,6 +11,7 @@ import './css/Search.css'
 import  Button  from '@mui/material/Button';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import Modal from '@mui/material/Modal';
+import Pagination from './../Content/Pagination';
 
 const SearchHotel = (props) => {
     const [Data,setData]= React.useState(null)
@@ -19,8 +20,14 @@ const SearchHotel = (props) => {
     const [SearchData,setSearchData]=useState()
     const [width,setWidth]= React.useState('0px')
     const [Visibility,setVisibility]= useState(false)
+    const [Low,setLow]= React.useState(0)
+    const [High,setHigh]= React.useState(10)
     
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[Low])
     React.useEffect(()=>{
+        window.scrollTo(0, 0);
        if(search) {
         postData(url +'/searchData',{
             tableName:'hotels',
@@ -84,7 +91,9 @@ const SearchHotel = (props) => {
                         {
                             Data?(
                                 Data.map((data,i) =>(
-                                    <SearchHotelCart key={i} data={data} />
+                                    i>=Low && i<High?(
+                                        <SearchHotelCart key={i} data={data} />
+                                    ):(<div key={i}></div>)
                                 ))
                             ):(<Loader/>)
                         }
@@ -97,9 +106,11 @@ const SearchHotel = (props) => {
                 justifyContent: 'center',
                 marginBottom: '20px'
              }}>
-                <Button to="#" underline="none" color="inherit">
-                    <p style={{color: '#FC444B'}}>1</p>
-                </Button>
+                {
+                    Data?(
+                        <Pagination lowLevel={setLow} highLevel={setHigh} length={Data.length} perPage={10}/>
+                    ):(<></>)
+                }
                 
             </div>
             <AppOverView />

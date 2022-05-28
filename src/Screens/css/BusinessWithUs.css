@@ -13,7 +13,7 @@
     align-items: center;
 }
 @media only screen and (max-width: 600px) {
-    .loginbodyleft3 {
+    .loginbodyleft3 { 
         width: 300px;
         height: 400px;
         margin-bottom: 0px;

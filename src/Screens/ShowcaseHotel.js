@@ -46,6 +46,7 @@ const ShowcaseHotel = (props) => {
     const user=useSelector(state => state.User)
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         postData(url +'/getData',{
             tableName:'hotels',
             condition:'id='+id
@@ -89,7 +90,7 @@ const ShowcaseHotel = (props) => {
         }).catch(err => {
             setLoader(false)
         })
-        postData(url +'/sendEmail',{
+        postData(url +'/sendEmail',{ 
             from:'info@smira.club',
             to:auth.currentUser.email,
             subject:'Your Booking Request has been received - Smira Club',
@@ -168,14 +169,15 @@ const ShowcaseHotel = (props) => {
                     <div className='showDescription'>
                         <h3 style={{
                             fontWeight: '700px',
-                            fontSize: '30px',
+                            fontSize: '22px',
                             color: '#292929',
                             marginTop: '30px'
                         }}>Description </h3>
                         <h6 style={{
                             height: height,
-                            overflow: 'hidden'
-                        }} className='showcasetxt'>{Data?Data.description:''}</h6>
+                            overflow: 'hidden',
+                            fontWeight: 'normal'
+                        }} className='showttx'>{Data?Data.description:''}</h6>
                         <button onClick={() => {
                                     if(height == '78px'){
                                         setHeight('auto')
@@ -205,7 +207,7 @@ const ShowcaseHotel = (props) => {
                     </div>
                     <div className='showcasemap'>
                         <div className='showCaseMap'><GoogleMapReact /></div>
-                        <h3 style={{ color: '#292929', fontSize: '30px', fontWeight: '700px',marginBottom: '30px'}}>What's nearby</h3>
+                        <h3 style={{ color: '#292929', fontSize: '22px', fontWeight: '700px',marginBottom: '30px'}}>What's nearby</h3>
                         {
                             Data?(
                                 <div className='showcasemaps'>
@@ -213,7 +215,7 @@ const ShowcaseHotel = (props) => {
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>{Data.near_by.split(',')[0]}</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '16px', fontWeight: '400px' }}>{Data.near_by.split(',')[0]}</h2></div>
                             </div>
 
                         </div>
@@ -226,7 +228,7 @@ const ShowcaseHotel = (props) => {
                                 <div className='showcaseNearby'></div>
                             </div>
                             <div className='showFont'>
-                                <div><h2 style={{ color: '#585858', fontSize: '26px', fontWeight: '400px' }}>{Data.near_by.split(',')[1]}</h2></div>
+                                <div><h2 style={{ color: '#585858', fontSize: '16px', fontWeight: '400px' }}>{Data.near_by.split(',')[1]}</h2></div>
                             </div>
 
                         </div>
@@ -290,11 +292,15 @@ const ShowcaseHotel = (props) => {
                 </div>
                 <div className='ShowcaseRight'>
                     <div className='ShowcaseRightf'>
-                        <h3>Booking Details</h3>
-                        <h4 style={{
+                        <h3 style={{fontSize:'22px'}}>Booking Details</h3>
+                        <p style={{
                             display: 'flex',
-                            color: '#808080'
-                        }}>Check-in<p className='showrightStar'>*</p></h4>
+                            color: '#808080',
+                            fontSize: '18px',
+                            margin:'0px',
+                            marginTop: '30px',
+                            marginBottom:'8px'
+                        }}>Check-in *</p>
                         <div className='Showinputbox'>
                             <input className='Showrightinputs' onChange={e=>{
                                 setCheckIn(e.target.value)
@@ -303,10 +309,14 @@ const ShowcaseHotel = (props) => {
 
                     </div>
                     <div className='ShowcaseRightf'>
-                        <h4 style={{
+                        <p style={{
                             display: 'flex',
-                            color: '#808080'
-                        }}>Check-out<p className='showrightStar'>*</p></h4>
+                            color: '#808080',
+                            fontSize: '18px',
+                            margin:'0px',
+                            marginTop: '10px',
+                            marginBottom:'8px'
+                        }}>Check-out *</p>
                         <div className='Showinputbox'>
                             <input className='Showrightinputs' onChange={e=>{
                                 setCheckOut(e.target.value)
@@ -404,14 +414,15 @@ const ShowcaseHotel = (props) => {
                         </div>
                         <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '100%'}}>
                         <p style={{color: 'red'}}>{Error}</p>
+                        </div>
                         <Button onClick={Confirm} style={{
                             border: '1px solid #FC444B',
                             borderRadius: '30px',
-                            marginTop: '10px'
+                            marginTop: '10px',
+                            marginBottom: '10px'
                         }} className='showconFButton'>
                         <p className='ShowsubmitText'>CONFIRM BOOKING</p>
                         </Button>
-                        </div>
                     </div>
                 </div>
             </div>

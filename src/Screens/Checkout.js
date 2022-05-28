@@ -15,6 +15,7 @@ function Checkout() {
     const [Data,setData]= React.useState(null)
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         postData(url +'/getData',{
             tableName: 'membership',
             condition:'id='+id

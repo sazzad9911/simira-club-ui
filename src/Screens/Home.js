@@ -22,13 +22,19 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 import './css/Home.css'
+import {useLocation} from 'react-router-dom'
 
  
 const Home = () => {
     const ref = createRef()
     const [left,setLeft]=React.useState(false)
     const [right,setRight]=React.useState(true)
+    const { pathname } = useLocation();
 
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+      console.log(pathname)
+    }, [pathname]);
     React.useEffect(() =>{
         //console.log(ref.current.scrollLeft)
     },[])
@@ -138,9 +144,9 @@ const Home = () => {
                 </div>
             </div>
             <div className='Home-topBrand'>
-                <TopBrands headText='Top Brands For You' />
+                <TopBrands headText='Top brands for you' />
             </div>
-            <div style={{ height: 20, width: '100%' }}></div>
+            <div style={{ height: 10, width: '100%' }}></div>
             <PopularDeal />
             <div style={{ height: 20, width: '100%' }}></div>
             <BookShow />

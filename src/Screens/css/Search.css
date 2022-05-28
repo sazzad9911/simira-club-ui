@@ -72,9 +72,10 @@
     background-color: #ffffff;
     flex: 4;
 }
-.searchInput::placeholder{
-    color: #808080;
+input::placeholder{
+    color: #8888
 }
+
 .ScarchButton{
     height: 40px;
     width: 150px;

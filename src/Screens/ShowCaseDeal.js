@@ -9,7 +9,9 @@ import {useSelector} from 'react-redux'
 
 const ShowCaseDeal = () => {
     const brands=useSelector(state => state.Brands)
-
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <div>
             <div style={{

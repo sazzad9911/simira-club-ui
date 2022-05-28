@@ -112,7 +112,8 @@ const TopBrands = (props) => {
                 ):(<></>)
             }
             <h2 style={{
-            marginLeft:'5%'
+            marginLeft:'5%',
+            fontSize: '25px' 
             }}>{props.headText}</h2>
             <div ref={ref} onScroll={scroll} className='brandShow'>
                 <div className='topBrandsDive'>

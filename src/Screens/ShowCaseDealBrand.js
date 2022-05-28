@@ -10,13 +10,17 @@ import {postData, url} from '../action'
 import {useSelector} from 'react-redux'
 import DealList from './../Cart/DealList';
 import Loader from './../Content/Loader';
+import Pagination from './../Content/Pagination';
 
 const ShowCaseDealBrand = (props) => {
     const {id}=useParams()
     const [Data,setData]=React.useState(null)
     const brands=useSelector(state => state.Brands)
+    const [Low,setLow]=React.useState(0)
+    const [High,setHigh]=React.useState(10)
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         postData(url +'/getData',{
             tableName:'deals',
             orderColumn: 'date',
@@ -28,6 +32,9 @@ const ShowCaseDealBrand = (props) => {
             console.log(data.message)
         })
     },[id])
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[Low])
     return (
         <div>
             <div className='showcasebody'>
@@ -65,17 +72,20 @@ const ShowCaseDealBrand = (props) => {
                     Data ? (
                         Data.length >0?(
                             Data.map((doc,i)=>(
-                                <DealList key={i} data={doc}/>
+                                i>=Low && i<High?(
+                                    <DealList key={i} data={doc}/>
+                                ):(<></>)
                             ))
                         ):(<p>No Deals Found</p>)
                     ):(<Loader/>)
                    }
                 </div>
                 <div className='pageSlide'>
-                    <Button variant="text" ><p className='text'>1</p></Button>
-                    <Button variant="text" ><p className='text'>2</p></Button>
-                    <Button variant="text" ><p className='text'>3</p></Button>
-                    <Button variant="text" ><p className='text'>4</p></Button>
+                {
+                    Data ? (
+                        <Pagination lowLevel={setLow} highLevel={setHigh} length={Data.length} perPage={10}/>
+                    ):(<></>)
+                }
                 </div>
                 <div className='hr'></div>
 

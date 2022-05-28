@@ -104,9 +104,35 @@
 }
 
 .Membershipcard-right {
-    width: 60%
+    width: 60%;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: 2px;
+    display: flex;
+    height: 370px;
 }
-
+.Membershipcard-right::-webkit-scrollbar{
+    display:block;
+  }
+  
+  .Membershipcard-right::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .Membershipcard-right::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .Membershipcard-right::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  .Membershipcard-right::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 .membershipfoote {
     color: #d70d0d;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -144,7 +170,6 @@
     padding: 10px;
 }
 
-
 .membercardft {
     width: 90%;
     margin-left: 5%;
@@ -152,6 +177,9 @@
     border-radius: 5px;
     background: #F3B038;
 
+}
+#txt{
+    margin: 0px
 }
 
 .membercardf {
@@ -166,6 +194,9 @@
     flex-wrap: wrap;
     outline: none;
     border: none;
+    color: #ffff;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 .membershipFamily{
     width:400px;
@@ -219,7 +250,7 @@
     justify-content: center;
     color: #FFFFFF;
     width: 80%;
-    padding: 5px;
+    height: 30px;
 }
 
 .membercardfs {
@@ -254,5 +285,12 @@
     }
     .Membershipcard-right{
         width: 100%;
+        display: flex;
+        overflow: hidden;
+        height:auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
     }
 }

@@ -53,7 +53,7 @@ const PopularDeal = () => {
         })
     },[])
     return (
-        <div style={{ background: 'none' }} className='box'>
+        <div style={{ background: 'none',marginTop:'-10px' }} className='box'>
 
            {
             left?(
@@ -110,8 +110,9 @@ const PopularDeal = () => {
             ):(<></>)
            }
             <h2 style={{
-            marginLeft:'5%'
-            }}> Popular Deals</h2>
+            marginLeft:'5%',
+            fontSize:'25px'
+            }}> Popular deals</h2>
             <div onScroll={scroll} ref={ref} className='brandShow'>
                 <div className='topBrandsDive'></div>
                 {

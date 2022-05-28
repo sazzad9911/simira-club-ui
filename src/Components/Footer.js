@@ -12,7 +12,7 @@ const Coloredline = ({ color }) => (
             height: 1
         }}
     />
-);
+); 
 const Footer = () => {
 
     return (
@@ -74,17 +74,27 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className='Footerbartwo'>
+               {
+                /*
+                 <div  className='Footerbartwo'>
                 <Coloredline color="#888" />
             </div>
-            <div>
+                */
+               }
+               <hr style={{
+                height: '1px',
+                width: '100%',
+                backgroundColor: '#888'
+               }}/>
+            <div style={{width:'100%'}}>
                 <p className='Footert'>By continuing past this page,
                     you agree to our Terms of Service, Cookie Policy,
                     Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2018-2022 © SmiraClub All rights reserved.
                 </p>
             </div>
+            </div>
+
+            
         </div>
     );
 };

@@ -12,6 +12,7 @@ import Loader from './../Content/Loader';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
  
@@ -20,6 +21,7 @@ const Membership = () => {
     const [Open,setOpen]=React.useState(false)
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         postData(url+'/getData',{
             tableName:'membership'
         }).then((data) => {
@@ -51,15 +53,15 @@ const Membership = () => {
                     </div>
                 </div>
                 <div className='Membershipcard-right'>
-                   <ScrollMenu>
-                   {
+                {
                     Data?(
                         Data.map((doc, i)=>(
+                            <div style={{width:'300px', height:'330px',margin:'5px'}}>
                             <Plans data={doc} key={i}/>
+                            </div>
                         ))
                     ):(<Loader/>)
                    }
-                   </ScrollMenu>
                 </div>
             </div>
             <div className='membershipHave'>
@@ -116,15 +118,64 @@ const Plans=(props)=>{
                 fontWeight: 500 }}>Benefits worth of ₹{data.price}</p>
             </div>
             <Link to={"/Checkout/"+data.id} style={{backgroundColor:data.color,
-            textDecoration:'none'}} className='membercardf'>
-                <div className='membertext' >
-                <p style={{ fontSize: 16,
-                 fontFamily: "'Plus Jakarta Sans', sans-serif", 
-                 fontWeight: 700,margin: '0px'}}>Become a Member</p></div>
-                <div className='membertext' ><p style={{ fontSize: 14,
+            textDecoration:'none', color:'#ffff'}} className='membercardf'>
+               <p id='txt' style={{ fontSize: 16,
+                  fontFamily: "'Plus Jakarta Sans', sans-serif", 
+                 fontWeight: 700, margin: '0px'}}>Become a Member</p>
+                <p id='txt' style={{ fontSize: 14,
                  fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  fontWeight: 500,margin: '0px'}}>at ₹{data.price} for {data.time} year </p></div>
+                  fontWeight: 500, margin: '0px'}}>at ₹{data.price} for {data.time} year </p>
             </Link>
     </div>
     )
 }
+function LeftArrow() {
+    const { isFirstItemVisible, scrollPrev } =
+      React.useContext(VisibilityContext);
+  
+    return (
+      <Arrow disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
+        Left
+      </Arrow>
+    );
+  }
+const Arrow=({data})=>{
+    const {
+        isFirstItemVisible,
+        scrollPrev,
+        visibleItemsWithoutSeparators,
+        initComplete,
+        isLastItemVisible,
+        scrollNext,
+      } = React.useContext(VisibilityContext);
+    return (
+        <button disabled={isFirstItemVisible} onClick={()=>scrollPrev()} style={{
+            height: '350px',
+            minWidth: '20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>
+       {
+        data=='left'?(
+            <ArrowBackIosIcon/>
+        ):(<></>)
+       }
+        </button>
+    )
+}
+
+function onWheel(apiObj: scrollVisibilityApiType, ev: React.WheelEvent): void {
+    const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+  
+    if (isThouchpad) {
+      ev.stopPropagation();
+      return;
+    }
+  
+    if (ev.deltaY < 0) {
+      apiObj.scrollNext();
+    } else if (ev.deltaY > 0) {
+      apiObj.scrollPrev();
+    }
+  }

@@ -5,7 +5,10 @@
 .optionLandBody {
     width: 96%;
     margin-left: 2%;
+    height:auto;
+    display: block;
 }
+
 .optionLandBody h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin-top: 30px;
@@ -37,7 +40,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #808080;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 5px;
@@ -51,24 +54,26 @@
 }
 
 .popularDealsView1 {
-    float: left;
     margin-bottom: 14px;
     margin-left: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
-
 .PopularDealsNameCart1 {
     display: flex;
-    float: left;
     justify-content: center;
     align-items: center;
     height: 30px;
+    min-width: 50px;
 }
 
 .PopularDealsNameCart1 h4 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #808080;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 5px;
@@ -81,9 +86,7 @@
 }
 
 .popularDealsView2 {
-    float: left;
     margin-bottom: 14px;
-    width: 100%;
 }
 
 .PopularDealsNameCart2 {
@@ -97,7 +100,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #808080;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 0px;
     margin-bottom: 10px;
     margin-right: 5px;
@@ -124,7 +127,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #808080;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 0px;
     margin-bottom: 10px;
     margin-right: 5px;

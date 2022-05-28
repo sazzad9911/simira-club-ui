@@ -92,8 +92,8 @@ const PopularHotels = () => {
             </div>
             ):(<></>)
            }
-            <div className='popularhotelsText'>
-                <h2>Popular Hotels</h2>
+            <div  className='popularhotelsText'>
+                <h2 style={{fontSize:'25px'}}>Popular hotels</h2>
             </div>
             <div ref={ref} onScroll={scroll} className='popularhotelsCart'>
                 <div className='topBrandsDive'></div>
