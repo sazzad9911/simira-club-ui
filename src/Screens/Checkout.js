@@ -13,6 +13,7 @@ import {postData, url} from '../action'
 function Checkout() {
     const {id}=useParams()
     const [Data,setData]= React.useState(null)
+    const [Plans,setPlans]= React.useState([])
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -21,6 +22,8 @@ function Checkout() {
             condition:'id='+id
         }).then(data=>{
             if(Array.isArray(data)){
+                const plans=data[0].plans.split(',');
+                setPlans(plans);
                 return setData(data[0])
             }
             console.log(data.message)
@@ -96,54 +99,18 @@ function Checkout() {
                 </div>
                 <div className="CheckoutRightLine" />
                 <div style={{ width: '10px', height: '30px', }} />
-                <div style={{ marginLeft: '50px', display: 'flex',}}>
+                {
+                    Plans.map((doc,i)=>(
+                        <div key={i} style={{ marginLeft: '50px', display: 'flex',}}>
                     <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
                         <path clipRule="evenodd" clipRule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
                     </svg>
-                    <p className="CheckoutRightText">Stays upto {Data?Data.night:''} nights</p>
+                    <p className="CheckoutRightText">{doc}</p>
                 </div>
-                <div style={{ marginLeft: '50px', display: 'flex', }}>
-                    <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
-                        <path fillRule="evenodd" clipRule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
-                    </svg>
-                    <p className="CheckoutRightText">Valid on any {Data?Data.hotel:''} hotels</p>
-                </div>
-                <div style={{ marginLeft: '50px', display: 'flex', }}>
-                    <div style={{ height: '25px', width: '25px', }}>
-                        <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
-                            <path clipRule="evenodd" clipRule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
-                        </svg>
-                    </div>
-                    <p className="CheckoutRightText">Family access upto {Data?Data.account:''} accounts</p>
-                </div>
-
-
-                <div style={{ marginLeft: '50px', display: 'flex', }}>
-                    <div style={{ height: '25px', width: '25px' }}>
-                        <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
-                        </svg>
-                    </div>
-                    <p className="CheckoutRightText">10 days prior to reservetion</p>
-                </div>
-                <div style={{ marginLeft: '50px', display: 'flex', }}>
-                    <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
-                    </svg>
-                    <p className="CheckoutRightText">Weekends booking</p>
-                </div>
-                <div style={{ marginLeft: '50px', display: 'flex', }}>
-                    <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
-                    </svg>
-                    <p className="CheckoutRightText">Peak days booking</p>
-                </div>
+                    ))
+                }
+                
                 <div style={{
                     height: '35px',
                 }} />

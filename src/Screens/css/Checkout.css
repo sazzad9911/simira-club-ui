@@ -163,7 +163,7 @@
 
 
 .CheckoutRightBody{
-    height: 450px;
+    height: auto;
     width: 40%;
     border: 1.5px solid #D8D8D8;
     border-radius: 15px;
