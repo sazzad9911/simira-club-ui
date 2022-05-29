@@ -101,11 +101,13 @@ function Checkout() {
                 <div style={{ width: '10px', height: '30px', }} />
                 {
                     Plans.map((doc,i)=>(
-                        <div key={i} style={{ marginLeft: '50px', display: 'flex',}}>
+                        <div key={i} style={{ marginLeft: '50px', display: 'flex'}}>
+                    <div style={{width:'25px', height:'25px'}}>
                     <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15.2905" cy="15.8652" r="15" fill={Data?Data.color:'#fff'} />
                         <path clipRule="evenodd" clipRule="evenodd" d="M13.5018 20.5752C13.2137 20.5752 12.9226 20.4651 12.7024 20.2434L9.12196 16.6644C8.68005 16.2225 8.68005 15.5076 9.12196 15.0657C9.56386 14.6238 10.2788 14.6238 10.7207 15.0657L13.5018 17.8438L19.8604 11.4867C20.3023 11.0448 21.0172 11.0448 21.4591 11.4867C21.901 11.9286 21.901 12.6435 21.4591 13.0854L14.3011 20.2434C14.0809 20.4651 13.7914 20.5752 13.5018 20.5752" fill="#FEF8EC" />
                     </svg>
+                    </div>
                     <p className="CheckoutRightText">{doc}</p>
                 </div>
                     ))
