@@ -158,7 +158,7 @@ const CitiesWeOfferName = (props) => {
     return (
         <div className='PopularDealsNameCart3'>
             <Link style={{textDecoration: 'none'}}
-                to="#" color="inherit" underline="none">
+                to={"/HotelList/"+props.CWO} color="inherit" underline="none">
                 <h4>{props.CWO}</h4>
             </Link>
         </div>

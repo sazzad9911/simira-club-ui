@@ -12,6 +12,7 @@
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .Showstar{
     display: flex;
@@ -251,14 +252,16 @@
 }
 
 .ShowcaseRight {
-    width: 400px;
+    width: 35%;
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
     border: 1px solid #D8D8D8;
     margin: 25px;
     padding:20px;
-    height: 570px;
+    max-height: 610px;
+    margin-right: 0px;
+    margin-left: 0px;
 
 }
 @media (max-width:1100px) {

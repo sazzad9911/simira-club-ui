@@ -37,6 +37,7 @@ import app from './firebase'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HotelList from './Screens/HotelList';
 
 function App() {
   const dispatch = useDispatch()
@@ -147,6 +148,7 @@ React.useEffect(() => {
       <Route path="/ShowCaseDeal/:id" element={<ShowCaseDeal />} />
       <Route path="/Career" element={<Career />} />
       <Route path="/JobDescription" element={<JobDescription />} />
+      <Route path="/HotelList/:search" element={<HotelList />} />
         <Route path="*" element={<NotFound />} />     
       </Routes>
       <div style={{ height: 50, width: '100%',marginTop:'0px' }}></div>

@@ -7,6 +7,12 @@ import TvIcon from '@mui/icons-material/Tv';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import { Link,useParams } from 'react-router-dom';
+import CCTV from '../Asset/Font/CCTV.svg'
+import Wifi from '../Asset/Font/Free Wifi.svg'
+import Gym from '../Asset/Font/Gym.svg'
+import Parking from '../Asset/Font/Parking.svg'
+import Swimming from '../Asset/Font/Swimming Pool.svg'
+import TV from '../Asset/Font/TV.svg'
 
 const SearchHotelCart = (props) => {
     const conditions = props.data.conditions.split(',')
@@ -62,7 +68,7 @@ const SearchHotelCart = (props) => {
                     </div>
                     <div style={{
                         display: 'flex',
-                        alignItems: 'center',
+                        alignItems: 'center', 
                     }}>
                         {
                             conditions ? (
@@ -73,13 +79,13 @@ const SearchHotelCart = (props) => {
                                                 height: '40px',
                                                 width: '40px',
                                                 borderRadius: '20px',
-                                                backgroundColor: '#ebe6e6',
+                                                backgroundColor: '#F5F5F5',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 marginRight: '8px'
                                             }}>
-                                                <NetworkWifi3BarIcon color="action" sx={{ fontSize: 20, }} />
+                                                <img src={Wifi} />
                                             </div>
                                         )
                                     } else if (cond == 'tv') {
@@ -88,28 +94,74 @@ const SearchHotelCart = (props) => {
                                                 height: '40px',
                                                 width: '40px',
                                                 borderRadius: '20px',
-                                                backgroundColor: '#ebe6e6',
+                                                backgroundColor: '#f5f5f5',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 marginRight: '8px'
                                             }}>
-                                                <TvIcon color="action" sx={{ fontSize: 20, }} />
+                                                <img src={TV} />
                                             </div>
                                         )
-                                    } else {
+                                    } else if(cond=='parking') {
                                         return (
                                             <div key={i} style={{
                                                 height: '40px',
                                                 width: '40px',
                                                 borderRadius: '20px',
-                                                backgroundColor: '#ebe6e6',
+                                                backgroundColor: '#f5f5f5',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 marginRight: '8px'
                                             }}>
-                                                <LocalParkingIcon color="action" sx={{ fontSize: 20, }} />
+                                                <img src={Parking} />
+                                            </div>
+                                        )
+                                    }else if (cond == 'cctv'){
+                                        return (
+                                            <div key={i} style={{
+                                                height: '40px',
+                                                width: '40px',
+                                                borderRadius: '20px',
+                                                backgroundColor: '#f5f5f5',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                marginRight: '8px'
+                                            }}>
+                                                <img src={CCTV} />
+                                            </div>
+                                        )
+                                    }else if(cond=='gym'){
+                                        return (
+                                            <div key={i} style={{
+                                                height: '40px',
+                                                width: '40px',
+                                                borderRadius: '20px',
+                                                backgroundColor: '#f5f5f5',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                marginRight: '8px'
+                                            }}>
+                                                <img src={Gym} />
+                                            </div>
+                                        )
+                                    }
+                                    else{
+                                        return (
+                                            <div key={i} style={{
+                                                height: '40px',
+                                                width: '40px',
+                                                borderRadius: '20px',
+                                                backgroundColor: '#f5f5f5',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                marginRight: '8px'
+                                            }}>
+                                                <img src={Swimming} />
                                             </div>
                                         )
                                     }

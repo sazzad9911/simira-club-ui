@@ -130,7 +130,7 @@ const Home = () => {
                 <div ref={ref} onScroll={scroll} id='scroll' className='HomeIconContainer'>
 
                     <div className='topBrandsDive'></div>
-                    <IconButton link='/Hotel' img={Hotels} title='Hotels' />
+                    <IconButton link='/HotelList' img={Hotels} title='Hotels' />
                     <IconButton link='/Restaurant' img={Restaurant} title='Restaurant' />
                     <IconButton link='/Games' img={Games} title='Games' />
                     <IconButton link='/Shopping' img={Shopping} title='Shopping' />

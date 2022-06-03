@@ -57,9 +57,11 @@ const ShowCaseDealBrand = (props) => {
                                     borderRadius: '30px',
                                     padding: '0px'
                                 }}>
-                                    <div className='buttonView'>
+                                    <a href={brands?brands.filter(d=>d.id ==id)[0].location:''} style={{
+                                        textDecoration: 'none'
+                                    }} className='buttonView'>
                                         <p className='buttonViewTxt'> VISIT STORE</p>
-                                    </div>
+                                    </a>
                                 </Button>
                             </div>
 

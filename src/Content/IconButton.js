@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 const IconButton = (props) => {
     return (
 
-        <Link style={{textDecoration: 'none'}} to={"/ShowCaseCategory"+props.link}>
+        <Link style={{textDecoration: 'none'}} to={props.title=='Hotels'?props.link+'/a':"/ShowCaseCategory"+props.link}>
             <button className='iconButtonbox'>
                 <img src={props.img} />
                 <h5>{props.title}</h5>

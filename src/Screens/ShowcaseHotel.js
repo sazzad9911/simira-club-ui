@@ -105,7 +105,7 @@ const ShowcaseHotel = (props) => {
     return (
         <div style={{
             width:'100%',
-            overflowX: 'hidden'
+            overflowX: 'hidden',
         }}>
             <img style={{marginTop:'30px'}} src={Data?Data.image:''} className='Hotelimg' />
             <div className='Showcase'>
@@ -150,7 +150,7 @@ const ShowcaseHotel = (props) => {
                                     )
                                 }else if (doc=='cctv'){
                                     return (
-                                        <img key={i} src={Swimming} className='showicon'/>
+                                        <img key={i} src={CCTV} className='showicon'/>
                                     )
                                 }else{
                                     return (
@@ -419,7 +419,6 @@ const ShowcaseHotel = (props) => {
                             border: '1px solid #FC444B',
                             borderRadius: '30px',
                             marginTop: '10px',
-                            marginBottom: '10px'
                         }} className='showconFButton'>
                         <p className='ShowsubmitText'>CONFIRM BOOKING</p>
                         </Button>

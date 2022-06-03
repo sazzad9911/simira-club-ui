@@ -1,5 +1,5 @@
 .mainbody {
-    height: 90%;
+    height: auto;
     width: 90%;
     border: 1px dashed #000000;
     display: flex;
@@ -75,7 +75,7 @@
 .offercodebutton:hover {
     background-color: #FC444B;
 
-}
+} 
 
 .offercodebuttonText {
     font-family: 'Plus Jakarta Sans', sans-serif;

@@ -64,7 +64,7 @@ const ShowCaseDealCart = () => {
     }
     return (
         <div>
-            <div className='mainbody'>
+            <div className='mainbody'> 
                 <div>
                     <img className="img61" src={brands && Data?brands.
                     filter(data=>data.id==Data.brand_id)[0].image:''} alt="img1" />
