@@ -39,7 +39,7 @@ const ShowCaseDeal = () => {
     },[id])
     const book=()=>{
         setError('')
-        if(!user|| !user[0].membership_type || dateDifference(user[0].starting_date,user[0].ending_date)<0){
+        if(!user|| !user[0].membership_type || dateDifference(new Date(),user[0].ending_date && !user[0].link)<0){
             setError('Please buy membership plan first.')
             return
         }

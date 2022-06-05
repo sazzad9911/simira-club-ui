@@ -16,7 +16,7 @@ import SignalWifi3BarIcon from '@mui/icons-material/SignalWifi3Bar';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Button from '@mui/material/Button';
 import { Link,useParams } from 'react-router-dom';
-import {postData, url,convertDate} from '../action'
+import {postData, url,convertDate,dateDifference} from '../action'
 import CCTV from '../Asset/Font/CCTV.svg'
 import Wifi from '../Asset/Font/Free Wifi.svg'
 import Gym from '../Asset/Font/Gym.svg'
@@ -101,6 +101,127 @@ const ShowcaseHotel = (props) => {
         }else{
             window.location.href='/Membership'
         }
+    }
+    const checkHotelBooking= () =>{
+        
+        if(user[0].link){
+            console.log('Family access granted')
+            setLoader(true)
+            postData(url + '/getData',{
+                tableName: 'user',
+                condition: "uid=" + "'" +user[0].link + "'"
+            }).then(data=>{
+                if(Array.isArray(data) && data.length > 0){
+                    getFamilyAccess(data[0])
+                    setLoader(false)
+                }
+                setError(data.message)
+                setLoader(false)
+            })
+            return
+        }
+        
+        if(user || !user[0].membership_type || parseInt(dateDifference(new Date(), user[0].ending_date))<0){
+            setError('Your membership plan has expired. Please renew your membership plan.')
+            return
+        }
+        setLoader(true) 
+        postData(url + '/getData',{
+            tableName:'membership',
+            condition: "type=" + "'"+user[0].membership_type+"'"
+        }).then(membership=>{
+            if(Array.isArray(membership) && membership.length > 0){
+                let totalHotels =0;
+                let totalNights =0;
+                postData(url + '/getData',{
+                tableName: 'hotel_booking',
+                condition: "user_id=" +"'"+ auth.currentUser.uid + "'"
+                }).then(data=>{
+             if(Array.isArray(data) && data.length > 0){
+                let id=data[0].hotel_id;
+                totalHotels=0;
+               data.forEach(doc=>{
+               if(doc.visible && dateDifference(user[0].starting_date,doc.date)>=0 && dateDifference(user[0].ending_date,doc.date)<0){
+                totalNights=totalNights+parseInt(dateDifference(doc.check_in, doc.check_out))
+                if(id!=doc.hotel_id){
+                    totalHotels=totalHotels+1;
+                    id =doc.hotel_id;
+                }
+               }
+             })
+             if(membership[0].hotel!='all' && membership[0].hotel<totalHotels ){
+                setError('Your hotel quota exceeded. Please renew your plan.')
+                setLoader(false);
+                return
+             }
+             if(membership[0].night!='unlimited' && membership[0].night<totalNights){
+                setError('You extend maximum level of your night spend quota. Please renew your plan')
+                setLoader(false);
+                return
+             }
+             setLoader(false);
+             Confirm()
+            //console.log(totalHotels);
+           // console.log(totalNights);
+            }else{
+                console.log(data.message)
+                return null;
+            }
+        })
+            }
+        })
+    }
+    const getFamilyAccess = (user) => {
+        
+        if(user || !user.membership_type || parseInt(dateDifference(new Date(), user.ending_date))<0){
+            setError('Your membership plan has expired. Please renew your membership plan.')
+            return
+        }
+        setLoader(true) 
+        postData(url + '/getData',{
+            tableName:'membership',
+            condition: "type=" + "'"+user.membership_type+"'"
+        }).then(membership=>{
+            if(Array.isArray(membership) && membership.length > 0){
+                let totalHotels =0;
+                let totalNights =0;
+                postData(url + '/getData',{
+                tableName: 'hotel_booking',
+                condition: "user_id=" +"'"+ user.uid + "'"
+                }).then(data=>{
+             if(Array.isArray(data) && data.length > 0){
+                let id=data[0].hotel_id;
+                totalHotels=0;
+               data.forEach(doc=>{
+               if(doc.visible && dateDifference(user.starting_date,doc.date)>=0 && dateDifference(user.ending_date,doc.date)<0){
+                totalNights=totalNights+parseInt(dateDifference(doc.check_in, doc.check_out))
+                if(id!=doc.hotel_id){
+                    totalHotels=totalHotels+1;
+                    id =doc.hotel_id;
+                }
+               }
+             })
+             if(membership[0].hotel!='all' && membership[0].hotel<totalHotels ){
+                setError('Your hotel quota exceeded. Please renew your plan.')
+                setLoader(false);
+                return
+             }
+             if(membership[0].night!='unlimited' && membership[0].night<totalNights){
+                setError('You extend maximum level of your night spend quota. Please renew your plan')
+                setLoader(false);
+                return
+             }
+             setLoader(false);
+             Confirm()
+            //console.log(totalHotels);
+           // console.log(totalNights);
+            }else{
+                console.log(data.message)
+                return null;
+            }
+        })
+            }
+        })
     }
     return (
         <div style={{
@@ -415,7 +536,7 @@ const ShowcaseHotel = (props) => {
                         <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '100%'}}>
                         <p style={{color: 'red'}}>{Error}</p>
                         </div>
-                        <Button onClick={Confirm} style={{
+                        <Button onClick={checkHotelBooking} style={{
                             border: '1px solid #FC444B',
                             borderRadius: '30px',
                             marginTop: '10px',

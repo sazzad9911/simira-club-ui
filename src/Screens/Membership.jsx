@@ -56,8 +56,8 @@ const Membership = () => {
                 {
                     Data?(
                         Data.map((doc, i)=>(
-                            <div style={{width:'300px', height:'330px',margin:'5px'}}>
-                            <Plans data={doc} key={i}/>
+                            <div key={i} style={{width:'300px', height:'330px',margin:'5px'}}>
+                            <Plans data={doc} />
                             </div>
                         ))
                     ):(<Loader/>)

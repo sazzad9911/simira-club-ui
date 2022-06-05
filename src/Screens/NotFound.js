@@ -16,4 +16,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;<p>Not match any route</p>
+export default NotFound;

@@ -5,8 +5,46 @@ import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import '../Screens/css/contact.css'
+import {postData,url} from '../action'
+import { getAuth } from 'firebase/auth';
+import app from './../firebase';
  
 const Contact = () => {
+    const auth = getAuth(app);
+    const [Loader,setLoader]= React.useState(false)
+    const [Name,setName]= React.useState()
+    const [Mobile,setMobile]= React.useState()
+    const [Message,setMessage]= React.useState()
+    const [Error,setError]= React.useState()
+
+    const send=()=>{
+        setError('')
+        if(!Name || !Mobile || !Message) {
+           setError('Opps! All field are required')
+           return;
+        }
+        setLoader(true);
+        setError('Loading...')
+        let date=new Date()
+        date=date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
+        postData(url +'/setData',{
+            auth:auth.currentUser,
+            tableName: 'customer_messages',
+            columns: ['name','phone','message','uid','date'],
+            values: [Name,Mobile, Message,auth.currentUser.uid,date]
+        }).then(data => {
+            setError('')
+            if(data.insertId) {
+                setLoader(true)
+                setName('')
+                setMobile('')
+                setMessage('')
+            }
+            console.log(data)
+        }).catch(err => {
+            setError('')
+        })
+    }
     return (     
             <div style={{marginTop:'100px', marginBottom:'100px' }} className='loginbody2'  style={{justifyContent: 'center'}}>
                 <div className='loginbodyleft2'>
@@ -20,18 +58,24 @@ const Contact = () => {
                             marginBottom: '30px'
                         }}>We’re here to help and answer <br/> any question you might have.</h1>
                         <div className='textinputview2'>
-                            <input className='textinput2' type='text' placeholder='Full name' />
+                            <input value={Name} onChange={(e)=>{
+                                setName(e.target.value)
+                            }} className='textinput2' type='text' placeholder='Full name' />
 
                         </div>
                         <div className='textinputview2'>
-                            <input className='textinput2' type='email' placeholder='Email' />
+                            <input value={Mobile} onChange={(e)=>{
+                                setMobile(e.target.value)
+                            }} className='textinput2' type='email' placeholder='Phone' />
 
                         </div>
                         <div className='textinputviewMess2'>
-                            <input className='textinputMess2' type='text' placeholder='Your message' />
+                            <input value={Message} onChange={(e)=>{
+                                setMessage(e.target.value)
+                            }} className='textinputMess2' type='text' placeholder='Your message' />
                         </div>
-                        
-                        <Button style={{
+                        {Error?(<p style={{color: 'red'}}>{Error}</p>):(<></>)}
+                        <Button onClick={send} style={{
                             height:'50px',
                             width:'400px',
                             borderRadius:'50px',
@@ -39,7 +83,7 @@ const Contact = () => {
                             padding: '0px'
                         }}>
                             <div className='loginButton2'>
-                                <p className='submitText2'>SUBMIT</p>
+                                <p className='submitText2'>{Loader?'DONE':'SUBMIT'}</p>
                             </div>
                         </Button>
                         <div className='forgotPlink2'>
