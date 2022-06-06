@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import { useSelector } from 'react-redux';
 import Loader from '../Content/Loader';
 
-import { Oval } from "react-loader-spinner";
 
 const PopularHotels = () => {
     const hotels = useSelector(state => state.Hotels)

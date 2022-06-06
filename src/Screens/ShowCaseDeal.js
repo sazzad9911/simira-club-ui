@@ -8,9 +8,9 @@ import { Link,useParams } from 'react-router-dom';
 import app from './../firebase';
 import { getAuth } from 'firebase/auth';
 import {postData, url,convertDate,dateDifference} from '../action'
-import { Oval } from 'react-loader-spinner';
 import '../Cart/css/ShowCaseDealCart.css'
 import Button from '@mui/material/Button';
+import Loader from './../Content/Loader';
 
 
 const ShowCaseDeal = () => {
@@ -97,7 +97,7 @@ const ShowCaseDeal = () => {
                 <p style={{color: 'red',margin:'0px'}}>{Error}</p>
                 {
                     Loading?(
-                        <Oval/>
+                        <Loader/>
                     ):(<></>)
                 }
                 <Button onClick={() =>{

@@ -1,20 +1,21 @@
-.loader {
-    border: 10px solid #f3f3f3;
+
+  .loader-spinner {
+    width: 4.5em;
+    height: 5em;
+    border: 3px solid transparent;
+    border-top-color: #fc2f70;
+    border-bottom-color: #fc2f70;
     border-radius: 50%;
-    border-top: 10px solid #FC444B;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
+    animation: spin-stretch 2s ease infinite;
   }
   
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  @keyframes spin-stretch {
+    50% {
+      transform: rotate(360deg) scale(0.4, 0.33);
+      border-width: 8px;
+    }
+    100% {
+      transform: rotate(720deg) scale(1, 1);
+      border-width: 3px;
+    }
   }

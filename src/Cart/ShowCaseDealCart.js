@@ -6,7 +6,7 @@ import { Link,useParams } from 'react-router-dom';
 import app from './../firebase';
 import { getAuth } from 'firebase/auth';
 import {postData, url,convertDate} from '../action'
-import { Oval } from 'react-loader-spinner';
+import Loader from './../Content/Loader';
 
 
 const ShowCaseDealCart = () => {
@@ -78,7 +78,7 @@ const ShowCaseDealCart = () => {
                 <p style={{color: 'red',margin:'0px'}}>{Error}</p>
                 {
                     Loading?(
-                        <Oval/>
+                       <Loader/>
                     ):(<></>)
                 }
                 <Button onClick={() =>{

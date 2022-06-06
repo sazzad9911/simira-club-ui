@@ -34,7 +34,7 @@ const OptionLand = (props) => {
            <div>
             <h2 style={{ 
                 color:'#585858',
-                marginLeft:'5%',
+                marginLeft:'5%', 
                 fontSize: '25px',
             }}>Popular Hotels</h2>
             <div className='popularDealsView1'>
@@ -48,7 +48,7 @@ const OptionLand = (props) => {
                                </Link>
                               <h3 className='dot1'>.</h3> 
                             </div>
-                        ):(<></>)
+                        ):(<div key={i}></div>)
                     ))
                 ):(<Loader/>)
             }
@@ -66,7 +66,7 @@ const OptionLand = (props) => {
                         brands.map((doc,i)=>(
                             i<30?(
                                 <TopBrandsName key={i} id={doc.id} TBWU={doc.name}></TopBrandsName>
-                            ):(<></>)
+                            ):(<div key={i}></div>)
                         ))
                     ):(<Loader/>)
                 }
@@ -86,7 +86,7 @@ const OptionLand = (props) => {
                     Address.map((doc,i)=>(
                         <CitiesWeOfferName key={i} CWO={doc.city}></CitiesWeOfferName>
                     ))
-                ):(<></>)
+                ):(<div></div>)
             }
             </div>
 

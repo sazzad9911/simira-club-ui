@@ -5,9 +5,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
 
-import { Oval } from "react-loader-spinner";
 import { postData, url, setBrands } from "../action";
 import { useDispatch, useSelector } from 'react-redux';
+import Loader from './../Content/Loader';
 
 const TopBrands = (props) => {
     const ref = createRef()
@@ -126,15 +126,7 @@ const TopBrands = (props) => {
 
                         ))
                     ) : (
-                        <div style={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '100%',
-                            height: '100%'
-                        }}>
-                            <Oval color="#FC444B" height={80} width={80} />
-                        </div>
+                        <Loader/>
                     )
                 }
                 <div className='topBrandsDive'></div>

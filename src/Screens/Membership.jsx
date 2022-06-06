@@ -13,12 +13,17 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { getAuth } from 'firebase/auth';
+import app from './../firebase';
 
 
  
 const Membership = () => {
     const [Data,setData]=React.useState(null)
     const [Open,setOpen]=React.useState(false)
+    const [MembershipFamilyCode, setMembershipFamilyCode] = useState("")
+    const [MemberShipFamilyCodeError, setMemberShipFamilyCodeError] = useState()
+    const auth=getAuth(app)
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -31,6 +36,53 @@ const Membership = () => {
             console.log(data.message)
         })
     },[])
+    const addCode=() =>{
+        setMemberShipFamilyCodeError('Loading...')
+        let code=MembershipFamilyCode.replace(/\s|-/gi,"")    
+        postData(url + '/getData',{
+          tableName: 'family_code',
+          condition:"code="+ "'" +code+"'"
+        }).then(data=>{
+          if(Array.isArray(data) && data.length>0){
+            if(!data[0].user_id){
+              setMemberShipFamilyCodeError('')
+              postData(url + '/updateData',{
+                "tableName":"user",
+                "columns":["link"],
+                "values":[data[0].buyer_id],
+                "condition":"uid="+ "'" +auth.currentUser.uid+"'"
+              }).then(data => {
+                if(data.affectedRows){
+                    setMemberShipFamilyCodeError('Loading...')
+                  confirm(code)
+                }else{
+                  setMemberShipFamilyCodeError(data.message)
+                }
+              })
+            }else{
+              setMemberShipFamilyCodeError('Your code has already been used.')
+              return
+            }
+          }else{
+            setMemberShipFamilyCodeError('Incorrect code')
+          }
+        })
+      }
+      const confirm=(code)=>{
+        postData(url + '/updateData', {
+          tableName: 'family_code',
+          columns: ['user_id'],
+          values: [auth.currentUser.uid],
+          condition:"code=" + "'" + code+ "'"
+        }).then(data=>{
+          console.log(data)
+          setMemberShipFamilyCodeError('Your family access granted!!')
+          setTimeout(()=>{
+            window.location.reload()
+          },400)
+        })
+        
+    }
     return (
         <div style={{
             width:'100%',
@@ -83,9 +135,17 @@ const Membership = () => {
             <Modal open={Open} onClose={()=>setOpen(!Open)}>
             <div className="membershipFamily">
             <p>Membership Family Code</p>
-            <input type="text" placeholder="XXXX - XXXX - XXXX - XXXX">
+            <input value={MembershipFamilyCode} onChange={e=>{
+                let text=e.target.value;
+                if(text.length==4 || text.length==11 || text.length==18){
+                  setMembershipFamilyCode(text+' - ');
+                }else if(text.length<=25){
+                  setMembershipFamilyCode(text)
+                }
+            }} type="text" placeholder="XXXX - XXXX - XXXX - XXXX">
             </input>
-            <button>ADD FAMILY CODE</button>
+            {MemberShipFamilyCodeError?(<p style={{color:'red'}}>{MemberShipFamilyCodeError}</p>):(<></>)}
+            <button onClick={addCode}>ADD FAMILY CODE</button>
             </div>
             </Modal>
         </div>

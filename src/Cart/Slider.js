@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Slide } from "react-slideshow-image";
-import 'react-slideshow-image/dist/styles.css'
 import './css/slider.css'
-import { Oval } from "react-loader-spinner";
 import { postData, url } from "../action";
 import { useSelector } from "react-redux";
 import Carousel from 'react-bootstrap/Carousel'
 import { AiFillAccountBook } from "react-icons/ai";
+import Loader from './../Content/Loader';
 
 const Slider = () => {
    const data= useSelector(state => state.Banners)
@@ -31,15 +29,7 @@ const Slider = () => {
                                 </Carousel.Item>
                             ))
                 ) : (
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: '100%',
-                        height: '100%'
-                    }}>
-                        <Oval color="#FC444B" height={80} width={80} />
-                    </div>
+                    <Loader/>
                 )
             }
         </Carousel>

@@ -8,8 +8,8 @@ import { postData, url, setDeals } from '../action';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Loader from './../Content/Loader';
 
-import { Oval } from "react-loader-spinner";
 
 const PopularDeal = () => {
     const ref = createRef()
@@ -124,15 +124,7 @@ const PopularDeal = () => {
                             </DealCart>
                         ))
                     ) : (
-                        <div style={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '100%',
-                            height: '100%'
-                        }}>
-                            <Oval color="#FC444B" height={80} width={80} />
-                        </div>
+                        <Loader/>
                     )
                 }
                 <div className='topBrandsDive'></div>
