@@ -5,6 +5,9 @@ import AppOverView from './../Cart/AppOverView';
 import Img from './Image/Careers.PNG'
 
 function TermsAndConditions() {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
        <div>
         <div className="TermsBody">
@@ -87,7 +90,7 @@ function TermsAndConditions() {
             <AppOverView />
             </div>
             <OptionLand />
-            <div style={{ height: 50, width: '100%',marginTop:'220px' }}></div>
+           
        </div>
     );
 }

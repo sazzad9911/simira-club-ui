@@ -5,44 +5,42 @@ import Button from '@mui/material/Button';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import '../Screens/css/contact.css'
 import {postData,url} from '../action'
-import { getAuth } from 'firebase/auth';
+import { getAuth,updatePassword } from 'firebase/auth';
 import app from './../firebase';
  
-const Contact = () => {
+const ChangePassword = () => {
     const auth = getAuth(app);
     const [Loader,setLoader]= React.useState(false)
     const [Name,setName]= React.useState()
     const [Mobile,setMobile]= React.useState()
     const [Message,setMessage]= React.useState()
     const [Error,setError]= React.useState()
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
 
     const send=()=>{
         setError('')
-        if(!Name || !Mobile || !Message) {
+        if(!Name) {
            setError('Opps! All field are required')
            return;
         }
         setLoader(true);
         setError('Loading...')
-        let date=new Date()
-        date=date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
-        postData(url +'/setData',{
-            auth:auth.currentUser,
-            tableName: 'customer_messages',
-            columns: ['name','phone','message','uid','date'],
-            values: [Name,Mobile, Message,auth.currentUser.uid,date]
-        }).then(data => {
-            setError('')
-            if(data.insertId) {
-                setLoader(true)
-                setName('')
-                setMobile('')
-                setMessage('')
-            }
-            console.log(data)
-        }).catch(err => {
-            setError('')
-        })
+        if(!auth.currentUser){
+            setError('Invalid user singing.')
+            return;
+        }
+        updatePassword(auth.currentUser, Name).then(() => {
+            // Update successful.
+            setError('Password updated successfully')
+          }).catch((error) => {
+            // An error ocurred
+            // ...
+            setError(error.code)
+          });
+          
+        
     }
     return (     
             <div style={{marginTop:'100px', marginBottom:'100px' }} className='loginbody2'  style={{justifyContent: 'center'}}>
@@ -54,25 +52,16 @@ const Contact = () => {
                     <div style={{display: 'block',}} className='loginbodyrightbody2'>
                         <h1 style={{
                             fontSize: '22px',
-                            marginBottom: '30px'
-                        }}>We’re here to help and answer <br/> any question you might have.</h1>
+                            marginBottom: '30px',
+                            textAlign: 'center'
+                        }}>Change password</h1>
                         <div className='textinputview2'>
                             <input value={Name} onChange={(e)=>{
                                 setName(e.target.value)
-                            }} className='textinput2' type='text' placeholder='Full name' />
+                            }} className='textinput2' type='text' placeholder='New password' />
 
                         </div>
-                        <div className='textinputview2'>
-                            <input value={Mobile} onChange={(e)=>{
-                                setMobile(e.target.value)
-                            }} className='textinput2' type='email' placeholder='Phone' />
-
-                        </div>
-                        <div className='textinputviewMess2'>
-                            <input value={Message} onChange={(e)=>{
-                                setMessage(e.target.value)
-                            }} className='textinputMess2' type='text' placeholder='Your message' />
-                        </div>
+                        
                         {Error?(<p style={{color: 'red'}}>{Error}</p>):(<></>)}
                         <Button onClick={send} style={{
                             height:'50px',
@@ -118,4 +107,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ChangePassword;

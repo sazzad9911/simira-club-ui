@@ -35,14 +35,14 @@ const Header = () => {
             <div className="header-top">
                 <div>
                     <LocationOnIcon />
-                    <p style={{ margin:'0px'}}>Mumbai, Maharashtra</p>
+                    <p style={{ margin:'0px'}}>India</p>
                 </div>
                 <div>
-                    <Link to='/Career' style={{textDecoration: 'none'}}>
+                    {/* <Link to='/Career' style={{textDecoration: 'none'}}>
                         <button style={{
                             borderRight: '1px solid #ffff'
                         }}>We are hiring!</button>
-                    </Link>
+                    </Link> */}
                     <Link to='/TermsAndConditions' style={{textDecoration: 'none'}}>
                     <button style={{
                         borderRight: '1px solid #ffff'
@@ -116,7 +116,7 @@ const Header = () => {
                                 </Link>
 
                             ) : (
-                                <Link style={{textDecoration: 'none'}} to="/Login" color="inherit">
+                                <Link style={{textDecoration: 'none',color:'#FC444B'}} to="/Login" color="inherit">
                                     <div style={{
                                         backgroundColor: '#ffff',
                                         width: 120,

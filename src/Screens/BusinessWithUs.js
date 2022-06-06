@@ -11,9 +11,9 @@ const BusinessWithUs = () => {
  
             <div className='loginbody3' style={{ justifyContent: 'center',marginTop:'100px',marginBottom:'100px' }}>
 
-                <div className='loginbodyleft3'  >
+                {/* <div className='loginbodyleft3'  >
                     <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg12'></img>
-                </div>
+                </div> */}
                 <div className='loginbodyright3'>
                     <div className='loginbodyrightbody3'>
                         <h1>We’re here to help you grow your business online.</h1>

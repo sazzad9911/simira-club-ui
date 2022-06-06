@@ -21,9 +21,9 @@ const Footer = () => {
                 <div className='footerbox'>
                     <div className='Footertxt'>
                         <h5 className='Footerfont-style'>COMPANY</h5>
-                        <div className='Footerlink'>
+                        {/* <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color: '#808080'}} to="/Career" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Careers</Link><br></br>
-                        </div>
+                        </div> */}
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="/Contact" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Contact</Link><br></br>
                         </div>
@@ -40,7 +40,7 @@ const Footer = () => {
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Privacy</Link><br></br>
                         </div>
                         <div className='Footerlink'>
-                            <Link style={{textDecoration: 'none',color:'#808080'}} to="/TermsAndConditions" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Tems</Link><br></br>
+                            <Link style={{textDecoration: 'none',color:'#808080'}} to="/TermsAndConditions" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Terms & Conditions</Link><br></br>
                         </div>
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Support</Link>

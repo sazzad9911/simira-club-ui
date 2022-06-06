@@ -14,7 +14,8 @@ import Button from '@mui/material/Button';
 import {useSelector} from 'react-redux'
 import {postData, url,convertDate} from '../action'
 import app from './../firebase';
-import { getAuth } from 'firebase/auth';
+import { getAuth,signOut } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 
 const MyProfile = (props) => {
@@ -160,16 +161,35 @@ const MyProfile = (props) => {
                         </div>
                     </div>
                     <div className='MyProfileTexts'>
-                        <Button style={{
+                        <Link to='/ForgetPassword' style={{
                             marginTop: '20px',
-                            color:'#000000'
-                        }}>Forgot password?</Button>
-                        <Button style={{
+                            color:'#000000',
+                            textDecoration: 'none',
+                            marginRight: '10px',
+                            fontWeight: '600'
+                        }}>Forgot password?</Link>
+                        <Link to='/LogIn2' style={{
                             marginTop: '20px',
-                            marginLeft:'-10px',
                             color:'red',
-                        }}>Change password</Button>
+                            textDecoration: 'none',
+                            fontWeight: '600'
+                        }}>Change password</Link>
                     </div>
+                    <Button onClick={()=>{
+                        signOut(auth).then(() => {
+                       window.location.href='/'
+                     }).catch((error) => {
+                       // An error happened.
+                     });
+                    }} style={{
+                        backgroundColor:'#FC444B',
+                        color:'white',
+                        width: '100%',
+                        height: '60px',
+                        borderRadius: '30px'
+                    }}>
+                        Log Out
+                    </Button>
                 </div>
             </div>
         </div>

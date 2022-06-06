@@ -38,6 +38,9 @@ import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HotelList from './Screens/HotelList';
+import ChangePassword from './Screens/ChangePassword';
+import ForgetPassword from './Screens/ForgetPassword';
+import Login2 from './Components/LogIn2';
 
 function App() {
   const dispatch = useDispatch()
@@ -140,6 +143,7 @@ React.useEffect(() => {
       <Route path="/Contact" element={<Contact />} />
       <Route path="/BusinessWithUs" element={<BusinessWithUs />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Login2" element={<Login2 />} />
       <Route path="/Membership" element={<Membership />} />
       <Route path="/Checkout/:id" element={<Checkout />} />
       <Route path="/Profile" element={<MyProfile />} />
@@ -148,6 +152,8 @@ React.useEffect(() => {
       <Route path="/ShowCaseDeal/:id" element={<ShowCaseDeal />} />
       <Route path="/Career" element={<Career />} />
       <Route path="/JobDescription" element={<JobDescription />} />
+      <Route path="/ChangePassword" element={<ChangePassword />} />
+      <Route path="/ForgetPassword" element={<ForgetPassword />} />
       <Route path="/HotelList/:search" element={<HotelList />} />
         <Route path="*" element={<NotFound />} />     
       </Routes>

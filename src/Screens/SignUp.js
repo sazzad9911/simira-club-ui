@@ -76,7 +76,8 @@ const SignUp = () => {
                             ):(<></>)
                         }
                         <div className='forgotPlink1'>
-                            <Link style={{textDecoration: 'none',color:"#FC444B"}} underline="none" color="black" to="#">Forgot Password?</Link>
+                            <Link style={{textDecoration: 'none',color:"#FC444B"}} underline="none" color="black"
+                             to="/ForgetPassword">Forgot Password?</Link>
                         </div>
                         <Button onClick={SignUp} style={{
                             marginTop: '20px',

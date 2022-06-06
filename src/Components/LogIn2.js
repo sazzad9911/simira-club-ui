@@ -13,7 +13,7 @@ import app from '../firebase'
 import { Link } from 'react-router-dom';
 import Loader from './../Content/Loader';
 
-const Login = (props) => {
+const Login2 = (props) => {
     const dispatch = useDispatch()
     const [Email, setEmail] = React.useState()
     const [Password, setPassword] = React.useState()
@@ -37,7 +37,7 @@ const Login = (props) => {
                 condition: "uid="+"'"+user.uid+"'"
             }).then(data => {
                 dispatch(setUser(data))
-                window.location.href='/'
+                window.location.href='/ChangePassword'
             })
             
         }).catch(err => {
@@ -56,7 +56,7 @@ const Login = (props) => {
             </div>
             <div className='loginbodyright'>
                 <div className='loginbodyrightbody'>
-                    <h1>Login into your existing <br></br> account</h1>
+                    <h1>Please log into your account first</h1>
                     <div className='textinputview'>
                         <input onChange={(e) => setEmail(e.target.value)} className='textinput' type='email' placeholder='Email' />
 
@@ -122,4 +122,4 @@ const Login = (props) => {
     );
 };
 
-export default Login;
+export default Login2;

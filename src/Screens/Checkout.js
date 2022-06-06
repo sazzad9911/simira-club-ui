@@ -309,13 +309,13 @@ const checkCard = () => {
     return (
         <div className="CheckoutBody">
         
-            <div className="CheckoutLeftBOX">
-                <h1 className="CheckoutText">Start your 30-day trial now!</h1>
+            <div  className="CheckoutLeftBOX">
+                {/* <h1 className="CheckoutText">Start your 30-day trial now!</h1>
                 <p className="CheckoutTextP">We won't charge you today. Your payment</p>
                 <div className="CheckoutTextPdiv">
                     <p className="CheckoutTextP">day will be on</p>
                     <p className="CheckoutLeftP">{Months[date.getMonth()+1]+' '+date.getDate()+' '+date.getFullYear()}</p>
-                </div>
+                </div> */}
                 <h2 className="CheckoutLeftH2">Payment Method</h2>
                 <div className="CheckoutLeftH2">
                     <FormControl>
@@ -326,7 +326,7 @@ const checkCard = () => {
                             name="radio-buttons-group"
                         >
                             <FormControlLabel value="pay" control={<Radio />} label="Pay now with UPI, Netbanking & Wallet" />
-                            <FormControlLabel value="later" control={<Radio />} label="Pay later with credit or debit card" />
+                            {/* <FormControlLabel value="later" control={<Radio />} label="Pay later with credit or debit card" /> */}
                         </RadioGroup>
                     </FormControl>
                     {/*<div className="CheckoutLeftBDiv">

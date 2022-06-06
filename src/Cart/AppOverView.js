@@ -35,7 +35,7 @@ const AppOverView = () => {
     }
     return (
         <div className='AppOverViewBody'>
-                <div className='AppOverViewLaftDiv'>
+                {/* <div className='AppOverViewLaftDiv'>
                     <img className='AppOverViewImg' src={Photo} />
                 </div> 
                 <div className='AppOverViewRightDiv'>
@@ -108,7 +108,10 @@ const AppOverView = () => {
                         </div>
                     </div>
                    </div>
-                </div>
+                </div> */}
+                <img style={{
+                    width: '100%'
+                }} src={require('./content.png')}/>
 
         </div>
     );
