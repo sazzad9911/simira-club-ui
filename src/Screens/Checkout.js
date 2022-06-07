@@ -40,6 +40,8 @@ function Checkout() {
     const [Action,setAction]= React.useState(false)
     const [AllCoupons,setAllCoupons]= React.useState()
     const [CouponDetails, setCouponDetails]= React.useState()
+    const [CouponUser, setCouponUser]= React.useState(null)
+    const [PromoUser,setPromoUser]= React.useState(null)
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -62,7 +64,7 @@ function Checkout() {
                 condition: "uid=" + "'" +auth.currentUser.uid +"'"
             }).then(user=>{
                 if(Array.isArray(user)&& user.length > 0){
-                    console.log(user)
+                    //console.log(user)
                    return setUser(user[0]);
                 }
                 console.log(user.message)
@@ -78,6 +80,15 @@ function Checkout() {
                 setCodes(data);
             }
         })
+        postData(url + '/getData', {
+            tableName: 'cuppon_user', 
+        }).then((data) =>{ 
+            if(Array.isArray(data)){
+                console.log(data)
+               return setCouponUser(data)
+            }
+            console.log(data.message)
+        })
     },[Action])
     React.useEffect(() => {
         postData(url + '/getData', {
@@ -89,8 +100,9 @@ function Checkout() {
             }
             console.log(data.message)
         })
-    },[])
-    const handlePayment = async (params) => {
+       
+    },[Action])
+    const handlePayment = async () => {
         let discount=CouponDetails?(CouponDetails.offer*Data.price)/100:0
         
        await postData(url +'/makePayment',{
@@ -115,14 +127,15 @@ function Checkout() {
                             console.log(data)
                         })
                         if(CouponDetails){
-                            postData(url + '/updateData',{
-                                tableName: 'cuppon_code',
-                                columns: ['used'],
-                                values: [1],
-                                condition:"id =" +CouponDetails.id
+                            postData(url + '/setData',{
+                                tableName: 'cuppon_user',
+                                columns: ['uid','code'],
+                                values: [User.uid,CouponDetails.code],
+                                auth:auth.currentUser
                             }).then(data=>{
                                 console.log(data)
                             })
+                            setAction(!Action)
                         }
                         return setUserWithAmount()
                     },
@@ -268,26 +281,31 @@ const checkCard = () => {
     })
     
 }
-    const checkCode=()=>{
-        setError('')
+const checkCode=async()=>{
+    await postData(url + '/getData',{
+        tableName: 'promo_user',
+        condition:"uid='"+User.uid+"' AND code='"+PromoCode+"'",
+    }).then(data=>{
+        console.log(data)
+        if(Array.isArray(data) && data.length > 0){
+            setError('You have already use this code')
+            return
+        }else{
+            setError('')
        let filter=Codes.filter(d=>d.code==PromoCode)
-       if(filter && filter.length>0 && filter[0].used){
-        console.log('Your code has already been used.')
-        setError('Your code has already been used.')
-        return false
-       }else if(filter==0){
+       if(!Array.isArray(filter) || filter.length==0){
         console.log('Invalid promo code')
         setError('Invalid promo code')
         return false
        }else{
         setError('Loading...')
-        postData(url + '/updateData',{
-            "tableName":"promo_code",
-            "condition":"code='"+PromoCode+"'",
-            "values":[1],
-            "columns":["used"]
+        postData(url + '/setData',{
+            auth: auth.currentUser,
+            tableName:"promo_user",
+            values:[User.uid,PromoCode],
+            columns:["uid","code"]
         }).then(data => {
-            if(data.affectedRows){
+            if(data.insertId){
               return  setUserWithPromoCode()
             }
             setError('')
@@ -295,16 +313,26 @@ const checkCard = () => {
         })
         return true
        }
-    }
-    const submit=()=>{
+        }
+    })
+       
+}
+const submit=()=>{
+        if(!User){
+            window.location.href ='/LogIn'
+            return
+        }
         if(PromoCode && !Check){
             checkCode()
-        }else if(Check && Check=='later'){
+        }else if(Check && Check=='later' && !PromoCode){
             checkCard()
-        }else if(Check && Check=='pay'){
+        }else if(Check && Check=='pay' && !PromoCode){
             handlePayment()
+        }else if(PromoCode && Check){
+            setError('You can only use promo code or payment method. Please remove code for payment.')
+            checkCode()
         }
-    }
+}
 
     return (
         <div className="CheckoutBody">
@@ -381,11 +409,16 @@ const checkCard = () => {
                 </div>
                 <div className="CheckoutLeftInputPromo">
                     <input onChange={e=>{
+                        if(!CouponUser){
+                            return
+                        }
+                        let user=CouponUser.length>0?CouponUser.filter(u=>u.uid==User.uid && u.code==e.target.value):false
                         let coupons=AllCoupons.filter(c=>c.code==e.target.value)
+                        if(Array.isArray(user) && user.length > 0){
+                            setError('You already have used this code.')
+                            return
+                        }
                         if(Array.isArray(coupons)&& coupons.length>0){
-                            if(coupons[0].used){
-                                return setError('This coupon code is already used')
-                            }
                             setError('Congrats!! Coupon code is matched')
                             setCouponDetails(coupons[0])
                             console.log(coupons[0])

@@ -38,6 +38,10 @@ const ShowCaseDeal = () => {
         })
     },[id])
     const book=()=>{
+        if(!user){
+            window.location.href='/LogIn'
+            return
+        }
         setError('')
         if(!user|| !user[0].membership_type || dateDifference(new Date(),user[0].ending_date && !user[0].link)<0){
             setError('Please buy membership plan first.')

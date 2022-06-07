@@ -103,6 +103,10 @@ const ShowcaseHotel = (props) => {
         }
     }
     const checkHotelBooking= () =>{
+        if(!user){
+            window.location.href='/LogIn'
+            return
+        }
         
         if(user[0].link){
             console.log('Family access granted')
