@@ -22,14 +22,14 @@ import {Link} from 'react-router-dom'
 const Header = () => {
     const width = window.innerWidth
     const user = useSelector(state => state.User)
-    const [height, setHeight] = React.useState('66px')
+    const [height, setHeight] = React.useState('75px')
     let name = ''
     if (user) {
         name = user[0].name.split(' ')
         name = name[0]
     }
 
-
+ 
     return (
         <div className="header">
             <div className="header-top">
@@ -54,9 +54,12 @@ const Header = () => {
                 </div>
             </div>
             <div style={{ height: height }} className="header-bottom">
-                <div className='header-content'> 
+                <div className='header-content'>  
                     <Link to='/' style={{textDecoration: 'none'}} >
-                        <img src={Icon} />
+                        <img style={{
+                            height: '70px',
+                            width: '70px',
+                        }} src={Icon} />
                     </Link>
                     <Link to='/Search' style={{textDecoration: 'none'}}>
                         <div className='searchContainer'>

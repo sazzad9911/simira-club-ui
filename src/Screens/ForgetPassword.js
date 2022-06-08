@@ -27,7 +27,7 @@ const ForgetPassword = () => {
         setError('Loading...')
         sendPasswordResetEmail(auth, Name)
           .then(() => {
-            setError('Password reset email sent successfully! Please check email')
+            setError('Password reset email sent successfully! Please check email. If did not get then check spam box')
           })
           .catch((error) => {
             const errorCode = error.code;

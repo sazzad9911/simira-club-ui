@@ -51,9 +51,9 @@ const Login = (props) => {
 
         <div style={{ justifyContent: 'center' }} className='loginbody'>
 
-            <div className='loginbodyleft'>
+            {/* <div className='loginbodyleft'>
                 <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg1'></img>
-            </div>
+            </div> */}
             <div className='loginbodyright'>
                 <div className='loginbodyrightbody'>
                     <h1>Login into your existing <br></br> account</h1>

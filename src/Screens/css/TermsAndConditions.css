@@ -24,9 +24,24 @@
     display: flex;
     
 }
+.TermsBody strong{
+    margin-top: 50px;
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #000000;
+}
 .TermsPDiv p{
     opacity: .7;
     font-weight: 200;
+    font-size: 24px;
+    color: #585858;
+    margin-left: 12px;
+    text-align: justify;
+}
+.TermsPDiv li{
+    opacity: .7;
+    font-weight: 100;
     font-size: 24px;
     color: #585858;
     margin-left: 12px;

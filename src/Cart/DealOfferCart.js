@@ -21,11 +21,11 @@ const Dealoffercart = (props) => {
                          <div>
                             <p className='headline6'>{data.name}</p>
                         </div>
-                        <div className='headlineReft'>
+                        {/* <div className='headlineReft'>
                             <Button>
                                 <FavoriteBorderIcon sx={{ color: pink[500] }} />
                             </Button>
-                        </div>
+                        </div> */}
                     </div>
                     <p className='text2'>{deals?deals.filter(d=>d.brand_id==data.id).length+' Offers Available':'0'+' Offers Available'}</p>
                     <div className='buttonView6'>

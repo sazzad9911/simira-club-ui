@@ -68,6 +68,10 @@ const ShowcaseHotel = (props) => {
         })
     },[id])
     const Confirm = () => {
+        if(!user){
+            window.location.href='/LogIn'
+        }
+        
         if(Room<1){
             setError('Please select any room')
             return
@@ -103,11 +107,18 @@ const ShowcaseHotel = (props) => {
         }
     }
     const checkHotelBooking= () =>{
+        if(!CheckIn || !CheckOut || !Adults || !Room){
+            setError('Please set all fields correctly.')
+            return
+        }
         if(!user){
             window.location.href='/LogIn'
             return
         }
-        
+        if(!user[0].membership_type){
+            window.location.href='/Membership'
+            return
+        }
         if(user[0].link){
             console.log('Family access granted')
             setLoader(true)
@@ -125,7 +136,7 @@ const ShowcaseHotel = (props) => {
             return
         }
         
-        if(user || !user[0].membership_type || parseInt(dateDifference(new Date(), user[0].ending_date))<0){
+        if(!user[0].membership_type || parseInt(dateDifference(new Date(), user[0].ending_date))<0){
             setError('Your membership plan has expired. Please renew your membership plan.')
             return
         }
@@ -168,8 +179,8 @@ const ShowcaseHotel = (props) => {
             //console.log(totalHotels);
            // console.log(totalNights);
             }else{
-                console.log(data.message)
-                return null;
+                setLoader(false);
+                Confirm()
             }
         })
             }
@@ -177,7 +188,7 @@ const ShowcaseHotel = (props) => {
     }
     const getFamilyAccess = (user) => {
         
-        if(user || !user.membership_type || parseInt(dateDifference(new Date(), user.ending_date))<0){
+        if( !user.membership_type || parseInt(dateDifference(new Date(), user.ending_date))<0){
             setError('Your membership plan has expired. Please renew your membership plan.')
             return
         }
@@ -220,8 +231,7 @@ const ShowcaseHotel = (props) => {
             //console.log(totalHotels);
            // console.log(totalNights);
             }else{
-                console.log(data.message)
-                return null;
+                Confirm()
             }
         })
             }

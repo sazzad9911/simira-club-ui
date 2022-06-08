@@ -108,7 +108,11 @@
     font-weight: 500;
     color: #000000;
     font-size: 32px;
+    flex-wrap: wrap;
 
+}
+.MyProfileText span {
+    color: #FC444B;
 }
 .MyProfileTexts {
     justify-content: center;

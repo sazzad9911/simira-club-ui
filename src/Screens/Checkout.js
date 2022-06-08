@@ -31,7 +31,7 @@ function Checkout() {
     const [CVV,setCVV]= React.useState()
     const Months=['January','February','March','April','May','June','July','August','September','October','November','December']
     const date=new Date()
-    const [Check,setCheck]= React.useState()
+    const [Check,setCheck]= React.useState('pay')
     const Razorpay = useRazorpay();
     const [Error,setError]= React.useState()
     const auth = getAuth(app)
@@ -208,6 +208,9 @@ function Checkout() {
             console.log(data)
         })
         setError('Membership plan purchase successful. We have send you a email.')
+        setTimeout(()=>{
+            window.location.href='/'
+        },400)
         
     }
     const setUserWithPromoCode =()=>{
@@ -335,7 +338,7 @@ const submit=()=>{
 }
 
     return (
-        <div className="CheckoutBody">
+        <div className="CheckoutBody"> 
         
             <div  className="CheckoutLeftBOX">
                 {/* <h1 className="CheckoutText">Start your 30-day trial now!</h1>
@@ -344,6 +347,7 @@ const submit=()=>{
                     <p className="CheckoutTextP">day will be on</p>
                     <p className="CheckoutLeftP">{Months[date.getMonth()+1]+' '+date.getDate()+' '+date.getFullYear()}</p>
                 </div> */}
+                <div style={{marginTop: '70px'}}></div>
                 <h2 className="CheckoutLeftH2">Payment Method</h2>
                 <div className="CheckoutLeftH2">
                     <FormControl>
@@ -353,7 +357,7 @@ const submit=()=>{
                             aria-labelledby="demo-radio-buttons-group-label"
                             name="radio-buttons-group"
                         >
-                            <FormControlLabel value="pay" control={<Radio />} label="Pay now with UPI, Netbanking & Wallet" />
+                            <FormControlLabel checked={true} value="pay" control={<Radio />} label="Pay now with UPI, Netbanking & Wallet" />
                             {/* <FormControlLabel value="later" control={<Radio />} label="Pay later with credit or debit card" /> */}
                         </RadioGroup>
                     </FormControl>
@@ -429,7 +433,8 @@ const submit=()=>{
                 </div>
                 {Error?(<p style={{color:'red',marginTop:'10px'}}>{Error}</p>):(<></>)}
                 <button onClick={submit} style={{
-                    backgroundColor:Data?Data.color:'#ffff'
+                    backgroundColor:Data?Data.color:'#ffff',
+                    color: 'white'
                 }}>
                 Active Package
                 </button>

@@ -41,6 +41,7 @@ import HotelList from './Screens/HotelList';
 import ChangePassword from './Screens/ChangePassword';
 import ForgetPassword from './Screens/ForgetPassword';
 import Login2 from './Components/LogIn2';
+import PrivacyPolicy from './Screens/PrivacyPolicy';
 
 function App() {
   const dispatch = useDispatch()
@@ -155,6 +156,7 @@ React.useEffect(() => {
       <Route path="/ChangePassword" element={<ChangePassword />} />
       <Route path="/ForgetPassword" element={<ForgetPassword />} />
       <Route path="/HotelList/:search" element={<HotelList />} />
+      <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />     
       </Routes>
       <div style={{ height: 50, width: '100%',marginTop:'0px' }}></div>

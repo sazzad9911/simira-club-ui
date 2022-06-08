@@ -101,7 +101,7 @@ const Membership = () => {
                     </div>
             
                     <div className='MemberLeft'>
-                        <p>Claim your free month</p>
+                        <p>Buy Membership</p>
                     </div>
                 </div>
                 <div className='Membershipcard-right'>

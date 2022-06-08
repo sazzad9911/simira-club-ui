@@ -37,23 +37,23 @@ const Footer = () => {
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="/Membership" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Membership</Link><br></br>
                         </div> 
                         <div className='Footerlink'>
-                            <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Privacy</Link><br></br>
+                            <Link style={{textDecoration: 'none',color:'#808080'}} to="/PrivacyPolicy" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Privacy</Link><br></br>
                         </div>
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="/TermsAndConditions" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Terms & Conditions</Link><br></br>
                         </div>
-                        <div className='Footerlink'>
+                        {/* <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Support</Link>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='Footertxt'>
                         <h5 className='Footerfont-style'>DISCOVER</h5>
-                        <div className='Footerlink'>
+                        {/* <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Popular Deals</Link><br></br>
                         </div>
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Popular Hotels</Link><br></br>
-                        </div>
+                        </div> */}
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">SmiraClub Member</Link><br></br>
                         </div>
@@ -81,7 +81,7 @@ const Footer = () => {
             </div>
                 */
                }
-               <hr style={{
+               {/* <hr style={{
                 height: '1px',
                 width: '100%',
                 backgroundColor: '#888'
@@ -91,7 +91,7 @@ const Footer = () => {
                     you agree to our Terms of Service, Cookie Policy,
                     Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2018-2022 © SmiraClub All rights reserved.
                 </p>
-            </div>
+            </div> */}
             </div>
 
             

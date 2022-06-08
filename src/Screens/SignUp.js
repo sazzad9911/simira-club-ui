@@ -36,9 +36,9 @@ const SignUp = () => {
                    columns: ['name', 'email', 'uid'],
                    values:[Name,Email,userCredentials.user.uid]
                            }).then(data => {
-         setLoading(false)
-         window.location.href='/'
-                              console.log(data)     
+                    setLoading(false)
+                    window.location.href='/'
+                    console.log(data)     
             }).catch(err => {
                 setError('Email address is invalid.')
                 console.log(err.message)
@@ -50,9 +50,9 @@ const SignUp = () => {
         <div>
             <div style={{ justifyContent: 'center' }} className='loginbody1'>
 
-                <div className='loginbodyleft1'>
+                {/* <div className='loginbodyleft1'>
                     <img src="https://theupay.com/bank/Assets/login.jpg" className='leftImg'></img>
-                </div>
+                </div> */}
                 <div className='loginbodyright1'>
                     <div className='loginbodyrightbody1'>
                         <h1>Create account and become a membe</h1>

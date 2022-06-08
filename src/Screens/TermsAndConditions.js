@@ -13,77 +13,117 @@ function TermsAndConditions() {
         <div className="TermsBody">
             <h2>Terms & Conditions</h2>
             <div className="TermsPDiv">
-                <div>
-                <p>1.</p>
-                <p>It is the responsibility of a customer to read, understand and remain knowledgeable of the terms and conditions.</p>
-                </div>
-                <div>
-                <p>2.</p>
-                <p>Booking confirmation letter is required at the time of check-in.</p>
-                </div>
-                <div>
-                <p>3.</p>
-                <p>Customer is eligible for a stay from Sunday to Thursday at all mentioned locations.</p>
-                </div>
-                <div>
-                <p>4.</p>
-                <p>Offer is not valid for single occupancy.</p>
-                </div>
-                <div>
-                <p>5.</p>
-                <p>To avail of the offer, the customer will be required to pay Rs. 999/- per person per night, children from 5-12 years of age have to pay Rs. 599/- directly to the hotel or Smira Club account in advance for unlimited breakfast & dinner (veg /non-veg, as per the respective hotel’s policy, Non-Veg Breakfast Includes Egg Items Only and Non-Veg Dinner Includes Chicken Items Only)</p>
-                </div>
-                <div>
-                <p>6.</p>
-                <p>Booking should be done prior according to the membership plan.</p>
-                </div>
-                <div>
-                <p>7.</p>
-                <p>In case of non-availability, each customer shall be compensated with a stay at any other property/place offered by participating service provider.</p>
-                </div>
-                <div>
-                <p>8.</p>
-                <p>Any other services other than the above-mentioned services are chargeable at the resort.</p>
-                </div>
-                <div>
-                <p>9.</p>
-                <p>In case of conflict, the decision of the participating service provider shall be final and abiding.</p>
-                </div>
-                <div>
-                <p>10.</p>
-                <p>This membership cannot be encashed, refunded, or extended. The customer has to use this offer within the mentioned validity period.</p>
-                </div>
-                <div>
-                <p>11.</p>
-                <p>This membership is not valid during bank holidays, public holidays, long weekends, 7 days of Diwali, and from 24th December to 1st January. If a customer would like to book on the above-mentioned days then an extra amount will be charged as per the participating service provider’s rate policy.</p>
-                </div>
-                <div>
-                    <p>12.</p>
-                    <p>Any confirmed booking is non-refundable and cannot be canceled.</p>
-                </div>
-                <div>
-                <p>13.</p>
-                <p>Smira Club has no refund policy.</p>
-                </div>
-                <div>
-                <p>14.</p>
-                <p>Smira Club is not responsible and will not intervene in case of service-related issues with the participating service provider. We kindly request you to coordinate directly with the participating service provider.</p>
-                </div>
-                <div>
-                    <p>15.</p>
-                    <p>Any other commitment given by the executive other than the above-mentioned terms shall not be fulfilled by Smira Club.</p>
-                </div>
-                <div>
-                <p>16</p>
-                <p>Any legal issues will be resolved by an arbitrator in Mumbai jurisdiction only errors and omissions expected</p>
-                </div>
-                <h2>Cancellation Policys</h2>
-                <div className="TermsPDiv">
-                    <p className="TermsP">Member can cancel the policy at its own discretion, but NO REFUND will be processed for the same to
-                        discontinue membership email us at support@smira.club
-
-                    </p>
-                </div>
+            <p>
+                  By downloading or using the app, these terms will
+                  automatically apply to you – you should make sure therefore
+                  that you read them carefully before using the app. You’re not
+                  allowed to copy or modify the app, any part of the app, or
+                  our trademarks in any way. You’re not allowed to attempt to
+                  extract the source code of the app, and you also shouldn’t try
+                  to translate the app into other languages or make derivative
+                  versions. The app itself, and all the trademarks, copyright,
+                  database rights, and other intellectual property rights related
+                  to it, still belong to Smira Services Private Limited.
+                </p> <p>
+                  Smira Services Private Limited is committed to ensuring that the app is
+                  as useful and efficient as possible. For that reason, we
+                  reserve the right to make changes to the app or to charge for
+                  its services, at any time and for any reason. We will never
+                  charge you for the app or its services without making it very
+                  clear to you exactly what you’re paying for.
+                </p> <p>
+                  The Smira Club - Hotels &amp; Deals app stores and processes personal data that
+                  you have provided to us, to provide our
+                  Service. It’s your responsibility to keep your phone and
+                  access to the app secure. We therefore recommend that you do
+                  not jailbreak or root your phone, which is the process of
+                  removing software restrictions and limitations imposed by the
+                  official operating system of your device. It could make your
+                  phone vulnerable to malware/viruses/malicious programs,
+                  compromise your phone’s security features and it could mean
+                  that the Smira Club - Hotels &amp; Deals app won’t work properly or at all.
+                </p> 
+                <p>
+                    The app does use third-party services that declare their
+                    Terms and Conditions.
+                  </p> 
+                  <p>
+                    Link to Terms and Conditions of third-party service
+                    providers used by the app
+                  </p> 
+                  <ul>
+                  <li>
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google Play Services</a>
+                  </li>
+                  </ul>
+                  <p>
+                  You should be aware that there are certain things that
+                  Smira Services Private Limited will not take responsibility for. Certain
+                  functions of the app will require the app to have an active
+                  internet connection. The connection can be Wi-Fi or provided
+                  by your mobile network provider, but Smira Services Private Limited
+                  cannot take responsibility for the app not working at full
+                  functionality if you don’t have access to Wi-Fi, and you don’t
+                  have any of your data allowance left.
+                </p>
+                <p>
+                  If you’re using the app outside of an area with Wi-Fi, you
+                  should remember that the terms of the agreement with your
+                  mobile network provider will still apply. As a result, you may
+                  be charged by your mobile provider for the cost of data for
+                  the duration of the connection while accessing the app, or
+                  other third-party charges. In using the app, you’re accepting
+                  responsibility for any such charges, including roaming data
+                  charges if you use the app outside of your home territory
+                  (i.e. region or country) without turning off data roaming. If
+                  you are not the bill payer for the device on which you’re
+                  using the app, please be aware that we assume that you have
+                  received permission from the bill payer for using the app.
+                </p> <p>
+                  Along the same lines, Smira Services Private Limited cannot always take
+                  responsibility for the way you use the app i.e. You need to
+                  make sure that your device stays charged – if it runs out of
+                  battery and you can’t turn it on to avail the Service,
+                  Smira Services Private Limited cannot accept responsibility.
+                </p> <p>
+                  With respect to Smira Services Private Limited’s responsibility for your
+                  use of the app, when you’re using the app, it’s important to
+                  bear in mind that although we endeavor to ensure that it is
+                  updated and correct at all times, we do rely on third parties
+                  to provide information to us so that we can make it available
+                  to you. Smira Services Private Limited accepts no liability for any
+                  loss, direct or indirect, you experience as a result of
+                  relying wholly on this functionality of the app.
+                </p> <p>
+                  At some point, we may wish to update the app. The app is
+                  currently available on Android &amp; iOS – the requirements for the 
+                  both systems(and for any additional systems we
+                  decide to extend the availability of the app to) may change,
+                  and you’ll need to download the updates if you want to keep
+                  using the app. Smira Services Private Limited does not promise that it
+                  will always update the app so that it is relevant to you
+                  and/or works with the Android &amp; iOS version that you have
+                  installed on your device. However, you promise to always
+                  accept updates to the application when offered to you, We may
+                  also wish to stop providing the app, and may terminate use of
+                  it at any time without giving notice of termination to you.
+                  Unless we tell you otherwise, upon any termination, (a) the
+                  rights and licenses granted to you in these terms will end;
+                  (b) you must stop using the app, and (if needed) delete it
+                  from your device.
+                </p> <p><strong>Changes to This Terms and Conditions</strong></p> <p>
+                  We may update our Terms and Conditions
+                  from time to time. Thus, you are advised to review this page
+                  periodically for any changes. We will
+                  notify you of any changes by posting the new Terms and
+                  Conditions on this page.
+                </p> <p>
+                  These terms and conditions are effective as of 2022-06-01
+                </p> <p><strong>Contact Us</strong></p> <p>
+                  If you have any questions or suggestions about our
+                  Terms and Conditions, do not hesitate to contact us
+                  at app@smira.club.
+                  </p>
             </div>
         </div>
         <div style={{ marginTop:'50px' }}>
