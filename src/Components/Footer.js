@@ -27,9 +27,9 @@ const Footer = () => {
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="/Contact" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Contact</Link><br></br>
                         </div>
-                        <div className='Footerlink'>
+                        {/* <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Sitemap</Link>
-                        </div>
+                        </div> */}
                     </div> 
                     <div className='Footertxt'>
                         <h4 className='Footerfont-style'>For You</h4>
@@ -55,7 +55,7 @@ const Footer = () => {
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">Popular Hotels</Link><br></br>
                         </div> */}
                         <div className='Footerlink'>
-                            <Link style={{textDecoration: 'none',color:'#808080'}} to="#" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">SmiraClub Member</Link><br></br>
+                            <Link style={{textDecoration: 'none',color:'#808080'}} to="/Membership" color="#808080" underline="none" fontSize={18} letterSpacing="0.03em">SmiraClub Member</Link><br></br>
                         </div>
                         <div className='Footerlink'>
                             <Link style={{textDecoration: 'none',color:'#808080'}} to="/BusinessWithUs" color="#808080" underline="none" fontSize={18} fontWeight={400} letterSpacing="0.03em">Business With Us</Link>

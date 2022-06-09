@@ -7,11 +7,13 @@ const FilterCart = (props) => {
         <div className='filterBox'> 
             <div style={{ display: 'flex',justifyContent:'space-between' }}>
                 <h2>Filters</h2>
-                <button className='FilterCartButton'>
+                <button onClick={() =>{
+                    props.setCategory('')
+                }} className='FilterCartButton'>
                 <p style={{margin:'0px'}}>Clear All</p></button>
             </div>
             <div className='FilterCartDivLine' />
-            <p style={{ marginLeft: '15px', marginTop: '30px' }}>Sort by</p>
+            {/* <p style={{ marginLeft: '15px', marginTop: '30px' }}>Sort by</p>
             <div style={{ display: 'grid', marginTop: '20px'}}>
                 <button style={{
                     height: 'auto',
@@ -81,25 +83,31 @@ const FilterCart = (props) => {
                 <StarIcon style={{ color: '#E47768' }} />
             </div>
             <div style={{ marginTop: '30px' }} />
-            <div className='FilterCartDivLine' />
+            <div className='FilterCartDivLine' /> */}
             <p style={{ marginTop: '30px', marginLeft: '15px' }}>Categories</p>
             <div style={{ display: 'flex' }}>
-                <button style={{
+                <button onClick={()=>{
+                    props.setCategory('deluxe')
+                }} style={{
                     height: 'auto',
                     width: 'auto',
                     padding: '5px'
-                }}  className='FilterCartButtonDel'>Deluxe</button>
-                <button style={{
+                }}  className={props.value=='deluxe' ? 'FilterCartButtonDel':'FilterCartButtonVil'}>Deluxe</button>
+                <button onClick={()=>{
+                    props.setCategory('villas')
+                }} style={{
                     height: 'auto',
                     width: 'auto',
                     padding: '5px'
-                }}  className='FilterCartButtonVil'>Villas</button>
+                }}  className={props.value=='villas' ? 'FilterCartButtonDel':'FilterCartButtonVil'}>Villas</button>
             </div>
-            <button style={{
+            <button onClick={()=>{
+                    props.setCategory('farm-house')
+                }} style={{
                     height: 'auto',
                     width: 'auto',
                     padding: '5px'
-                }} className='FilterCartButtonVil'>Farm House</button>
+                }} className={props.value=='farm-house' ? 'FilterCartButtonDel':'FilterCartButtonVil'}>Farm House</button>
         </div>
     );
 };

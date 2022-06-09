@@ -13,12 +13,10 @@ import Gym from '../Asset/Font/Gym.svg'
 import Parking from '../Asset/Font/Parking.svg'
 import Swimming from '../Asset/Font/Swimming Pool.svg'
 import TV from '../Asset/Font/TV.svg'
+import free from './free.svg'
 
 const SearchHotelCart = (props) => {
     const conditions = props.data.conditions.split(',')
-
-    
-
     return (
         <div >
             <div style={{
@@ -208,7 +206,7 @@ const SearchHotelCart = (props) => {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                            <AutoFixHighIcon style={{ color: '#64B657' }} sx={{ fontSize: 20, }} />
+                            <img src={free}/>
                         </div>
                         <div>
                             <p style={{

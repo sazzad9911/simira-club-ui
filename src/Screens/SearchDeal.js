@@ -25,6 +25,7 @@ const SearchDeal = (props) => {
     const [Visibility,setVisibility]= useState(false)
     const [Low,setLow]= React.useState(0)
     const [High,setHigh]= React.useState(10)
+    const [Brands,setBrands]= React.useState()
     
     React.useEffect(()=>{
         window.scrollTo(0, 0);
@@ -33,6 +34,8 @@ const SearchDeal = (props) => {
             tableName:'deals',
             searchData: search,
             searchColumn:'brand',
+            filterColumn: 'brand',
+            filterValue: Brands,
         }).then(data =>{
             if(Array.isArray(data)){
                 return setData(data)
@@ -42,7 +45,7 @@ const SearchDeal = (props) => {
        }else{
         setData([])
        }
-    },[search])
+    },[search+Brands])
     React.useEffect(() => {
         window.scrollTo(0, 0);
     },[Low])
@@ -53,7 +56,7 @@ const SearchDeal = (props) => {
                overflowY:'scroll',
                paddingRight:'15px',
                }}>
-              <FilterTowCart />
+              <FilterTowCart change={setBrands} value={Brands} />
                
                </div>
                <Modal open={Visibility} onClose={()=>setVisibility(!Visibility)}>
@@ -63,7 +66,7 @@ const SearchDeal = (props) => {
                display:'inline-block',
                width:'250px'
                }}>
-               <FilterTowCart />
+               <FilterTowCart change={setBrands} value={Brands} />
                
                </div>
                </Modal>
@@ -110,7 +113,7 @@ const SearchDeal = (props) => {
                 marginBottom: '20px'
              }}>
                 {
-                    Data?(
+                    Data && Data.length>0?(
                         <Pagination lowLevel={setLow} highLevel={setHigh} length={Data.length} perPage={10}/>
                     ):(<></>)
                 }

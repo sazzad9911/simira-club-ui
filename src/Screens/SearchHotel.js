@@ -22,6 +22,7 @@ const SearchHotel = (props) => {
     const [Visibility,setVisibility]= useState(false)
     const [Low,setLow]= React.useState(0)
     const [High,setHigh]= React.useState(10)
+    const [Category,setCategory]= React.useState()
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -33,6 +34,8 @@ const SearchHotel = (props) => {
             tableName:'hotels',
             searchData: search,
             searchColumn:'address',
+            filterColumn: 'categories',
+            filterValue: Category,
         }).then(data =>{
             if(Array.isArray(data)){
                 return setData(data)
@@ -42,7 +45,7 @@ const SearchHotel = (props) => {
        }else{
         setData([])
        }
-    },[search])
+    },[search+Category])
     return (
         <div style={{width: '100%',marginTop:'30px',overflowX:'hidden'}}>
             <div style={{display: 'flex',width:'90%',height:'100%',marginLeft:'5%'}}>
@@ -50,7 +53,7 @@ const SearchHotel = (props) => {
                overflowY:'scroll',
                paddingRight:'15px',
                }}>
-               <FilterCart />
+               <FilterCart value={Category} setCategory={setCategory} />
                
                </div>
                <Modal open={Visibility} onClose={()=>setVisibility(!Visibility)}>
@@ -60,7 +63,7 @@ const SearchHotel = (props) => {
                display:'inline-block',
                width:'250px'
                }}>
-               <FilterCart />
+               <FilterCart value={Category} setCategory={setCategory} />
                
                </div>
                </Modal>
@@ -74,7 +77,7 @@ const SearchHotel = (props) => {
                         <div className='ScarchBox1'>
                             <div className='ScarchInputBox1'>
                                 <input onChange={(e) =>setSearchData(e.target.value)} className='ScarchInput1' type='text'
-                                    placeholder='Search by hotel,deal,restaurant' />
+                                    placeholder='Search' />
                                 <select onChange={(e)=>setSelect(e.target.value)} className='ScarchSelect1'>
                                     <option value="SearchHotel">Hotel</option>
                                     <option value="SearchDeal">Deals</option>
@@ -107,7 +110,7 @@ const SearchHotel = (props) => {
                 marginBottom: '20px'
              }}>
                 {
-                    Data?(
+                    Data && Data.length>0?(
                         <Pagination lowLevel={setLow} highLevel={setHigh} length={Data.length} perPage={10}/>
                     ):(<></>)
                 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import './css/AppOverView.css';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import Link from '@mui/material/Link';
 import Photo from './css/Mockup (Will be updated later).png'
 import { Checkbox } from '@mui/material';
 import { useState } from "react";
 import { getAuth } from 'firebase/auth';
 import app from './../firebase';
 import {postData, url} from '../action'
+import logo from './logo.svg'
+import { Link } from 'react-router-dom';
 
 const AppOverView = () => {
 
@@ -35,23 +36,23 @@ const AppOverView = () => {
     }
     return (
         <div className='AppOverViewBody'>
-                {/* <div className='AppOverViewLaftDiv'>
-                    <img className='AppOverViewImg' src={Photo} />
+                <div className='AppOverViewLaftDiv'>
+                    <img className='AppOverViewImg' src={logo} />
                 </div> 
                 <div className='AppOverViewRightDiv'>
                    <div>
                    <div>
-                        <h2 className='AppOverViewBigText'>Get The SmiraClub App</h2>
-                        <div>
+                        <h2 className='AppOverViewBigText'>Get the SmiraClub App</h2>
+                        {/* <div>
                             <p className='AppOverViewSamllText'>
                                 We'll send you a link that you can open on your phone to<br/>
                                 download the app.
                             </p>
-                        </div>
+                        </div> */}
 
                     </div>
-                    <div style={{ height: '20px', width: 'auto' }}></div>
-                    <div className='AppOverViewButtonDiv'>
+                    {/* <div style={{ height: '20px', width: 'auto' }}></div> */}
+                    {/* <div className='AppOverViewButtonDiv'>
                         <div className='AppOverViewButtonDiv'>
 
                             <input
@@ -80,9 +81,9 @@ const AppOverView = () => {
                                 :
                                 <h2 className='AppOverViewHtext'>Phone</h2>}
                         </div>
-                    </div>
+                    </div> */}
                     <p style={{color:'red'}}>{Error}</p>
-                    <div className='AppOverViewFromBox'>
+                    {/* <div className='AppOverViewFromBox'>
                     
                         {isChecked ? <input onChange={e=>{
                             setEmail(e.target.value)
@@ -94,24 +95,24 @@ const AppOverView = () => {
 
                             <p className='AppOverViewFromButtonP'>Send</p>
                         </button>
-                    </div>
+                    </div> */}
 
                     <div >
                         <h5 className='AppOverViewh5'>Download app from</h5>
                         <div className='AppOverViewLink'>
-                            <div >
-                                <Link href="/"><img className='Footerimg' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png' /></Link>
+                            <div className='Footerimg'>
+                                <Link to="/"><img  src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png' /></Link>
                             </div>
-                            <div >
-                                <Link href="/"><img className='FooterimgEnd' src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
+                            <div className='FooterimgEnd'>
+                                <Link to="/"><img  src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
                             </div>
                         </div>
                     </div>
                    </div>
-                </div> */}
-                <img style={{
+                </div> 
+                {/* <img style={{
                     width: '100%'
-                }} src={require('./content.png')}/>
+                }} src={require('./content.png')}/> */}
 
         </div>
     );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;1,500&display=swap');
+
 .AppOverViewBody{
     width:100%;
     height: auto;
@@ -11,9 +13,8 @@
 
 .AppOverViewLaftDiv{
     width: 40%;
-    background-color: #FFF5F6;
     display: flex;
-    justify-content:center;
+    justify-content:flex-end
 }
 .AppOverViewRightDiv{
     height: auto;
@@ -33,10 +34,11 @@
     }
 }
 .AppOverViewBigText{
-    font-size: 45px;
+    font-size: 48px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     margin-left: 0px;
+    margin-bottom: -10px;
 }
 .AppOverViewSamllText{
     font-size: 18px;
@@ -129,10 +131,10 @@
     margin-top: 40px;
 }
 .AppOverViewImg{
-    height: 450px;
+    height: 400px;
     width: 350px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-right: 10px;
 }
 .topping{
     color: #FC444B;
@@ -143,11 +145,32 @@
 }
 
 .Footerimg{
-    height: 40px;
-    width: 135px
+    
+    width: 250px
+}
+.Footerimg img{
+    width: 100%;
+    height: 100%;
 }
 .FooterimgEnd{
-    height: 40px;
-    width: 135px;
+    width: 250px;
     margin-left: 10px;
+}
+.FooterimgEnd img{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 980px) {
+    .AppOverViewLaftDiv{
+        width: 100%;
+    }
+    .AppOverViewRightDiv{
+        width: 100%;
+    }
+    .Footerimg{
+        width: 90%
+    }
+    .FooterimgEnd{
+        width: 90%;
+    }
 }
