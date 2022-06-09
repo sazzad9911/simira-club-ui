@@ -110,12 +110,12 @@ function Checkout() {
         }).then(data=>{
             if(data.id){
                 const options = {
-                    key: "rzp_test_LC2zuVNMYJbS0a", // Enter the Key ID generated from the Dashboard
+                    key: "rzp_live_J2l32I0ubXHiN1", // Enter the Key ID generated from the Dashboard
                     amount: (Data.price-discount)*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                     currency: "INR",
                     name: "SMIRA CLUB",
                     description: "Buy membership plan",
-                    image: "https://example.com/your_logo",
+                    image: "https://i.ibb.co/D7SkjQy/icon.png",
                     order_id: data.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
                     handler: function (data) {
                         postData(url + '/setData', {
