@@ -15,7 +15,7 @@ const AppOverView = () => {
     const [isChecked, setIsChecked] = useState(false);
     const [Email,setEmail]= React.useState()
     const auth = getAuth(app)
-    const [Error,setError]=React.useState()
+    const [Error,setError]=React.useState('')
 
     const handleOnChange = () => {
         setIsChecked(!isChecked);
@@ -101,10 +101,10 @@ const AppOverView = () => {
                         <h5 className='AppOverViewh5'>Download app from</h5>
                         <div className='AppOverViewLink'>
                             <div className='Footerimg'>
-                                <Link to="/"><img  src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png' /></Link>
+                                <a target='_blank' href="https://play.google.com/store/apps/details?id=com.scientistx.smira"><img  src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png' /></a>
                             </div>
                             <div className='FooterimgEnd'>
-                                <Link to="/"><img  src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></Link>
+                                <a href="#"><img  src='https://www.nysora.com/wp-content/uploads/2020/04/apple-store-badge.png' /></a>
                             </div>
                         </div>
                     </div>

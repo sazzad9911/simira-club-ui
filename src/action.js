@@ -56,3 +56,9 @@ export const dateDifference =(newDate, oldDate)=>{
   const reminding = (new Date(oldDate).getTime() - new Date(newDate).getTime()) / (1000 * 3600 * 24);
   return reminding.toFixed(0)
 }
+export const visualDate=(date)=>{
+  date=new Date(date);
+  const Months=['January','February','March','April','May','June','July','August','September','October','November','December']
+  date =date.getDate() +' ' +Months[date.getMonth()]+' '+date.getFullYear()
+  return date
+}

@@ -8,7 +8,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { Link,useParams } from 'react-router-dom';
-import {postData, url,convertDate, dateDifference} from '../action'
+import {postData, url,convertDate, dateDifference,visualDate} from '../action'
 import useRazorpay from "react-razorpay";
 import { useSelector } from 'react-redux';
 import { getAuth } from 'firebase/auth';
@@ -174,7 +174,7 @@ function Checkout() {
        }
        return result;
     }
-    const confirm=()=>{
+    const confirm=(newDate)=>{
         setError('Loading...')
         let codes=null;
         if(Data.account!='no'){
@@ -198,15 +198,82 @@ function Checkout() {
                 index++;
             }
         }
-        let msg=codes?codes+" are you family access code.":""
+        if(PromoCode){
+            postData(url +'/sendEmail',{ 
+                from:'info@smira.club',
+                to:auth.currentUser.email,
+                subject:'Your Free Trial of Membership has Activated - Smira Club',
+                text: `
+                <p>Dear ${User.name},</p>
+
+                <p>Welcome to Smira Club. We’re thrilled to see you here!</p>
+
+                <p>We’re confident that membership will help you save more money while enjoying the luxuries of our services.</p>
+
+                <p>Your free trial will end on [End Date ${visualDate(newDate)}].</p>
+
+
+                <p>Best regards</p>
+                <p>Smira Club</p>
+ 
+                <p>Ranjit Studio Compound, </p>
+                <p>Ground & 1st Floor, </p>
+                <p>C-Block, Plot No. 115, </p>
+                <p>Dada Saheb Phalke Marg, </p>
+                <p>Opp. Bharatkshetra, Hindmata, </p>
+                <p>Dadar East, Mumbai, </p>
+                <p>Maharashtra 400014 </p>
+ 
+                <p>Contact No. </p>
+                <p>9819812456</p>
+                <p>9833733477</p>
+                <p>9820342389</p>
+ 
+                <p>Email - support@smira.club</p>
+
+                `
+            }).then(data=>{
+                console.log(data)
+            })
+        }else{
+            let msg=codes?`Your Family Access Code is [${codes}] (If applicable).`:""
         postData(url +'/sendEmail',{ 
             from:'info@smira.club',
             to:auth.currentUser.email,
-            subject:'Your Membership Purchase Request has been received - Smira Club',
-            text: "<p>Dear <strong>"+User.name.split(' ')[0]+"</strong>,</p><p>Your membership is activated - membership type <strong>"+Data.name+"</strong> membership from date <strong>"+convertDate(new Date())+"</strong> your product time period "+Data.time+" year."+msg+" Enjoy with our best hotels and deals plan .If you have any inquiries, please do not hesitate to contact us.</p><p>Best Regards</p><p>Smira Club</p><p>Ranjit Studio Compound,</p><p> Ground & 1st Floor, </p><p>C-Block, Plot No. 115, </p><p>Dada Saheb Phalke Marg, </p><p>Opp. Bharatkshetra, Hindmata, </p><p>Dadar East, Mumbai, </p><p>Maharashtra 400014 </p><p>Contact No. </p><p>9819812456</p><p>9833733477</p><p>9820342389</p><p> Email - support@smira.club</p>"
+            subject:'You’re now officially a member of our family - Smira Club',
+            text: `
+            <p>Dear ${User.name},</p>
+
+            <p>Welcome to Smira Club. We’re thrilled to see you here!</p>
+
+            <p>We’re confident that membership will help you save more money while enjoying the luxuries of our services.</p>
+
+            <p> ${msg}</p>
+
+
+            <p>Best regards</p>
+            <p>Smira Club</p>
+ 
+            <p>Ranjit Studio Compound, </p>
+            <p>Ground & 1st Floor, </p>
+            <p>C-Block, Plot No. 115, </p>
+            <p>Dada Saheb Phalke Marg, </p>
+            <p>Opp. Bharatkshetra, Hindmata, </p>
+            <p>Dadar East, Mumbai, </p>
+            <p>Maharashtra 400014 </p>
+ 
+            <p>Contact No. </p>
+            <p>9819812456</p>
+            <p>9833733477</p>
+            <p>9820342389</p>
+ 
+            <p>Email - support@smira.club</p>
+            `
         }).then(data=>{
             console.log(data)
         })
+        }
+        
         setError('Membership plan purchase successful. We have send you a email.')
         setTimeout(()=>{
             window.location.href='/'
@@ -225,7 +292,7 @@ function Checkout() {
         }).then(data=>{
             if(data.affectedRows){
                 setError('Loading...')
-               return confirm()
+               return confirm(newDate)
             }
             setError(data.message)
             console.log(data.message)
@@ -242,7 +309,7 @@ const setUserWithAmount=()=>{
         }).then(data=>{
             if(data.affectedRows){
                 
-               return confirm()
+               return confirm(newDate)
             }
             setError(data.message)
             console.log(data.message)

@@ -1,0 +1,24 @@
+.mobileScreen-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center
+}
+.mobileScreen-body h2{
+    width: 100%;
+    text-align:center;
+    margin-top:0
+}
+.mobileScreen-body h5{
+   margin-top:50px
+}
+.Footerimg2 {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.Footerimg2 img{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px;
+}

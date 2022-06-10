@@ -163,9 +163,11 @@
 @media (max-width: 980px) {
     .AppOverViewLaftDiv{
         width: 100%;
+        justify-content: center;
     }
     .AppOverViewRightDiv{
         width: 100%;
+        justify-content: center;
     }
     .Footerimg{
         width: 90%

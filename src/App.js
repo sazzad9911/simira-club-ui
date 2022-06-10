@@ -42,6 +42,8 @@ import ChangePassword from './Screens/ChangePassword';
 import ForgetPassword from './Screens/ForgetPassword';
 import Login2 from './Components/LogIn2';
 import PrivacyPolicy from './Screens/PrivacyPolicy';
+import AppOverView from './Cart/AppOverView';
+import MobileScreen from './Cart/MobileScreen';
 
 function App() {
   const dispatch = useDispatch()
@@ -130,6 +132,11 @@ React.useEffect(() => {
   })
 }, [action])
 
+if(window.innerWidth<600){
+  return(
+    <MobileScreen />
+  )
+}
   return (
     <Router>
       <Header />
