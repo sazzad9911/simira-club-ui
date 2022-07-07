@@ -14,7 +14,7 @@ const dispatch = useDispatch()
             textDecoration: 'none'
         }}>
         <div style={{
-            backgroundImage: 'url(' +props.img1+')',
+            backgroundImage: `url('${data.image}')`,
             backgroundSize: 'cover',
         }} className='body12'>
             <div className='cartBottom'>

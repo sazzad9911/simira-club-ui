@@ -123,7 +123,7 @@ const PopularDeal = () => {
 
                             </DealCart>
                         ))
-                    ) : (
+                    ) : ( 
                         <Loader/>
                     )
                 }

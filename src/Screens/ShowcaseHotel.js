@@ -44,6 +44,9 @@ const ShowcaseHotel = (props) => {
     const [Loader,setLoader] = React.useState(false)
     const auth = getAuth(app)
     const user=useSelector(state => state.User)
+    const [Veg,setVeg]=React.useState(0)
+    const [NonVeg,setNonVeg]=React.useState(0)
+    const [Note,setNote]=React.useState()
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -81,8 +84,8 @@ const ShowcaseHotel = (props) => {
         postData(url + '/setData', {
             auth: auth.currentUser,
             tableName: 'hotel_booking',
-            columns: ['check_in', 'check_out', 'adult', 'children', 'room', 'date', 'user_id', 'hotel_id','type'],
-            values: [convertDate(new Date(CheckIn)), convertDate(new Date(CheckOut)), Adults, Children, Room, convertDate(new Date()), auth.currentUser.uid, id,'veg']
+            columns: ['check_in', 'check_out', 'adult', 'children', 'room', 'date', 'user_id', 'hotel_id','type','veg','non_veg','note'],
+            values: [convertDate(new Date(CheckIn)), convertDate(new Date(CheckOut)), Adults, Children, Room, convertDate(new Date()), auth.currentUser.uid, id,'veg',Veg,NonVeg,Note?Note:'']
         }).then(data => {
             if (data.insertId) {
                 setLoader(false)
@@ -425,7 +428,9 @@ const ShowcaseHotel = (props) => {
                         ):(<></>)
                     }
                 </div>
-                <div className='ShowcaseRight'>
+                <div style={{
+                    height: 'auto'
+                }} className='ShowcaseRight'>
                     <div className='ShowcaseRightf'>
                         <h3 style={{fontSize:'22px'}}>Booking Details</h3>
                         <p style={{
@@ -463,7 +468,7 @@ const ShowcaseHotel = (props) => {
                            marginLeft: '10px', 
                            marginRight: '10px',
                            marginTop: '5px'
-                        }} >
+                           }} >
                             <div style={{marginTop:'10px'}} className='showAdults'>
                                 <p className='showadu'>Adults</p>
                                 <p className='showold'>Older 12 years</p>
@@ -523,7 +528,7 @@ const ShowcaseHotel = (props) => {
                            marginLeft: '10px',
                            marginRight: '10px',
                            marginTop: '5px'
-                        }} >
+                           }} >
                             <div className='showAdults'>
                                 <p className='showadu'>Room</p>
                             </div>
@@ -547,6 +552,73 @@ const ShowcaseHotel = (props) => {
                                 </Button>
                             </div>
                         </div>
+                        <div style={{
+                            display: 'flex',
+                           marginLeft: '10px', 
+                           marginRight: '10px',
+                           marginTop: '5px'
+                           }} >
+                            <div style={{marginTop:'10px'}} className='showAdults'>
+                                <p className='showadu'>Veg</p>
+                                <p className='showold'>Breakfast+Dinner</p>
+                            </div>
+                            <div className='showAdultss'>
+                                <Button onClick={()=>{
+                                    if(Veg>0){
+                                        setVeg(Veg-1)
+                                    }
+                                }}>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
+                                <p className='showbuttonTwon'>{Veg}</p>
+                                <Button onClick={() =>{
+                                    setVeg(Veg+1)
+                                }}>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
+                            </div>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                           marginLeft: '10px', 
+                           marginRight: '10px',
+                           marginTop: '5px'
+                           }} >
+                            <div style={{marginTop:'10px'}} className='showAdults'>
+                                <p className='showadu'>Non-Veg</p>
+                                <p className='showold'>Breakfast+Dinner</p>
+                            </div>
+                            <div className='showAdultss'>
+                                <Button onClick={()=>{
+                                    if(NonVeg>0){
+                                        setNonVeg(NonVeg-1)
+                                    }
+                                }}>
+                                    <div className='showbutton'>
+                                        <p className='showbuttonone'>-</p>
+                                    </div>
+                                </Button>
+                                <p className='showbuttonTwon'>{NonVeg}</p>
+                                <Button onClick={() =>{
+                                    setNonVeg(NonVeg+1)
+                                }}>
+                                    <div className='showbuttont'>
+                                        <p className='showbuttontwo'>+</p>
+                                    </div>
+                                </Button>
+                            </div>
+                        </div>
+                        <div style={{marginTop:'10px'}}>
+                        <p className='showadu'>Additional Note</p>
+                        <textarea rows="4" placeholder='' onChange={(e) =>{
+                            setNote(e.target.value)
+                        }}></textarea>
+                        </div>
+                        
                         <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '100%'}}>
                         <p style={{color: 'red'}}>{Error}</p>
                         </div>
