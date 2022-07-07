@@ -392,15 +392,11 @@ const submit=()=>{
             window.location.href ='/LogIn'
             return
         }
-        if(PromoCode && !Check){
+        if(PromoCode){
             checkCode()
-        }else if(Check && Check=='later' && !PromoCode){
-            checkCard()
-        }else if(Check && Check=='pay' && !PromoCode){
+        }else if(!PromoCode){
             handlePayment()
-        }else if(PromoCode && Check){
-            setError('You can only use promo code or payment method. Please remove code for payment.')
-            checkCode()
+            console.log('dfda')
         }
 }
 
