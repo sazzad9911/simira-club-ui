@@ -16,7 +16,7 @@ import SignalWifi3BarIcon from '@mui/icons-material/SignalWifi3Bar';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Button from '@mui/material/Button';
 import { Link,useParams } from 'react-router-dom';
-import {postData, url,convertDate,dateDifference} from '../action'
+import {postData, url,convertDate,dateDifference,visualDate} from '../action'
 import CCTV from '../Asset/Font/CCTV.svg'
 import Wifi from '../Asset/Font/Free Wifi.svg'
 import Gym from '../Asset/Font/Gym.svg'
@@ -27,6 +27,7 @@ import { ReactSVG } from 'react-svg'
 import {useSelector} from 'react-redux'
 import { getAuth } from 'firebase/auth';
 import app from './../firebase';
+import Loader from './../Content/Loader';
 
 const ShowcaseHotel = (props) => {
     const {id}=useParams()
@@ -41,7 +42,7 @@ const ShowcaseHotel = (props) => {
     const [CheckIn,setCheckIn] = React.useState()
     const [CheckOut,setCheckOut] = React.useState()
     const [Error,setError]= React.useState()
-    const [Loader,setLoader] = React.useState(false)
+    const [loader,setLoader] = React.useState(false)
     const auth = getAuth(app)
     const user=useSelector(state => state.User)
     const [Veg,setVeg]=React.useState(0)
@@ -79,7 +80,7 @@ const ShowcaseHotel = (props) => {
             setError('Please select any room')
             return
         }
-        if(user && user[0].membership_type){
+        if(user && user[0].membership_type || user[0].link){
             setLoader(true)
         postData(url + '/setData', {
             auth: auth.currentUser,
@@ -99,9 +100,38 @@ const ShowcaseHotel = (props) => {
         })
         postData(url +'/sendEmail',{ 
             from:'info@smira.club',
-            to:auth.currentUser.email,
+            to:user[0].email,
             subject:'Your Booking Request has been received - Smira Club',
-            text:"<p>Dear <strong>"+user[0].name.split(' ')[0]+"</strong>,</p><p>We have received your request for a booking on <strong>"+convertDate(new Date(CheckIn))+"</strong> for <strong>"+Room+"</strong> room at the "+Data.name+".Please wait for a booking confirmation email to know about your booking status.If you have any inquiries, please do not hesitate to contact us.</p><p>Best Regards</p><p>Smira Club</p><p>Ranjit Studio Compound,</p><p> Ground & 1st Floor, </p><p>C-Block, Plot No. 115, </p><p>Dada Saheb Phalke Marg, </p><p>Opp. Bharatkshetra, Hindmata, </p><p>Dadar East, Mumbai, </p><p>Maharashtra 400014 </p><p>Contact No. </p><p>9819812456</p><p>9833733477</p><p>9820342389</p><p> Email - support@smira.club</p>"
+            text:`
+           <p> Dear <b>${user[0].name}</b>,</p>
+           <p> We have received your request for a booking at -<br>
+            Hotel Name: <strong>${Data.name}</strong><br>
+            Hotel location:<strong> ${Data.address}</strong><br>
+            Total number of guests:<strong> ${Adults+Children}</strong><br>
+            Number of kids below 5 years:<strong> ${Children}</strong><br>
+            Number of rooms:<strong> ${Room}</strong> <br>
+            Check-in date:<strong> ${visualDate(CheckIn)}</strong><br>
+            Check-out date:<strong> ${visualDate(CheckOut)}</strong></p>
+           <p> Please wait for a booking confirmation email to know about your booking status.</p>
+           <p> If you have any inquiries, please do not hesitate to contact us.</p>
+           <p> Best regards,<br>
+          Smira Club</p>
+ 
+           <b> Smira Services - ‘A sweet memory is really affordable’ 
+         Smira Services Pvt. Ltd. </b>
+            <p>Ranjit Studio Compound, <br>
+           Ground & 1st Floor, <br>
+            M-Block, Plot No. 115, <br>
+           Dada Saheb Phalke Marg, <br>
+           Opp. Bharatkshetra, Hindmata,<br>
+           Dadar East, Mumbai,<br>
+           Maharashtra 400014 </p>
+ 
+           <p> Contact No. <br>
+            9833733477<br>
+           9833733977<br>
+            Email - support@smira.club</p>
+            `
         }).then(data=>{
             console.log(data)
         })
@@ -116,10 +146,6 @@ const ShowcaseHotel = (props) => {
         }
         if(!user){
             window.location.href='/LogIn'
-            return
-        }
-        if(!user[0].membership_type){
-            window.location.href='/Membership'
             return
         }
         if(user[0].link){
@@ -138,6 +164,11 @@ const ShowcaseHotel = (props) => {
             })
             return
         }
+        if(!user[0].membership_type){
+            window.location.href='/Membership'
+            return
+        }
+        
         
         if(!user[0].membership_type || parseInt(dateDifference(new Date(), user[0].ending_date))<0){
             setError('Your membership plan has expired. Please renew your membership plan.')
@@ -621,6 +652,7 @@ const ShowcaseHotel = (props) => {
                         
                         <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '100%'}}>
                         <p style={{color: 'red'}}>{Error}</p>
+                        {loader?(<Loader/>):(<></>)}
                         </div>
                         <Button onClick={checkHotelBooking} style={{
                             border: '1px solid #FC444B',

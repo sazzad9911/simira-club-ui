@@ -28,6 +28,7 @@ const MyProfile = (props) => {
     const [Location,setLocation]= React.useState()
     const [Error,setError]= React.useState()
     const auth = getAuth(app)
+    const [Links,setLinks]= React.useState()
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -40,6 +41,16 @@ const MyProfile = (props) => {
             date=date.getFullYear()+"-"+((date.getMonth()+1)>9?(date.getMonth()+1):'0'+(date.getMonth()+1))+"-"+(date.getDate()>9?date.getDate():'0'+date.getDate())
             setBirthDay(date)
             setLocation(user[0].address)
+            if(user && user[0].link) {
+                postData(url+'/getData',{
+                  tableName: 'user',
+                  condition:`uid='${user[0].link}'`
+                }).then(response => {
+                  if(Array.isArray(response) && response.length!=0) {
+                    setLinks(response[0].email)
+                  }
+                })
+              }
         }
     },[user])
     const updateData=(key,value) => {
@@ -164,6 +175,10 @@ const MyProfile = (props) => {
                             type='text' placeholder='Location' />
                         </div>
                     </div>
+                    {Links?(<p style={{
+                        textAlign: 'center',
+                        margin:'10px'
+                    }}>Member of: <b>{Links}</b></p>):(<></>)}
                     <div className='MyProfileTexts'>
                         <Link to='/ForgetPassword' style={{
                             marginTop: '20px',

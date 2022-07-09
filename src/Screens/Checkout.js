@@ -42,6 +42,12 @@ function Checkout() {
     const [CouponDetails, setCouponDetails]= React.useState()
     const [CouponUser, setCouponUser]= React.useState(null)
     const [PromoUser,setPromoUser]= React.useState(null)
+    const [PromoData, setPromoData]= React.useState({
+        visible: false,
+        data: {},
+        type:''
+    })
+    const [loader,setLoader] =React.useState(false)
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -351,41 +357,55 @@ const checkCard = () => {
     })
     
 }
-const checkCode=async()=>{
-    await postData(url + '/getData',{
+const checkCode=()=>{
+        
+    postData(url + '/getData',{
         tableName: 'promo_user',
-        condition:"uid='"+User.uid+"' AND code='"+PromoCode+"'",
-    }).then(data=>{
-        console.log(data)
-        if(Array.isArray(data) && data.length > 0){
-            setError('You have already use this code')
+        condition:"uid='"+ auth.currentUser.uid+"' AND code='"+PromoCode+"'"
+    }).then(response=>{
+        if(Array.isArray(response)&& response.length > 0){
+            setError('You have already used this code.')
             return
-        }else{
-            setError('')
-       let filter=Codes.filter(d=>d.code==PromoCode)
-       if(!Array.isArray(filter) || filter.length==0){
-        console.log('Invalid promo code')
-        setError('Invalid promo code')
-        return false
-       }else{
-        setError('Loading...')
-        postData(url + '/setData',{
-            auth: auth.currentUser,
-            tableName:"promo_user",
-            values:[User.uid,PromoCode],
-            columns:["uid","code"]
-        }).then(data => {
-            if(data.insertId){
-              return  setUserWithPromoCode()
-            }
-            setError('')
-            console.log(data.message)
-        })
-        return true
-       }
         }
+        setError('')
+   let filter=Codes.filter(d=>d.code==PromoCode)
+   if(!filter || filter.length== 0){
+    console.log('Invalid promo code')
+    setError('Invalid promo code')
+    return false
+   }else{
+    const type=filter[0].code.substring(0,4)
+    if(type=="SLVP"){
+        setPromoData({visible:true,data:filter[0],type:'silver'});
+    }else if(type=="GLDP"){
+        setPromoData({visible:true,data:filter[0],type:'gold'});
+    }else if(type=="PLNP"){
+        setPromoData({visible:true,data:filter[0],type:'platinum'});
+    }else if(type=="DMNP"){
+        setPromoData({visible:true,data:filter[0],type:'diamond'});
+    }else{
+        promo_action()
+    }
+   }
     })
-       
+}
+const promo_action =()=>{
+
+    setLoader(true)
+    postData(url + '/setData',{
+        "tableName":"promo_user",
+        "values":[auth.currentUser.uid,PromoCode],
+        "columns":["uid","code"],
+        "auth":auth.currentUser
+    }).then(data => {
+        if(data.affectedRows){
+            setAction(!Action)
+          return  setUserWithPromoCode()
+        }
+        setLoader(false)
+        console.log(data.message)
+    })
+    return true
 }
 const submit=()=>{
         if(!User){

@@ -22,29 +22,52 @@ import Travel from './../File/icon/Travel.svg';
 const ShowCaseCategory = (props) => {
     const [data, setData] = useState(null)
     const {type}=useParams()
+   
     React.useEffect(() => {
+        console.log(type)
         window.scrollTo(0, 0);
-        postData(url + "/getData", {
-            tableName: 'brands',
-            orderColumn: 'id',
-            condition:'type='+"'"+type+"'"
-        }).then(data => {
-            if (data.message) {
-                console.log(data.message)
-                return
-            }
-            setData(data)
-            //dispatch(setBrands(data))
-            //console.log(data)
-        }).catch(err => {
-            console.log(err.message)
-        })
-    }, [])
+        if(type=='all'){
+            postData(url + '/getData',{
+                tableName: 'brands',
+            }).then(data =>{
+                if(Array.isArray(data)){
+                    setData(data)
+                }
+            })
+            return
+        }
+        if(type){
+            let sp=type.split(',');
+            let condition=''
+            sp.map((doc,i)=>{
+                if(!condition){
+                    condition="id='"+doc+"'";
+                }
+                condition=condition+" OR id='"+doc+"'"
+            })
+            postData(url + '/getData',{
+                tableName: 'brands',
+                condition: `${condition} OR type='${type}'`
+            }).then(data =>{
+                if(Array.isArray(data)){
+                    setData(data)
+                }
+            })
+        }else{
+            setData([])
+        }
+    }, [type])
     return (
         <div>
             <div className='showcasebody1'>
                 <div className='cartBottom41'>
-                    <div className='cartButtomLeft41'>
+                {type!='Restaurant' || type!='Hotel'||type!='Games'||type!='Health'||
+                        type!='Villas'||type!='Shopping'||type!='Services'||
+                        type!='Camping'||type!='Travel'?(
+                            <></>
+                        ):(
+                            <div>
+                            <div className='cartButtomLeft41'>
                         <img style={{
                             height: '175px',
                             width: '175px'
@@ -57,7 +80,8 @@ const ShowCaseCategory = (props) => {
                         <p style={{fontSize:'32px',margin:'0px'}} className='headline1'>{type}</p>
                         <p style={{fontSize:'24px',margin:'0px'}} className='text21'>{data ? data.length : '0'} Options Available</p>
                     </div>
-                    
+                            </div>
+                        )}
                 </div>
                 <div style={{marginTop:'10px'}} className='hr6'></div>
                 {

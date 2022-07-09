@@ -10,7 +10,7 @@ const data = props.doc
 const dispatch = useDispatch()
     
     return (
-        <Link to={"/ShowCaseCategory/"+data.type} style={{
+        <Link to={"/ShowCaseCategory/"+data.brands} style={{
             textDecoration: 'none'
         }}>
         <div style={{
