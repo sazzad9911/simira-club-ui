@@ -123,7 +123,14 @@ const ShowCaseDeal = () => {
             <div style={{ marginLeft: '5%',marginRight: '5%'}} className={'condition'}>
                 <h4 >Terms and Conditions</h4>
                 <p style={{textAlign:'justify',maxHeight:Height,overflow:'hidden'}}>
-                   {Data?Data.conditions:''}
+                   {Data?Data.used :''}
+                   <br/>
+                   {Data?Data.application :''}
+                   <br/>
+                   {Data?Data.valid :''}
+                   <br/>
+                   {Data?Data.remember :''}
+                   <br/>
                 </p>
                 <Button onClick={()=>{
                     if(Height=='auto'){

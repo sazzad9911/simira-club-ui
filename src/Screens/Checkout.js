@@ -293,8 +293,8 @@ function Checkout() {
         postData(url + '/updateData',{
             "condition":"uid='"+ auth.currentUser.uid+"'",
             "tableName":"user",
-            "columns":["membership_type","starting_date","ending_date"],
-            "values":[Data.type,convertDate(new Date()),newDate]
+            "columns":["membership_type","starting_date","ending_date","paid"],
+            "values":[Data.type,convertDate(new Date()),newDate,"no"]
         }).then(data=>{
             if(data.affectedRows){
                 setError('Loading...')
